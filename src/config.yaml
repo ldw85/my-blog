@@ -9,9 +9,9 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: 科技评测博客
-    template: '%s — 科技评测博客'
-  description: "消费电子产品和 SaaS 软件的深度评测与横向对比"
+    default: TechReviews
+    template: '%s — TechReviews'
+  description: "In-depth reviews and comparisons of consumer electronics, SaaS tools, and AI products"
   robots:
     index: true
     follow: true
