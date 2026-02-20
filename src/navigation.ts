@@ -24,8 +24,11 @@ export const headerData = {
       ],
     },
     {
-      text: '榜单',
-      href: getBlogPermalink(),
+      text: '产品',
+      links: [
+        { text: 'Mac mini - AI Server', href: getPermalink('/product/mac-mini') },
+        { text: 'All Reviews', href: getBlogPermalink() },
+      ],
     },
     {
       text: '关于',

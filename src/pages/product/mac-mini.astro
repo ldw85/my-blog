@@ -1,0 +1,231 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Mac mini M4 - The Ultimate Home AI Server',
+  description: 'Discover why Mac mini is the perfect home server for running AI agents like OpenClaw. Low power, silent, powerful.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Home AI Server Revolution"
+    title={<>Your Personal AI Team,<br /><span class="text-accent dark:text-white">One Mac mini Away</span></>}
+    subtitle={
+      <>
+        Run OpenClaw, Claude, ChatGPT agents and more — 24/7. Silent, low-power, and powerful.
+        The Mac mini M4 is the perfect home server for AI enthusiasts and developers.
+      </>
+    }
+    actions={[
+      { variant: 'primary', text: 'Check Price on Amazon', href: 'https://www.amazon.com/dp/B0DLBTPDCS', target: '_blank', icon: 'tabler:shopping-cart' },
+      { variant: 'secondary', text: 'Read Our Review', href: '/blog' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&q=80',
+      alt: 'Mac mini - Ultimate Home AI Server',
+    }}
+  />
+
+  <!-- Key Benefits -->
+  <Features
+    title="Why Mac mini is Perfect for AI Agents"
+    subtitle="Everything you need to run your own AI infrastructure"
+    items={[
+      {
+        title: '🔇 whisper_volume_off Whisper Quiet',
+        description: 'Fanless design means silent operation. No noisy data center, no disturbing your work or sleep. Place it anywhere in your home.',
+      },
+      {
+        title: '⚡ Energy Efficient',
+        description: 'Consumes only 30W at idle, up to 150W under load. Run 24/7 for cents a day vs. expensive VPS monthly fees.',
+      },
+      {
+        title: '🚀 M4 Chip Power',
+        description: '10-core CPU + 10-core GPU delivers desktop-class performance. Handle multiple AI agents simultaneously without lag.',
+      },
+      {
+        title: '🏠 Fully Local',
+        description: 'Your data stays at home. No cloud dependencies, no privacy concerns. Full control over your AI infrastructure.',
+      },
+      {
+        title: '💰 One-Time Investment',
+        description: 'No monthly VPS bills. Pay once, own forever. Save $500+ per year vs. cloud VPS hosting.',
+      },
+      {
+        title: '🔄 Apple Ecosystem',
+        description: 'Seamless integration with iPhone, iPad, Apple Watch. Build sophisticated automation workflows across devices.',
+      },
+    ]}
+  />
+
+  <!-- OpenClaw Integration -->
+  <Content
+    title="Perfect for OpenClaw & AI Agents"
+    subtitle="Run your personal AI assistant 24/7"
+    items={[
+      {
+        title: 'Deploy OpenClaw Effortlessly',
+        description: 'OpenClaw runs natively on macOS. Docker, Homebrew, or direct installation — your choice. Set up in minutes, not hours.',
+      },
+      {
+        title: 'Run Multiple Agents in Parallel',
+        description: 'M4 chip handles 5+ concurrent AI agent sessions. Build a team of specialized assistants: researcher, writer, coder, analyst.',
+      },
+      {
+        title: 'Always-On Personal Assistant',
+        description: 'Wake your AI assistant anytime via Siri, Shortcuts, or local network. No waiting for cloud services, no downtime.',
+      },
+      {
+        title: 'Connect from Anywhere',
+        description: 'Use Cloudflare Tunnel, Tailscale, or ngrok to access your home AI server from anywhere in the world.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
+      alt: 'AI Agents Architecture',
+    }}
+  />
+
+  <!-- Specs -->
+  <Features
+    title="Technical Specifications"
+    subtitle="M4 chip configuration for optimal AI performance"
+    columns={2}
+    items={[
+      {
+        title: 'Processor',
+        description: 'Apple M4 chip with 10-core CPU (4 performance + 6 efficiency) and 10-core GPU',
+      },
+      {
+        title: 'Neural Engine',
+        description: '16-core Neural Engine for ML tasks, optimized for local AI inference',
+      },
+      {
+        title: 'Memory',
+        description: '16GB unified memory (configurable to 32GB). Bandwidth: 120GB/s',
+      },
+      {
+        title: 'Storage',
+        description: '256GB SSD (configurable to 2TB). Fast read/write for quick model loading',
+      },
+      {
+        title: 'Connectivity',
+        description: 'Gigabit Ethernet, Wi-Fi 6E, Bluetooth 5.3, 3x Thunderbolt 4 ports',
+      },
+      {
+        title: 'Power Consumption',
+        description: 'Idle: ~30W | Under load: up to 150W | Energy Star certified',
+      },
+    ]}
+  />
+
+  <!-- Comparison -->
+  <Content
+    title="Mac mini vs VPS for AI Agents"
+    subtitle="Why more developers are switching to local hosting"
+    isReversed={true}
+    items={[
+      {
+        title: 'Cost Comparison',
+        description: 'VPS: $20-50/month = $240-600/year. Mac mini: ~$599 one-time. Break-even in 12-18 months, then savings begin.',
+      },
+      {
+        title: 'Performance',
+        description: 'M4 outperforms typical VPS 2-3x in single-threaded tasks. Unified memory architecture eliminates swap latency.',
+      },
+      {
+        title: 'Privacy & Security',
+        description: 'VPS: Your data on shared infrastructure. Mac mini: Complete local control. HIPAA, GDPR compliance made easier.',
+      },
+      {
+        title: 'Reliability',
+        description: 'VPS: Dependent on provider uptime, regional outages. Mac mini: Your device, your rules, your uptime.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
+      alt: 'Server Comparison',
+    }}
+  />
+
+  <!-- Use Cases -->
+  <Testimonials
+    title="Popular Use Cases"
+    subtitle="What you can run on your Mac mini AI server"
+    testimonials={[
+      {
+        title: 'OpenClaw AI Assistant',
+        description: 'Personal AI assistant powered by Claude/GPT models. Text, voice, and automation capabilities. 24/7 availability.',
+        author: 'Primary Use Case',
+        avatar: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=100&q=80',
+      },
+      {
+        title: 'Home Automation Hub',
+        description: 'Run HomeBridge, Apple HomeKit, and AI agents together. Voice-controlled smart home with local processing.',
+        author: 'Smart Home',
+        avatar: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=100&q=80',
+      },
+      {
+        title: 'Development Server',
+        description: 'Local CI/CD, testing environments, containerized apps. macOS-native development without cloud dependencies.',
+        author: 'Development',
+        avatar: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=100&q=80',
+      },
+      {
+        title: 'Media Server',
+        description: 'Plex/Jellyfin server, Time Machine backup, local cloud storage. All your media, always accessible.',
+        author: 'Entertainment',
+        avatar: 'https://images.unsplash.com/photo-1484712401471-05c21fccdbf7?w=100&q=80',
+      },
+    ]}
+  />
+
+  <!-- FAQ -->
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'Can Mac mini run 24/7?',
+        description: 'Absolutely. Mac mini is designed for continuous operation. The fanless M4 model runs cool and quiet around the clock.',
+      },
+      {
+        title: 'How much does electricity cost?',
+        description: 'At ~30W idle (about $0.004/hour), running 24/7 costs approximately $3-4 per month. Under full load, maybe $8-10/month depending on your electricity rates.',
+      },
+      {
+        title: 'Do I need technical skills?',
+        description: 'Basic comfort with computers recommended. We provide setup guides for OpenClaw and other tools. Most users are up and running in under an hour.',
+      },
+      {
+        title: 'Can I access it remotely?',
+        description: 'Yes! Tools like Cloudflare Tunnel, Tailscale, or ngrok make your home Mac mini accessible from anywhere with an internet connection.',
+      },
+      {
+        title: 'What about internet speed?',
+        description: 'Local network access is instant. For remote access, a standard broadband connection (20+ Mbps) is sufficient for most AI agent interactions.',
+      },
+      {
+        title: 'Is it better than Mac Studio?',
+        description: 'For most AI agent use cases, Mac mini M4 offers the best value. Mac Studio makes sense only if you need extreme GPU performance for large model inference.',
+      },
+    ]}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    title="Ready to Build Your AI Team?"
+    subtitle="Join thousands of developers running their personal AI assistants on Mac mini. One-time investment, endless possibilities."
+    actions={[
+      { variant: 'primary', text: 'Buy on Amazon', href: 'https://www.amazon.com/dp/B0DLBTPDCS', target: '_blank' },
+      { variant: 'secondary', text: 'Read Full Review', href: '/blog' },
+    ]}
+  />
+</Layout>
