@@ -3,180 +3,90 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      text: '消费电子',
       links: [
-        {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
+        { text: '耳机音频', href: getPermalink('audio', 'category') },
+        { text: '智能家居', href: getPermalink('smart-home', 'category') },
+        { text: '手机平板', href: getPermalink('mobile', 'category') },
+        { text: '电脑设备', href: getPermalink('computing', 'category') },
+        { text: '键鼠外设', href: getPermalink('peripherals', 'category') },
+        { text: '苹果生态', href: getPermalink('apple', 'category') },
       ],
     },
     {
-      text: 'Pages',
+      text: 'AI & SaaS',
       links: [
-        {
-          text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
-        },
-        {
-          text: 'Services',
-          href: getPermalink('/services'),
-        },
-        {
-          text: 'Pricing',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
+        { text: 'AI 工具', href: getPermalink('ai-tools', 'category') },
+        { text: 'AI 资讯', href: getPermalink('ai-news', 'category') },
+        { text: 'SaaS 工具', href: getPermalink('saas', 'category') },
+        { text: '开源项目', href: getPermalink('open-source', 'category') },
+        { text: '生产力', href: getPermalink('productivity', 'category') },
       ],
     },
     {
-      text: 'Landing',
-      links: [
-        {
-          text: 'Lead Generation',
-          href: getPermalink('/landing/lead-generation'),
-        },
-        {
-          text: 'Long-form Sales',
-          href: getPermalink('/landing/sales'),
-        },
-        {
-          text: 'Click-Through',
-          href: getPermalink('/landing/click-through'),
-        },
-        {
-          text: 'Product Details (or Services)',
-          href: getPermalink('/landing/product'),
-        },
-        {
-          text: 'Coming Soon or Pre-Launch',
-          href: getPermalink('/landing/pre-launch'),
-        },
-        {
-          text: 'Subscription',
-          href: getPermalink('/landing/subscription'),
-        },
-      ],
+      text: '榜单',
+      href: getBlogPermalink(),
     },
     {
-      text: 'Blog',
+      text: '关于',
       links: [
-        {
-          text: 'Blog List',
-          href: getBlogPermalink(),
-        },
-        {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
+        { text: '关于我们', href: getPermalink('/about') },
+        { text: '联系方式', href: getPermalink('/contact') },
+        { text: '投稿合作', href: getPermalink('/contact') },
       ],
-    },
-    {
-      text: 'Widgets',
-      href: '#',
     },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
+  actions: [],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Product',
+      title: '内容分类',
       links: [
-        { text: 'Features', href: '#' },
-        { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: '消费电子', href: getBlogPermalink() },
+        { text: 'AI & SaaS', href: getBlogPermalink() },
+        { text: '热门榜单', href: getBlogPermalink() },
+        { text: '对比评测', href: getBlogPermalink() },
       ],
     },
     {
-      title: 'Platform',
+      title: '消费电子',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: '耳机音频', href: getPermalink('audio', 'category') },
+        { text: '智能家居', href: getPermalink('smart-home', 'category') },
+        { text: '手机平板', href: getPermalink('mobile', 'category') },
+        { text: '键鼠外设', href: getPermalink('peripherals', 'category') },
       ],
     },
     {
-      title: 'Support',
+      title: 'AI & SaaS',
       links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
+        { text: 'AI 工具', href: getPermalink('ai-tools', 'category') },
+        { text: 'AI 资讯', href: getPermalink('ai-news', 'category') },
+        { text: 'SaaS 工具', href: getPermalink('saas', 'category') },
+        { text: '开源项目', href: getPermalink('open-source', 'category') },
       ],
     },
     {
-      title: 'Company',
+      title: '其他',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: '关于我们', href: getPermalink('/about') },
+        { text: '联系方式', href: getPermalink('/contact') },
+        { text: '隐私政策', href: getPermalink('/privacy') },
+        { text: '服务条款', href: getPermalink('/terms') },
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: '隐私政策', href: getPermalink('/privacy') },
+    { text: '服务条款', href: getPermalink('/terms') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/arthelokyo/astrowind' },
+    { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: '#' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/arthelokyo"> Arthelokyo</a> · All rights reserved.
+    © 2025 科技优选 · 你的消费电子与AI工具指南
   `,
 };

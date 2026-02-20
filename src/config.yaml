@@ -1,6 +1,6 @@
 site:
   name: 科技优选
-  site: 'https://your-domain.com'
+  site: 'https://techreviews.example.com'
   base: '/'
   trailingSlash: false
 
@@ -9,26 +9,26 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: TechReviews
-    template: '%s — TechReviews'
-  description: "In-depth reviews and comparisons of consumer electronics, SaaS tools, and AI products"
+    default: 科技优选
+    template: '%s — 科技优选'
+  description: "专业、客观的消费电子评测与AI工具推荐。帮你找到最适合的耳机、手机、键盘、AI工具。"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: 科技优选
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: ''
+    site: ''
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: zh-CN
   textDirection: ltr
 
 apps:
