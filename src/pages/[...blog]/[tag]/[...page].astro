@@ -19,8 +19,25 @@ const { page, tag } = Astro.props as Props;
 
 const currentPage = page.currentPage ?? 1;
 
+// 标签颜色映射
+const tagColors: Record<string, string> = {
+  'Review': 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200',
+  'Comparison': 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200',
+  'Guide': 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200',
+  'News': 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200',
+  'Top List': 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200',
+  'Sony': 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200',
+  'Bose': 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200',
+  'Apple': 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200',
+  'AI': 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200',
+  'ChatGPT': 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200',
+};
+
+const colorClass = tagColors[tag.title] || 'bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200';
+
 const metadata = {
-  title: `Posts by tag '${tag.title}'${currentPage > 1 ? ` — Page ${currentPage} ` : ''}`,
+  title: `#${tag.title}`,
+  description: `标签 "${tag.title}" 下的所有文章`,
   robots: {
     index: blogTagRobots?.index,
     follow: blogTagRobots?.follow,
@@ -29,8 +46,25 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline>Tag: {tag.title}</Headline>
+  <!-- 标签头部 -->
+  <section class="py-12 not-prose bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <span class={`inline-block px-4 py-2 rounded-full text-lg font-medium mb-4 ${colorClass}`}>
+        #{tag.title}
+      </span>
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">#{tag.title}</h1>
+      <p class="text-lg text-muted">共 {page.data.length} 篇文章</p>
+      
+      <div class="mt-6">
+        <a href="/blog" class="inline-flex items-center text-blue-600 hover:underline">
+          ← 返回全部文章
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文章列表 -->
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-5xl">
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>

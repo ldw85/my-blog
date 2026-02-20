@@ -19,8 +19,28 @@ const { page, category } = Astro.props as Props;
 
 const currentPage = page.currentPage ?? 1;
 
+// 分类映射
+const categoryInfo: Record<string, { emoji: string; desc: string }> = {
+  'Audio': { emoji: '🎧', desc: '耳机、音箱等音频设备评测' },
+  'Smart Home': { emoji: '🏠', desc: '智能家居产品评测' },
+  'Mobile': { emoji: '📱', desc: '手机、平板等移动设备评测' },
+  'Computing': { emoji: '💻', desc: '电脑、设备等计算设备评测' },
+  'Peripherals': { emoji: '⌨️', desc: '键盘、鼠标等外设评测' },
+  'Apple': { emoji: '🍎', desc: '苹果生态产品评测' },
+  'Photography': { emoji: '📷', desc: '相机、影像设备评测' },
+  'Gaming': { emoji: '🎮', desc: '游戏设备评测' },
+  'Wearables': { emoji: '⌚', desc: '智能穿戴设备评测' },
+  'AI Tools': { emoji: '🤖', desc: 'AI 工具深度评测' },
+  'AI News': { emoji: '📰', desc: 'AI 行业资讯' },
+  'SaaS': { emoji: '💼', desc: 'SaaS 工具推荐' },
+  'Productivity': { emoji: '⚡', desc: '效率工具与方法论' },
+};
+
+const info = categoryInfo[category.title] || { emoji: '📁', desc: '' };
+
 const metadata = {
-  title: `Category '${category.title}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `${info.emoji} ${category.title}`,
+  description: info.desc,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,
@@ -29,8 +49,24 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline>{category.title}</Headline>
+  <!-- 分类头部 -->
+  <section class="py-12 not-prose bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <div class="text-6xl mb-4">{info.emoji}</div>
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">{category.title}</h1>
+      {info.desc && <p class="text-lg text-muted">{info.desc}</p>}
+      
+      <div class="mt-6">
+        <a href="/blog" class="inline-flex items-center text-blue-600 hover:underline">
+          ← 返回全部文章
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 文章列表 -->
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-5xl">
+    <Headline subtitle={`${page.data.length} 篇文章`}></Headline>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>
