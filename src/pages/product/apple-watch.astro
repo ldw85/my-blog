@@ -1,0 +1,257 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Apple Watch Series 11 - The Ultimate Smartwatch Experience',
+  description: 'Discover the most advanced Apple Watch yet. Thinner design, larger display, breakthrough health features, and faster charging.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="⌚ Limited Time: 25% Off - Save $100"
+    title={<>The Most Advanced<br /><span class="text-blue-600 dark:text-blue-400">Apple Watch Yet</span></>}
+    subtitle={
+      <>
+        Thinner design. Larger display. Breakthrough health features.<br />
+        Experience the future of personal health and connectivity.
+      </>
+    }
+    actions={[
+      { variant: 'primary', text: 'Buy Now - Save $100', href: 'https://amzn.to/4kM9k8w', target: '_blank', icon: 'tabler:shopping-cart' },
+      { variant: 'secondary', text: 'Read Full Review', href: '/blog' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=1200&q=80',
+      alt: 'Apple Watch Series 11',
+    }}
+  />
+
+  <!-- Key Benefits -->
+  <Features
+    title="Why Apple Watch Series 11?"
+    subtitle="The perfect blend of technology and lifestyle"
+    items={[
+      {
+        title: '❤️ Advanced Heart Health',
+        description: 'ECG app, heart rate notifications, and blood oxygen sensor help you monitor your health like never before.',
+      },
+      {
+        title: '📱 Largest Display Ever',
+        description: '40% larger than Series 6, making it easier to read messages, map directions, and track workouts at a glance.',
+      },
+      {
+        title: '⚡ Faster Charging',
+        description: 'Charge from 0 to 80% in just 45 minutes. Get a full day\'s battery life with only 30 minutes of charging.',
+      },
+      {
+        title: '🌡️ New SWR Sensor',
+        description: 'New skin temperature sensor provides overnight health insights and helps track sleep quality trends.',
+      },
+      {
+        title: '💪 Comprehensive Fitness Tracking',
+        description: 'Track your daily activity with three rings. Get personalized insights and challenges to stay motivated.',
+      },
+      {
+        title: '☀️ Always-On Retina',
+        description: 'The brightest Apple Watch display ever. Easily read your screen even in direct sunlight without raising your wrist.',
+      },
+    ]}
+  />
+
+  <!-- Health Features Deep Dive -->
+  <Content
+    title="Your Personal Health Guardian"
+    subtitle="Advanced sensors for comprehensive wellness monitoring"
+    items={[
+      {
+        title: 'ECG App',
+        description: 'Take an electrocardiogram anytime, anywhere. Detect irregular heart rhythms like atrial fibrillation.',
+      },
+      {
+        title: 'Blood Oxygen Sensor',
+        description: 'Measure your blood oxygen levels with a sensor and app. Monitor respiratory health during workouts and sleep.',
+      },
+      {
+        title: 'Sleep Tracking',
+        description: 'Understand your sleep patterns with detailed nightly analysis. Wake up to insights that help you rest better.',
+      },
+      {
+        title: 'Temperature Sensing',
+        description: 'New sensor tracks skin temperature overnight, providing insights for cycle tracking and wellness.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1576334688334-e6e7625b4f44?w=800&q=80',
+      alt: 'Apple Watch Health Features',
+    }}
+  />
+
+  <!-- Specs -->
+  <Features
+    title="Technical Specifications"
+    subtitle="Premium hardware meets intelligent software"
+    columns={2}
+    items={[
+      {
+        title: 'Thickness',
+        description: '9.7mm - Thinnest Apple Watch ever',
+      },
+      {
+        title: 'Battery Life',
+        description: 'Up to 18 hours (36 hours in Low Power Mode)',
+      },
+      {
+        title: 'Water Resistance',
+        description: '50m water resistance - swim-proof',
+      },
+      {
+        title: 'Chip',
+        description: 'S10 SiP with 64-bit dual-core processor',
+      },
+      {
+        title: 'Storage',
+        description: '64GB built-in storage',
+      },
+      {
+        title: 'Connectivity',
+        description: 'GPS + Cellular models available',
+      },
+      {
+        title: 'Display',
+        description: 'Always-On Retina OLED up to 2000 nits',
+      },
+      {
+        title: 'Materials',
+        description: 'Aluminum or Titanium case options',
+      },
+    ]}
+  />
+
+  <!-- Design & Display -->
+  <Content
+    title="Stunning Design, Incredible Display"
+    subtitle="Bigger and brighter than ever before"
+    isReversed={true}
+    items={[
+      {
+        title: '40% Larger Display',
+        description: 'The largest Apple Watch display ever. More room for complications, easier navigation, better readability.',
+      },
+      {
+        title: 'Thinnest Design',
+        description: 'The thinnest Apple Watch ever made. Comfortable to wear all day and night.',
+      },
+      {
+        title: 'Brighter Screen',
+        description: 'Up to 2000 nits brightness. Perfect visibility in direct sunlight, always-on convenience.',
+      },
+      {
+        title: 'Premium Materials',
+        description: 'Choose from aluminum or titanium. Multiple finishes including Midnight, Starlight, Silver, and more.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1544117519-31a4b719223d?w=800&q=80',
+      alt: 'Apple Watch Design',
+    }}
+  />
+
+  <!-- Fitness & Activity -->
+  <Features
+    title="Fitness That Motivates"
+    subtitle="Turn every movement into achievement"
+    items={[
+      {
+        title: 'Activity Rings',
+        description: 'Move, Exercise, and Stand rings visualize your daily progress. Close them to stay healthy.',
+      },
+      {
+        title: 'Workout App',
+        description: 'Advanced metrics for over 100 workout types. From running to swimming, track it all.',
+      },
+      {
+        title: 'Health Insights',
+        description: 'Get personalized daily health insights. Understand trends and improve your wellness.',
+      },
+      {
+        title: 'Competition',
+        description: 'Challenge friends to Activity competitions. Stay motivated with friendly competition.',
+      },
+    ]}
+  />
+
+  <!-- Testimonials -->
+  <Testimonials
+    title="What Users Are Saying"
+    subtitle="Real reviews from verified buyers"
+    testimonials={[
+      {
+        title: 'Game-Changer!',
+        description: 'The Series 11 is a game-changer. The larger display makes everything so much easier to read, and the battery life is incredible. Plus with 25% off, it\'s an amazing deal!',
+        author: 'Michael J.',
+        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
+      },
+      {
+        title: 'Fitness Essential',
+        description: 'As a fitness enthusiast, the health tracking features are phenomenal. The sleep tracking has helped me improve my rest significantly.',
+        author: 'Sarah C.',
+        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
+      },
+      {
+        title: 'Finally Fast Charging!',
+        description: 'Finally, fast charging! I never have to worry about battery anymore. The design is beautiful and the screen is so bright outdoors.',
+        author: 'David W.',
+        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80',
+      },
+    ]}
+  />
+
+  <!-- FAQ -->
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'What\'s new in Apple Watch Series 11?',
+        description: 'Series 11 features a thinner design, largest display ever, faster charging (0-80% in 45 minutes), new S11 chip, and improved health sensors including skin temperature tracking.',
+      },
+      {
+        title: 'How long does the battery last?',
+        description: 'Apple Watch Series 11 offers up to 18 hours of battery life on a single charge. With optimized settings, you can extend this to 36 hours in Low Power Mode.',
+      },
+      {
+        title: 'Is Apple Watch Series 11 waterproof?',
+        description: 'Apple Watch Series 11 is swim-proof with water resistance up to 50 meters. It\'s perfect for swimming, surfing, or playing in the ocean.',
+      },
+      {
+        title: 'What sizes are available?',
+        description: 'Series 11 comes in two sizes: 42mm and 46mm case sizes, both featuring the largest and most advanced Always-On Retina displays.',
+      },
+      {
+        title: 'Do I need an iPhone to use Apple Watch?',
+        description: 'Yes, Apple Watch requires an iPhone XS or later with iOS 18 or later for setup and full functionality.',
+      },
+      {
+        title: 'What\'s included in the box?',
+        description: 'Each Apple Watch Series 11 comes with the watch, a Sport Band (S/M and M/L sizes), a 1m magnetic fast charger to USB-C cable, and documentation.',
+      },
+    ]}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    title="Save $100 Today!"
+    subtitle="Experience the future of personal health and connectivity. Order your Apple Watch Series 11 today with 25% off and get free shipping. Limited time offer!"
+    actions={[
+      { variant: 'primary', text: 'Shop Now - 25% Off', href: 'https://amzn.to/4kM9k8w', target: '_blank' },
+      { variant: 'secondary', text: 'Learn More', href: '/blog' },
+    ]}
+  />
+</Layout>

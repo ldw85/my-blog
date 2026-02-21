@@ -27,6 +27,7 @@ export const headerData = {
       text: '产品',
       links: [
         { text: 'Mac mini - AI Server', href: getPermalink('/product/mac-mini') },
+        { text: 'Apple Watch Series 11', href: getPermalink('/product/apple-watch') },
         { text: 'All Reviews', href: getBlogPermalink() },
       ],
     },
