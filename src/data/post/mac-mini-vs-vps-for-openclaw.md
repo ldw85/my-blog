@@ -82,13 +82,38 @@ For running OpenClaw + supporting services, this matters.
 - Disk failures
 - Migration hassles
 
-**Mac mini Advantages:**
-- Physical control
-- No provider dependency
-- Predictable performance
-- Silent operation
+### 4. Privacy and Security Concerns
 
-### 4. My Real Setup
+This is a critical consideration for personal AI assistants:
+
+**VPS Privacy Risks:**
+- Your OpenClaw will have access to sensitive account credentials (GitHub, X/Twitter, email, banking APIs)
+- These highly private keys are stored on third-party remote servers
+- Even with best practices, there's always some attack surface on cloud infrastructure
+- Data traverses the internet constantly, increasing exposure risk
+
+**Mac mini Privacy Advantages:**
+- All credentials stay on your local device
+- Use **1Password** or similar to manage secrets locally
+- No data leaves your home network unless you explicitly allow it
+- Complete physical and logical control over your AI assistant
+- Integrate with 1Password for secure credential management
+
+### 5. Workflow Integration
+
+**VPS Limitations:**
+- As a remote server, you can't just "open the desktop" to work
+- Need to upload files to VPS for OpenClaw to access them
+- Disconnected from your daily workflow
+- Can't easily share screen, drag-drop files, or collaborate in real-time
+
+**Mac mini Advantages:**
+- OpenClaw operates on your local machine, always ready
+- Seamlessly work alongside your AI assistant on the same desktop
+- Drag-and-drop files, share screens instantly
+- Natural human-AI collaboration — just turn on the monitor and work together
+
+### 6. My Real Setup
 
 | Component | My Setup |
 |-----------|----------|
@@ -137,6 +162,7 @@ To get the most out of your Mac mini for OpenClaw hosting:
 - Short-term projects only
 - Need geographically distributed access
 - Tech experts wanting full server control
+- Comfortable storing AI assistant credentials on cloud servers
 
 ## Who Should Use Mac mini?
 
@@ -145,6 +171,8 @@ To get the most out of your Mac mini for OpenClaw hosting:
 ✅ Need to run multiple services locally  
 ✅ Value noise-free operation  
 ✅ Want better performance per dollar  
+✅ **Privacy-conscious** — want full control over sensitive credentials  
+✅ Want seamless desktop collaboration with AI assistant  
 
 ---
 
