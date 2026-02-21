@@ -8,93 +8,202 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 
 const metadata = {
-  title: 'Mac mini M4 - The Ultimate Home AI Server',
-  description: 'Discover why Mac mini is the perfect home server for running AI agents like OpenClaw. Low power, silent, powerful.',
+  title: 'Mac mini M4 - The Ultimate Personal AI Server',
+  description: 'Transform your home with the most powerful Mac mini ever. Built for Apple Intelligence, perfect for running OpenClaw and AI agents 24/7.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Section -->
+  <!-- Hero Section - High Impact Marketing -->
   <Hero
-    tagline="Home AI Server Revolution"
-    title={<>Your Personal AI Team,<br /><span class="text-accent dark:text-white">One Mac mini Away</span></>}
+    tagline="🔥 Hot New Release 2024"
+    title={<>Meet the Most Powerful<br /><span class="text-blue-600 dark:text-blue-400">Mac mini Ever Built</span></>}
     subtitle={
       <>
-        Run OpenClaw, Claude, ChatGPT agents and more — 24/7. Silent, low-power, and powerful.
-        The Mac mini M4 is the perfect home server for AI enthusiasts and developers.
+        M4 chip with 10‑core CPU & 10‑core GPU.<br />
+        Built for Apple Intelligence. Starting at just <strong>$599</strong>.
       </>
     }
     actions={[
-      { variant: 'primary', text: 'Check Price on Amazon', href: 'https://www.amazon.com/dp/B0DLBTPDCS', target: '_blank', icon: 'tabler:shopping-cart' },
-      { variant: 'secondary', text: 'Read Our Review', href: '/blog' },
+      { variant: 'primary', text: 'Buy Now on Amazon', href: 'https://www.amazon.com/dp/B0DLBTPDCS', target: '_blank', icon: 'tabler:shopping-cart' },
+      { variant: 'secondary', text: 'Why Mac mini for AI?', href: '#why-macmini' },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&q=80',
-      alt: 'Mac mini - Ultimate Home AI Server',
+      alt: 'Mac mini M4 - Most Powerful Ever',
     }}
   />
 
+  <!-- Social Proof Banner -->
+  <div class="bg-gradient-to-r from-blue-600 to-purple-600 py-4">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-white font-semibold">
+        ⭐ <strong>4.8/5 Stars</strong> on Amazon · <strong>2,608 Reviews</strong> · #1 Best Seller in Desktop Computers
+      </p>
+    </div>
+  </div>
+
+  <!-- Why Mac mini for AI - The Key Value Prop -->
+  <div id="why-macmini" class="py-20 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4">Why Run Your AI Assistant on Mac mini?</h2>
+        <p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          OpenClaw, Claude, ChatGPT — run your personal AI team 24/7 at home. 
+          <span class="text-blue-600 font-semibold">Silent. Powerful. Private.</span>
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-5xl mb-4">🔇</div>
+          <h3 class="text-xl font-bold mb-3">Whisper Quiet</h3>
+          <p class="text-slate-600 dark:text-slate-300">
+            Fanless design means silent operation. No noisy data center in your living room. 
+            Place it anywhere — bedroom, office, living room. You'll forget it's there.
+          </p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-5xl mb-4">💰</div>
+          <h3 class="text-xl font-bold mb-3">Save $500+ Per Year</h3>
+          <p class="text-slate-600 dark:text-slate-300">
+            VPS costs $20-50/month = $240-600/year. Mac mini: $599 one-time. 
+            <span class="text-green-600 font-semibold">Break-even in 12-18 months, then pure savings.</span>
+          </p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-5xl mb-4">🛡️</div>
+          <h3 class="text-xl font-bold mb-3">Complete Privacy</h3>
+          <p class="text-slate-600 dark:text-slate-300">
+            Your AI assistant has access to sensitive accounts — GitHub, X, banking APIs. 
+            <span class="text-red-500 font-semibold">Keep them local, not on a cloud VPS.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Key Benefits -->
   <Features
-    title="Why Mac mini is Perfect for AI Agents"
-    subtitle="Everything you need to run your own AI infrastructure"
+    title="Everything You Need for AI"
+    subtitle="Power meets efficiency in the world's most versatile desktop"
     items={[
       {
-        title: '🔇 whisper_volume_off Whisper Quiet',
-        description: 'Fanless design means silent operation. No noisy data center, no disturbing your work or sleep. Place it anywhere in your home.',
-      },
-      {
-        title: '⚡ Energy Efficient',
-        description: 'Consumes only 30W at idle, up to 150W under load. Run 24/7 for cents a day vs. expensive VPS monthly fees.',
-      },
-      {
         title: '🚀 M4 Chip Power',
-        description: '10-core CPU + 10-core GPU delivers desktop-class performance. Handle multiple AI agents simultaneously without lag.',
+        description: '10-core CPU + 10-core GPU. Handle multiple AI agents simultaneously without lag.',
       },
       {
-        title: '🏠 Fully Local',
-        description: 'Your data stays at home. No cloud dependencies, no privacy concerns. Full control over your AI infrastructure.',
+        title: '🧠 Neural Engine',
+        description: '16-core Neural Engine with 38 TOPS. Perfect for local AI inference and Apple Intelligence.',
       },
       {
-        title: '💰 One-Time Investment',
-        description: 'No monthly VPS bills. Pay once, own forever. Save $500+ per year vs. cloud VPS hosting.',
+        title: '⚡ 120GB/s Memory Bandwidth',
+        description: 'Unified memory architecture. No swap latency, instant AI model loading.',
       },
       {
-        title: '🔄 Apple Ecosystem',
-        description: 'Seamless integration with iPhone, iPad, Apple Watch. Build sophisticated automation workflows across devices.',
+        title: '🔌 Rich Connectivity',
+        description: '3x Thunderbolt 4, USB-C front ports, HDMI, Gigabit Ethernet (upgradeable to 10Gb).',
+      },
+      {
+        title: '📦 Ultra Compact',
+        description: 'Just 5 x 5 x 2 inches. The smallest Mac ever. Fits anywhere.',
+      },
+      {
+        title: '🌡️ Energy Efficient',
+        description: 'Idle: ~30W | Under load: up to 150W. 24/7 operation for cents a day.',
       },
     ]}
   />
 
-  <!-- OpenClaw Integration -->
+  <!-- OpenClaw Integration - The Primary Use Case -->
   <Content
-    title="Perfect for OpenClaw & AI Agents"
-    subtitle="Run your personal AI assistant 24/7"
+    title="Perfect for OpenClaw AI Assistant"
+    subtitle="Run your personal AI 24/7 at home"
     items={[
       {
-        title: 'Deploy OpenClaw Effortlessly',
-        description: 'OpenClaw runs natively on macOS. Docker, Homebrew, or direct installation — your choice. Set up in minutes, not hours.',
+        title: 'Deploy in Minutes',
+        description: 'OpenClaw runs natively on macOS. Docker, Homebrew, or direct installation — you choose.',
       },
       {
-        title: 'Run Multiple Agents in Parallel',
-        description: 'M4 chip handles 5+ concurrent AI agent sessions. Build a team of specialized assistants: researcher, writer, coder, analyst.',
+        title: 'Multiple Agents, One Device',
+        description: 'M4 handles 5+ concurrent AI sessions. Build a team: researcher, writer, coder, analyst.',
       },
       {
         title: 'Always-On Personal Assistant',
-        description: 'Wake your AI assistant anytime via Siri, Shortcuts, or local network. No waiting for cloud services, no downtime.',
+        description: 'Wake AI anytime via Siri, Shortcuts, or network. No waiting for cloud services.',
       },
       {
-        title: 'Connect from Anywhere',
-        description: 'Use Cloudflare Tunnel, Tailscale, or ngrok to access your home AI server from anywhere in the world.',
+        title: 'Remote Access Ready',
+        description: 'Cloudflare Tunnel, Tailscale, or ngrok — access your home AI from anywhere.',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
-      alt: 'AI Agents Architecture',
+      alt: 'OpenClaw AI Assistant on Mac mini',
     }}
   />
 
-  <!-- Specs -->
+  <!-- Comparison Table -->
+  <div class="py-20 bg-slate-50 dark:bg-slate-900">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Mac mini vs VPS for AI</h2>
+      
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white dark:bg-slate-800 rounded-2xl shadow-lg overflow-hidden">
+          <thead class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+            <tr>
+              <th class="px-6 py-4 text-left">Feature</th>
+              <th class="px-6 py-4 text-center">Mac mini M4</th>
+              <th class="px-6 py-4 text-center">Typical VPS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-slate-100 dark:border-slate-700">
+              <td class="px-6 py-4 font-semibold">Price</td>
+              <td class="px-6 py-4 text-center text-green-600 font-bold">$599 (one-time)</td>
+              <td class="px-6 py-4 text-center">$20-50/month</td>
+            </tr>
+            <tr class="border-b border-slate-100 dark:border-slate-700">
+              <td class="px-6 py-4 font-semibold">Performance</td>
+              <td class="px-6 py-4 text-center text-green-600 font-bold">10-core CPU/GPU</td>
+              <td class="px-6 py-4 text-center">2-4 cores</td>
+            </tr>
+            <tr class="border-b border-slate-100 dark:border-slate-700">
+              <td class="px-6 py-4 font-semibold">Memory</td>
+              <td class="px-6 py-4 text-center text-green-600 font-bold">16GB+ Unified</td>
+              <td class="px-6 py-4 text-center">4-8GB</td>
+            </tr>
+            <tr class="border-b border-slate-100 dark:border-slate-700">
+              <td class="px-6 py-4 font-semibold">Privacy</td>
+              <td class="px-6 py-4 text-center text-green-600 font-bold">✅ Fully Local</td>
+              <td class="px-6 py-4 text-center">❌ Cloud</td>
+            </tr>
+            <tr class="border-b border-slate-100 dark:border-slate-700">
+              <td class="px-6 py-4 font-semibold">Noise</td>
+              <td class="px-6 py-4 text-center text-green-600 font-bold">✅ Silent</td>
+              <td class="px-6 py-4 text-center">N/A</td>
+            </tr>
+            <tr>
+              <td class="px-6 py-4 font-semibold">Resale Value</td>
+              <td class="px-6 py-4 text-center text-green-600 font-bold">~50% after 3 years</td>
+              <td class="px-6 py-4 text-center">$0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <p class="text-center mt-8 text-lg">
+        <span class="text-blue-600 font-bold">Verdict:</span> Mac mini pays for itself in 12-18 months — then you own it forever.
+      </p>
+    </div>
+  </div>
+
+  <!-- Technical Specs -->
   <Features
     title="Technical Specifications"
     subtitle="M4 chip configuration for optimal AI performance"
@@ -106,87 +215,124 @@ const metadata = {
       },
       {
         title: 'Neural Engine',
-        description: '16-core Neural Engine for ML tasks, optimized for local AI inference',
+        description: '16-core Neural Engine • 38 TOPS • Hardware-accelerated ray tracing',
       },
       {
         title: 'Memory',
-        description: '16GB unified memory (configurable to 32GB). Bandwidth: 120GB/s',
+        description: '16GB unified memory (configurable to 24GB/32GB) • 120GB/s bandwidth',
       },
       {
         title: 'Storage',
-        description: '256GB SSD (configurable to 2TB). Fast read/write for quick model loading',
+        description: '256GB SSD (configurable to 512GB/1TB/2TB) • Fast NVMe',
+      },
+      {
+        title: 'Display Support',
+        description: 'Up to 3 displays: 2x 6K Thunderbolt + 1x 5K/8K HDMI',
       },
       {
         title: 'Connectivity',
-        description: 'Gigabit Ethernet, Wi-Fi 6E, Bluetooth 5.3, 3x Thunderbolt 4 ports',
+        description: 'Wi-Fi 6E, Bluetooth 5.3, Gigabit Ethernet (10Gb option), 3x Thunderbolt 4',
       },
       {
-        title: 'Power Consumption',
-        description: 'Idle: ~30W | Under load: up to 150W | Energy Star certified',
+        title: 'Size & Weight',
+        description: '5 × 5 × 2 inches • 1.5 lbs — smallest Mac ever',
+      },
+      {
+        title: 'Power',
+        description: 'Idle: ~30W • Max: 150W • Energy Star certified',
       },
     ]}
-  />
-
-  <!-- Comparison -->
-  <Content
-    title="Mac mini vs VPS for AI Agents"
-    subtitle="Why more developers are switching to local hosting"
-    isReversed={true}
-    items={[
-      {
-        title: 'Cost Comparison',
-        description: 'VPS: $20-50/month = $240-600/year. Mac mini: ~$599 one-time. Break-even in 12-18 months, then savings begin.',
-      },
-      {
-        title: 'Performance',
-        description: 'M4 outperforms typical VPS 2-3x in single-threaded tasks. Unified memory architecture eliminates swap latency.',
-      },
-      {
-        title: 'Privacy & Security',
-        description: 'VPS: Your data on shared infrastructure. Mac mini: Complete local control. HIPAA, GDPR compliance made easier.',
-      },
-      {
-        title: 'Reliability',
-        description: 'VPS: Dependent on provider uptime, regional outages. Mac mini: Your device, your rules, your uptime.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80',
-      alt: 'Server Comparison',
-    }}
   />
 
   <!-- Use Cases -->
   <Testimonials
-    title="Popular Use Cases"
-    subtitle="What you can run on your Mac mini AI server"
+    title="What Can You Run?"
+    subtitle="More than just an AI server"
     testimonials={[
       {
-        title: 'OpenClaw AI Assistant',
-        description: 'Personal AI assistant powered by Claude/GPT models. Text, voice, and automation capabilities. 24/7 availability.',
+        title: '🤖 OpenClaw AI Assistant',
+        description: 'Personal AI powered by Claude/GPT. Text, voice, automation. 24/7 availability.',
         author: 'Primary Use Case',
         avatar: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=100&q=80',
       },
       {
-        title: 'Home Automation Hub',
-        description: 'Run HomeBridge, Apple HomeKit, and AI agents together. Voice-controlled smart home with local processing.',
+        title: '🏠 Smart Home Hub',
+        description: 'HomeBridge, Apple HomeKit, AI agents. Voice-controlled automation.',
         author: 'Smart Home',
         avatar: 'https://images.unsplash.com/photo-1558002038-1055907df827?w=100&q=80',
       },
       {
-        title: 'Development Server',
-        description: 'Local CI/CD, testing environments, containerized apps. macOS-native development without cloud dependencies.',
+        title: '💻 Development Server',
+        description: 'Local CI/CD, testing, containers. Native macOS dev without cloud.',
         author: 'Development',
         avatar: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=100&q=80',
       },
       {
-        title: 'Media Server',
-        description: 'Plex/Jellyfin server, Time Machine backup, local cloud storage. All your media, always accessible.',
+        title: '🎬 Media Server',
+        description: 'Plex/Jellyfin, Time Machine, local cloud. All your media, always accessible.',
         author: 'Entertainment',
         avatar: 'https://images.unsplash.com/photo-1484712401471-05c21fccdbf7?w=100&q=80',
       },
     ]}
   />
+
+  <!-- Pricing & Accessories -->
+  <div class="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">Choose Your Configuration</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Base Model -->
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+          <h3 class="text-2xl font-bold mb-2">Mac mini M4</h3>
+          <p class="text-slate-300 mb-4">Perfect for starters</p>
+          <div class="text-4xl font-bold mb-6">$599</div>
+          <ul class="space-y-3 mb-8 text-slate-300">
+            <li>✅ M4 chip (10-core)</li>
+            <li>✅ 16GB unified memory</li>
+            <li>✅ 256GB SSD</li>
+            <li>✅ Gigabit Ethernet</li>
+          </ul>
+          <a href="https://www.amazon.com/dp/B0DLBTPDCS" target="_blank" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
+            Buy Now
+          </a>
+        </div>
+        
+        <!-- Popular -->
+        <div class="bg-white backdrop-blur rounded-2xl p-8 border-2 border-blue-500 transform scale-105">
+          <div class="bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded-full inline-block mb-2">MOST POPULAR</div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-2">Mac mini M4</h3>
+          <p class="text-slate-600 mb-4">Best value for AI</p>
+          <div class="text-4xl font-bold text-slate-900 mb-6">$799</div>
+          <ul class="space-y-3 mb-8 text-slate-700">
+            <li>✅ M4 chip (10-core)</li>
+            <li>✅ 24GB unified memory</li>
+            <li>✅ 512GB SSD</li>
+            <li>✅ 10Gb Ethernet option</li>
+          </ul>
+          <a href="https://www.amazon.com/dp/B0DLBTPDCS" target="_blank" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
+            Buy Now
+          </a>
+        </div>
+        
+        <!-- Pro -->
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-8 border border-white/20">
+          <h3 class="text-2xl font-bold mb-2">Mac mini M4 Pro</h3>
+          <p class="text-slate-300 mb-4">Maximum performance</p>
+          <div class="text-4xl font-bold mb-6">$1,399</div>
+          <ul class="space-y-3 mb-8 text-slate-300">
+            <li>✅ M4 Pro chip (12-core)</li>
+            <li>✅ 24GB unified memory</li>
+            <li>✅ 512GB SSD</li>
+            <li>✅ 10-core GPU</li>
+          </ul>
+          <a href="https://www.amazon.com/dp/B0DLBTPDCS" target="_blank" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-colors">
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- FAQ -->
   <FAQs
@@ -194,37 +340,37 @@ const metadata = {
     items={[
       {
         title: 'Can Mac mini run 24/7?',
-        description: 'Absolutely. Mac mini is designed for continuous operation. The fanless M4 model runs cool and quiet around the clock.',
+        description: 'Absolutely. Mac mini is designed for continuous operation. The M4 model runs cool and quiet around the clock.',
       },
       {
         title: 'How much does electricity cost?',
-        description: 'At ~30W idle (about $0.004/hour), running 24/7 costs approximately $3-4 per month. Under full load, maybe $8-10/month depending on your electricity rates.',
+        description: 'At ~30W idle (~$0.004/hour), running 24/7 costs ~$3-4/month. Under full load: $8-10/month.',
       },
       {
         title: 'Do I need technical skills?',
-        description: 'Basic comfort with computers recommended. We provide setup guides for OpenClaw and other tools. Most users are up and running in under an hour.',
+        description: 'Basic comfort recommended. We provide setup guides. Most users are up and running in under an hour.',
       },
       {
         title: 'Can I access it remotely?',
-        description: 'Yes! Tools like Cloudflare Tunnel, Tailscale, or ngrok make your home Mac mini accessible from anywhere with an internet connection.',
-      },
-      {
-        title: 'What about internet speed?',
-        description: 'Local network access is instant. For remote access, a standard broadband connection (20+ Mbps) is sufficient for most AI agent interactions.',
+        description: 'Yes! Cloudflare Tunnel, Tailscale, or ngrok make your home Mac mini accessible from anywhere.',
       },
       {
         title: 'Is it better than Mac Studio?',
-        description: 'For most AI agent use cases, Mac mini M4 offers the best value. Mac Studio makes sense only if you need extreme GPU performance for large model inference.',
+        description: 'For most AI use cases, Mac mini M4 offers the best value. Mac Studio makes sense only for extreme GPU workloads.',
+      },
+      {
+        title: 'What about Apple Intelligence?',
+        description: 'M4 is built for Apple Intelligence. Run local AI features without sending data to the cloud.',
       },
     ]}
   />
 
-  <!-- CTA -->
+  <!-- Final CTA -->
   <CallToAction
     title="Ready to Build Your AI Team?"
-    subtitle="Join thousands of developers running their personal AI assistants on Mac mini. One-time investment, endless possibilities."
+    subtitle="Join thousands running personal AI assistants on Mac mini. One-time investment. Endless possibilities."
     actions={[
-      { variant: 'primary', text: 'Buy on Amazon', href: 'https://www.amazon.com/dp/B0DLBTPDCS', target: '_blank' },
+      { variant: 'primary', text: 'Buy on Amazon →', href: 'https://www.amazon.com/dp/B0DLBTPDCS', target: '_blank' },
       { variant: 'secondary', text: 'Read Full Review', href: '/blog' },
     ]}
   />
