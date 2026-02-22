@@ -7,20 +7,20 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import { getBlogPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: '科技优选 - 你的消费电子与AI工具指南',
-  description: '专业、客观的消费电子评测与AI工具推荐。涵盖耳机、手机、机械键盘、AI软件等品类，帮助你做出更好的购买决策。',
+  title: 'TechReviews - Your Guide to Consumer Electronics & AI Tools',
+  description: 'Expert, unbiased reviews of consumer electronics and AI tools. Headphones, phones, mechanical keyboards, AI software and more.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero 区域 -->
+  <!-- Hero Section -->
   <Hero
-    tagline="科技优选"
-    title="你的消费电子与AI工具指南"
-    subtitle="专业、客观的产品评测与推荐。<br />帮你找到最适合的耳机、手机、键盘、AI工具。"
+    tagline="TechReviews"
+    title="Your Guide to Consumer Electronics & AI Tools"
+    subtitle="Expert, unbiased product reviews and recommendations.<br />Find the perfect headphones, phones, keyboards, and AI tools."
     actions={[
-      { variant: 'primary', text: '开始探索', href: '#categories' },
-      { variant: 'secondary', text: '查看榜单', href: '/blog' },
+      { variant: 'primary', text: 'Start Exploring', href: '#categories' },
+      { variant: 'secondary', text: 'View Rankings', href: '/blog' },
     ]}
     image={{
       src: '~/assets/images/hero-image.png',
@@ -28,11 +28,11 @@ const metadata = {
     }}
   />
 
-  <!-- 两大分类入口 -->
+  <!-- Two Main Categories -->
   <section id="categories" class="py-16 not-prose">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- 消费电子 -->
+        <!-- Consumer Electronics -->
         <a
           href="/blog"
           class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
@@ -42,16 +42,16 @@ const metadata = {
           <div class="relative z-10">
             <div class="text-5xl mb-4">🎧</div>
             <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-              消费电子
+              Consumer Electronics
             </h3>
             <p class="text-slate-300 mb-4">
-              硬件产品评测、对比、选购指南
+              Hardware product reviews, comparisons, and buying guides
             </p>
             <div class="flex flex-wrap gap-2 text-sm">
-              <span class="px-3 py-1 bg-white/10 rounded-full text-slate-300">耳机</span>
-              <span class="px-3 py-1 bg-white/10 rounded-full text-slate-300">手机</span>
-              <span class="px-3 py-1 bg-white/10 rounded-full text-slate-300">键盘</span>
-              <span class="px-3 py-1 bg-white/10 rounded-full text-slate-300">智能家居</span>
+              <span class="px-3 py-1 bg-white/10 rounded-full text-slate-300">Headphones</span>
+              <span class="px-3 py-1 bg-white/10 rounded-full text-slate-300">Phones</span>
+              <span class="px-3 py-1 bg-white/10 rounded-full text-slate-300">Keyboards</span>
+              <span class="px-3 py-1 bg-white/10 rounded-full text-slate-300">Smart Home</span>
             </div>
           </div>
         </a>
@@ -66,16 +66,16 @@ const metadata = {
           <div class="relative z-10">
             <div class="text-5xl mb-4">🤖</div>
             <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
-              AI & SaaS 工具
+              AI & SaaS Tools
             </h3>
             <p class="text-purple-200 mb-4">
-              AI 产品、SaaS 工具、科技资讯
+              AI products, SaaS tools, and tech news
             </p>
             <div class="flex flex-wrap gap-2 text-sm">
               <span class="px-3 py-1 bg-white/10 rounded-full text-purple-200">ChatGPT</span>
               <span class="px-3 py-1 bg-white/10 rounded-full text-purple-200">Claude</span>
               <span class="px-3 py-1 bg-white/10 rounded-full text-purple-200">SaaS</span>
-              <span class="px-3 py-1 bg-white/10 rounded-full text-purple-200">效率工具</span>
+              <span class="px-3 py-1 bg-white/10 rounded-full text-purple-200">Productivity</span>
             </div>
           </div>
         </a>
@@ -83,21 +83,21 @@ const metadata = {
     </div>
   </section>
 
-  <!-- 最新评测 - 消费电子 -->
+  <!-- Latest Reviews -->
   <BlogLatestPosts
-    title="🎯 最新评测"
-    information="消费电子新品评测与深度体验报告"
+    title="🎯 Latest Reviews"
+    information="Fresh product reviews and in-depth体验 reports"
     count={6}
   />
 
-  <!-- 热门榜单 -->
+  <!-- Popular Rankings -->
   <section class="py-16 not-prose">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-8 text-center">
-        📊 热门榜单
+        📊 Popular Rankings
       </h2>
       <div class="grid md:grid-cols-2 gap-8">
-        <!-- 消费电子榜单 -->
+        <!-- Electronics Rankings -->
         <a
           href="/blog"
           class="block p-6 rounded-xl bg-white dark:bg-slate-800 shadow-md hover:shadow-lg transition-shadow"
@@ -105,27 +105,27 @@ const metadata = {
           <div class="flex items-center gap-4 mb-4">
             <div class="text-3xl">🏆</div>
             <div>
-              <h3 class="text-xl font-semibold">消费电子榜单</h3>
-              <p class="text-sm text-muted">2025 年度推荐</p>
+              <h3 class="text-xl font-semibold">Electronics Rankings</h3>
+              <p class="text-sm text-muted">2025 Top Picks</p>
             </div>
           </div>
           <ul class="space-y-3">
             <li class="flex items-center gap-2">
               <span class="text-blue-600 font-bold">1</span>
-              <span>Sony WH-1000XM5 评测</span>
+              <span>Sony WH-1000XM5 Review</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="text-blue-600 font-bold">2</span>
-              <span>iPhone 16 Pro 深度体验</span>
+              <span>iPhone 16 Pro Deep Dive</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="text-blue-600 font-bold">3</span>
-              <span>Keychron Q1 Pro 机械键盘</span>
+              <span>Keychron Q1 Pro Mechanical Keyboard</span>
             </li>
           </ul>
         </a>
 
-        <!-- AI 工具榜单 -->
+        <!-- AI Tools Rankings -->
         <a
           href="/blog"
           class="block p-6 rounded-xl bg-white dark:bg-slate-800 shadow-md hover:shadow-lg transition-shadow"
@@ -133,22 +133,22 @@ const metadata = {
           <div class="flex items-center gap-4 mb-4">
             <div class="text-3xl">⚡</div>
             <div>
-              <h3 class="text-xl font-semibold">AI 工具榜单</h3>
-              <p class="text-sm text-muted">提升效率必看</p>
+              <h3 class="text-xl font-semibold">AI Tools Rankings</h3>
+              <p class="text-sm text-muted">Boost Your Productivity</p>
             </div>
           </div>
           <ul class="space-y-3">
             <li class="flex items-center gap-2">
               <span class="text-purple-600 font-bold">1</span>
-              <span>ChatGPT vs Claude 对比</span>
+              <span>ChatGPT vs Claude Comparison</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="text-purple-600 font-bold">2</span>
-              <span>Cursor AI 编程助手评测</span>
+              <span>Cursor AI Coding Assistant Review</span>
             </li>
             <li class="flex items-center gap-2">
               <span class="text-purple-600 font-bold">3</span>
-              <span>Perplexity AI 搜索体验</span>
+              <span>Perplexity AI Search Experience</span>
             </li>
           </ul>
         </a>
@@ -156,30 +156,30 @@ const metadata = {
     </div>
   </section>
 
-  <!-- 对比评测 -->
+  <!-- Comparison Reviews -->
   <section class="py-16 not-prose bg-slate-50 dark:bg-slate-900">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <h2 class="text-3xl font-bold tracking-tight sm:text-4xl mb-8 text-center">
-        ⚖️ 精选对比
+        ⚖️ Top Comparisons
       </h2>
       <div class="grid md:grid-cols-3 gap-6">
         <a href="/blog" class="block p-6 rounded-xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-shadow">
-          <div class="text-sm text-blue-600 mb-2">耳机对比</div>
+          <div class="text-sm text-blue-600 mb-2">Headphone Comparison</div>
           <h3 class="text-lg font-semibold mb-2">Sony XM5 vs Bose QC45</h3>
-          <p class="text-sm text-muted mb-4">2025 年降噪耳机王者之争</p>
-          <span class="text-blue-600 text-sm font-medium">阅读全文 →</span>
+          <p class="text-sm text-muted mb-4">2025 Noise-Canceling King</p>
+          <span class="text-blue-600 text-sm font-medium">Read More →</span>
         </a>
         <a href="/blog" class="block p-6 rounded-xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-shadow">
-          <div class="text-sm text-purple-600 mb-2">AI 工具对比</div>
+          <div class="text-sm text-purple-600 mb-2">AI Tools Comparison</div>
           <h3 class="text-lg font-semibold mb-2">ChatGPT vs Claude</h3>
-          <p class="text-sm text-muted mb-4">哪个 AI 助手更适合你？</p>
-          <span class="text-purple-600 text-sm font-medium">阅读全文 →</span>
+          <p class="text-sm text-muted mb-4">Which AI assistant fits you better?</p>
+          <span class="text-purple-600 text-sm font-medium">Read More →</span>
         </a>
         <a href="/blog" class="block p-6 rounded-xl bg-white dark:bg-slate-800 shadow-sm hover:shadow-md transition-shadow">
-          <div class="text-sm text-green-600 mb-2">机械键盘对比</div>
+          <div class="text-sm text-green-600 mb-2">Keyboard Comparison</div>
           <h3 class="text-lg font-semibold mb-2">Keychron vs NuPhy</h3>
-          <p class="text-sm text-muted mb-4">客制化键盘哪个更值得买？</p>
-          <span class="text-green-600 text-sm font-medium">阅读全文 →</span>
+          <p class="text-sm text-muted mb-4">Which custom keyboard is worth it?</p>
+          <span class="text-green-600 text-sm font-medium">Read More →</span>
         </a>
       </div>
     </div>
@@ -187,10 +187,10 @@ const metadata = {
 
   <!-- CTA -->
   <CallToAction
-    title="订阅最新评测"
-    subtitle="每周获取最新产品评测与推荐，不错过任何好产品"
+    title="Subscribe to Latest Reviews"
+    subtitle="Get weekly product reviews and recommendations delivered to you"
     actions={[
-      { variant: 'primary', text: '立即订阅', href: '/rss.xml' },
+      { variant: 'primary', text: 'Subscribe Now', href: '/rss.xml' },
     ]}
   />
 </Layout>
