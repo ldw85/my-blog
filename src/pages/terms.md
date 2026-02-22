@@ -1,44 +1,44 @@
 ---
-title: '服务条款'
+title: 'Terms of Service'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-最后更新：2025年2月20日
+Last updated: February 20, 2025
 
-在使用我们的服务之前，请仔细阅读这些服务条款。
+Please read these Terms of Service carefully before using our Service.
 
-## 接受条款
+## Acceptance of Terms
 
-访问或使用科技优选网站即表示您同意受这些条款的约束。如果您不同意任何条款，则不应使用我们的服务。
+By accessing or using the TechReviews website, you agree to be bound by these Terms. If you disagree with any part of these terms, you should not use our Service.
 
-## 服务描述
+## Service Description
 
-科技优选提供消费电子和AI工具的产品评测、内容推荐服务。我们努力提供准确、客观的信息，但不对内容完全的准确性做出保证。
+TechReviews provides product reviews and content recommendations for consumer electronics and AI tools. We strive to provide accurate, unbiased information, but we do not guarantee the complete accuracy of all content.
 
-## 用户责任
+## User Responsibilities
 
-作为用户，您同意：
-- 不以任何非法方式使用服务
-- 不尝试通过黑客攻击或其他方式未经授权访问服务
-- 不传播任何病毒或其他恶意代码
-- 不发布任何虚假或误导性内容
+As a user, you agree to:
+- Not use the Service for any unlawful purpose
+- Not attempt to gain unauthorized access to the Service through hacking or other means
+- Not distribute any viruses or other malicious code
+- Not post any false or misleading content
 
-## 内容所有权
+## Content Ownership
 
-网站上所有内容（包括文本、图片、评测文章）归科技优选所有。未经授权，禁止复制、分发或使用这些内容。
+All content on the website (including text, images, and review articles) is owned by TechReviews. Unauthorized copying, distribution, or use of this content is prohibited.
 
-## 免责声明
+## Disclaimer
 
-服务按"原样"提供。我们不对服务的准确性、可靠性或完整性做出任何明示或暗示的保证。
+The Service is provided "as is." We make no express or implied warranties regarding the accuracy, reliability, or completeness of the Service.
 
-## 链接到第三方网站
+## Links to Third-Party Websites
 
-我们的服务可能包含指向第三方网站的链接。我们对这些网站的内容不承担责任。
+Our Service may contain links to third-party websites. We are not responsible for the content of these websites.
 
-## 更改条款
+## Changes to Terms
 
-我们可能随时修改这些条款。更改将在本页面上发布。
+We may modify these Terms at any time. Changes will be posted on this page.
 
-## 联系方式
+## Contact Information
 
-如果您对这些条款有任何疑问，请联系我们：contact@techreviews.example.com
+If you have any questions about these Terms, please contact us: contact@techreviews.example.com

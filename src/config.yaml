@@ -1,5 +1,5 @@
 site:
-  name: 科技优选
+  name: TechReviews
   site: 'https://techreviews.example.com'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: 科技优选
-    template: '%s — 科技优选'
-  description: "专业、客观的消费电子评测与AI工具推荐。帮你找到最适合的耳机、手机、键盘、AI工具。"
+    default: TechReviews
+    template: '%s — TechReviews'
+  description: "Expert, unbiased reviews of consumer electronics and AI tools. Find the best headphones, phones, keyboards, and AI tools."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: 科技优选
+    site_name: TechReviews
     images:
       - url: '~/assets/images/default.png'
         width: 1200
@@ -28,7 +28,7 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: zh-CN
+  language: en-US
   textDirection: ltr
 
 apps:

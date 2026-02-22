@@ -1,59 +1,59 @@
 ---
-title: '隐私政策'
+title: 'Privacy Policy'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-最后更新：2025年2月20日
+Last updated: February 20, 2025
 
-本隐私政策描述我们关于收集、使用和披露您在使用服务时信息的政策和程序，并告诉您关于隐私权利和法律如何保护您。
+This Privacy Policy describes our policies and procedures regarding the collection, use, and disclosure of your information when you use the Service, and tells you about your privacy rights and how the law protects you.
 
-我们使用您的个人信息来提供和改进服务。使用服务即表示您同意按照本隐私政策收集和使用信息。
+We use your personal data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy.
 
-## 信息收集
+## Information Collection
 
-### 我们收集的信息
+### Information We Collect
 
-**个人信息**：当您订阅Newsletter、发表评论或联系我们时，我们可能收集您的个人信息，包括：
-- 姓名
-- 邮箱地址
-- 评论内容
+**Personal Information**: When you subscribe to our newsletter, comment, or contact us, we may collect personal information including:
+- Name
+- Email address
+- Comment content
 
-**使用数据**：我们自动收集访问信息，包括：
-- 访问日期和时间
-- 浏览器类型和版本
-- 设备信息
+**Usage Data**: We automatically collect information when you access the Service, including:
+- Access date and time
+- Browser type and version
+- Device information
 
-## 信息使用
+## Use of Information
 
-我们将从您收集的信息用于：
-- 提供和维护我们的服务
-- 通知您有关服务的更新
-- 回复您的评论和咨询
-- 提供客户支持
-- 改进我们的服务
+We use the information we collect to:
+- Provide and maintain our Service
+- Notify you about changes to our Service
+- Respond to your comments and inquiries
+- Provide customer support
+- Improve our Service
 
-## 信息共享
+## Information Sharing
 
-我们不会出售您的个人信息。我们可能与以下第三方共享信息：
-- 服务提供商（用于帮助我们提供服务）
-- 法律要求时（遵守法律或保护权利）
+We do not sell your personal information. We may share information with third parties including:
+- Service providers (to help us provide our Service)
+- When required by law (to comply with legal obligations or protect rights)
 
-## Cookie
+## Cookies
 
-我们使用 Cookie 来改善您的体验。您可以通过浏览器设置拒绝 Cookie，但这可能影响某些功能。
+We use cookies to enhance your experience. You can refuse cookies through your browser settings, but this may affect certain functionality.
 
-## 第三方链接
+## Third-Party Links
 
-我们的服务可能包含指向第三方网站的链接。我们不对这些网站的内容或隐私政策负责。
+Our Service may contain links to third-party websites. We are not responsible for the content or privacy practices of these websites.
 
-## 儿童隐私
+## Children's Privacy
 
-我们的服务不面向 13 岁以下儿童。我们不会故意收集儿童的个人信息。
+Our Service is not intended for children under 13. We do not knowingly collect personal information from children.
 
-## 更改
+## Changes
 
-我们可能随时更新本隐私政策。更改将在本页面上发布，更新日期将显示在页面顶部。
+We may update this Privacy Policy from time to time. Changes will be posted on this page with the updated date at the top.
 
-## 联系我们
+## Contact Us
 
-如果您对本隐私政策有任何问题，请联系我们：contact@techreviews.example.com
+If you have any questions about this Privacy Policy, please contact us: contact@techreviews.example.com

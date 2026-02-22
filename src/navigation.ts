@@ -3,28 +3,28 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: '消费电子',
+      text: 'Electronics',
       links: [
-        { text: '耳机音频', href: getPermalink('audio', 'category') },
-        { text: '智能家居', href: getPermalink('smart-home', 'category') },
-        { text: '手机平板', href: getPermalink('mobile', 'category') },
-        { text: '电脑设备', href: getPermalink('computing', 'category') },
-        { text: '键鼠外设', href: getPermalink('peripherals', 'category') },
-        { text: '苹果生态', href: getPermalink('apple', 'category') },
+        { text: 'Audio & Headphones', href: getPermalink('audio', 'category') },
+        { text: 'Smart Home', href: getPermalink('smart-home', 'category') },
+        { text: 'Phones & Tablets', href: getPermalink('mobile', 'category') },
+        { text: 'Computers', href: getPermalink('computing', 'category') },
+        { text: 'Peripherals', href: getPermalink('peripherals', 'category') },
+        { text: 'Apple', href: getPermalink('apple', 'category') },
       ],
     },
     {
       text: 'AI & SaaS',
       links: [
-        { text: 'AI 工具', href: getPermalink('ai-tools', 'category') },
-        { text: 'AI 资讯', href: getPermalink('ai-news', 'category') },
-        { text: 'SaaS 工具', href: getPermalink('saas', 'category') },
-        { text: '开源项目', href: getPermalink('open-source', 'category') },
-        { text: '生产力', href: getPermalink('productivity', 'category') },
+        { text: 'AI Tools', href: getPermalink('ai-tools', 'category') },
+        { text: 'AI News', href: getPermalink('ai-news', 'category') },
+        { text: 'SaaS Tools', href: getPermalink('saas', 'category') },
+        { text: 'Open Source', href: getPermalink('open-source', 'category') },
+        { text: 'Productivity', href: getPermalink('productivity', 'category') },
       ],
     },
     {
-      text: '产品',
+      text: 'Products',
       links: [
         { text: 'Mac mini - AI Server', href: getPermalink('/product/mac-mini') },
         { text: 'Apple Watch Series 11', href: getPermalink('/product/apple-watch') },
@@ -32,11 +32,11 @@ export const headerData = {
       ],
     },
     {
-      text: '关于',
+      text: 'About',
       links: [
-        { text: '关于我们', href: getPermalink('/about') },
-        { text: '联系方式', href: getPermalink('/contact') },
-        { text: '投稿合作', href: getPermalink('/contact') },
+        { text: 'About Us', href: getPermalink('/about') },
+        { text: 'Contact', href: getPermalink('/contact') },
+        { text: 'Contribute', href: getPermalink('/contact') },
       ],
     },
   ],
@@ -46,51 +46,51 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: '内容分类',
+      title: 'Categories',
       links: [
-        { text: '消费电子', href: getBlogPermalink() },
+        { text: 'Consumer Electronics', href: getBlogPermalink() },
         { text: 'AI & SaaS', href: getBlogPermalink() },
-        { text: '热门榜单', href: getBlogPermalink() },
-        { text: '对比评测', href: getBlogPermalink() },
+        { text: 'Top Rankings', href: getBlogPermalink() },
+        { text: 'Comparisons', href: getBlogPermalink() },
       ],
     },
     {
-      title: '消费电子',
+      title: 'Electronics',
       links: [
-        { text: '耳机音频', href: getPermalink('audio', 'category') },
-        { text: '智能家居', href: getPermalink('smart-home', 'category') },
-        { text: '手机平板', href: getPermalink('mobile', 'category') },
-        { text: '键鼠外设', href: getPermalink('peripherals', 'category') },
+        { text: 'Audio & Headphones', href: getPermalink('audio', 'category') },
+        { text: 'Smart Home', href: getPermalink('smart-home', 'category') },
+        { text: 'Phones & Tablets', href: getPermalink('mobile', 'category') },
+        { text: 'Peripherals', href: getPermalink('peripherals', 'category') },
       ],
     },
     {
       title: 'AI & SaaS',
       links: [
-        { text: 'AI 工具', href: getPermalink('ai-tools', 'category') },
-        { text: 'AI 资讯', href: getPermalink('ai-news', 'category') },
-        { text: 'SaaS 工具', href: getPermalink('saas', 'category') },
-        { text: '开源项目', href: getPermalink('open-source', 'category') },
+        { text: 'AI Tools', href: getPermalink('ai-tools', 'category') },
+        { text: 'AI News', href: getPermalink('ai-news', 'category') },
+        { text: 'SaaS Tools', href: getPermalink('saas', 'category') },
+        { text: 'Open Source', href: getPermalink('open-source', 'category') },
       ],
     },
     {
-      title: '其他',
+      title: 'More',
       links: [
-        { text: '关于我们', href: getPermalink('/about') },
-        { text: '联系方式', href: getPermalink('/contact') },
-        { text: '隐私政策', href: getPermalink('/privacy') },
-        { text: '服务条款', href: getPermalink('/terms') },
+        { text: 'About Us', href: getPermalink('/about') },
+        { text: 'Contact', href: getPermalink('/contact') },
+        { text: 'Privacy Policy', href: getPermalink('/privacy') },
+        { text: 'Terms of Service', href: getPermalink('/terms') },
       ],
     },
   ],
   secondaryLinks: [
-    { text: '隐私政策', href: getPermalink('/privacy') },
-    { text: '服务条款', href: getPermalink('/terms') },
+    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Terms of Service', href: getPermalink('/terms') },
   ],
   socialLinks: [
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: '#' },
   ],
   footNote: `
-    © 2025 科技优选 · 你的消费电子与AI工具指南
+    © 2025 TechReviews - Your Guide to Consumer Electronics & AI Tools
   `,
 };
