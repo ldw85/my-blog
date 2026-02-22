@@ -8,5 +8,4 @@ cwd = "."
 [build.environment]
 NODE_VERSION = "20"
 
-[pages]
-build_output_dir = "./dist"
+pages_build_output_dir = "./dist"
