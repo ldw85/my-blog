@@ -19,21 +19,21 @@ const { page, category } = Astro.props as Props;
 
 const currentPage = page.currentPage ?? 1;
 
-// 分类映射
+// Category mapping
 const categoryInfo: Record<string, { emoji: string; desc: string }> = {
-  'Audio': { emoji: '🎧', desc: '耳机、音箱等音频设备评测' },
-  'Smart Home': { emoji: '🏠', desc: '智能家居产品评测' },
-  'Mobile': { emoji: '📱', desc: '手机、平板等移动设备评测' },
-  'Computing': { emoji: '💻', desc: '电脑、设备等计算设备评测' },
-  'Peripherals': { emoji: '⌨️', desc: '键盘、鼠标等外设评测' },
-  'Apple': { emoji: '🍎', desc: '苹果生态产品评测' },
-  'Photography': { emoji: '📷', desc: '相机、影像设备评测' },
-  'Gaming': { emoji: '🎮', desc: '游戏设备评测' },
-  'Wearables': { emoji: '⌚', desc: '智能穿戴设备评测' },
-  'AI Tools': { emoji: '🤖', desc: 'AI 工具深度评测' },
-  'AI News': { emoji: '📰', desc: 'AI 行业资讯' },
-  'SaaS': { emoji: '💼', desc: 'SaaS 工具推荐' },
-  'Productivity': { emoji: '⚡', desc: '效率工具与方法论' },
+  'Audio': { emoji: '🎧', desc: 'Headphones, speakers, and audio equipment reviews' },
+  'Smart Home': { emoji: '🏠', desc: 'Smart home product reviews' },
+  'Mobile': { emoji: '📱', desc: 'Phones, tablets, and mobile device reviews' },
+  'Computing': { emoji: '💻', desc: 'Computers and computing device reviews' },
+  'Peripherals': { emoji: '⌨️', desc: 'Keyboards, mice, and peripheral reviews' },
+  'Apple': { emoji: '🍎', desc: 'Apple ecosystem product reviews' },
+  'Photography': { emoji: '📷', desc: 'Camera and imaging equipment reviews' },
+  'Gaming': { emoji: '🎮', desc: 'Gaming equipment reviews' },
+  'Wearables': { emoji: '⌚', desc: 'Smart wearable device reviews' },
+  'AI Tools': { emoji: '🤖', desc: 'In-depth AI tool reviews' },
+  'AI News': { emoji: '📰', desc: 'AI industry news' },
+  'SaaS': { emoji: '💼', desc: 'SaaS tool recommendations' },
+  'Productivity': { emoji: '⚡', desc: 'Productivity tools and methodologies' },
 };
 
 const info = categoryInfo[category.title] || { emoji: '📁', desc: '' };
@@ -49,7 +49,7 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- 分类头部 -->
+  <!-- Category Header -->
   <section class="py-12 not-prose bg-slate-50 dark:bg-slate-900">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
       <div class="text-6xl mb-4">{info.emoji}</div>
@@ -58,15 +58,15 @@ const metadata = {
       
       <div class="mt-6">
         <a href="/blog" class="inline-flex items-center text-blue-600 hover:underline">
-          ← 返回全部文章
+          ← Back to All Posts
         </a>
       </div>
     </div>
   </section>
 
-  <!-- 文章列表 -->
+  <!-- Posts List -->
   <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-5xl">
-    <Headline subtitle={`${page.data.length} 篇文章`}></Headline>
+    <Headline subtitle={`${page.data.length} articles`}></Headline>
     <BlogList posts={page.data} />
     <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
   </section>

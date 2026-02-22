@@ -5,78 +5,78 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: '联系我们 - 科技优选',
-  description: '商务合作、产品评测、投稿咨询',
+  title: 'Contact Us - TechReviews',
+  description: 'Business cooperation, product reviews, submissions',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget -->
-  <HeroText tagline="联系我们" title="期待与你交流" />
+  <HeroText tagline="Contact Us" title="We'd Love to Hear From You" />
 
-  <!-- 联系表单 -->
+  <!-- Contact Form -->
   <ContactUs
     id="form"
-    title="发送消息"
-    subtitle="请选择联系类型，我们会尽快回复"
+    title="Send a Message"
+    subtitle="Select a topic and we'll get back to you soon"
     inputs={[
       {
         type: 'text',
         name: 'name',
-        label: '姓名',
+        label: 'Name',
       },
       {
         type: 'email',
         name: 'email',
-        label: '邮箱',
+        label: 'Email',
       },
       {
         type: 'text',
         name: 'subject',
-        label: '主题',
+        label: 'Subject',
       },
     ]}
     textarea={{
-      label: '留言内容',
+      label: 'Message',
     }}
     disclaimer={{
-      label: '提交此表单即表示您同意我们收集您的个人信息用于回复您的咨询。',
+      label: 'By submitting this form, you agree to our collection of your personal information for responding to your inquiry.',
     }}
-    description="我们通常在 24 小时内回复。"
+    description="We typically respond within 24 hours."
   />
 
-  <!-- 联系方式 -->
+  <!-- Contact Info -->
   <Features2
-    title="联系我们"
+    title="Get in Touch"
     items={[
       {
-        title: '产品评测',
-        description: '申请产品评测，请发送产品信息和评测需求',
+        title: 'Product Reviews',
+        description: 'Request a product review - send product info and review requirements',
         icon: 'tabler:star',
       },
       {
-        title: '商务合作',
-        description: '品牌推广、内容合作等商业事务请联系',
+        title: 'Business Cooperation',
+        description: 'Brand promotion and content partnerships',
         icon: 'tabler:briefcase',
       },
       {
-        title: '投稿建议',
-        description: '欢迎投稿或提供选题建议',
+        title: 'Contributions',
+        description: 'Submit articles or suggest topics',
         icon: 'tabler:message',
       },
       {
-        title: '邮箱',
+        title: 'Email',
         description: 'contact@techreviews.example.com',
         icon: 'tabler:mail',
       },
       {
-        title: '社交媒体',
-        description: '关注我们获取最新评测动态',
+        title: 'Social Media',
+        description: 'Follow us for the latest reviews',
         icon: 'tabler:brand-twitter',
       },
       {
-        title: 'RSS 订阅',
-        description: '通过 RSS 订阅获取最新文章',
+        title: 'RSS Feed',
+        description: 'Subscribe via RSS for latest articles',
         icon: 'tabler:rss',
       },
     ]}

@@ -8,127 +8,127 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: '关于我们 - 科技优选',
-  description: '专业、客观的消费电子与AI工具评测团队',
+  title: 'About Us - TechReviews',
+  description: 'Expert reviews of consumer electronics and AI tools',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero -->
   <Hero
-    tagline="关于我们"
+    tagline="About Us"
     image={{
       src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: '科技优选',
+      alt: 'TechReviews',
     }}
   >
     <Fragment slot="title">
-      致力于帮助你做出<span class="text-accent dark:text-white">更好的购买决策</span>
+      Helping you make <span class="text-accent dark:text-white">better purchase decisions</span>
     </Fragment>
     <Fragment slot="subtitle">
-      我们是专注于消费电子和AI工具的评测团队相信产品的力量，致力为用户提供专业、客观、有价值的购买参考。
+      We are a dedicated team focusing on consumer electronics and AI tools. We believe in the power of products and strive to provide professional, unbiased, and valuable purchase recommendations.
     </Fragment>
   </Hero>
 
-  <!-- 评测方法论 -->
+  <!-- Our Review Methodology -->
   <Steps2
-    title="我们的评测方法"
-    subtitle="每一个评测都经过严格测试，确保客观公正"
+    title="Our Review Methodology"
+    subtitle="Every review goes through rigorous testing to ensure objectivity"
     items={[
       {
-        title: '真实使用体验',
-        description: '每款产品至少使用2周以上，模拟真实使用场景，不做纸上谈兵',
+        title: 'Real Usage Experience',
+        description: 'Each product is used for at least 2 weeks in real-world scenarios',
       },
       {
-        title: '客观测试数据',
-        description: '通过专业设备进行客观测试，确保数据的准确性和可参考性',
+        title: 'Objective Test Data',
+        description: 'Professional equipment ensures accurate and reliable test results',
       },
       {
-        title: '独立观点',
-        description: '坚持独立评测，不接受厂商充值，保证观点的客观性和独立性',
+        title: 'Independent Opinions',
+        description: 'We maintain independent reviews without manufacturer influence',
       },
       {
-        title: '持续更新',
-        description: '产品更新后及时更新评测内容，确保信息的时效性',
+        title: 'Continuous Updates',
+        description: 'Reviews are updated when products are refreshed',
       },
     ]}
   />
 
-  <!-- 评测类别 -->
+  <!-- Review Categories -->
   <Features3
-    title="评测领域"
-    subtitle="覆盖消费电子和AI工具的多个细分领域"
+    title="Review Categories"
+    subtitle="Coverage across consumer electronics and AI tools"
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: '🎧 音频设备',
-        description: '无线耳机、音箱、专业音频设备评测与推荐',
+        title: '🎧 Audio',
+        description: 'Wireless headphones, speakers, and professional audio equipment',
         icon: 'tabler:headphones',
       },
       {
-        title: '📱 移动设备',
-        description: '手机、平板、智能穿戴设备深度评测',
+        title: '📱 Mobile',
+        description: 'Phones, tablets, and wearable devices',
         icon: 'tabler:device-mobile',
       },
       {
-        title: '⌨️ 外设配件',
-        description: '机械键盘、鼠标、显示器等外设评测',
+        title: '⌨️ Peripherals',
+        description: 'Mechanical keyboards, mice, monitors and accessories',
         icon: 'tabler:keyboard',
       },
       {
-        title: '🏠 智能家居',
-        description: 'HomeKit、米家等智能家居产品评测',
+        title: '🏠 Smart Home',
+        description: 'HomeKit, Xiaomi and other smart home products',
         icon: 'tabler:home',
       },
       {
-        title: '🤖 AI 工具',
-        description: 'ChatGPT、Claude等AI产品深度评测',
+        title: '🤖 AI Tools',
+        description: 'In-depth reviews of ChatGPT, Claude and AI products',
         icon: 'tabler:brain',
       },
       {
-        title: '💻 SaaS 软件',
-        description: '效率工具、协作软件等SaaS产品推荐',
+        title: '💻 SaaS Software',
+        description: 'Productivity tools and collaboration software',
         icon: 'tabler:apps',
       },
     ]}
   />
 
-  <!-- 统计数据 -->
+  <!-- Stats -->
   <Stats
-    title="数据一览"
+    title="Our Numbers"
     stats={[
-      { title: '评测文章', amount: '100+' },
-      { title: '评测品类', amount: '20+' },
-      { title: '月度阅读', amount: '50K+' },
-      { title: '用户关注', amount: '10K+' },
+      { title: 'Review Articles', amount: '100+' },
+      { title: 'Product Categories', amount: '20+' },
+      { title: 'Monthly Readers', amount: '50K+' },
+      { title: 'Followers', amount: '10K+' },
     ]}
   />
 
-  <!-- 合作方式 -->
+  <!-- Collaboration -->
   <Features2
-    title="合作方式"
-    subtitle="欢迎与厂商和品牌进行合作"
+    title="Collaboration"
+    subtitle="Welcome to partner with brands and manufacturers"
     columns={2}
     items={[
       {
-        title: '产品评测',
-        description: '接受新品评测申请，提交真实使用体验报告',
+        title: 'Product Reviews',
+        description: 'We accept new product review requests',
         icon: 'tabler:star',
       },
       {
-        title: '商务合作',
-        description: '品牌推广、内容合作等商业事务',
+        title: 'Business Cooperation',
+        description: 'Brand promotion and content partnerships',
         icon: 'tabler:briefcase',
       },
       {
-        title: '广告投放',
-        description: '优质科技产品相关广告合作',
+        title: 'Advertising',
+        description: 'Quality tech product advertising opportunities',
         icon: 'tabler:chart-bar',
       },
       {
-        title: '投稿互动',
-        description: '欢迎用户投稿或提供选题建议',
+        title: 'Contributions',
+        description: 'User submissions and topic suggestions welcome',
         icon: 'tabler:message',
       },
     ]}
@@ -136,10 +136,10 @@ const metadata = {
 
   <!-- CTA -->
   <CallToAction
-    title="有问题？联系我们"
-    subtitle="有任何关于产品选购的问题，欢迎随时联系我们"
+    title="Have Questions? Contact Us"
+    subtitle="Any questions about product recommendations? Feel free to reach out"
     actions={[
-      { variant: 'primary', text: '联系方式', href: '/contact' },
+      { variant: 'primary', text: 'Contact Us', href: '/contact' },
     ]}
   />
 </Layout>

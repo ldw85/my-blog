@@ -7,110 +7,110 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: '评测服务 - 科技优选',
-  description: '专业的产品评测服务，帮助品牌展示产品价值',
+  title: 'Review Services - TechReviews',
+  description: 'Professional product review services to showcase your brand value',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero -->
   <Hero
-    tagline="评测服务"
-    title="专业、客观的产品评测"
-    subtitle="我们致力于为消费者提供真实、可靠的产品信息，帮助品牌展示产品价值。"
-    actions={[{ variant: 'primary', text: '联系我们', href: '/contact' }]}
+    tagline="Review Services"
+    title="Professional, Unbiased Product Reviews"
+    subtitle="We are committed to providing consumers with truthful, reliable product information and helping brands showcase their product value."
+    actions={[{ variant: 'primary', text: 'Contact Us', href: '/contact' }]}
     image={{
       src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: '评测服务',
+      alt: 'Review Services',
     }}
   />
 
-  <!-- 服务内容 -->
+  <!-- Services -->
   <Features2
-    title="我们的服务"
-    subtitle="全方位的评测解决方案"
+    title="Our Services"
+    subtitle="Comprehensive review solutions"
     columns={3}
     items={[
       {
-        title: '单品评测',
-        description: '深度体验报告，涵盖产品外观、性能、使用体验、优缺点等全方位分析',
+        title: 'Single Product Reviews',
+        description: 'In-depth experience reports covering appearance, performance, pros and cons',
         icon: 'tabler:star',
       },
       {
-        title: '对比评测',
-        description: '多产品横向对比，帮助消费者了解产品差异，做出更明智的选择',
+        title: 'Comparison Reviews',
+        description: 'Multi-product横向 comparison to help consumers understand differences',
         icon: 'tabler:arrows-left-right',
       },
       {
-        title: '榜单制作',
-        description: '基于真实体验和数据的产品榜单，为消费者提供选购参考',
+        title: 'Rankings',
+        description: 'Product rankings based on real experience and data',
         icon: 'tabler:chart-bar',
       },
       {
-        title: '选购指南',
-        description: '从入门到精通的全面选购指南，帮助消费者了解品类知识',
+        title: 'Buying Guides',
+        description: 'Comprehensive buying guides from beginner to expert',
         icon: 'tabler:book',
       },
       {
-        title: '视频评测',
-        description: '视频形式的产品展示和体验分享，覆盖更多受众',
+        title: 'Video Reviews',
+        description: 'Video product showcases and experience sharing',
         icon: 'tabler:video',
       },
       {
-        title: '定制内容',
-        description: '根据品牌需求定制的内容方案，满足多样化营销需求',
+        title: 'Custom Content',
+        description: 'Customized content solutions for brand needs',
         icon: 'tabler:settings',
       },
     ]}
   />
 
-  <!-- 评测流程 -->
+  <!-- Review Process -->
   <Content
-    title="评测流程"
-    subtitle="规范化的评测流程，确保评测质量"
+    title="Review Process"
+    subtitle="Standardized process ensures quality"
     items={[
       {
-        title: '产品接收',
-        description: '收到产品后进行开箱记录和初步检查',
+        title: 'Product Receipt',
+        description: 'Unboxing and initial inspection upon receiving product',
       },
       {
-        title: '深度体验',
-        description: '至少两周的真实使用，记录每日使用感受',
+        title: 'Deep Experience',
+        description: 'At least two weeks of real usage with daily notes',
       },
       {
-        title: '性能测试',
-        description: '使用专业设备进行客观性能测试',
+        title: 'Performance Testing',
+        description: 'Objective performance testing with professional equipment',
       },
       {
-        title: '内容撰写',
-        description: '结合主观体验和客观数据撰写评测报告',
+        title: 'Content Writing',
+        description: 'Writing review reports combining subjective and objective data',
       },
       {
-        title: '审核发布',
-        description: '内容审核后发布，确保信息准确',
+        title: 'Review & Publish',
+        description: 'Content review before publishing for accuracy',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2426&q=80',
-      alt: '评测流程',
+      alt: 'Review Process',
     }}
   />
 
-  <!-- 合作案例 -->
+  <!-- Testimonials -->
   <Testimonials
-    title="合作案例"
-    subtitle="已为多个品牌提供评测服务"
+    title="Client Stories"
+    subtitle="We've provided review services for multiple brands"
     testimonials={[
       {
-        title: '专业且客观',
-        description: '评测内容专业、客观，帮助我们的产品获得了更多消费者的关注和认可。',
-        author: '某知名耳机品牌',
+        title: 'Professional & Unbiased',
+        description: 'Professional and unbiased review content helped our products gain more attention and recognition from consumers.',
+        author: 'Major Headphone Brand',
         avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80',
       },
       {
-        title: '高质量内容',
-        description: '评测文章结构清晰、内容详实，是消费者了解产品的重要渠道。',
-        author: '某智能家居品牌',
+        title: 'High-Quality Content',
+        description: 'Well-structured and detailed review articles - an important channel for consumers to understand products.',
+        author: 'Smart Home Brand',
         avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80',
       },
     ]}
@@ -118,10 +118,10 @@ const metadata = {
 
   <!-- CTA -->
   <CallToAction
-    title="合作咨询"
-    subtitle="有兴趣与我们合作？请联系我们获取更多信息"
+    title="Partner With Us"
+    subtitle="Interested in collaboration? Contact us for more information"
     actions={[
-      { variant: 'primary', text: '立即咨询', href: '/contact' },
+      { variant: 'primary', text: 'Get in Touch', href: '/contact' },
     ]}
   />
 </Layout>

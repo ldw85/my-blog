@@ -8,105 +8,105 @@ import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: '会员订阅 - 科技优选',
-  description: '获取更早评测、专属优惠、优先回复',
+  title: 'Membership - TechReviews',
+  description: 'Get early access, exclusive discounts, priority replies',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText -->
   <HeroText
-    tagline="会员订阅"
-    title="解锁更多专属权益"
-    subtitle="支持我们持续产出高质量评测内容"
+    tagline="Membership"
+    title="Unlock Exclusive Benefits"
+    subtitle="Support us to continue producing high-quality review content"
   />
 
-  <!-- 订阅方案 -->
+  <!-- Subscription Plans -->
   <Prices
-    title="订阅方案"
-    subtitle="选择适合你的方案"
+    title="Subscription Plans"
+    subtitle="Choose the plan that fits you"
     prices={[
       {
-        title: '免费',
-        subtitle: '适合普通用户',
+        title: 'Free',
+        subtitle: 'For casual users',
         price: 0,
-        period: '永久免费',
+        period: 'Free forever',
         items: [
           {
-            description: '阅读所有评测文章',
+            description: 'Read all review articles',
           },
           {
-            description: '查看产品榜单',
+            description: 'View product rankings',
           },
           {
-            description: '参与评论讨论',
+            description: 'Participate in discussions',
           },
           {
-            description: 'RSS 订阅',
+            description: 'RSS subscription',
           },
         ],
         callToAction: {
-          text: '免费注册',
+          text: 'Sign Up Free',
           href: '#',
         },
         hasRibbon: false,
       },
       {
-        title: 'Pro 会员',
-        subtitle: '适合重度用户',
+        title: 'Pro Member',
+        subtitle: 'For power users',
         price: 9.9,
-        period: '/月',
+        period: '/month',
         items: [
           {
-            description: '免费用户全部权益',
+            description: 'All Free benefits',
           },
           {
-            description: '提前 48 小时获取新评测',
+            description: 'Get new reviews 48 hours early',
           },
           {
-            description: '专属选购指南',
+            description: 'Exclusive buying guides',
           },
           {
-            description: '会员专属折扣码',
+            description: 'Member-only discount codes',
           },
           {
-            description: '优先回复评论',
+            description: 'Priority comment replies',
           },
           {
-            description: '月度Newsletter',
+            description: 'Monthly Newsletter',
           },
         ],
         callToAction: {
-          text: '立即订阅',
+          text: 'Subscribe Now',
           href: '#',
         },
         hasRibbon: true,
-        ribbonTitle: '热门',
+        ribbonTitle: 'Popular',
       },
       {
-        title: '年度会员',
-        subtitle: '最划算的选择',
+        title: 'Annual Member',
+        subtitle: 'Best value',
         price: 99,
-        period: '/年',
+        period: '/year',
         items: [
           {
-            description: 'Pro 会员全部权益',
+            description: 'All Pro benefits',
           },
           {
-            description: '年度专属优惠',
+            description: 'Annual exclusive offers',
           },
           {
-            description: '优先评测资格',
+            description: 'Priority review access',
           },
           {
-            description: '专属社群入群资格',
+            description: 'Exclusive community access',
           },
           {
-            description: '生日专属礼品',
+            description: 'Birthday gift',
           },
         ],
         callToAction: {
-          text: '年付省 20%',
+          text: 'Save 20% with Annual',
           href: '#',
         },
         hasRibbon: false,
@@ -114,41 +114,41 @@ const metadata = {
     ]}
   />
 
-  <!-- 会员权益 -->
+  <!-- Benefits -->
   <Features3
-    title="会员权益说明"
-    subtitle="订阅会员获取更多价值"
+    title="Membership Benefits"
+    subtitle="Subscribe for more value"
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: '提前获取评测',
-        description: '新评测上线前提前 48 小时阅读，了解产品优缺点',
+        title: 'Early Access',
+        description: 'Read new reviews 48 hours before public release',
         icon: 'tabler:clock',
       },
       {
-        title: '专属折扣码',
-        description: '合作电商平台的专属优惠码，享受额外折扣',
+        title: 'Exclusive Discounts',
+        description: 'Special discount codes for partner e-commerce platforms',
         icon: 'tabler:discount',
       },
       {
-        title: '优先回复',
-        description: '评论优先获得回复，与评测团队更近距离',
+        title: 'Priority Replies',
+        description: 'Comments get优先 replies from our team',
         icon: 'tabler:messages',
       },
       {
-        title: '选购指南',
-        description: '会员专属的深度选购指南，涵盖各品类',
+        title: 'Buying Guides',
+        description: 'Member-exclusive in-depth buying guides',
         icon: 'tabler:book',
       },
       {
-        title: '月度Newsletter',
-        description: '每月精选内容汇总，不错过好产品',
+        title: 'Monthly Newsletter',
+        description: 'Curated monthly content summary',
         icon: 'tabler:mail',
       },
       {
-        title: '优先评测资格',
-        description: '新产品的优先评测机会，了解第一手信息',
+        title: 'Priority Reviews',
+        description: 'First access to new product reviews',
         icon: 'tabler:star',
       },
     ]}
@@ -156,34 +156,34 @@ const metadata = {
 
   <!-- FAQ -->
   <FAQs
-    title="常见问题"
-    subtitle="关于订阅的常见问题"
+    title="Frequently Asked Questions"
+    subtitle="Common questions about membership"
     items={[
       {
-        title: '订阅后可以取消吗？',
-        description: '可以随时取消，取消后服务持续到当前订阅周期结束。',
+        title: 'Can I cancel anytime?',
+        description: 'Yes, you can cancel anytime. Service continues until the end of your current billing period.',
       },
       {
-        title: '支持哪些支付方式？',
-        description: '支持微信、支付宝、信用卡等主流支付方式。',
+        title: 'What payment methods are supported?',
+        description: 'We support credit cards, PayPal, and other major payment methods.',
       },
       {
-        title: '会员有效期是多久？',
-        description: '月付会员有效期为 30 天，年付会员有效期为 365 天。',
+        title: 'How long is the membership valid?',
+        description: 'Monthly membership is valid for 30 days, annual membership is valid for 365 days.',
       },
       {
-        title: '可以开发票吗？',
-        description: '可以开发票，请联系客服提供开票信息。',
+        title: 'Can I get an invoice?',
+        description: 'Yes, please contact support for invoice information.',
       },
     ]}
   />
 
   <!-- CTA -->
   <CallToAction
-    title="有问题？"
-    subtitle="联系客服获取帮助"
+    title="Have Questions?"
+    subtitle="Contact support for help"
     actions={[
-      { variant: 'secondary', text: '联系客服', href: '/contact' },
+      { variant: 'secondary', text: 'Contact Us', href: '/contact' },
     ]}
   />
 </Layout>
