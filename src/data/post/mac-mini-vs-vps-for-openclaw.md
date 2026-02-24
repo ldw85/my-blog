@@ -46,7 +46,7 @@ The latest Mac mini with M4 chip is an impressive piece of hardware:
 - **Energy Efficiency**: Runs cooler, quieter
 - **Future-Proof**: Better longevity for AI applications
 
-**[Affiliate Link Placeholder: Mac mini M4 Amazon/US]**
+**[Mac mini M4 Amazon - Buy Now](https://amzn.to/4rtKZqN)**
 
 ---
 
@@ -192,9 +192,9 @@ For hosting OpenClaw — or any self-hosted AI assistant — **Mac mini M4 is th
 
 ## Where to Buy
 
-**[Affiliate Link Placeholder: Mac mini M4 - Amazon]**
+**[Mac mini M4 Amazon - Buy Now](https://amzn.to/4rtKZqN)**
 
-**[Affiliate Link Placeholder: Mac mini M4 - Best Buy]**
+**[Mac mini M4 - Best Buy](https://amzn.to/4rtKZqN)**
 
 ---
 

@@ -41,4 +41,4 @@ We may modify these Terms at any time. Changes will be posted on this page.
 
 ## Contact Information
 
-If you have any questions about these Terms, please contact us: contact@techreviews.example.com
+If you have any questions about these Terms, please contact us: support@techruling.com
