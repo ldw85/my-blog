@@ -201,11 +201,11 @@ Accept the bridge complexity.
 
 ## Where to Buy
 
-**[Eve Indoor Cam on Amazon](https://www.amazon.com/dp/B09NVDJZWS?tag=your-affiliate-id)**
+**[Eve Indoor Cam on Amazon](https://amzn.to/3OpzH8v)**
 
-**[Aqara G4 Doorbell on Amazon](https://www.amazon.com/dp/B0B8R1S3PN?tag=your-affiliate-id)**
+**[Aqara G4 Doorbell on Amazon](https://amzn.to/3OXS5Fs)**
 
-**[Eufy S350 on Amazon](https://www.amazon.com/dp/B0C4BXYW5V?tag=your-affiliate-id)**
+**[Eufy S350 on Amazon](https://amzn.to/4cKhZ9y)**
 
 ---
 
