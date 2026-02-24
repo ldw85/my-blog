@@ -39,7 +39,7 @@ In this comprehensive review, we'll analyze the iPhone mini from every angle to 
 
 ### Where to Buy
 
-**[Affiliate Link Placeholder: iPhone 13 mini - Amazon]**
+**[iPhone 13 mini - Amazon](https://amzn.to/3OxOKNp)**
 
 **[Affiliate Link Placeholder: iPhone 13 mini - Best Buy]**
 
