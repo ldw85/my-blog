@@ -258,7 +258,7 @@ I spent $400 on my first custom build and didn't even know what I wanted.
 - Gateron switches (decent)
 - Good entry point
 
-**[Keychron K2 on Amazon](https://www.amazon.com/dp/B0887WXRCM?tag=your-affiliate-id)**
+**[Keychron K2 on Amazon](https://amzn.to/4tSZ2aP)**
 
 ### $100-200: Keychron Q1
 
@@ -267,7 +267,7 @@ I spent $400 on my first custom build and didn't even know what I wanted.
 - Aluminum case
 - Great value
 
-**[Keychron Q1 on Amazon](https://www.amazon.com/dp/B09HR1TH9B?tag=your-affiliate-id)**
+**[Keychron Q1 on Amazon](https://amzn.to/4rIkqyo)**
 
 ### $200+: Keychron Q1 Pro or Mode Sonnet
 
@@ -275,6 +275,8 @@ I spent $400 on my first custom build and didn't even know what I wanted.
 - Premium materials
 - Wireless options
 - Worth it if you know what you want
+
+**[Keychron Q1 Pro on Amazon](https://amzn.to/4kUpzAt)**
 
 ---
 

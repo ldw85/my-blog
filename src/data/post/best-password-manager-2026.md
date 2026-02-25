@@ -101,6 +101,8 @@ From the makers of NordVPN, NordPass delivers streamlined security with modern d
 
 **Pricing**: Free tier available; Premium starts at $1.99/month
 
+**[Get NordPass on Amazon](https://amzn.to/4seKHEm)**
+
 **Why consider NordPass**: Backed by NordVPN's security expertise, NordPass offers cutting-edge encryption and a clean, easy-to-use experience.
 
 ### 4. Dashlane — Best for Comprehensive Features
@@ -128,6 +130,8 @@ LastPass remains popular for its robust family sharing features.
 - Easy-to-use vault interface
 
 **Pricing**: Free for individuals; Family plans at $4.00/month
+
+**[Get LastPass on Amazon](https://amzn.to/4rz3dqK)**
 
 **Why families love it**: LastPass makes it simple to share passwords securely with family members while maintaining individual privacy.
 
