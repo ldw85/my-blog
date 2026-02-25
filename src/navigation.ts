@@ -28,8 +28,7 @@ export const headerData = {
       links: [
         { text: 'Mac mini - AI Server', href: getPermalink('/product/mac-mini') },
         { text: 'Apple Watch Series 11', href: getPermalink('/product/apple-watch') },
-        { text: 'Holiday Deals', href: getPermalink('/landing-pages') },
-        { text: 'All Reviews', href: getBlogPermalink() },
+        { text: 'All Products', href: getBlogPermalink() },
       ],
     },
     {
@@ -53,6 +52,7 @@ export const footerData = {
         { text: 'AI & SaaS', href: getBlogPermalink() },
         { text: 'Top Rankings', href: getBlogPermalink() },
         { text: 'Comparisons', href: getBlogPermalink() },
+        { text: 'Holiday Deals', href: getPermalink('/landing-pages') },
       ],
     },
     {
