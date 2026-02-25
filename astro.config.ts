@@ -72,7 +72,13 @@ export default defineConfig({
   ],
 
   image: {
-    domains: ['cdn.pixabay.com', 'plus.unsplash.com', 'images.unsplash.com'],
+    domains: ['cdn.pixabay.com', 'plus.unsplash.com', 'images.unsplash.com', 'm.media-amazon.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com',
+      },
+    ],
   },
 
   markdown: {
