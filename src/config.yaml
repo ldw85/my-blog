@@ -1,6 +1,6 @@
 site:
   name: TechReviews
-  site: 'https://techreviews.example.com'
+  site: 'https://techruling.com'
   base: '/'
   trailingSlash: false
 
