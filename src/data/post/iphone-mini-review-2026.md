@@ -3,7 +3,7 @@ title: "iPhone Mini Review: Is It Still Worth Buying in 2026?"
 description: "Complete analysis of iPhone mini pros and cons. Should you buy iPhone 13 mini or wait? Find out if the compact flagship is right for you."
 pubDate: "2026-02-18"
 heroImage: "/blog-placeholder-3.jpg"
-category: "Consumer Electronics"
+category: "Apple"
 tags: ["iPhone", "iPhone Mini", "Apple", "Smartphone", "Review", "Tech Review"]
 ---
 

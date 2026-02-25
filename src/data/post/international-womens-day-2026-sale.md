@@ -3,7 +3,7 @@ title: "International Women's Day 2026: Ultimate Gift Guide for Her"
 description: "Looking for the perfect International Women's Day gift? Discover our curated selection of beauty, jewelry, fashion, and home fragrances - up to 50% off. Prime shipping & easy returns."
 pubDate: "2026-02-25"
 heroImage: "/blog-placeholder-1.jpg"
-category: "Lifestyle"
+category: "Other"
 tags: ["International Women's Day", "Gift Guide", "Beauty", "Jewelry", "Fashion", "Home Fragrance", "Amazon Deals", "Gift Ideas"]
 affiliateCategory: "lifestyle"
 ---

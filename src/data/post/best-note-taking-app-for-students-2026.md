@@ -3,7 +3,7 @@ title: "Best Note-Taking App for Students 2026: Complete Guide"
 description: "Finding the best note-taking app for students? Our comprehensive guide compares top apps including Notion, GoodNotes, OneNote, and more to boost your study productivity."
 pubDate: "2026-02-25"
 heroImage: "/blog-placeholder-1.jpg"
-category: "Software"
+category: "Productivity"
 tags: ["Note-Taking", "Student", "Notion", "GoodNotes", "OneNote", "Productivity", "App", "2026"]
 affiliateCategory: "software"
 ---

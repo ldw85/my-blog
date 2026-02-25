@@ -3,7 +3,7 @@ title: "Why I Don't Recommend VPS for OpenClaw Hosting - Get a Mac Mini Instead"
 description: "A detailed comparison of VPS vs Mac mini for hosting OpenClaw AI assistant, and why Mac mini M4 is the better choice for most users."
 pubDate: "2026-02-18"
 heroImage: "/blog-placeholder-3.jpg"
-category: "Hardware"
+category: "Computing"
 tags: ["OpenClaw", "Mac mini", "VPS", "AI Assistant", "Hardware"]
 ---
 

@@ -11,6 +11,7 @@ export const headerData = {
         { text: 'Computers', href: getPermalink('computing', 'category') },
         { text: 'Peripherals', href: getPermalink('peripherals', 'category') },
         { text: 'Apple', href: getPermalink('apple', 'category') },
+        { text: 'Other', href: getPermalink('other', 'category') },
       ],
     },
     {
