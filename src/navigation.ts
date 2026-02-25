@@ -28,6 +28,7 @@ export const headerData = {
       links: [
         { text: 'Mac mini - AI Server', href: getPermalink('/product/mac-mini') },
         { text: 'Apple Watch Series 11', href: getPermalink('/product/apple-watch') },
+        { text: 'Holiday Deals', href: getPermalink('/landing-pages') },
         { text: 'All Reviews', href: getBlogPermalink() },
       ],
     },
@@ -91,6 +92,6 @@ export const footerData = {
     { ariaLabel: 'GitHub', icon: 'tabler:brand-github', href: '#' },
   ],
   footNote: `
-    © 2025 TechReviews - Your Guide to Consumer Electronics & AI Tools
+    © 2026 TechReviews - Your Guide to Consumer Electronics & AI Tools
   `,
 };

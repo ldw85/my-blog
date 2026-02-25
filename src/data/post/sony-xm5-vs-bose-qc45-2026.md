@@ -1,7 +1,7 @@
 ---
-title: "Sony WH-1000XM5 vs Bose QC45: Which Noise-Cancelling King Should You Buy in 2025?"
+title: "Sony WH-1000XM5 vs Bose QC45: Which Noise-Cancelling King Should You Buy in 2026?"
 description: "An in-depth comparison of Sony WH-1000XM5 and Bose QC45 headphones. We test comfort, ANC, sound quality, and battery life to help you make the right choice."
-pubDate: "2025-02-19"
+pubDate: "2026-02-19"
 heroImage: "/blog-placeholder-1.jpg"
 category: "Audio"
 tags: ["Sony", "Bose", "Headphones", "Noise Cancelling", "Wireless", "Review"]

@@ -1,7 +1,7 @@
 ---
-title: "Mechanical Keyboard Guide 2025: Why Custom Keyboards Are Worth the Investment"
+title: "Mechanical Keyboard Guide 2026: Why Custom Keyboards Are Worth the Investment"
 description: "Is a custom mechanical keyboard worth it? A deep dive into switches, keycaps, build quality, and why enthusiasts spend $500+ on keyboards."
-pubDate: "2025-02-19"
+pubDate: "2026-02-19"
 heroImage: "/blog-placeholder-3.jpg"
 category: "Tech"
 tags: ["Mechanical Keyboard", "Custom Keyboard", "Keychron", "Switches", "Gaming", "Productivity", "Guide"]

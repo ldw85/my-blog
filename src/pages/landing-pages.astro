@@ -1,0 +1,104 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: '节日促销活动专题 - TechReviews',
+  description: '三八妇女节、双十一、黑色星期五等节日促销活动专题页',
+};
+---
+
+<Layout metadata={metadata}>
+
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">🎁 节日促销活动专题</h1>
+      <p class="text-xl text-gray-600">精选礼物推荐，限时优惠享不停</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- 三八妇女节 -->
+      <a href="/international-womens-day-2026-sale" class="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center">
+          <span class="text-6xl">🌸</span>
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2 group-hover:text-pink-600 transition-colors">
+            3.8妇女节特别献礼
+          </h2>
+          <p class="text-gray-600 mb-4 line-clamp-2">
+            致最美的你 - 美妆、珠宝配饰、时尚女装、精致香薰，限时折扣高达50%
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">2026-02-25</span>
+            <span class="text-pink-600 font-semibold group-hover:translate-x-1 transition-transform">了解更多 →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- 更多落地页可以继续添加 -->
+      <div class="group block bg-white rounded-xl shadow-md overflow-hidden opacity-75">
+        <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center">
+          <span class="text-6xl">🛍️</span>
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">
+            更多活动即将上线
+          </h2>
+          <p class="text-gray-600 mb-4 line-clamp-2">
+            敬请期待618、双十一等更多精彩活动
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">即将推出</span>
+            <span class="text-gray-400 font-semibold">🚧</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="group block bg-white rounded-xl shadow-md overflow-hidden opacity-75">
+        <div class="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center">
+          <span class="text-6xl">🎄</span>
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">
+            节日专栏
+          </h2>
+          <p class="text-gray-600 mb-4 line-clamp-2">
+            全年节日促销信息一网打尽
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">COMING SOON</span>
+            <span class="text-gray-400 font-semibold">🚧</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-8">
+      <h2 class="text-2xl font-bold mb-4">📅 即将到来的节日</h2>
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="text-center p-4 bg-white rounded-lg shadow">
+          <div class="text-3xl mb-2">🌸</div>
+          <div class="font-semibold">三八妇女节</div>
+          <div class="text-gray-500">3月8日</div>
+        </div>
+        <div class="text-center p-4 bg-white rounded-lg shadow">
+          <div class="text-3xl mb-2">🌷</div>
+          <div class="font-semibold">母亲节</div>
+          <div class="text-gray-500">5月11日</div>
+        </div>
+        <div class="text-center p-4 bg-white rounded-lg shadow">
+          <div class="text-3xl mb-2">💝</div>
+          <div class="font-semibold">618大促</div>
+          <div class="text-gray-500">6月18日</div>
+        </div>
+        <div class="text-center p-4 bg-white rounded-lg shadow">
+          <div class="text-3xl mb-2">🛍️</div>
+          <div class="font-semibold">双十一</div>
+          <div class="text-gray-500">11月11日</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</Layout>

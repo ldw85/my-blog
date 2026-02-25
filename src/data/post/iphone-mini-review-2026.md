@@ -1,5 +1,5 @@
 ---
-title: "iPhone Mini Review: Is It Still Worth Buying in 2024?"
+title: "iPhone Mini Review: Is It Still Worth Buying in 2026?"
 description: "Complete analysis of iPhone mini pros and cons. Should you buy iPhone 13 mini or wait? Find out if the compact flagship is right for you."
 pubDate: "2026-02-18"
 heroImage: "/blog-placeholder-3.jpg"
@@ -9,7 +9,7 @@ tags: ["iPhone", "iPhone Mini", "Apple", "Smartphone", "Review", "Tech Review"]
 
 ## The iPhone Mini: A Compact Powerhouse
 
-Since Apple discontinued the iPhone mini after the 13 series, many users wonder: **Is the iPhone mini still worth buying in 2024?**
+Since Apple discontinued the iPhone mini after the 13 series, many users wonder: **Is the iPhone mini still worth buying in 2026?**
 
 In this comprehensive review, we'll analyze the iPhone mini from every angle to help you make the right decision.
 
@@ -30,7 +30,7 @@ In this comprehensive review, we'll analyze the iPhone mini from every angle to 
 
 ## iPhone Mini Models: Which One to Choose?
 
-### Available Options (2024-2025)
+### Available Options (2026-2026)
 
 | Model | Release Year | Chip | Screen | Battery | Best For |
 |-------|--------------|------|--------|---------|----------|
@@ -210,7 +210,7 @@ Challenges:
 
 ## My Recommendations
 
-### Best iPhone Mini Deals (2024-2025)
+### Best iPhone Mini Deals (2026-2026)
 
 | Option | Where to Buy | Price | Rating |
 |--------|--------------|-------|--------|
@@ -233,7 +233,7 @@ Challenges:
 
 ## Final Thoughts
 
-The iPhone mini remains an excellent choice for the right user. Despite being discontinued, it's still worth buying in 2024-2025 — especially certified refurbished.
+The iPhone mini remains an excellent choice for the right user. Despite being discontinued, it's still worth buying in 2026-2026 — especially certified refurbished.
 
 ### Summary
 

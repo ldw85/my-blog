@@ -1,7 +1,7 @@
 ---
-title: "Best Home Security Cameras for HomeKit in 2025: Eve, Aqara, and Eufy Compared"
+title: "Best Home Security Cameras for HomeKit in 2026: Eve, Aqara, and Eufy Compared"
 description: "Looking for HomeKit-compatible security cameras? We compare Eve Indoor Cam, Aqara G4 Doorbell, and Eufy S350 to find the best option for Apple users."
-pubDate: "2025-02-19"
+pubDate: "2026-02-19"
 heroImage: "/blog-placeholder-2.jpg"
 category: "Smart Home"
 tags: ["Smart Home", "HomeKit", "Security Camera", "Apple", "Eve", "Aqara", "Eufy", "Review"]
@@ -213,7 +213,7 @@ Accept the bridge complexity.
 
 HomeKit cameras have come a long way. The days of "compatible but complicated" are over.
 
-**My pick for 2025:** The **Aqara G4** strikes the best balance — native HomeKit, no subscription, local processing, and it's actually affordable.
+**My pick for 2026:** The **Aqara G4** strikes the best balance — native HomeKit, no subscription, local processing, and it's actually affordable.
 
 ---
 

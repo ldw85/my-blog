@@ -1,7 +1,7 @@
 ---
 title: "3.8妇女节特别献礼 | 致最美的你 - 精选礼物低至5折"
 description: "三八妇女节送什么？精选美妆、珠宝配饰、时尚女装、精致香薰，限时折扣高达50%，正品保障，7天无理由退换。"
-pubDate: "2025-02-25"
+pubDate: "2026-02-25"
 heroImage: "/blog-placeholder-1.jpg"
 category: "Lifestyle"
 tags: ["3.8妇女节", "礼物推荐", "美妆", "珠宝", "女装", "香薰", "节日促销", "Amazon"]
