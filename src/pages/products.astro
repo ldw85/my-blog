@@ -1,0 +1,80 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'All Products - TechReviews',
+  description: 'Explore our product reviews and buying guides',
+};
+---
+
+<Layout metadata={metadata}>
+
+<section class="py-20">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-16">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">All Products</h1>
+      <p class="text-xl text-gray-600">Explore our product reviews and buying guides</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Mac mini -->
+      <a href="/product/mac-mini" class="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center">
+          <span class="text-6xl">💻</span>
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
+            Mac mini - AI Server
+          </h2>
+          <p class="text-gray-600 mb-4 line-clamp-2">
+            Transform your Mac mini into a powerful AI server with OpenClaw
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">Computing</span>
+            <span class="text-blue-600 font-semibold group-hover:translate-x-1 transition-transform">了解更多 →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Apple Watch -->
+      <a href="/product/apple-watch" class="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <div class="h-48 bg-gradient-to-br from-gray-100 to-gray-300 flex items-center justify-center">
+          <span class="text-6xl">⌚</span>
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
+            Apple Watch Series 11
+          </h2>
+          <p class="text-gray-600 mb-4 line-clamp-2">
+            The ultimate device for a healthy life with advanced health sensors
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">Wearable</span>
+            <span class="text-blue-600 font-semibold group-hover:translate-x-1 transition-transform">了解更多 →</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- More products coming soon -->
+      <div class="group block bg-white rounded-xl shadow-md overflow-hidden opacity-75">
+        <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+          <span class="text-6xl">🔜</span>
+        </div>
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">
+            More Products Coming Soon
+          </h2>
+          <p class="text-gray-600 mb-4 line-clamp-2">
+            We're working on more product reviews and buying guides
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">Stay Tuned</span>
+            <span class="text-gray-400 font-semibold">🚧</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</Layout>
