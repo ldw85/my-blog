@@ -1,0 +1,253 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'iPhone 12 mini - Small But Mighty | The Compact 5G Smartphone',
+  description: 'Experience the power of iPhone in a compact design. A14 chip, dual-camera system, 5G speed, and MagSafe. Perfect size for one-handed use.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Big Power. Small Size."
+    title="iPhone 12 mini"
+    subtitle="The world's smallest, thinnest, and lightest 5G smartphone. Experience flagship performance without the bulk."
+    actions={[
+      { variant: 'primary', text: 'Buy Now on Amazon', href: 'https://www.amazon.com/Apple-iPhone-Mini-128GB-Black/dp/B08PNKN4J7', target: '_blank', icon: 'tabler:shopping-cart' },
+      { variant: 'secondary', text: 'Explore Features', href: '#features' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80',
+      alt: 'iPhone 12 mini',
+    }}
+  />
+
+  <!-- Key Benefits -->
+  <Features
+    id="features"
+    title="Why iPhone 12 mini?"
+    subtitle="Massive power in a mini size"
+    items={[
+      {
+        title: 'A14 Bionic Chip',
+        description: 'The fastest chip ever in a smartphone. Power through games, AR experiences, and heavy multitasking with ease.',
+      },
+      {
+        title: 'Compact 5.4" Display',
+        description: 'Super Retina XDR display in a pocket-sized form factor. Perfect for one-handed use and easy portability.',
+      },
+      {
+        title: 'Dual-Camera System',
+        description: '12MP Ultra Wide and Wide cameras with Night mode, Deep Fusion, and Dolby Vision HDR video recording.',
+      },
+      {
+        title: '5G Connectivity',
+        description: 'Experience lightning-fast download and upload speeds. Stream in HD, video call without lag, and game in real-time.',
+      },
+      {
+        title: 'MagSafe Ecosystem',
+        description: 'Magnetic accessories that snap on instantly. Cases, chargers, and wallets that attach like magic.',
+      },
+      {
+        title: 'Face ID',
+        description: 'The most secure facial authentication in a smartphone. Unlock, authenticate, and pay with a glance.',
+      },
+    ]}
+  />
+
+  <!-- Design Section -->
+  <Content
+    title="Design That Fits"
+    subtitle="Premium materials, compact form"
+    items={[
+      {
+        title: 'Aerospace-Grade Aluminum',
+        description: 'Durable and lightweight. The same material used in aerospace industry.',
+      },
+      {
+        title: 'Ceramic Shield',
+        description: '4x better drop performance. The toughest glass ever in a smartphone.',
+      },
+      {
+        title: 'Water & Dust Resistant',
+        description: 'Rated IP68. Survives submersion in 6 meters of water for up to 30 minutes.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=1200&q=80',
+      alt: 'iPhone 12 mini Design',
+    }}
+  />
+
+  <!-- Camera Section -->
+  <Features
+    title="Pro-Level Photography"
+    subtitle="Capture every moment beautifully"
+    columns={2}
+    items={[
+      {
+        title: 'Night Mode',
+        description: 'Automatically turns on in low light. Capture bright, vivid photos even in darkness.',
+      },
+      {
+        title: 'Deep Fusion',
+        description: 'Machine learning processes every pixel for incredible detail and texture.',
+      },
+      {
+        title: 'Ultra Wide Camera',
+        description: '120° field of view. Capture 4x more scene in every shot.',
+      },
+      {
+        title: 'Dolby Vision HDR',
+        description: 'Record cinema-grade 4K HDR video. Edit right on your phone.',
+      },
+    ]}
+  />
+
+  <!-- 5G Section -->
+  <Content
+    title="5G. Speed of Light."
+    subtitle="The most bands for the fastest 5G"
+    items={[
+      {
+        title: 'More 5G Bands',
+        description: 'iPhone 12 mini supports more 5G bands than any other smartphone.',
+      },
+      {
+        title: 'Smart Data Mode',
+        description: 'Intelligently balances data usage and battery life. Switches to LTE when 5G is not needed.',
+      },
+      {
+        title: 'Stream Without Buffering',
+        description: 'High-definition streaming on the go. No more spinning wheels.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1200&q=80',
+      alt: '5G Speed',
+    }}
+    reverse={true}
+  />
+
+  <!-- Battery & Charging -->
+  <Features
+    title="Power & Charging"
+    subtitle="All-day battery, versatile charging"
+    columns={2}
+    items={[
+      {
+        title: 'All-Day Battery Life',
+        description: 'Up to 15 hours of video playback. Power through your day.',
+      },
+      {
+        title: 'MagSafe Charging',
+        description: '15W wireless charging. Snap on and charge up without cables.',
+      },
+      {
+        title: 'Fast Charging',
+        description: 'Charge up to 50% in just 30 minutes with 20W adapter.',
+      },
+      {
+        title: 'Qi Wireless Charging',
+        description: 'Works with any Qi-certified charger. Wireless power for all your devices.',
+      },
+    ]}
+  />
+
+  <!-- What's in the Box -->
+  <Features
+    title="What's in the Box"
+    subtitle="Complete package, minimal waste"
+    items={[
+      {
+        title: 'iPhone 12 mini',
+        description: '128GB storage in Black',
+      },
+      {
+        title: 'USB-C to Lightning Cable',
+        description: 'Fast charging capable',
+      },
+      {
+        title: 'Documentation',
+        description: 'Quick start guide and Apple stickers',
+      },
+      {
+        title: 'No Power Adapter',
+        description: 'Reduced carbon footprint. Use your existing charger or add a new one.',
+      },
+    ]}
+  />
+
+  <!-- Testimonials -->
+  <Testimonials
+    title="What Users Say"
+    subtitle="Loved by millions worldwide"
+    items={[
+      {
+        title: 'Perfect Size',
+        description: 'Finally, a powerful iPhone that fits comfortably in my pocket and works perfectly with one hand.',
+        author: 'Sarah M.',
+        avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+      },
+      {
+        title: 'Camera Wow Factor',
+        description: 'The photo quality is incredible. Night mode is a game changer for evening shots.',
+        author: 'David L.',
+        avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
+      },
+      {
+        title: '5G is Fast',
+        description: 'Downloaded a movie in minutes. The speed is mind-blowing compared to 4G.',
+        author: 'Michael R.',
+        avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
+      },
+    ]}
+  />
+
+  <!-- FAQ -->
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        question: 'Is iPhone 12 mini water-resistant?',
+        answer: 'Yes, iPhone 12 mini has an IP68 rating. It is water-resistant up to 6 meters for 30 minutes.',
+      },
+      {
+        question: 'Does iPhone 12 mini support 5G?',
+        answer: 'Yes, iPhone 12 mini supports 5G networks with more bands than any other smartphone.',
+      },
+      {
+        question: 'What storage options are available?',
+        answer: 'iPhone 12 mini comes in 64GB, 128GB, and 256GB storage options.',
+      },
+      {
+        question: 'Does it come with a charger?',
+        answer: 'iPhone 12 mini comes with a USB-C to Lightning cable. Power adapter and EarPods are sold separately to reduce environmental impact.',
+      },
+      {
+        question: 'Is the camera good for night photography?',
+        answer: 'Yes, the advanced dual-camera system with Night mode delivers stunning photos in low-light conditions.',
+      },
+      {
+        question: 'Does it support MagSafe accessories?',
+        answer: 'Yes, iPhone 12 mini is fully compatible with the MagSafe ecosystem of magnetic accessories.',
+      },
+    ]}
+  />
+
+  <!-- Final CTA -->
+  <CallToAction
+    title="Ready to Go Mini?"
+    subtitle="Experience the perfect balance of power and portability. Get your iPhone 12 mini today."
+    actions={[
+      { variant: 'primary', text: 'Buy Now on Amazon', href: 'https://www.amazon.com/Apple-iPhone-Mini-128GB-Black/dp/B08PNKN4J7', target: '_blank', icon: 'tabler:shopping-cart' },
+    ]}
+  />
+</Layout>
