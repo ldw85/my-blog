@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/LandingLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
@@ -11,23 +10,61 @@ const metadata = {
   title: 'iPhone mini - Small But Mighty | The Compact 5G Smartphone',
   description: 'Experience the power of iPhone in a compact design. A14 chip, dual-camera system, 5G speed, and MagSafe. Perfect size for one-handed use.',
 };
+
 ---
 
+<style is:global>
+  /* Override intersection animations for Hero section - show immediately */
+  .hero-section .intersect-once {
+    opacity: 1 !important;
+  }
+  .hero-section .motion-safe\:md\:opacity-0 {
+    opacity: 1 !important;
+  }
+  .hero-section {
+    animation: none !important;
+  }
+</style>
+
 <Layout metadata={metadata}>
-  <!-- Hero Section -->
-  <Hero
-    tagline="Big Power. Small Size."
-    title="iPhone mini"
-    subtitle="The world's smallest, thinnest, and lightest 5G smartphone. Experience flagship performance without the bulk."
-    actions={[
-      { variant: 'primary', text: 'Buy Now on Amazon', href: 'https://amzn.to/4kTawXS', target: '_blank', icon: 'tabler:shopping-cart' },
-      { variant: 'secondary', text: 'Explore Features', href: '#features' },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80',
-      alt: 'iPhone mini',
-    }}
-  />
+  <!-- Optimized Hero Section -->
+  <section class="relative md:-mt-[76px] not-prose hero-section">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="py-12 md:py-20">
+        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+          <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+            Big Power. Small Size.
+          </p>
+          <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+            iPhone mini
+          </h1>
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl text-muted mb-6 dark:text-slate-300">
+              The world's smallest, thinnest, and lightest 5G smartphone. Experience flagship performance without the bulk.
+            </p>
+            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+              <a href="https://amzn.to/4kTawXS" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0">
+                Buy Now on Amazon 🛒
+              </a>
+              <a href="#features" class="btn btn-secondary sm:mb-0">
+                Explore Features
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="relative m-auto max-w-5xl">
+          <img 
+            src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=1200&q=80" 
+            alt="iPhone mini"
+            class="mx-auto rounded-md w-full"
+            loading="eager"
+            width="1024"
+            height="576"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Key Benefits -->
   <Features
@@ -247,7 +284,7 @@ const metadata = {
     title="Ready to Go Mini?"
     subtitle="Experience the perfect balance of power and portability. Get your iPhone mini today."
     actions={[
-      { variant: 'primary', text: 'Buy Now on Amazon', href: 'https://amzn.to/4kTawXS', target: '_blank', icon: 'tabler:shopping-cart' },
+      { variant: 'primary', text: 'Buy Now on Amazon 🛒', href: 'https://amzn.to/4kTawXS', target: '_blank' },
     ]}
   />
 </Layout>
