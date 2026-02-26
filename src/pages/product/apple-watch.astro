@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/LandingLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
@@ -11,23 +10,61 @@ const metadata = {
   title: 'Apple Watch Series 11 - The Ultimate Smartwatch Experience',
   description: 'Discover the most advanced Apple Watch yet. Thinner design, larger display, breakthrough health features, and faster charging.',
 };
+
 ---
 
+<style is:global>
+  /* Override intersection animations for Hero section - show immediately */
+  .hero-section .intersect-once {
+    opacity: 1 !important;
+  }
+  .hero-section .motion-safe\:md\:opacity-0 {
+    opacity: 1 !important;
+  }
+  .hero-section {
+    animation: none !important;
+  }
+</style>
+
 <Layout metadata={metadata}>
-  <!-- Hero Section -->
-  <Hero
-    tagline="Limited Time: 25% Off - Save $100"
-    title="The Most Advanced Apple Watch Yet"
-    subtitle="Thinner design. Larger display. Breakthrough health features. Experience the future of personal health and connectivity."
-    actions={[
-      { variant: 'primary', text: 'Buy Now - Save $100', href: 'https://amzn.to/4b5SjD3', target: '_blank', icon: 'tabler:shopping-cart' },
-      { variant: 'secondary', text: 'Read Full Review', href: '/blog' },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=1200&q=80',
-      alt: 'Apple Watch Series 11',
-    }}
-  />
+  <!-- Optimized Hero Section -->
+  <section class="relative md:-mt-[76px] not-prose hero-section">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="py-12 md:py-20">
+        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+          <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+            Limited Time: 25% Off - Save $100
+          </p>
+          <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+            The Most Advanced Apple Watch Yet
+          </h1>
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl text-muted mb-6 dark:text-slate-300">
+              Thinner design. Larger display. Breakthrough health features. Experience the future of personal health and connectivity.
+            </p>
+            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+              <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0">
+                Buy Now - Save $100 🛒
+              </a>
+              <a href="/blog" class="btn btn-secondary sm:mb-0">
+                Read Full Review
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="relative m-auto max-w-5xl">
+          <img 
+            src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=1200&q=80" 
+            alt="Apple Watch Series 11"
+            class="mx-auto rounded-md w-full"
+            loading="eager"
+            width="1024"
+            height="576"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Key Benefits -->
   <Features
@@ -84,7 +121,7 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Series_11_Product_Page_L__en-US_01._CB800260814_.jpg',
+      src: 'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&q=80',
       alt: 'Apple Watch Health Features',
     }}
   />
@@ -187,24 +224,24 @@ const metadata = {
   <Testimonials
     title="What Users Are Saying"
     subtitle="Real reviews from verified buyers"
-    testimonials={[
+    items={[
       {
         title: 'Game-Changer!',
         description: 'The Series 11 is a game-changer. The larger display makes everything so much easier to read, and the battery life is incredible. Plus with 25% off, it\'s an amazing deal!',
         author: 'Michael J.',
-        avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
+        avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
       },
       {
         title: 'Fitness Essential',
         description: 'As a fitness enthusiast, the health tracking features are phenomenal. The sleep tracking has helped me improve my rest significantly.',
         author: 'Sarah C.',
-        avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80',
+        avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
       },
       {
         title: 'Finally Fast Charging!',
         description: 'Finally, fast charging! I never have to worry about battery anymore. The design is beautiful and the screen is so bright outdoors.',
         author: 'David W.',
-        avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80',
+        avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
       },
     ]}
   />
@@ -214,27 +251,27 @@ const metadata = {
     title="Frequently Asked Questions"
     items={[
       {
-        title: 'What\'s new in Apple Watch Series 11?',
+        question: 'What\'s new in Apple Watch Series 11?',
         description: 'Series 11 features a thinner design, largest display ever, faster charging (0-80% in 45 minutes), new S11 chip, and improved health sensors including skin temperature tracking.',
       },
       {
-        title: 'How long does the battery last?',
+        question: 'How long does the battery last?',
         description: 'Apple Watch Series 11 offers up to 18 hours of battery life on a single charge. With optimized settings, you can extend this to 36 hours in Low Power Mode.',
       },
       {
-        title: 'Is Apple Watch Series 11 waterproof?',
+        question: 'Is Apple Watch Series 11 waterproof?',
         description: 'Apple Watch Series 11 is swim-proof with water resistance up to 50 meters. It\'s perfect for swimming, surfing, or playing in the ocean.',
       },
       {
-        title: 'What sizes are available?',
+        question: 'What sizes are available?',
         description: 'Series 11 comes in two sizes: 42mm and 46mm case sizes, both featuring the largest and most advanced Always-On Retina displays.',
       },
       {
-        title: 'Do I need an iPhone to use Apple Watch?',
+        question: 'Do I need an iPhone to use Apple Watch?',
         description: 'Yes, Apple Watch requires an iPhone XS or later with iOS 18 or later for setup and full functionality.',
       },
       {
-        title: 'What\'s included in the box?',
+        question: 'What\'s included in the box?',
         description: 'Each Apple Watch Series 11 comes with the watch, a Sport Band (S/M and M/L sizes), a 1m magnetic fast charger to USB-C cable, and documentation.',
       },
     ]}
@@ -245,8 +282,7 @@ const metadata = {
     title="Save $100 Today!"
     subtitle="Experience the future of personal health and connectivity. Order your Apple Watch Series 11 today with 25% off and get free shipping. Limited time offer!"
     actions={[
-      { variant: 'primary', text: 'Shop Now - 25% Off', href: 'https://amzn.to/4b5SjD3', target: '_blank' },
-      { variant: 'secondary', text: 'Learn More', href: '/blog' },
+      { variant: 'primary', text: 'Shop Now - 25% Off 🛒', href: 'https://amzn.to/4b5SjD3', target: '_blank' },
     ]}
   />
 </Layout>

@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/LandingLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
@@ -11,23 +10,61 @@ const metadata = {
   title: 'Mac mini M4 - The Ultimate Personal AI Server',
   description: 'Transform your home with the most powerful Mac mini ever. Built for Apple Intelligence, perfect for running OpenClaw and AI agents 24/7.',
 };
+
 ---
 
+<style is:global>
+  /* Override intersection animations for Hero section - show immediately */
+  .hero-section .intersect-once {
+    opacity: 1 !important;
+  }
+  .hero-section .motion-safe\:md\:opacity-0 {
+    opacity: 1 !important;
+  }
+  .hero-section {
+    animation: none !important;
+  }
+</style>
+
 <Layout metadata={metadata}>
-  <!-- Hero Section - High Impact Marketing -->
-  <Hero
-    tagline="Hot New Release 2024"
-    title="Meet the Most Powerful Mac mini Ever Built"
-    subtitle="M4 chip with 10-core CPU and 10-core GPU. Built for Apple Intelligence. Starting at just $599."
-    actions={[
-      { variant: 'primary', text: 'Buy Now on Amazon', href: 'https://amzn.to/4rtKZqN', target: '_blank', icon: 'tabler:shopping-cart' },
-      { variant: 'secondary', text: 'Why Mac mini for AI?', href: '#why-macmini' },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&q=80',
-      alt: 'Mac mini M4 - Most Powerful Ever',
-    }}
-  />
+  <!-- Optimized Hero Section -->
+  <section class="relative md:-mt-[76px] not-prose hero-section">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="py-12 md:py-20">
+        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+          <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
+            Hot New Release 2024
+          </p>
+          <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+            Meet the Most Powerful Mac mini Ever Built
+          </h1>
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl text-muted mb-6 dark:text-slate-300">
+              M4 chip with 10-core CPU and 10-core GPU. Built for Apple Intelligence. Starting at just $599.
+            </p>
+            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+              <a href="https://amzn.to/4rtKZqN" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0">
+                Buy Now on Amazon 🛒
+              </a>
+              <a href="#why-macmini" class="btn btn-secondary sm:mb-0">
+                Why Mac mini for AI?
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="relative m-auto max-w-5xl">
+          <img 
+            src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=1200&q=80" 
+            alt="Mac mini M4 - Most Powerful Ever"
+            class="mx-auto rounded-md w-full"
+            loading="eager"
+            width="1024"
+            height="576"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Social Proof Banner -->
   <div class="bg-gradient-to-r from-blue-600 to-purple-600 py-4">
@@ -243,7 +280,7 @@ const metadata = {
   <Testimonials
     title="What Can You Run?"
     subtitle="More than just an AI server"
-    testimonials={[
+    items={[
       {
         title: 'OpenClaw AI Assistant',
         description: 'Personal AI powered by Claude/GPT. Text, voice, automation. 24/7 availability.',
