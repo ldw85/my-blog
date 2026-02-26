@@ -1,0 +1,292 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Spring Collection 2026 - Elegant Women\'s Dresses | Spring Fashion Sale',
+  description: 'Discover our stunning spring dress collection. Floral prints, light fabrics, and elegant styles perfect for any occasion. Up to 40% off this season.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <Hero
+    tagline="Spring Sale - Up to 40% Off"
+    title="Spring Collection 2026"
+    subtitle="Embrace the season with our curated selection of elegant spring dresses. From casual daywear to stunning evening gowns, find your perfect look."
+    actions={[
+      { variant: 'primary', text: 'Shop Spring Dresses', href: 'https://www.amazon.com/s?k=spring+dresses+for+women', target: '_blank', icon: 'tabler:shopping-cart' },
+      { variant: 'secondary', text: 'Explore Collection', href: '#styles' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=1200&q=80',
+      alt: 'Spring Dress Collection',
+    }}
+  />
+
+  <!-- Key Benefits -->
+  <Features
+    id="styles"
+    title="Why Our Spring Dresses?"
+    subtitle="Timeless elegance meets modern comfort"
+    items={[
+      {
+        title: 'Breathable Fabrics',
+        description: 'Lightweight cotton, linen, and silk blends keep you cool and comfortable as temperatures rise.',
+      },
+      {
+        title: 'Versatile Styles',
+        description: 'From casual sundresses to elegant maxis, find the perfect dress for work, weekend, or special events.',
+      },
+      {
+        title: 'Trending Prints',
+        description: 'Beautiful floral patterns, pastel colors, and modern geometric designs capture the essence of spring.',
+      },
+      {
+        title: 'Flattering Fits',
+        description: 'A-line, wrap, and fit-and-flare silhouettes complement every body type and personal style.',
+      },
+      {
+        title: 'Easy Care',
+        description: 'Machine-washable options make maintaining your wardrobe effortless. Look great with minimal effort.',
+      },
+      {
+        title: 'Sustainable Choices',
+        description: 'Eco-friendly and ethically sourced materials available. Look good while doing good.',
+      },
+    ]}
+  />
+
+  <!-- Dress Types Section -->
+  <Content
+    title="Dress Styles for Every Occasion"
+    subtitle="Find your perfect spring look"
+    items={[
+      {
+        title: 'Floral Sundresses',
+        description: 'Perfect for weekend brunch, garden parties, and casual outings. Light, breezy, and effortlessly feminine.',
+      },
+      {
+        title: 'Wrap Dresses',
+        description: 'The timeless wrap silhouette flatters every figure. Dress up or down for any occasion.',
+      },
+      {
+        title: 'Maxi Dresses',
+        description: 'Elegant floor-length styles perfect for outdoor weddings, formal events, and resort vacations.',
+      },
+      {
+        title: 'Midi Dresses',
+        description: 'The perfect balance of casual and chic. Ideal for work, dinner dates, and daytime events.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=1200&q=80',
+      alt: 'Various Spring Dress Styles',
+    }}
+  />
+
+  <!-- Color Trends -->
+  <Features
+    title="Spring 2026 Color Trends"
+    subtitle="This season's hottest hues"
+    columns={3}
+    items={[
+      {
+        title: 'Soft Pastels',
+        description: 'Blush pink, lavender, and mint green bring a gentle, romantic feel to your wardrobe.',
+      },
+      {
+        title: 'Earth Tones',
+        description: 'Terracotta, olive, and sand create an organic, grounded aesthetic.',
+      },
+      {
+        title: 'Bold Accents',
+        description: 'Vibrant coral, sunny yellow, and electric blue add statement-making pops of color.',
+      },
+    ]}
+  />
+
+  <!-- Fabric Guide -->
+  <Content
+    title="Premium Fabrics for Spring"
+    subtitle="Comfort meets sophistication"
+    items={[
+      {
+        title: 'Organic Cotton',
+        description: 'Soft, breathable, and sustainable. Perfect for everyday wear and sensitive skin.',
+      },
+      {
+        title: 'Linen Blend',
+        description: 'Natural texture and excellent airflow. Gets better with every wash.',
+      },
+      {
+        title: 'Silk & Satin',
+        description: 'Luxurious sheen and drape. Elevates any look for special occasions.',
+      },
+      {
+        title: 'Jersey Knit',
+        description: 'Stretchy, comfortable, and wrinkle-resistant. Ideal for travel and busy lifestyles.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1518622358385-8ea7d0794bf6?w=1200&q=80',
+      alt: 'Spring Fashion Fabrics',
+    }}
+    reverse={true}
+  />
+
+  <!-- Occasion Guide -->
+  <Features
+    title="Dresses for Every Spring Occasion"
+    subtitle="From casual to formal"
+    columns={2}
+    items={[
+      {
+        title: 'Office Ready',
+        description: 'Professional styles in solid colors and subtle patterns. Command attention in meetings.',
+      },
+      {
+        title: 'Date Night',
+        description: 'Romantic dresses with flattering silhouettes. Make a lasting impression.',
+      },
+      {
+        title: 'Weekend Casual',
+        description: 'Effortless sundresses and shirt dresses. Perfect for shopping, lunch, and outdoor events.',
+      },
+      {
+        title: 'Special Events',
+        description: 'Statement pieces for weddings, galas, and celebrations. Stand out from the crowd.',
+      },
+    ]}
+  />
+
+  <!-- Styling Tips -->
+  <Content
+    title="Style Your Spring Dress"
+    subtitle="Pro tips for every look"
+    items={[
+      {
+        title: 'Layer Smartly',
+        description: 'Add a denim jacket or lightweight cardigan for cool mornings. Remove as temperature rises.',
+      },
+      {
+        title: 'Accessorize Right',
+        description: 'Statement jewelry, scarves, and belts transform simple dresses into complete outfits.',
+      },
+      {
+        title: 'Footwear Matters',
+        description: 'Pair with sandals, wedges, or sneakers depending on the occasion and your personal style.',
+      },
+      {
+        title: 'Bag Selection',
+        description: 'Crossbody bags for day, clutch purses for evening. Match the formality of your dress.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1485968579169-a6f3a8ded5c7?w=1200&q=80',
+      alt: 'Spring Dress Styling',
+    }}
+  />
+
+  <!-- Testimonials -->
+  <Testimonials
+    title="What Customers Say"
+    subtitle="Real reviews from real women"
+    items={[
+      {
+        title: 'Perfect Spring Wardrobe',
+        description: 'These dresses are absolutely stunning. The quality is amazing and they fit perfectly. Received so many compliments!',
+        author: 'Jessica T.',
+        avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+      },
+      {
+        title: 'Comfortable & Chic',
+        description: 'Finally, dresses that look expensive but feel like pajamas. Perfect for my busy schedule.',
+        author: 'Amanda R.',
+        avatar: 'https://randomuser.me/api/portraits/women/33.jpg',
+      },
+      {
+        title: 'Great Quality',
+        description: 'The fabric quality exceeded my expectations. Washed beautifully and still looks new after multiple wears.',
+        author: 'Sarah L.',
+        avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+      },
+      {
+        title: 'Perfect Fit',
+        description: 'True to size and very flattering. The wrap dress is now my go-to for both work and weekend.',
+        author: 'Michelle K.',
+        avatar: 'https://randomuser.me/api/portraits/women/90.jpg',
+      },
+    ]}
+  />
+
+  <!-- Size & Fit Guide -->
+  <Features
+    title="Size & Fit Guide"
+    subtitle="Find your perfect fit"
+    columns={2}
+    items={[
+      {
+        title: 'True to Size',
+        description: 'Most customers find their regular size fits perfectly. Check our detailed size chart.',
+      },
+      {
+        title: 'Curvy Options',
+        description: 'Special cuts and sizes designed for curvier figures. Every body is beautiful.',
+      },
+      {
+        title: 'Petite & Tall',
+        description: 'Special length options available. No more alterations needed.',
+      },
+      {
+        title: 'Easy Returns',
+        description: 'Free returns within 30 days. Shop with confidence.',
+      },
+    ]}
+  />
+
+  <!-- FAQ -->
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        question: 'What is the best fabric for spring dresses?',
+        answer: 'Lightweight fabrics like cotton, linen, and jersey knit are ideal for spring. They breathe well and keep you comfortable as temperatures fluctuate.',
+      },
+      {
+        question: 'How do I care for my spring dresses?',
+        answer: 'Most spring dresses can be machine washed on gentle cycle. Always check the care label. Air dry or tumble dry low to maintain quality.',
+      },
+      {
+        question: 'Can I wear these dresses to work?',
+        answer: 'Absolutely! Our collection includes many professional styles suitable for office wear. Pair with a blazer for a polished look.',
+      },
+      {
+        question: 'What accessories go with spring dresses?',
+        answer: 'Depends on the occasion! Add a denim jacket and sneakers for casual days, or statement jewelry and heels for evening events.',
+      },
+      {
+        question: 'Do you offer petite and plus sizes?',
+        answer: 'Yes! We offer a wide range of sizes from XS to 3XL, including petite and tall lengths where available.',
+      },
+      {
+        question: 'What is your return policy?',
+        answer: 'We offer free returns within 30 days of purchase. Items must be unworn with tags attached.',
+      },
+    ]}
+  />
+
+  <!-- Final CTA -->
+  <CallToAction
+    title="Ready to Bloom This Spring?"
+    subtitle="Shop our exclusive spring collection. Limited stock available in popular styles."
+    actions={[
+      { variant: 'primary', text: 'Shop Now on Amazon', href: 'https://www.amazon.com/s?k=spring+dresses+for+women', target: '_blank', icon: 'tabler:shopping-cart' },
+    ]}
+  />
+</Layout>
