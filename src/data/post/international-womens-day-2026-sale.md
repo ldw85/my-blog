@@ -55,7 +55,7 @@ Whether it's your mom, wife, girlfriend, best friend, or even yourself — **she
 
 **Popular Brands**: Pandora, Swarovski, Tiffany & Co., Alex and Ani
 
-[🔗 Shop Jewelry on Amazon →](#)
+[🔗 Shop Jewelry on Amazon →](https://amzn.to/46oGG7Q)
 
 ---
 
@@ -74,7 +74,7 @@ Whether it's your mom, wife, girlfriend, best friend, or even yourself — **she
 
 **Popular Brands**: ZARA, H&M, UNIQLO, Nordstrom
 
-[🔗 Shop Fashion on Amazon →](#)
+[🔗 Shop Fashion on Amazon →](https://amzn.to/4qW6C1I)
 
 ---
 
@@ -93,7 +93,7 @@ Whether it's your mom, wife, girlfriend, best friend, or even yourself — **she
 
 **Popular Brands**: Yankee Candle, Diptyque, Jo Malone, Bath & Body Works
 
-[🔗 Shop Fragrances on Amazon →](#)
+[🔗 Shop Fragrances on Amazon →](https://amzn.to/4qV49Vm)
 
 ---
 
