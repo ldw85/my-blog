@@ -42,8 +42,9 @@ const metadata = {
               Embrace the season with our curated selection of elegant spring dresses. From casual daywear to stunning evening gowns, find your perfect look.
             </p>
             <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-              <a href="https://amzn.to/40viXzb" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0">
-                Shop Spring Dresses 🛒
+              <a href="https://amzn.to/40viXzb" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0 amazon-btn">
+                <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
+                Buy on Amazon
               </a>
               <a href="#styles" class="btn btn-secondary sm:mb-0">
                 Explore Collection
@@ -322,7 +323,28 @@ const metadata = {
     title="Ready to Bloom This Spring?"
     subtitle="Shop our exclusive spring collection. Limited stock available in popular styles."
     actions={[
-      { variant: 'primary', text: 'Shop Now on Amazon 🛒', href: 'https://amzn.to/40viXzb', target: '_blank' },
+      { variant: 'primary', text: 'Buy on Amazon 🎁', href: 'https://amzn.to/40viXzb', target: '_blank' },
     ]}
   />
 </Layout>
+
+<style is:global>
+.amazon-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: linear-gradient(180deg, #FFD814 0%, #FFBB50 100%) !important;
+  border: 1px solid #FCD200 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+  font-weight: 600 !important;
+  color: #0F1111 !important;
+}
+.amazon-btn:hover {
+  background: linear-gradient(180deg, #F7CA00 0%, #F7CA00 100%) !important;
+  border-color: #FCD200 !important;
+}
+.amazon-icon {
+  width: 20px;
+  height: 20px;
+}
+</style>
