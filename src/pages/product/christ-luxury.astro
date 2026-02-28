@@ -1,0 +1,276 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const metadata = {
+  title: 'CHRIST - Exklusiver Schmuck & Uhren | Weltfrauentag Special',
+  description: 'Entdecken Sie zeitlos elegante Schmuckstücke und luxuriöse Uhren zum Weltfrauentag. Bis zu 20% Rabatt auf ausgewählte Uhren & Schmuck.',
+};
+---
+
+<style is:global>
+  /* Override intersection animations for Hero section - show immediately */
+  .hero-section .intersect-once {
+    opacity: 1 !important;
+  }
+  .hero-section .motion-safe\:md\:opacity-0 {
+    opacity: 1 !important;
+  }
+  .hero-section {
+    animation: none !important;
+  }
+  .christ-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  }
+  .gold-text {
+    background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 50%, #d4af37 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gold-btn {
+    background: linear-gradient(135deg, #d4af37 0%, #c5a028 100%) !important;
+    border: 2px solid #f4e4bc !important;
+    color: #1a1a2e !important;
+    font-weight: 700 !important;
+    transition: all 0.3s ease !important;
+  }
+  .gold-btn:hover {
+    background: linear-gradient(135deg, #f4e4bc 0%, #d4af37 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4) !important;
+  }
+  .trust-badge {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <section class="relative md:-mt-[76px] not-prose hero-section christ-hero">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="py-12 md:py-20">
+        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+          <p class="text-base text-[#d4af37] font-bold tracking-widest uppercase mb-4">
+            ✨ Weltfrauentag Special ✨
+          </p>
+          <h1 class="text-5xl md:text-7xl font-bold leading-tighter tracking-tighter mb-6 font-heading text-white">
+            Ein Statement für <span class="gold-text">Stärke</span>
+          </h1>
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+              Zum Weltfrauentag: Feiere dich selbst mit zeitloser Eleganz und sichere dir exklusive Frühlingsangebote
+            </p>
+            
+            <!-- Promo Badge -->
+            <div class="inline-block bg-[#d4af37] text-[#1a1a2e] px-6 py-3 rounded-full font-bold text-lg mb-8">
+              🎉 Bis zu 20% Rabatt auf ausgewählte Uhren & Schmuck
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+              <div class="trust-badge px-4 py-2 rounded-full text-white text-sm">
+                ✓ 30 Tage Rückgaberecht
+              </div>
+              <div class="trust-badge px-4 py-2 rounded-full text-white text-sm">
+                ✓ Kostenlose Retoure in den Stores
+              </div>
+              <div class="trust-badge px-4 py-2 rounded-full text-white text-sm">
+                ✓ Offizieller CHRIST Händler
+              </div>
+            </div>
+            
+            <div class="max-w-md m-auto flex flex-col sm:flex-row justify-center gap-4">
+              <a href="https://tatrck.com/h/0Hu30_Cb0Ob-?model=cpc" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0 gold-btn">
+                Jetzt shoppen - Bis zu 20% sparen ✨
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hero Image -->
+        <div class="relative m-auto max-w-5xl">
+          <img 
+            src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1200&q=80" 
+            alt="Luxus Schmuck & Uhren - CHRIST Kollektion"
+            class="mx-auto rounded-lg w-full shadow-2xl"
+            loading="eager"
+            width="1024"
+            height="576"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warum CHRIST -->
+  <Features
+    title="Warum CHRIST?"
+    subtitle="Ihre Adresse für exklusive Luxus-Schmuckstücke"
+    items={[
+      {
+        title: 'Offizieller Fachhändler',
+        description: 'Als autorisierter CHRIST Händler garantieren wir 100% Originalware mit voller Herstellergarantie.',
+      },
+      {
+        title: 'Exklusive Kollektionen',
+        description: 'Entdecken Sie handverlesene Stücke von renommierten Designern und Luxusmarken.',
+      },
+      {
+        title: 'Fachliche Beratung',
+        description: 'Unsere Experten helfen Ihnen, das perfekte Schmuckstück oder die perfekte Uhr zu finden.',
+      },
+      {
+        title: 'Meisterhandwerk',
+        description: 'Jedes Stück wird mit höchster Präzision und Liebe zum Detail gefertigt.',
+      },
+    ]}
+  />
+
+  <!-- Schmuck Kollektion -->
+  <Content
+    title="Exklusiver Schmuck für starke Frauen"
+    subtitle="Zeitlose Eleganz trifft auf modernes Design"
+    items={[
+      {
+        title: 'Diamantschmuck',
+        description: 'Funkelnde Diamanten in klassischen und modernen Fassungen. Perfekt für besondere Momente.',
+      },
+      {
+        title: 'Gold & Edelstahl',
+        description: 'Von Gelbgold über Weißgold bis zu eleganten Stahlketten - für jeden Stil das Richtige.',
+      },
+      {
+        title: 'Perlen',
+        description: 'Zeitlose Perlenketten und -ohrringe für einen eleganten und sophisticated Look.',
+      },
+      {
+        title: 'Memorial & Personalisiert',
+        description: 'Gravurschmuck und personalisierte Stücke, die Ihre ganz persönliche Geschichte erzählen.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=800&q=80',
+      alt: 'Exklusiver Christ Schmuck',
+    }}
+  />
+
+  <!-- Uhren Kollektion -->
+  <Content
+    title="Luxusuhren für jeden Anlass"
+    subtitle="Präzision und Eleganz am Handgelenk"
+    isReversed={true}
+    items={[
+      {
+        title: 'Klassische Uhren',
+        description: 'Zeitlose Designs, die Generationen überdauern. Elegant, raffiniert, unvergänglich.',
+      },
+      {
+        title: 'Sportuhren',
+        description: 'Robust und stylish für den aktiven Lifestyle. Wasserdicht und stoßfest.',
+      },
+      {
+        title: 'Smartwatches',
+        description: 'Die perfekte Verbindung aus Tradition und moderner Technologie.',
+      },
+      {
+        title: 'Limited Editions',
+        description: 'Exklusive Sondermodelle für Sammler und Liebhaber seltener Stücke.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
+      alt: 'Luxusuhren Kollektion',
+    }}
+  />
+
+  <!-- Weltfrauentag Special -->
+  <Features
+    title="Weltfrauentag Special - Bis zu 20% Rabatt"
+    subtitle="Verwöhnen Sie sich zum Internationalen Frauentag"
+    columns={3}
+    items={[
+      {
+        title: '💎 Diamantkollektion',
+        description: 'Bis zu 20% Rabatt auf ausgewählte Diamantketten, Ringe und Ohrringe.',
+      },
+      {
+        title: '⌚ Luxusuhren',
+        description: 'Rabatte auf Premium-Markenuhren von TAG Heuer, Longines und mehr.',
+      },
+      {
+        title: '🌸 Frühlingskollektion',
+        description: 'Entdecken Sie die neuen Frühlingsdesigns in Pastelltönen.',
+      },
+    ]}
+  />
+
+  <!-- Vorteile -->
+  <Features
+    title="Ihre Vorteile beim Einkauf"
+    subtitle="Darum vertrauen uns Tausende zufriedene Kunden"
+    columns={2}
+    items={[
+      {
+        title: '30 Tage Rückgaberecht',
+        description: 'Nicht zufrieden? Kein Problem. Sie können Ihre Bestellung innerhalb von 30 Tagen zurücksenden.',
+      },
+      {
+        title: 'Kostenlose Retoure in den Stores',
+        description: 'Geben Sie Ihren Einkauf bequem in einer unserer Filialen zurück.',
+      },
+      {
+        title: 'Sichere Zahlung',
+        description: 'SSL-verschlüsselte Zahlung per Kreditkarte, PayPal oder Ratenzahlung.',
+      },
+      {
+        title: 'Expressversand',
+        description: 'Kostenloser Versand ab 50€ - schnell und zuverlässig zu Ihnen nach Hause.',
+      },
+    ]}
+  />
+
+  <!-- Testimonials -->
+  <Testimonials
+    title="Was unsere Kunden sagen"
+    subtitle="Echte Bewertungen von zufriedenen Kundinnen"
+    items={[
+      {
+        title: 'Wunderschöne Qualität',
+        description: 'Die Uhr ist absolut gorgeous. Die Verarbeitung ist erstklassig und der Kundenservice war sehr hilfreich.',
+        author: 'Maria S.',
+        avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
+      },
+      {
+        title: 'Perfektes Geschenk',
+        description: 'Habe meiner Mutter zum Weltfrauentag eine Kette geschenkt. Sie war hellauf begeistert! Vielen Dank!',
+        author: 'Anna L.',
+        avatar: 'https://randomuser.me/api/portraits/women/68.jpg',
+      },
+      {
+        title: 'Tolles Einkaufserlebnis',
+        description: 'Die Beratung war excellent. Man hat sich Zeit genommen und alle Fragen geduldig beantwortet.',
+        author: 'Sophie K.',
+        avatar: 'https://randomuser.me/api/portraits/women/33.jpg',
+      },
+    ]}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    title="Feiern Sie sich selbst"
+    subtitle="Zum Weltfrauentag beschenken Sie sich mit zeitloser Eleganz. Nutzen Sie jetzt unsere exklusiven Frühlingsangebote und sparen Sie bis zu 20%!"
+    actions={[
+      { variant: 'primary', text: 'Jetzt shoppen - 20% Rabatt ✨', href: 'https://tatrck.com/h/0Hu30_Cb0Ob-?model=cpc', target: '_blank' },
+    ]}
+  />
+</Layout>
