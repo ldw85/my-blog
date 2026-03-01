@@ -7,12 +7,13 @@ import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  showAffiliateDisclosure?: boolean;
 }
 
-const { metadata } = Astro.props;
+const { metadata, showAffiliateDisclosure = true } = Astro.props;
 ---
 
-<PageLayout metadata={metadata}>
+<PageLayout metadata={metadata} showAffiliateDisclosure={showAffiliateDisclosure}>
   <Fragment slot="announcement">
     <slot name="announcement" />
   </Fragment>

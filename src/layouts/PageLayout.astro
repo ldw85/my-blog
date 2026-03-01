@@ -11,9 +11,10 @@ import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  showAffiliateDisclosure?: boolean;
 }
 
-const { metadata } = Astro.props;
+const { metadata, showAffiliateDisclosure = true } = Astro.props;
 ---
 
 <Layout metadata={metadata}>
@@ -28,7 +29,7 @@ const { metadata } = Astro.props;
   </main>
   
   <!-- Amazon Affiliate Disclosure - 亚马逊联盟推广声明 -->
-  <AmazonAffiliateDisclosure />
+  {showAffiliateDisclosure && <AmazonAffiliateDisclosure />}
   
   <slot name="footer">
     <Footer {...footerData} />
