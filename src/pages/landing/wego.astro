@@ -1,0 +1,213 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'ويجو - احجز أرخص تذاكر الطيران عبر الإنترنت | Wego',
+  description: 'اكتشف أرخص أسعار تذاكر الطيران إلى وجهات عالمية. قارن بين أسعار شركات الطيران المختلفة واحجز الآن بأسهل طريقة.',
+};
+---
+
+<style is:global>
+  /* Override intersection animations for Hero section - show immediately */
+  .hero-section .intersect-once {
+    opacity: 1 !important;
+  }
+  .hero-section .motion-safe\:md\:opacity-0 {
+    opacity: 1 !important;
+  }
+  .hero-section {
+    animation: none !important;
+  }
+  .wego-hero {
+    background: linear-gradient(135deg, #00a698 0%, #00d2be 50%, #00f5c4 100%);
+  }
+  .wego-text {
+    color: #00a698;
+  }
+  .wego-btn {
+    background: linear-gradient(135deg, #00a698 0%, #008b7d 100%) !important;
+    border: 2px solid #00a698 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    transition: all 0.3s ease !important;
+  }
+  .wego-btn:hover {
+    background: linear-gradient(135deg, #00d2be 0%, #00a698 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 166, 152, 0.4) !important;
+  }
+  .trust-badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+<Layout metadata={metadata} showAffiliateDisclosure={false}>
+  <!-- Hero Section -->
+  <section class="relative md:-mt-[76px] not-prose hero-section wego-hero">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="py-12 md:py-20">
+        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+          <p class="text-base text-white font-bold tracking-widest uppercase mb-4">
+            ✈️ أرخص أسعار الطيران في الشرق الأوسط ✈️
+          </p>
+          <h1 class="text-5xl md:text-7xl font-bold leading-tighter tracking-tighter mb-6 font-heading text-white">
+            احجز طائرتك مع <span class="text-white">ويجو</span>
+          </h1>
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+              قارن أسعار التذاكر من أكثر من 700 شركة طيران وموقع حجز. اعثر على أرخص الأسعار واحجز في ثوانٍ
+            </p>
+            
+            <!-- Promo Badge -->
+            <div class="inline-block bg-white text-[#00a698] px-6 py-3 rounded-full font-bold text-lg mb-8">
+              🎉 خصم يصل إلى 50% على بعض الوجهات!
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+              <div class="trust-badge px-4 py-2 rounded-full text-white text-sm font-medium">
+                ✓ أكثر من 700 شركة طيران
+              </div>
+              <div class="trust-badge px-4 py-2 rounded-full text-white text-sm font-medium">
+                ✓ أفضل الأسعار مضمونة
+              </div>
+              <div class="trust-badge px-4 py-2 rounded-full text-white text-sm font-medium">
+                ✓ حجز آمن وسهل
+              </div>
+            </div>
+            
+            <div class="max-w-md m-auto flex flex-col sm:flex-row justify-center gap-4">
+              <a href="https://go.urtrackinglink.com/SH8PR" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0 wego-btn">
+                احجز رحلتك الآن 🛫
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hero Image -->
+        <div class="relative m-auto max-w-5xl">
+          <img 
+            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80" 
+            alt="حجز تذاكر الطيران عبر الإنترنت"
+            class="mx-auto rounded-lg w-full shadow-2xl"
+            loading="eager"
+            width="1024"
+            height="576"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- لماذا تختار ويجو؟ -->
+  <Features
+    title="لماذا تختار ويجو؟"
+    subtitle="أفضل منصة لحجز الطيران في المنطقة"
+    items={[
+      {
+        title: '🔍 مقارنة شاملة',
+        description: 'قارن أسعار شركات الطيران المختلفة في مكان واحد. اعثر على أفضل صفقة بكل سهولة.',
+      },
+      {
+        title: '💰 أسعار مخفضة',
+        description: 'نقدم لك أرخص الأسعار مع ضمان أفضل سعر في السوق. احفظ أموالك.',
+      },
+      {
+        title: '🌍 وجهات عالمية',
+        description: 'احجز رحلات إلى آلاف الوجهات حول العالم. من دبي إلى أي مكان تريده.',
+      },
+      {
+        title: '⭐ تقييمات حقيقية',
+        description: 'اقرأ تجارب المسافرين الحقيقيين قبل الحجز. قرارك建立在معلومات موثوقة.',
+      },
+    ]}
+  />
+
+  <!-- كيفية الحجز -->
+  <Content
+    title="كيف تحجز رحلتك في 3 خطوات"
+    subtitle="احجز طاولتك في دقائق معدودة"
+    items={[
+      {
+        title: '🔎 ابحث عن رحلتك',
+        description: 'أدخل وجهتك وتاريخ سفرك. سنقوم بمقارنة أسعار جميع شركات الطيران.',
+      },
+      {
+        title: '💵 قارن واختر',
+        description: 'تصفح النتائج واختر أفضل سعر يناسب ميزانيتك وجدول سفرك.',
+      },
+      {
+        title: '✅ احجز بسهولة',
+        description: 'أكمل حجزك بأمان عبر موقع ويجو. احصل على تأكيد فوري.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=800&q=80',
+      alt: 'سهولة حجز الطيران',
+    }}
+  />
+
+  <!-- الوجهات Popular -->
+  <Features
+    title="الوجهات الأكثر شعبية"
+    subtitle="اعثر على رحلتك المثالية"
+    columns={3}
+    items={[
+      {
+        title: '🇹🇷 إسطنبول',
+        description: 'رحلة إلى إسطنبول بأسعار مميزة. استكشف تاريخ وثقافة المدينة.',
+      },
+      {
+        title: '🇪🇬 شرم الشيخ',
+        description: 'احجز رحلتك إلى شرم الشيخ واستمتع بشواطئ البحر الأحمر.',
+      },
+      {
+        title: '🇹🇭 تايلاند',
+        description: 'سافر إلى تايلاند واستمتع بالاستوائية والطبيعة الخلابة.',
+      },
+    ]}
+  />
+
+  <!-- مميزات إضافية -->
+  <Features
+    title="مميزات ويجو"
+    subtitle="كل ما تحتاجه لحجز مثالي"
+    columns={2}
+    items={[
+      {
+        title: '🛡️ حجز آمن',
+        description: 'بياناتك الشخصية مؤمنة بالكامل. حجزك آمن وموثوق.',
+      },
+      {
+        title: '📞 دعم العملاء',
+        description: 'فريق دعم متوفر 24/7 لمساعدتك في أي استفسار.',
+      },
+      {
+        title: '🎁 عروض حصرية',
+        description: 'احصل على خصومات وعروض حصرية فقط لأعضاء ويجو.',
+      },
+      {
+        title: '📱 حجز من هاتفك',
+        description: 'احجز في أي وقت ومن أي مكان عبر موقع ويجو المتوافق مع الجوال.',
+      },
+    ]}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    title="ابدأ رحلتك الآن"
+    subtitle="لا تفوت الفرصة! احجز رحلتك بأفضل الأسعار على ويجو واستمتع برحلة لا تُنسى."
+    actions={[
+      { variant: 'primary', text: 'احجز رحلتك الآن 🛫', href: 'https://go.urtrackinglink.com/SH8PR', target: '_blank' },
+    ]}
+  />
+</Layout>
