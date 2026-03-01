@@ -1,0 +1,217 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Noon - Middle East\'s Leading Online Shopping Destination',
+  description: 'Discover amazing deals on electronics, fashion, beauty, home, and more. Shop the largest selection of products at incredibly low prices.',
+};
+---
+
+<style is:global>
+  /* Override intersection animations for Hero section - show immediately */
+  .hero-section .intersect-once {
+    opacity: 1 !important;
+  }
+  .hero-section .motion-safe\:md\:opacity-0 {
+    opacity: 1 !important;
+  }
+  .hero-section {
+    animation: none !important;
+  }
+  .noon-hero {
+    background: linear-gradient(135deg, #f5d56e 0%, #f7d02a 50%, #ffcc00 100%);
+  }
+  .noon-text {
+    color: #0f1222;
+  }
+  .noon-btn {
+    background: linear-gradient(135deg, #0f1222 0%, #1a1f3a 100%) !important;
+    border: 2px solid #0f1222 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    transition: all 0.3s ease !important;
+  }
+  .noon-btn:hover {
+    background: linear-gradient(135deg, #1a1f3a 0%, #0f1222 100%) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(15, 18, 34, 0.4) !important;
+  }
+  .trust-badge {
+    background: rgba(15, 18, 34, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(15, 18, 34, 0.2);
+  }
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+<Layout metadata={metadata} showAffiliateDisclosure={false}>
+  <!-- Hero Section -->
+  <section class="relative md:-mt-[76px] not-prose hero-section noon-hero">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="py-12 md:py-20">
+        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+          <p class="text-base text-[#0f1222] font-bold tracking-widest uppercase mb-4">
+            🌍 Middle East's #1 Shopping App 🌍
+          </p>
+          <h1 class="text-5xl md:text-7xl font-bold leading-tighter tracking-tighter mb-6 font-heading text-[#0f1222]">
+            Shop <span class="noon-text">Noon</span> - Millions of Products
+          </h1>
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl md:text-2xl text-[#0f1222]/80 mb-8 leading-relaxed">
+              Your one-stop destination for electronics, fashion, beauty, baby products, home & kitchen at incredibly affordable prices
+            </p>
+            
+            <!-- Promo Badge -->
+            <div class="inline-block bg-[#0f1222] text-white px-6 py-3 rounded-full font-bold text-lg mb-8">
+              🎉 Free Delivery • Easy Returns • Secure Payment
+            </div>
+            
+            <!-- Trust Badges -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+              <div class="trust-badge px-4 py-2 rounded-full text-[#0f1222] text-sm font-medium">
+                ✓ 100% Original Products
+              </div>
+              <div class="trust-badge px-4 py-2 rounded-full text-[#0f1222] text-sm font-medium">
+                ✓ Cash on Delivery
+              </div>
+              <div class="trust-badge px-4 py-2 rounded-full text-[#0f1222] text-sm font-medium">
+                ✓ 14-Day Returns
+              </div>
+            </div>
+            
+            <div class="max-w-md m-auto flex flex-col sm:flex-row justify-center gap-4">
+              <a href="http://go.urtrackinglink.com/SH8PP" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0 noon-btn">
+                Shop Now on Noon 🛒
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Hero Image -->
+        <div class="relative m-auto max-w-5xl">
+          <img 
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&q=80" 
+            alt="Noon - Online Shopping in Middle East"
+            class="mx-auto rounded-lg w-full shadow-2xl"
+            loading="eager"
+            width="1024"
+            height="576"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Shop Noon -->
+  <Features
+    title="Why Shop on Noon?"
+    subtitle="The Middle East's most trusted online marketplace"
+    items={[
+      {
+        title: '🏆 Original Products',
+        description: '100% authentic products from authorized sellers. Every purchase is guaranteed genuine.',
+      },
+      {
+        title: '🚚 Free Delivery',
+        description: 'Free shipping on orders over AED 100. Fast and reliable delivery across the region.',
+      },
+      {
+        title: '💳 Secure Payment',
+        description: 'Multiple payment options including credit cards, debit cards, and cash on delivery.',
+      },
+      {
+        title: '↩️ Easy Returns',
+        description: 'Hassle-free 14-day return policy. Shop with confidence.',
+      },
+    ]}
+  />
+
+  <!-- Product Categories -->
+  <Content
+    title="Shop by Category"
+    subtitle="Discover millions of products across all your favorite categories"
+    items={[
+      {
+        title: '📱 Electronics',
+        description: 'Smartphones, laptops, tablets, gaming consoles, accessories and more from top brands.',
+      },
+      {
+        title: '👗 Fashion',
+        description: 'Clothing, shoes, bags, watches and accessories for men, women and kids.',
+      },
+      {
+        title: '💄 Beauty & Makeup',
+        description: 'Skincare, cosmetics, fragrances and beauty tools from premium brands.',
+      },
+      {
+        title: '🏠 Home & Kitchen',
+        description: 'Furniture, decor, kitchen appliances, bedding and everything for your home.',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=800&q=80',
+      alt: 'Noon Product Categories',
+    }}
+  />
+
+  <!-- Top Brands -->
+  <Features
+    title="Top Brands Available"
+    subtitle="Shop from hundreds of international and regional brands"
+    columns={3}
+    items={[
+      {
+        title: '📱 Apple & Samsung',
+        description: 'Latest smartphones, tablets, and accessories at competitive prices.',
+      },
+      {
+        title: '👟 Nike & Adidas',
+        description: 'Authentic sportswear, shoes, and accessories for active lifestyle.',
+      },
+      {
+        title: '💄 MAC & Sephora',
+        description: 'Premium cosmetics, skincare, and fragrances from top beauty brands.',
+      },
+    ]}
+  />
+
+  <!-- Benefits -->
+  <Features
+    title="Why Choose Noon?"
+    subtitle="The best online shopping experience in the Middle East"
+    columns={2}
+    items={[
+      {
+        title: '🌍 Regional Favorite',
+        description: 'The most popular online shopping platform in UAE, Saudi Arabia, Egypt and more.',
+      },
+      {
+        title: '⭐ Customer Reviews',
+        description: 'Real reviews from millions of satisfied customers across the region.',
+      },
+      {
+        title: '📞 24/7 Support',
+        description: 'Round-the-clock customer service to assist you with any questions.',
+      },
+      {
+        title: '💰 Best Prices',
+        description: 'Competitive pricing with regular deals, discounts, and flash sales.',
+      },
+    ]}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    title="Start Shopping Now"
+    subtitle="Download the Noon app or visit the website to explore millions of products at amazing prices!"
+    actions={[
+      { variant: 'primary', text: 'Shop Now on Noon 🛒', href: 'http://go.urtrackinglink.com/SH8PP', target: '_blank' },
+    ]}
+  />
+</Layout>
