@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://techruling.com/sitemap-index.xml
