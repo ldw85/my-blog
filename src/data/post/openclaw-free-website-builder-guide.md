@@ -1,17 +1,19 @@
 ---
-title: "How I Built a Professional Review Website in Under 30 Minutes with LobsterAI"
-description: "Discover how to use AI assistance to create, deploy, and launch a beautiful blog website without writing a single line of code. Full step-by-step guide with real examples."
+title: "How I Built a Free Professional Review Website in Under 30 Minutes with OpenClaw (100% Free)"
+description: "Discover how to use OpenClaw AI assistant to create, deploy, and launch a beautiful blog website without writing a single line of code. Full step-by-step guide with real examples. Total cost: $0"
 pubDate: "2025-03-07"
 heroImage: "/blog-placeholder-1.jpg"
 category: "AI Tools"
-tags: ["AI", "Website Builder", "LobsterAI", "Astro", "Cloudflare Pages", "No-Code", "Tutorial"]
+tags: ["AI", "Website Builder", "OpenClaw", "Astro", "Cloudflare Pages", "No-Code", "Tutorial", "Free"]
 ---
 
-# How I Built a Professional Review Website in Under 30 Minutes with LobsterAI
+# How I Built a Free Professional Review Website in Under 30 Minutes with OpenClaw
 
-Have you ever wanted to launch a beautiful, professional website but felt intimidated by coding? What if I told you that with the right AI assistant, you can go from idea to live website in less than 30 minutes—without writing a single line of code?
+Have you ever wanted to launch a beautiful, professional website but felt intimidated by coding? What if I told you that with the right AI assistant, you can go from idea to live website in less than 30 minutes—without writing a single line of code—and it won't cost you a dime?
 
-In this comprehensive guide, I'll walk you through exactly how I used **LobsterAI**, an AI-powered development assistant, to build and deploy PicksHub—a stunning review website featuring 9 different product categories. I'll share the exact prompts I used, how many conversations it took, and the impressive results.
+In this comprehensive guide, I'll walk you through exactly how I used **OpenClaw**, a powerful AI-powered development assistant, to build and deploy PicksHub—a stunning review website featuring 9 different product categories. I'll share the exact prompts I used, how many conversations it took, and the impressive results.
+
+**The best part? This entire project cost $0.** Every tool I used offers a free tier, including the AI model itself (MiniMax 2.5).
 
 ## The Challenge: Building a Review Website Fast
 
@@ -32,9 +34,51 @@ The traditional approach would involve:
 
 But with AI-assisted development, I accomplished all of this in a fraction of the time.
 
+## What You'll Need (All Free!)
+
+Before we dive in, here's what you'll need—every single item is free:
+
+1. **OpenClaw Account** - The AI assistant that does all the work
+2. **GitHub Account** - For code storage and automatic deployments
+3. **Cloudflare Account** - Free CDN hosting withgenerous free tier
+4. **MiniMax 2.5 API Token** - The LLM powering OpenClaw (completely free)
+
+### Wait, MiniMax is Free?
+
+Yes! OpenClaw uses MiniMax 2.5 as its default LLM, and MiniMax offers a completely free API tier. You only need to pay for the API token itself—which is free for personal use. If you're on OpenClaw's Coding Plan, the cost is negligible (essentially free for most users).
+
+This means **the entire AI assistance costs $0**.
+
+### Setting Up Cloudflare (Free!)
+
+Cloudflare Pages offers a generous free tier that includes:
+
+- **Unlimited bandwidth** for static sites
+- **Global CDN** for fast loading worldwide
+- **Automatic SSL** certificates
+- **GitHub Actions integration** for automatic deployments
+
+**To get your Cloudflare API token:**
+
+1. Log in to [Cloudflare Dashboard](https://dash.cloudflare.com)
+2. Click on your profile icon → "My Profile"
+3. Select "API Tokens" from the left sidebar
+4. Click "Create Custom Token"
+5. Name it (e.g., "OpenClaw Deployment")
+6. Set permissions:
+   - **Zone**: Read
+   - **Account**: None
+   - **User**: None
+7. Set "Account Resources" to "Include > All accounts" (or specific account)
+8. Set "Zone Resources" to "Include > All zones"
+9. Click "Continue" → "Create Token"
+10. Copy your token and keep it safe
+
+That's it! You now have a free API token for deployments.
+
 ## Step 1: Finding the Right Starting Point
 
-My first prompt to LobsterAI was simple:
+My first prompt to OpenClaw was simple:
 
 > "Clone https://github.com/ldw85/my-blog.git and get familiar with the project. You'll be maintaining this website going forward."
 
@@ -48,7 +92,7 @@ This is the key insight: **the best AI projects start with clear, specific goals
 
 ## Step 2: Template Extraction & Customization
 
-LobsterAI analyzed the Astro project and extracted:
+OpenClaw analyzed the Astro project and extracted:
 
 - **81 reusable components** optimized for Astro 5.0
 - **Tailwind CSS styling** for beautiful, responsive designs
@@ -66,7 +110,7 @@ With the template ready, I specified exactly what I wanted:
 I also provided:
 
 - **GitHub repository**: https://github.com/ldw85/pickshub.git
-- **Cloudflare API token** for deployment
+- **Cloudflare API token** (the free one I just showed you how to get)
 
 The AI then created:
 
@@ -81,7 +125,7 @@ As my primary audience would be English-speaking readers, I requested:
 
 > "The homepage and blog pages contain Chinese text. Please change all text to English."
 
-LobsterAI meticulously translated:
+OpenClaw meticulously translated:
 
 - All **9 category names** (fashion, beauty, luxury, home, travel, outdoor, baby, education, dating)
 - **Homepage content** including headers, descriptions, and CTAs
@@ -96,7 +140,7 @@ After reviewing the live site, I noticed the navigation menu still showed old ca
 
 > "The homepage categories are complete, but the menu bar still shows old categories like Electronics, AI & SaaS, and Products with submenus. Please analyze how the menu bar should be designed?"
 
-LobsterAI analyzed the navigation structure and reorganized it to match my 9 categories, grouping them logically:
+OpenClaw analyzed the navigation structure and reorganized it to match my 9 categories, grouping them logically:
 
 - **Lifestyle**: Fashion, Beauty, Dating
 - **Home & Family**: Home, Baby
@@ -106,7 +150,7 @@ LobsterAI analyzed the navigation structure and reorganized it to match my 9 cat
 
 ## The Exact Prompts I Used
 
-Throughout this project, I didn't write any code or run any commands. Instead, I communicated my requirements to LobsterAI in plain English. Here's exactly what I asked for:
+Throughout this project, I didn't write any code or run any commands. Instead, I communicated my requirements to OpenClaw in plain English. Here's exactly what I asked for:
 
 ### Prompt 1: Clone and Explore
 
@@ -132,7 +176,7 @@ Throughout this project, I didn't write any code or run any commands. Instead, I
 
 ### Prompt 6: Publish This Article
 
-> "Based on our conversation, write a 2000-word SEO article about how I used LobsterAI to build this website without writing code. Include the prompts I used and the results."
+> "Based on our conversation, write a 2000-word SEO article about how I used OpenClaw to build this website without writing code. Include the prompts I used and the results."
 
 **That's it!** Six clear prompts. Zero code written. One live website deployed.
 
@@ -168,6 +212,14 @@ In this project, I achieved:
 - Category and tag taxonomies
 - Responsive navigation and footer
 - RSS feed support
+
+### 💰 **Cost**
+
+- **Total: $0**
+- OpenClaw: Free (MiniMax 2.5 API is free)
+- GitHub: Free
+- Cloudflare Pages: Free
+- Domain: Optional (can use free .pages.dev subdomain)
 
 ## Key Takeaways
 
@@ -205,7 +257,7 @@ By delegating technical work to AI, I focused on:
 
 ## Conclusion
 
-The traditional web development workflow requires significant technical expertise, time investment, and ongoing maintenance. But with AI assistants like LobsterAI, the barrier to entry has dramatically lowered.
+The traditional web development workflow requires significant technical expertise, time investment, and ongoing maintenance. But with AI assistants like OpenClaw, the barrier to entry has dramatically lowered—and it can be completely free.
 
 In this project, I:
 
@@ -216,6 +268,7 @@ In this project, I:
 - ✅ Set up automatic deployments
 - ✅ Total conversation turns: ~15
 - ✅ Total time: ~30 minutes
+- ✅ **Total cost: $0**
 
 **The future of web development isn't about memorizing syntax—it's about knowing how to communicate your vision to AI.**
 
@@ -228,4 +281,4 @@ Ready to build your own website? Start with a clear vision, find a suitable temp
 **Live Website**: [https://pickshub.pages.dev](https://pickshub.pages.dev)
 **GitHub Repository**: [https://github.com/ldw85/pickshub.git](https://github.com/ldw85/pickshub.git)
 
-*This article was written to demonstrate the power of AI-assisted development. All content, code, and deployment were accomplished through natural language conversations with LobsterAI.*
+*This article was written to demonstrate the power of AI-assisted development. All content, code, and deployment were accomplished through natural language conversations with OpenClaw. The entire project cost $0 thanks to free tiers from MiniMax and Cloudflare.*
