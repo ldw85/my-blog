@@ -1,4 +1,5 @@
 User-agent: *
 Disallow:
 
+Sitemap: https://techruling.com/sitemap.xml
 Sitemap: https://techruling.com/sitemap-index.xml
