@@ -194,7 +194,7 @@ Apple's M-series and M4 chips represent a fundamentally different approach to AI
 | Starting Price | $3,499 |
 
 **Where to Buy:**
-- [Apple MacBook Pro on Amazon](https://www.amazon.com/s?k=MacBook+Pro+M5+Max)
+- [Apple MacBook Pro on Amazon](https://amzn.to/4b71iUL)
 
 ---
 
@@ -244,7 +244,7 @@ For most users, the RTX 4070 Ti SUPER represents the best balance of capability 
 - [NVIDIA GeForce RTX 4070 Ti SUPER](https://amzn.to/4uwyexK)
 - [Apple Mac Mini](https://amzn.to/4loavLM)
 - [Apple Mac Studio](https://amzn.to/4lzL3mQ)
-- [Apple MacBook Pro](https://www.amazon.com/s?k=MacBook+Pro+M5+Max)
+- [Apple MacBook Pro](https://amzn.to/4b71iUL)
 
 ---
 
