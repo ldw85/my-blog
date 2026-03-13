@@ -75,7 +75,7 @@ The RTX 4090's 24GB VRAM capacity makes it uniquely capable among consumer GPUs:
 - High power consumption (450W TDP)
 
 **Where to Buy:**
-- [NVIDIA GeForce RTX 4090 on Amazon](https://www.amazon.com/s?k=RTX+4090+graphics+card)
+- [NVIDIA GeForce RTX 4090 on Amazon](https://amzn.to/4uratXz)
 
 **Tom's Hardware Rating:** 4.5/5 stars ⭐
 
@@ -105,7 +105,7 @@ The RTX 4080 SUPER, reviewed by Tom's Hardware as "More Efficient, Still Expensi
 - Better availability than RTX 4090
 
 **Where to Buy:**
-- [NVIDIA GeForce RTX 4080 SUPER on Amazon](https://www.amazon.com/s?k=RTX+4080+SUPER+graphics+card)
+- [NVIDIA GeForce RTX 4080 SUPER on Amazon](https://amzn.to/4rxfcEy)
 
 **Tom's Hardware Rating:** 3.5/5 stars ⭐
 
@@ -133,7 +133,7 @@ For users with more modest budgets, the RTX 4070 Ti SUPER delivers remarkable va
 - Excellent entry point for AI experimentation
 
 **Where to Buy:**
-- [NVIDIA GeForce RTX 4070 Ti SUPER on Amazon](https://www.amazon.com/s?k=RTX+4070+Ti+SUPER+graphics+card)
+- [NVIDIA GeForce RTX 4070 Ti SUPER on Amazon](https://amzn.to/4uwyexK)
 
 ---
 
@@ -160,7 +160,7 @@ Apple's M-series and M4 chips represent a fundamentally different approach to AI
 - **Image Generation**: Stable Diffusion via Core ML
 
 **Where to Buy:**
-- [Apple Mac Mini on Amazon](https://www.amazon.com/s?k=Mac+Mini+M4+Apple+Silicon)
+- [Apple Mac Mini on Amazon](https://amzn.to/4loavLM)
 
 ---
 
@@ -177,7 +177,7 @@ Apple's M-series and M4 chips represent a fundamentally different approach to AI
 | Starting Price | $1,999 | $3,999 |
 
 **Where to Buy:**
-- [Apple Mac Studio on Amazon](https://www.amazon.com/s?k=Apple+Mac+Studio)
+- [Apple Mac Studio on Amazon](https://amzn.to/4lzL3mQ)
 
 ---
 
@@ -239,11 +239,11 @@ For most users, the RTX 4070 Ti SUPER represents the best balance of capability 
 
 ## Amazon Product Links
 
-- [NVIDIA GeForce RTX 4090](https://www.amazon.com/s?k=RTX+4090+graphics+card)
-- [NVIDIA GeForce RTX 4080 SUPER](https://www.amazon.com/s?k=RTX+4080+SUPER+graphics+card)
-- [NVIDIA GeForce RTX 4070 Ti SUPER](https://www.amazon.com/s?k=RTX+4070+Ti+SUPER+graphics+card)
-- [Apple Mac Mini](https://www.amazon.com/s?k=Mac+Mini+M4+Apple+Silicon)
-- [Apple Mac Studio](https://www.amazon.com/s?k=Apple+Mac+Studio)
+- [NVIDIA GeForce RTX 4090](https://amzn.to/4uratXz)
+- [NVIDIA GeForce RTX 4080 SUPER](https://amzn.to/4rxfcEy)
+- [NVIDIA GeForce RTX 4070 Ti SUPER](https://amzn.to/4uwyexK)
+- [Apple Mac Mini](https://amzn.to/4loavLM)
+- [Apple Mac Studio](https://amzn.to/4lzL3mQ)
 - [Apple MacBook Pro](https://www.amazon.com/s?k=MacBook+Pro+M5+Max)
 
 ---
