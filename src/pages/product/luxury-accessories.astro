@@ -1,18 +1,19 @@
 ---
-title: "2026 Luxury Edit: The Ultimate Designer Accessories Guide"
-description: "Discover the finest luxury accessories from top designers. Our expert editors curate the season's most coveted pieces."
-pubDate: "2026-03-13"
-heroImage: "/images/luxury-products/3000x1500_1042a686-18ce-4920-ac9e-b8782c9900f8.jpg"
-category: "Product"
-tags: ["Luxury", "Fashion", "Designer", "Accessories", "Tory Burch"]
+import Layout from '~/layouts/LandingLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: '2026 Luxury Edit: Designer Accessories Guide | The Luxury Edit',
+  description: 'Discover the finest luxury accessories from top designers. Our expert editors curate the season\'s most coveted pieces.',
+};
+
 ---
 
-# 2026 Luxury Edit: The Ultimate Designer Accessories Guide
-
-<style>
-/* Magazine Editorial Style */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
-
+<style is:global>
 :root {
   --gold: #C9A962;
   --dark: #1a1a1a;
@@ -23,18 +24,9 @@ tags: ["Luxury", "Fashion", "Designer", "Accessories", "Tory Burch"]
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--cream);
-  color: var(--charcoal);
-  line-height: 1.8;
 }
 
-.magazine-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  background: #fff;
-  box-shadow: 0 0 60px rgba(0,0,0,0.08);
-}
-
-/* Cover Section */
+/* Magazine Cover Style */
 .magazine-cover {
   position: relative;
   height: 85vh;
@@ -98,7 +90,6 @@ body {
   opacity: 0.7;
 }
 
-/* Editors Pick */
 .editors-pick {
   background: var(--gold);
   color: #fff;
@@ -111,7 +102,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Section Styles */
+/* Editorial Section */
 .editorial-section {
   padding: 80px 60px;
   border-bottom: 1px solid #eee;
@@ -216,13 +207,6 @@ body {
   font-weight: 500;
 }
 
-.product-price .original {
-  text-decoration: line-through;
-  color: #999;
-  margin-right: 10px;
-  font-size: 0.95rem;
-}
-
 /* Editorial Content */
 .editorial-content {
   display: grid;
@@ -247,17 +231,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.editorial-text h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.editorial-text p {
-  color: #555;
-  margin-bottom: 1.5rem;
 }
 
 /* Trust Section */
@@ -331,25 +304,6 @@ body {
   color: var(--dark);
 }
 
-/* Footer */
-.magazine-footer {
-  background: #111;
-  color: #666;
-  padding: 40px 60px;
-  text-align: center;
-  font-size: 0.85rem;
-}
-
-.magazine-footer a {
-  color: #999;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
-.magazine-footer a:hover {
-  color: var(--gold);
-}
-
 /* Responsive */
 @media (max-width: 768px) {
   .editorial-section {
@@ -367,7 +321,7 @@ body {
 }
 </style>
 
-<div class="magazine-container">
+<Layout metadata={metadata}>
 
 <!-- Magazine Cover -->
 <section class="magazine-cover">
@@ -391,7 +345,6 @@ body {
   <p>
     Whether you're investing in your first luxury piece or expanding your collection, our editors have handpicked items that combine timeless design with contemporary relevance. These are not just accessories—they're statements.
   </p>
-  <p style="margin-top: 20px; font-style: italic; color: #999;">— The Editorial Team</p>
 </section>
 
 <!-- Featured Handbags -->
@@ -446,18 +399,15 @@ body {
     <div class="editorial-image">
       <img src="/images/luxury-products/750x750_b9bd5956-3487-44d1-9dd4-50c2ebbce0ec._AC_CR0%2C0%2C780%2C780_SX750_SY750_.jpg" alt="Luxury Jewelry">
     </div>
-    <div class="editorial-text">
-      <h3>The Jewelry Edit</h3>
-      <p>From delicate necklaces to bold earrings, our jewelry collection showcases pieces that transition seamlessly from day to night. Each item is crafted with attention to detail and designed to become a cherished part of your personal style story.</p>
-      <p>Whether you prefer minimalist pieces or statement makers, our curated selection offers something for every taste and occasion.</p>
-      <div style="margin-top: 30px;">
-        <strong>Highlights:</strong>
-        <ul style="margin-top: 15px; color: #555;">
-          <li>Premium materials and finishes</li>
-          <li>Hypoallergenic options available</li>
-          <li>Versatile designs for any outfit</li>
-        </ul>
-      </div>
+    <div>
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1.5rem;">The Jewelry Edit</h3>
+      <p style="color: #555; margin-bottom: 1.5rem;">From delicate necklaces to bold earrings, our jewelry collection showcases pieces that transition seamlessly from day to night.</p>
+      <p style="color: #555;">Whether you prefer minimalist pieces or statement makers, our curated selection offers something for every taste.</p>
+      <ul style="margin-top: 20px; color: #555;">
+        <li>Premium materials and finishes</li>
+        <li>Hypoallergenic options available</li>
+        <li>Versatile designs for any outfit</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -471,7 +421,7 @@ body {
   <div class="product-showcase">
     <div class="product-card">
       <div class="product-image">
-        <img src="/images/luxury-products/800x482_61M5fwli5DL._AC_CR0%2C0%2C0%2C0_SY482_.jpg" alt="Designer Flats">
+        <img src="/images/luxury-products/800x482_61M5fwli5DL._AC_CR0%2C0%2C0%2C0_SY482_.jpg" alt="Designer Sandals">
       </div>
       <div class="product-info">
         <div class="product-brand">Tory Burch</div>
@@ -575,18 +525,8 @@ body {
 <!-- CTA Section -->
 <section class="cta-section">
   <h2>Ready to Elevate Your Style?</h2>
-  <p>Explore our complete collection of luxury designer accessories. Free shipping on orders over $200.</p>
+  <p>Explore our complete collection of luxury designer accessories.</p>
   <a href="#" class="cta-button">Shop Now</a>
 </section>
 
-<!-- Footer -->
-<footer class="magazine-footer">
-  <p>© 2026 The Luxury Edit. All rights reserved.</p>
-  <div style="margin-top: 15px;">
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms of Service</a>
-    <a href="#">Contact Us</a>
-  </div>
-</footer>
-
-</div>
+</Layout>
