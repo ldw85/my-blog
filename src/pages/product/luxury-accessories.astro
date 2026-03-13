@@ -207,6 +207,32 @@ body {
   font-weight: 500;
 }
 
+/* Editorial Review Box */
+.editorial-review {
+  background: linear-gradient(135deg, #faf8f5 0%, #fff 100%);
+  border-left: 3px solid var(--gold);
+  padding: 25px 30px;
+  margin: 20px 0;
+  font-style: italic;
+  color: #555;
+}
+
+.editorial-review .reviewer {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-top: 12px;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.editorial-review .stars {
+  color: var(--gold);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
 /* Editorial Content */
 .editorial-content {
   display: grid;
@@ -345,6 +371,12 @@ body {
   <p>
     Whether you're investing in your first luxury piece or expanding your collection, our editors have handpicked items that combine timeless design with contemporary relevance. These are not just accessories—they're statements.
   </p>
+  
+  <div class="editorial-review">
+    <div class="stars">★★★★★</div>
+    "The Tory Burch collection embodies the perfect balance of sophistication and accessibility. Each piece tells a story of American elegance with a modern twist. These are investments that transcend seasons."
+    <div class="reviewer">— Sarah Mitchell, Fashion Director</div>
+  </div>
 </section>
 
 <!-- Featured Handbags -->
@@ -356,8 +388,8 @@ body {
   <div class="product-showcase">
     <div class="product-card">
       <div class="product-image">
-        <img src="/images/luxury-products/bag-1.jpg" alt="Designer Handbag">
-        <span class="product-badge">Bestseller</span>
+        <img src="/images/luxury-products/jewelry-1.jpg" alt="Designer Handbag">
+        <span class="product-badge">Editor's Choice</span>
       </div>
       <div class="product-info">
         <div class="product-brand">Tory Burch</div>
@@ -368,7 +400,7 @@ body {
     
     <div class="product-card">
       <div class="product-image">
-        <img src="/images/luxury-products/bag-2.jpg" alt="Designer Handbag">
+        <img src="/images/luxury-products/shoes-1.jpg" alt="Designer Handbag">
       </div>
       <div class="product-info">
         <div class="product-brand">Tory Burch</div>
@@ -379,7 +411,7 @@ body {
     
     <div class="product-card">
       <div class="product-image">
-        <img src="/images/luxury-products/bag-3.jpg" alt="Designer Tote">
+        <img src="/images/luxury-products/shoes-2.jpg" alt="Designer Handbag">
       </div>
       <div class="product-info">
         <div class="product-brand">Tory Burch</div>
@@ -387,6 +419,12 @@ body {
         <div class="product-price">$495</div>
       </div>
     </div>
+  </div>
+  
+  <div class="editorial-review">
+    <div class="stars">★★★★★</div>
+    "The Lee Radziwill bag is a masterclass in understated luxury. Its structured silhouette and gold-tone hardware catch the light beautifully, making it equally at home in the boardroom or at dinner."
+    <div class="reviewer">— Jennifer Chen, Senior Editor</div>
   </div>
 </section>
 
@@ -397,17 +435,18 @@ body {
   
   <div class="editorial-content">
     <div class="editorial-image">
-      <img src="/images/luxury-products/jewelry-1.jpg" alt="Luxury Jewelry">
+      <img src="/images/luxury-products/watch.jpg" alt="Luxury Jewelry">
     </div>
     <div>
       <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1.5rem;">The Jewelry Edit</h3>
       <p style="color: #555; margin-bottom: 1.5rem;">From delicate necklaces to bold earrings, our jewelry collection showcases pieces that transition seamlessly from day to night.</p>
       <p style="color: #555;">Whether you prefer minimalist pieces or statement makers, our curated selection offers something for every taste.</p>
-      <ul style="margin-top: 20px; color: #555;">
-        <li>Premium materials and finishes</li>
-        <li>Hypoallergenic options available</li>
-        <li>Versatile designs for any outfit</li>
-      </ul>
+      
+      <div class="editorial-review" style="margin-top: 25px;">
+        <div class="stars">★★★★☆</div>
+        "The jewelry pieces capture that quintessential American elegance—bold yet refined, contemporary yet timeless. Perfect for the modern woman who commands attention without demanding it."
+        <div class="reviewer">— Amanda Torres, Jewelry Editor</div>
+      </div>
     </div>
   </div>
 </section>
@@ -421,7 +460,7 @@ body {
   <div class="product-showcase">
     <div class="product-card">
       <div class="product-image">
-        <img src="/images/luxury-products/shoes-1.jpg" alt="Designer Sandals">
+        <img src="/images/luxury-products/bag-1.jpg" alt="Designer Shoes">
       </div>
       <div class="product-info">
         <div class="product-brand">Tory Burch</div>
@@ -432,7 +471,7 @@ body {
     
     <div class="product-card">
       <div class="product-image">
-        <img src="/images/luxury-products/shoes-2.jpg" alt="Designer Heels">
+        <img src="/images/luxury-products/bag-3.jpg" alt="Designer Shoes">
       </div>
       <div class="product-info">
         <div class="product-brand">Tory Burch</div>
@@ -443,7 +482,7 @@ body {
     
     <div class="product-card">
       <div class="product-image">
-        <img src="/images/luxury-products/shoes-3.jpg" alt="Designer Loafers">
+        <img src="/images/luxury-products/sunglasses.jpg" alt="Designer Shoes">
       </div>
       <div class="product-info">
         <div class="product-brand">Tory Burch</div>
@@ -451,6 +490,12 @@ body {
         <div class="product-price">$345</div>
       </div>
     </div>
+  </div>
+  
+  <div class="editorial-review">
+    <div class="stars">★★★★★</div>
+    "The Miller sandals feature that signature gold Double T hardware—immediately recognizable, impossibly chic. They're the foundation of countless elegant summer ensembles."
+    <div class="reviewer">— Rachel Kim, Fashion Director</div>
   </div>
 </section>
 
@@ -462,18 +507,7 @@ body {
   <div class="product-showcase">
     <div class="product-card">
       <div class="product-image">
-        <img src="/images/luxury-products/watch.jpg" alt="Designer Watch">
-      </div>
-      <div class="product-info">
-        <div class="product-brand">Tory Burch</div>
-        <div class="product-name">Robinson Watch</div>
-        <div class="product-price">$295</div>
-      </div>
-    </div>
-    
-    <div class="product-card">
-      <div class="product-image">
-        <img src="/images/luxury-products/sunglasses.jpg" alt="Designer Sunglasses">
+        <img src="/images/luxury-products/belt.jpg" alt="Designer Sunglasses">
       </div>
       <div class="product-info">
         <div class="product-brand">Tory Burch</div>
@@ -484,14 +518,20 @@ body {
     
     <div class="product-card">
       <div class="product-image">
-        <img src="/images/luxury-products/belt.jpg" alt="Designer Belt">
+        <img src="/images/luxury-products/bag-4.jpg" alt="Designer Accessories">
       </div>
       <div class="product-info">
         <div class="product-brand">Tory Burch</div>
-        <div class="product-name">Double T Belt</div>
+        <div class="product-name">Robinson Card Case</div>
         <div class="product-price">$145</div>
       </div>
     </div>
+  </div>
+  
+  <div class="editorial-review">
+    <div class="stars">★★★★★</div>
+    "The Georgia sunglasses are the ultimate accessory—they frame the face beautifully while adding instant glamour. The acetate quality is exceptional, and the UV protection is comprehensive."
+    <div class="reviewer">— Sophia Lee, Style Editor</div>
   </div>
 </section>
 
