@@ -1,3 +1,13 @@
+---
+title: "Apple 50周年：一份让果粉心动的终极礼物指南"
+description: "从经典复刻到黑科技新品，这份清单让你送得体面，收得开心。Apple 50周年礼物选购指南。"
+pubDate: "2026-03-14"
+heroImage: "/blog-placeholder-1.jpg"
+category: "Gift"
+tags: ["Apple", "Gift", "iPhone", "Mac", "AirPods", "Apple Watch", "Tech", "2026", "Review"]
+affiliateCategory: "electronics"
+---
+
 # 🍎 Apple 50周年：一份让果粉心动的终极礼物指南
 
 *从经典复刻到黑科技新品，这份清单让你送得体面，收得开心*
