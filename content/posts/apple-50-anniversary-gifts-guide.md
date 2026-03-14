@@ -33,14 +33,14 @@
 - **亮点**：主动降噪、空间音频、MagSafe充电盒
 - **适合**：通勤族、音乐爱好者
 - **参考价**：$249
-- 🔗 [查看商品](https://www.amazon.com/dp/B0BDHWDR12)
+- 🔗 [查看商品](https://amzn.to/4ru8kYE)
 
-#### 3. Apple Magic Keyboard
+#### 1. Apple Magic Keyboard
 - **定位**：iPad/Mac最佳伴侣
 - **亮点**：触控ID、剪刀式结构、轻薄设计
 - **适合**：文字工作者、学生
 - **参考价**：$199
-- 🔗 [查看商品](https://www.amazon.com/dp/B09JQMJHXY)
+- 🔗 [查看商品](https://amzn.to/4lwsWOy)
 
 ---
 
@@ -51,21 +51,21 @@
 - **亮点**：M4芯片、Ultra Retina XDR屏、史上最薄
 - **适合**：设计师、创作者、学生
 - **参考价**：$999起
-- 🔗 [查看商品](https://www.amazon.com/dp/B0F5PSHX6K)
+- 🔗 [查看商品](https://amzn.to/4bI8BlZ)
 
 #### 5. MacBook Air 15" (M3芯片)
 - **定位**：轻薄性能两不误
 - **亮点**：M3芯片、15小时续航、MagSafe充电
 - **适合**：办公族、程序员、大学生
 - **参考价**：$1,299
-- 🔗 [查看商品](https://www.amazon.com/dp/B0CTK1CXF2)
+- 🔗 [查看商品](https://amzn.to/4ltOpaH)
 
 #### 6. HomePod (第2代)
 - **定位**：智能家居中枢
 - **亮点**：Siri智能助理、空间音频、Thread协议
 - **适合**：苹果生态用户、智能家居玩家
 - **参考价**：$299
-- 🔗 [查看商品](https://www.amazon.com/dp/B0BSHF7WHW)
+- 🔗 [查看商品](https://amzn.to/4bt8Cck)
 
 ---
 
@@ -76,21 +76,20 @@
 - **亮点**：M4 Pro芯片、小巧机身、丰富接口
 - **适合**：开发者、设计师、居家办公
 - **参考价**：$1,399起
-- 🔗 [查看商品](https://www.amazon.com/dp/B0D4JXKD42)
+- 🔗 [查看商品](https://amzn.to/4buCVzr)
 
 #### 8. Apple Vision Pro
 - **定位**：空间计算先驱
 - **亮点**：EyeSight、8K分辨率、手势交互
 - **适合**：科技极客、早期 adopters
 - **参考价**：$3,499
-- 🔗 [查看商品](https://www.amazon.com/dp/B0BSHF63WH)
 
 #### 9. iPhone 16 Pro Max
 - **定位**：旗舰手机标杆
 - **亮点**：A18 Pro芯片、钛金属、5倍光学变焦
 - **适合**：果粉升级、礼品首选
 - **参考价**：$1,199起
-- 🔗 [查看商品](https://www.amazon.com/dp/B0D5NF2N5V)
+- 🔗 [查看商品](https://amzn.to/40vg5m4)
 
 ---
 
