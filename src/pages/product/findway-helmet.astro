@@ -1,0 +1,540 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Findway Pro Bike Helmet - Safety Certified Cycling Helmet for Adults',
+  description: 'Premium urban cycling helmet with 14 vents, adjustable fit, and multi-sport versatility. ASTM, CPSC, CE certified for your safety.',
+};
+
+---
+
+<style is:global>
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --accent: #f59e0b;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --gray: #64748b;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 80px 20px;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.hero-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #94a3b8;
+  margin-bottom: 32px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--accent);
+  color: #000;
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.cert-badges {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+@media (max-width: 900px) {
+  .cert-badges {
+    justify-content: center;
+  }
+}
+
+.cert-badge {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Pain Points Section */
+.pain-section {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-label {
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.pain-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.pain-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.pain-icon {
+  width: 56px;
+  height: 56px;
+  background: #fee2e2;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.pain-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.pain-card p {
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+/* Features Section */
+.features-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f8fafc 0%, #fff 100%);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e2e8f0;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* Product Gallery */
+.gallery-section {
+  padding: 80px 20px;
+  background: var(--dark);
+  color: #fff;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.gallery-item {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.03);
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 80px 20px;
+  background: var(--accent);
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  font-size: 1.15rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--dark);
+  color: #fff;
+  padding: 18px 40px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Specs */
+.specs-section {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.spec-item {
+  text-align: center;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.spec-label {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.spec-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .pain-section,
+  .features-section,
+  .gallery-section,
+  .cta-section,
+  .specs-section {
+    padding: 60px 20px;
+  }
+}
+</style>
+
+<Layout metadata={metadata}>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <span class="hero-badge">🚴 Rider Approved</span>
+      <h1>Ride Safe. Ride Comfortable.</h1>
+      <p class="hero-subtitle">The ultimate urban cycling helmet engineered for safety, designed for style. Certified by ASTM, CPSC, CE & EN1078.</p>
+      <a href="https://amzn.to/46XvCPa" class="hero-cta">
+        Shop Now on Amazon
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div class="cert-badges">
+        <span class="cert-badge">✓ ASTM Certified</span>
+        <span class="cert-badge">✓ CPSC Certified</span>
+        <span class="cert-badge">✓ CE Certified</span>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="/images/luxury-products/helmet-1.jpg" alt="Findway Pro Bike Helmet">
+    </div>
+  </div>
+</section>
+
+<!-- Pain Points Section -->
+<section class="pain-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Why Riders Struggle</p>
+      <h2 class="section-title">The Problem with Ordinary Helmets</h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-icon">⚠️</div>
+        <h3>Safety Risks</h3>
+        <p>Every year, thousands of cyclists suffer preventable head injuries. Without proper certification, your helmet won't protect you when it matters most.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">😰</div>
+        <h3>Uncomfortable Fit</h3>
+        <p>Traditional helmets are either too tight causing headaches, or too loose making you feel unsafe. Neither is acceptable for daily commutes.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">🥵</div>
+        <h3>Overheating</h3>
+        <p>Poor ventilation means sweating profusely in summer. You end up avoiding your helmet altogether—exactly when you need it most.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-icon">💇</div>
+        <h3>Hair Damage</h3>
+        <p>Helmets crush your hairstyle, leaving you looking messy at your destination. It's a daily frustration for style-conscious riders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Why Findway Pro?</p>
+      <h2 class="section-title">Engineered for the Modern Rider</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Multi-Certified Safety</h3>
+        <p>Meets ASTM, CPSC, CE, and EN1078 safety standards. The durable ABS shell and dense EPS foam interior absorb impact, keeping you protected on every ride.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💨</div>
+        <h3>14 Ventilation Ports</h3>
+        <p>Maximum airflow keeps your head cool even on hot summer days. Say goodbye to helmet sweat and hello to comfortable daily commuting.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Perfect Adjustable Fit</h3>
+        <p>Fits head circumference 54-61.5cm (21.26-24.21 inches). The rear dial and chin strap provide precise adjustment for men and women.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🕶️</div>
+        <h3>Built-in Sun Visor</h3>
+        <p>No need for extra sunglasses. The integrated visor blocks the sun while you ride, adding convenience to your cycling experience.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏃</div>
+        <h3>Multi-Sport Versatility</h3>
+        <p>Perfect for commuting, road biking, skateboarding, skating, scootering, and longboarding. One helmet for all your activities.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧼</div>
+        <h3>Removable Washable Pads</h3>
+        <p>Interior padding is removable, washable, and quick-drying. Keep your helmet fresh and hygienic ride after ride.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Gallery -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Product Gallery</p>
+      <h2 class="section-title">See It in Action</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="/images/luxury-products/helmet-1.jpg" alt="Findway Pro Helmet Front View">
+      </div>
+      <div class="gallery-item">
+        <img src="/images/luxury-products/helmet-2.jpg" alt="Findway Pro Helmet Side View">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Specs Section -->
+<section class="specs-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Technical Specs</p>
+      <h2 class="section-title">Product Details</h2>
+    </div>
+    <div class="specs-grid">
+      <div class="spec-item">
+        <p class="spec-label">Brand</p>
+        <p class="spec-value">Findway</p>
+      </div>
+      <div class="spec-item">
+        <p class="spec-label">Model</p>
+        <p class="spec-value">DHX906</p>
+      </div>
+      <div class="spec-item">
+        <p class="spec-label">Size</p>
+        <p class="spec-value">Medium</p>
+      </div>
+      <div class="spec-item">
+        <p class="spec-label">Head Size</p>
+        <p class="spec-value">54-61.5 cm</p>
+      </div>
+      <div class="spec-item">
+        <p class="spec-label">Color</p>
+        <p class="spec-value">White-White</p>
+      </div>
+      <div class="spec-item">
+        <p class="spec-label">Certification</p>
+        <p class="spec-value">ASTM, CPSC, CE, EN1078</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Ride Safer?</h2>
+    <p>Join thousands of satisfied riders who trust Findway Pro for their daily commute and weekend adventures.</p>
+    <a href="https://amzn.to/46XvCPa" class="cta-button">Get Yours on Amazon - $59.95</a>
+  </div>
+</section>
+
+</Layout>
