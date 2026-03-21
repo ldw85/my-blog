@@ -138,7 +138,7 @@ The deep heel cup is one of the standout features. It locks your heel in place a
 About 6-12 months depending on use. Heavy users (250+ lbs) might replace sooner. Mine look fine after one month.
 
 **Will these fix my plantar fasciitis?**
-I'm not a doctor, but my podiatrist did say these types of insoles help manage symptoms. They didn't "cure" me, but they made a real difference in daily pain levels.
+I'm not a doctor, but my podiatrist did say these types of insoles help manage symptoms. They didn't eliminate the problem entirely, but they made a real difference in daily pain levels.
 
 **Can I use these for running?**
 No. Get dedicated running insoles. These are too bulky and don't have the lateral support running needs.
@@ -152,7 +152,7 @@ Yes — these are actually designed for wider feet. If you have narrow feet, you
 
 **7.8/10**
 
-If you're a bigger guy (or gal) dealing with heel pain, these are worth trying. The first week sucks, but push through and you'll likely notice the difference. Just manage your expectations — they're not a miracle cure, but they're solid everyday support that actually holds up for heavier frames.
+If you're a bigger guy (or gal) dealing with heel pain, these are worth trying. The first week sucks, but push through and you'll likely notice the difference. Just manage your expectations — they're not a miracle solution, but they're solid everyday support that actually holds up for heavier frames.
 
 **Buy if**: You're over 180 lbs with heel/arch pain and want actual support.
 **Skip if**: You're lighter, need running insoles, or want something for hot summer days.
