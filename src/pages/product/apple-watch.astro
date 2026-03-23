@@ -5,12 +5,12 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
 
 const metadata = {
-  title: 'Apple Watch Series 11 - The Ultimate Smartwatch Experience',
-  description: 'Discover the most advanced Apple Watch yet. Thinner design, larger display, breakthrough health features, and faster charging.',
+  title: 'Apple Watch Series 11 Review 2026 - Should You Buy?',
+  description: 'Complete Apple Watch Series 11 review with comparison vs Series 10 & Ultra 2. Discover the best deals, key health features, and if upgrading is worth it.',
 };
-
 ---
 
 <style is:global>
@@ -24,6 +24,19 @@ const metadata = {
   .hero-section {
     animation: none !important;
   }
+  /* Mid-CTA styling */
+  .mid-cta {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+  .dark .mid-cta {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  }
+  .comparison-table {
+    overflow-x: auto;
+  }
+  .comparison-table table {
+    min-width: 600px;
+  }
 </style>
 
 <Layout metadata={metadata}>
@@ -36,19 +49,19 @@ const metadata = {
             Limited Time: 25% Off - Save $100
           </p>
           <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
-            The Most Advanced Apple Watch Yet
+            Apple Watch Series 11 Review
           </h1>
           <div class="max-w-3xl mx-auto">
             <p class="text-xl text-muted mb-6 dark:text-slate-300">
-              Thinner design. Larger display. Breakthrough health features. Experience the future of personal health and connectivity.
+              Thinner design. Largest display ever. Breakthrough health features. Plus faster charging — get a full day's battery in just 30 minutes.
             </p>
             <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
               <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0 amazon-btn">
                 <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
-                Buy on Amazon
+                Check Current Price on Amazon
               </a>
-              <a href="/blog" class="btn btn-secondary sm:mb-0">
-                Read Full Review
+              <a href="#comparison" class="btn btn-secondary sm:mb-0">
+                View Comparison
               </a>
             </div>
           </div>
@@ -67,58 +80,175 @@ const metadata = {
     </div>
   </section>
 
+  <!-- Quick Stats -->
+  <Stats
+    title=""
+    items={[
+      { title: 'Display Size', amount: '40%', description: 'larger than Series 6' },
+      { title: 'Charging Speed', amount: '45', description: 'min to 80%' },
+      { title: 'Battery Life', amount: '18-36', description: 'hours' },
+      { title: 'Water Resistance', amount: '50m', description: 'swim-proof' },
+    ]}
+  />
+
   <!-- Key Benefits -->
   <Features
-    title="Why Apple Watch Series 11?"
-    subtitle="The perfect blend of technology and lifestyle"
+    title="Why Apple Watch Series 11 Is Worth It"
+    subtitle="More than features — these are the real benefits that matter in your daily life"
     items={[
       {
-        title: 'Advanced Heart Health',
-        description: 'ECG app, heart rate notifications, and blood oxygen sensor help you monitor your health like never before.',
+        title: 'Know If Your Heart Is Healthy — While You Sleep',
+        description: 'Continuous ECG monitoring detects irregular heart rhythms early. Get alerts before symptoms appear, giving you peace of mind 24/7.',
       },
       {
-        title: 'Largest Display Ever',
-        description: '40% larger than Series 6, making it easier to read messages, map directions, and track workouts at a glance.',
+        title: 'Never Miss a Message — Even in Bright Sunlight',
+        description: 'The brightest Always-On Retina display (2000 nits) means you can read notifications at the beach, on the trail, or anywhere without raising your wrist.',
       },
       {
-        title: 'Faster Charging',
-        description: 'Charge from 0 to 80% in just 45 minutes. Get a full day\'s battery life with only 30 minutes of charging.',
+        title: 'Get a Full Day\'s Battery in 30 Minutes',
+        description: 'Fast charging means you\'re never tied to an outlet. A morning coffee is enough to keep your watch running all day.',
       },
       {
-        title: 'New SWR Sensor',
-        description: 'New skin temperature sensor provides overnight health insights and helps track sleep quality trends.',
+        title: 'Understand Your Sleep Quality — Finally',
+        description: 'New skin temperature sensors track overnight trends and provide insights into your sleep patterns. Wake up knowing how well you actually rested.',
       },
       {
-        title: 'Comprehensive Fitness Tracking',
-        description: 'Track your daily activity with three rings. Get personalized insights and challenges to stay motivated.',
+        title: 'Close Your Rings, Every Single Day',
+        description: 'The three-ring system makes staying active feel like a game. Compete with friends, earn badges, and build lasting healthy habits.',
       },
       {
-        title: 'Always-On Retina',
-        description: 'The brightest Apple Watch display ever. Easily read your screen even in direct sunlight without raising your wrist.',
+        title: 'Swim, Surf, and Dive — No Worries',
+        description: '50m water resistance means the ocean is your gym. Track your lap times, monitor heart rate underwater, and rinse off when you\'re done.',
       },
     ]}
   />
 
+  <!-- Mid-Page CTA -->
+  <section class="mid-cta py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-lg font-semibold text-primary mb-2">Limited Time Offer</p>
+      <h3 class="text-2xl md:text-3xl font-bold mb-4">Save $100 on Apple Watch Series 11</h3>
+      <p class="text-muted mb-6">Check the current price on Amazon — deals change daily.</p>
+      <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary amazon-btn inline-flex items-center gap-2">
+        <svg class="amazon-icon w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
+        Check Price on Amazon →
+      </a>
+    </div>
+  </section>
+
+  <!-- Comparison Table Section -->
+  <section id="comparison" class="py-16 md:py-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Series 11 vs Series 10 vs Ultra 2</h2>
+        <p class="text-xl text-muted max-w-2xl mx-auto">Not sure which Apple Watch is right for you? Here's the honest comparison to help you decide.</p>
+      </div>
+      
+      <div class="comparison-table">
+        <table class="w-full border-collapse bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-lg">
+          <thead>
+            <tr class="bg-primary text-white">
+              <th class="p-4 text-left font-semibold">Feature</th>
+              <th class="p-4 text-center font-semibold bg-green-600">Series 11 ⭐</th>
+              <th class="p-4 text-center font-semibold">Series 10</th>
+              <th class="p-4 text-center font-semibold">Ultra 2</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-200 dark:divide-slate-700">
+            <tr>
+              <td class="p-4 font-medium">Display Size</td>
+              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">46mm (largest)</td>
+              <td class="p-4 text-center">45mm</td>
+              <td class="p-4 text-center">49mm</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Thickness</td>
+              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">9.7mm (thinnest)</td>
+              <td class="p-4 text-center">10.1mm</td>
+              <td class="p-4 text-center">14.4mm</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Battery Life</td>
+              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">18-36 hrs</td>
+              <td class="p-4 text-center">18-36 hrs</td>
+              <td class="p-4 text-center">36-72 hrs</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Fast Charging</td>
+              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">✅ 0-80% in 45min</td>
+              <td class="p-4 text-center">✅ 0-80% in 45min</td>
+              <td class="p-4 text-center">❌ No</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Blood Oxygen Sensor</td>
+              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">✅ Yes</td>
+              <td class="p-4 text-center">✅ Yes</td>
+              <td class="p-4 text-center">✅ Yes</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">ECG App</td>
+              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">✅ Yes</td>
+              <td class="p-4 text-center">✅ Yes</td>
+              <td class="p-4 text-center">✅ Yes</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Skin Temperature</td>
+              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">✅ Yes</td>
+              <td class="p-4 text-center">❌ No</td>
+              <td class="p-4 text-center">❌ No</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Water Resistance</td>
+              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">50m</td>
+              <td class="p-4 text-center">50m</td>
+              <td class="p-4 text-center">100m</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Price (Aluminum)</td>
+              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold text-green-600 dark:text-green-400">From $349 (Sale!)</td>
+              <td class="p-4 text-center">From $399</td>
+              <td class="p-4 text-center">From $799</td>
+            </tr>
+            <tr class="bg-gray-50 dark:bg-slate-700/50">
+              <td class="p-4 font-bold">Best For</td>
+              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">Most people — best value</td>
+              <td class="p-4 text-center">Upgraders from Series 7/8</td>
+              <td class="p-4 text-center">Athletes, adventurers</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="text-center mt-8">
+        <p class="text-muted mb-4">Series 11 offers the newest features at the best price point.</p>
+        <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary amazon-btn inline-flex items-center gap-2">
+          <svg class="amazon-icon w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
+          Check Current Price →
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Health Features Deep Dive -->
   <Content
     title="Your Personal Health Guardian"
-    subtitle="Advanced sensors for comprehensive wellness monitoring"
+    subtitle="Advanced sensors that watch over you around the clock"
     items={[
       {
-        title: 'ECG App',
-        description: 'Take an electrocardiogram anytime, anywhere. Detect irregular heart rhythms like atrial fibrillation.',
+        title: 'ECG — Catch Heart Issues Before They Become Problems',
+        description: 'Take an electrocardiogram in 30 seconds. Detects atrial fibrillation, the most common heart arrhythmia. Early detection saves lives.',
       },
       {
-        title: 'Blood Oxygen Sensor',
-        description: 'Measure your blood oxygen levels with a sensor and app. Monitor respiratory health during workouts and sleep.',
+        title: 'Blood Oxygen — Monitor Respiratory Health 24/7',
+        description: 'Track blood oxygen levels during workouts and sleep. Athletes use it to optimize training. Everyone else uses it for peace of mind.',
       },
       {
-        title: 'Sleep Tracking',
-        description: 'Understand your sleep patterns with detailed nightly analysis. Wake up to insights that help you rest better.',
+        title: 'Sleep Tracking — Finally Understand Your Rest',
+        description: 'Detailed nightly analysis shows REM, Core, and Deep sleep stages. Wake up to personalized insights that help you actually improve your rest.',
       },
       {
-        title: 'Temperature Sensing',
-        description: 'New sensor tracks skin temperature overnight, providing insights for cycle tracking and wellness.',
+        title: 'Temperature Sensing — New in Series 11',
+        description: 'Tracks skin temperature overnight, providing insights for cycle tracking and wellness. Know your body better, day by day.',
       },
     ]}
     image={{
@@ -130,12 +260,12 @@ const metadata = {
   <!-- Specs -->
   <Features
     title="Technical Specifications"
-    subtitle="Premium hardware meets intelligent software"
+    subtitle="Premium hardware that delivers"
     columns={2}
     items={[
       {
         title: 'Thickness',
-        description: '9.7mm - Thinnest Apple Watch ever',
+        description: '9.7mm — thinnest Apple Watch ever',
       },
       {
         title: 'Battery Life',
@@ -143,7 +273,7 @@ const metadata = {
       },
       {
         title: 'Water Resistance',
-        description: '50m water resistance - swim-proof',
+        description: '50m — swim, surf, or shower with confidence',
       },
       {
         title: 'Chip',
@@ -151,7 +281,7 @@ const metadata = {
       },
       {
         title: 'Storage',
-        description: '64GB built-in storage',
+        description: '64GB — room for your music and apps',
       },
       {
         title: 'Connectivity',
@@ -171,24 +301,24 @@ const metadata = {
   <!-- Design & Display -->
   <Content
     title="Stunning Design, Incredible Display"
-    subtitle="Bigger and brighter than ever before"
+    subtitle="Looks great on your wrist, works great outdoors"
     isReversed={true}
     items={[
       {
         title: '40% Larger Display',
-        description: 'The largest Apple Watch display ever. More room for complications, easier navigation, better readability.',
+        description: 'The biggest Apple Watch screen ever. More complications, easier navigation, no more squinting.',
       },
       {
-        title: 'Thinnest Design',
-        description: 'The thinnest Apple Watch ever made. Comfortable to wear all day and night.',
+        title: 'Thinnest Design Ever',
+        description: 'So comfortable you\'ll forget you\'re wearing it. Wear it to sleep for health tracking without bulk.',
       },
       {
-        title: 'Brighter Screen',
-        description: 'Up to 2000 nits brightness. Perfect visibility in direct sunlight, always-on convenience.',
+        title: '2000 Nits Brightness',
+        description: 'The brightest Apple Watch display. Read your screen at the beach, on the ski slopes, or under harsh fluorescent lights.',
       },
       {
         title: 'Premium Materials',
-        description: 'Choose from aluminum or titanium. Multiple finishes including Midnight, Starlight, Silver, and more.',
+        description: 'Choose aluminum for everyday durability or titanium for a premium finish. Multiple colors available.',
       },
     ]}
     image={{
@@ -197,26 +327,39 @@ const metadata = {
     }}
   />
 
+  <!-- Mid-Page CTA -->
+  <section class="mid-cta py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-lg font-semibold text-primary mb-2">Still Deciding?</p>
+      <h3 class="text-2xl md:text-3xl font-bold mb-4">Get the Facts First</h3>
+      <p class="text-muted mb-6">Check today's price and available deals before you buy.</p>
+      <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary amazon-btn inline-flex items-center gap-2">
+        <svg class="amazon-icon w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
+        See Price on Amazon →
+      </a>
+    </div>
+  </section>
+
   <!-- Fitness & Activity -->
   <Features
-    title="Fitness That Motivates"
-    subtitle="Turn every movement into achievement"
+    title="Fitness That Actually Motivates"
+    subtitle="Exercise shouldn't feel like a chore"
     items={[
       {
-        title: 'Activity Rings',
-        description: 'Move, Exercise, and Stand rings visualize your daily progress. Close them to stay healthy.',
+        title: 'Activity Rings — Make Fitness a Game',
+        description: 'Move, Exercise, and Stand rings visualize your progress. Close them daily to build lasting healthy habits. Compete with friends for extra motivation.',
       },
       {
-        title: 'Workout App',
-        description: 'Advanced metrics for over 100 workout types. From running to swimming, track it all.',
+        title: '100+ Workout Types Tracked',
+        description: 'From HIIT to swimming to dance, your watch knows what you\'re doing. Get advanced metrics and real-time heart rate zones.',
       },
       {
-        title: 'Health Insights',
-        description: 'Get personalized daily health insights. Understand trends and improve your wellness.',
+        title: 'Daily Health Insights',
+        description: 'Wake up to personalized health insights based on your trends. Understand how sleep, activity, and heart rate connect.',
       },
       {
-        title: 'Competition',
-        description: 'Challenge friends to Activity competitions. Stay motivated with friendly competition.',
+        title: 'Friendly Competition',
+        description: 'Challenge friends to Activity competitions. Share your progress, earn achievements, and stay accountable.',
       },
     ]}
   />
@@ -252,59 +395,38 @@ const metadata = {
     title="Frequently Asked Questions"
     items={[
       {
-        question: 'What\'s new in Apple Watch Series 11?',
-        description: 'Series 11 features a thinner design, largest display ever, faster charging (0-80% in 45 minutes), new S11 chip, and improved health sensors including skin temperature tracking.',
+        question: 'What\'s new in Apple Watch Series 11 compared to Series 10?',
+        description: 'Series 11 adds skin temperature sensing for health tracking, a thinner design, and is currently available at a discount (25% off, saving $100). Series 10 does not have temperature sensing.',
+      },
+      {
+        question: 'Is the Series 11 worth upgrading from Series 8 or older?',
+        description: 'Yes, especially if you want the larger display, faster charging, and the new skin temperature sensor. The 40% bigger screen and 0-80% charging in 45 minutes are significant quality-of-life improvements.',
       },
       {
         question: 'How long does the battery last?',
-        description: 'Apple Watch Series 11 offers up to 18 hours of battery life on a single charge. With optimized settings, you can extend this to 36 hours in Low Power Mode.',
+        description: 'Up to 18 hours of regular use, or up to 36 hours in Low Power Mode. Most users find they can go 1.5-2 days between charges with moderate use.',
       },
       {
-        question: 'Is Apple Watch Series 11 waterproof?',
-        description: 'Apple Watch Series 11 is swim-proof with water resistance up to 50 meters. It\'s perfect for swimming, surfing, or playing in the ocean.',
-      },
-      {
-        question: 'What sizes are available?',
-        description: 'Series 11 comes in two sizes: 42mm and 46mm case sizes, both featuring the largest and most advanced Always-On Retina displays.',
+        question: 'Can I swim with Apple Watch Series 11?',
+        description: 'Absolutely. With 50m water resistance, it\'s perfect for swimming, surfing, or playing in the ocean. Just remember to tap the water lock before diving in.',
       },
       {
         question: 'Do I need an iPhone to use Apple Watch?',
-        description: 'Yes, Apple Watch requires an iPhone XS or later with iOS 18 or later for setup and full functionality.',
+        description: 'Yes, Apple Watch requires an iPhone XS or later with iOS 18 or later for initial setup and full functionality.',
       },
       {
         question: 'What\'s included in the box?',
-        description: 'Each Apple Watch Series 11 comes with the watch, a Sport Band (S/M and M/L sizes), a 1m magnetic fast charger to USB-C cable, and documentation.',
+        description: 'Each Apple Watch Series 11 comes with: the watch, a Sport Band (S/M and M/L sizes), a 1m magnetic fast charger to USB-C cable, and documentation.',
       },
     ]}
   />
 
-  <!-- CTA -->
+  <!-- Final CTA -->
   <CallToAction
-    title="Save $100 Today!"
-    subtitle="Experience the future of personal health and connectivity. Order your Apple Watch Series 11 today with 25% off and get free shipping. Limited time offer!"
+    title="Ready to Join the Apple Watch Family?"
+    subtitle="Get the most advanced Apple Watch at the best price. Limited 25% off discount saves you $100. Check current Amazon price and availability now."
     actions={[
-      { variant: 'primary', text: 'Buy on Amazon 🎁', href: 'https://amzn.to/4b5SjD3', target: '_blank' },
+      { variant: 'primary', text: '🎁 Check Price on Amazon', href: 'https://amzn.to/4b5SjD3', target: '_blank' },
     ]}
   />
 </Layout>
-
-<style is:global>
-.amazon-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  background: linear-gradient(180deg, #FFD814 0%, #FFBB50 100%) !important;
-  border: 1px solid #FCD200 !important;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
-  font-weight: 600 !important;
-  color: #0F1111 !important;
-}
-.amazon-btn:hover {
-  background: linear-gradient(180deg, #F7CA00 0%, #F7CA00 100%) !important;
-  border-color: #FCD200 !important;
-}
-.amazon-icon {
-  width: 20px;
-  height: 20px;
-}
-</style>
