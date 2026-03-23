@@ -58,12 +58,16 @@ const metadata = {
             <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
               <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0 amazon-btn">
                 <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
-                Check Current Price on Amazon
+                Check Current Discount on Amazon
               </a>
               <a href="#comparison" class="btn btn-secondary sm:mb-0">
                 View Comparison
               </a>
             </div>
+            <!-- Scarcity Message -->
+            <p class="mt-4 text-sm text-orange-600 dark:text-orange-400 font-medium">
+              ⚡ Limited inventory — Space Gray 46mm is running low today
+            </p>
           </div>
         </div>
         <div class="relative m-auto max-w-5xl">
@@ -90,6 +94,72 @@ const metadata = {
       { title: 'Water Resistance', amount: '50m', description: 'swim-proof' },
     ]}
   />
+
+  <!-- Quick Choice Table - Should You Upgrade? -->
+  <section class="py-12 md:py-16 bg-gradient-to-b from-primary/5 to-transparent">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">Should You Upgrade?</h2>
+        <p class="text-muted"> Honest recommendations based on your current watch</p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Series 9 or older -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border-2 border-green-500 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            RECOMMENDED
+          </div>
+          <h3 class="text-lg font-bold mb-3">Series 9 or Older</h3>
+          <p class="text-muted text-sm mb-4">Major leap in display, charging speed, and health sensors</p>
+          <ul class="space-y-2 text-sm mb-4">
+            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> 40% larger display</li>
+            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> 2x faster charging</li>
+            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> New temperature sensor</li>
+            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> Skin temp tracking</li>
+          </ul>
+          <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+            Upgrade Now →
+          </a>
+        </div>
+        
+        <!-- Series 10 -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border-2 border-yellow-500 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            CONSIDER
+          </div>
+          <h3 class="text-lg font-bold mb-3">Series 10</h3>
+          <p class="text-muted text-sm mb-4">Only upgrade if you need these specific features</p>
+          <ul class="space-y-2 text-sm mb-4">
+            <li class="flex items-start gap-2"><span class="text-yellow-500">•</span> Temperature sensing</li>
+            <li class="flex items-start gap-2"><span class="text-yellow-500">•</span> Slightly thinner</li>
+            <li class="flex items-start gap-2"><span class="text-gray-400">✗</span> Similar battery life</li>
+            <li class="flex items-start gap-2"><span class="text-gray-400">✗</span> Same processor speed</li>
+          </ul>
+          <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+            Check Deals →
+          </a>
+        </div>
+        
+        <!-- First Gen / SE -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border-2 border-green-500 relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+            HIGHLY RECOMMENDED
+          </div>
+          <h3 class="text-lg font-bold mb-3">Series 6 or Older</h3>
+          <p class="text-muted text-sm mb-4">Transformative upgrade — you'll notice every difference</p>
+          <ul class="space-y-2 text-sm mb-4">
+            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> All new features</li>
+            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> Battery optimization</li>
+            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> Always-On display</li>
+            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> 5G Cellular option</li>
+          </ul>
+          <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
+            Get Series 11 →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Key Benefits -->
   <Features
@@ -126,13 +196,16 @@ const metadata = {
   <!-- Mid-Page CTA -->
   <section class="mid-cta py-12">
     <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="text-lg font-semibold text-primary mb-2">Limited Time Offer</p>
+      <p class="text-lg font-semibold text-primary mb-2">🔥 Today's Best Deal</p>
       <h3 class="text-2xl md:text-3xl font-bold mb-4">Save $100 on Apple Watch Series 11</h3>
-      <p class="text-muted mb-6">Check the current price on Amazon — deals change daily.</p>
+      <p class="text-muted mb-6">Check the current discount on Amazon — deals change daily.</p>
       <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary amazon-btn inline-flex items-center gap-2">
         <svg class="amazon-icon w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
-        Check Price on Amazon →
+        Check Current Discount on Amazon (Save $100) →
       </a>
+      <p class="mt-3 text-sm text-orange-600 dark:text-orange-400">
+        ⚡ Space Gray 46mm is running low today
+      </p>
     </div>
   </section>
 
@@ -223,7 +296,7 @@ const metadata = {
         <p class="text-muted mb-4">Series 11 offers the newest features at the best price point.</p>
         <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary amazon-btn inline-flex items-center gap-2">
           <svg class="amazon-icon w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
-          Check Current Price →
+          Check Current Discount (Save $100) →
         </a>
       </div>
     </div>
@@ -331,12 +404,62 @@ const metadata = {
   <section class="mid-cta py-12">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <p class="text-lg font-semibold text-primary mb-2">Still Deciding?</p>
-      <h3 class="text-2xl md:text-3xl font-bold mb-4">Get the Facts First</h3>
-      <p class="text-muted mb-6">Check today's price and available deals before you buy.</p>
+      <h3 class="text-2xl md:text-3xl font-bold mb-4">Check Today's Discount Before You Buy</h3>
+      <p class="text-muted mb-6">Prices and deals on Amazon change daily — verify before checkout.</p>
       <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary amazon-btn inline-flex items-center gap-2">
         <svg class="amazon-icon w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
-        See Price on Amazon →
+        Check Current Discount on Amazon →
       </a>
+    </div>
+  </section>
+
+  <!-- 5G Cellular Section -->
+  <section class="py-16 md:py-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-sm font-semibold px-3 py-1 rounded-full mb-4">
+            NEW IN SERIES 11
+          </span>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">5G Cellular: Phone-Free Runs Just Got Better</h2>
+          <p class="text-lg text-muted mb-6">
+            Most users don't know Series 11 supports 5G cellular — letting you leave your phone behind completely. Stream music, take calls, and get GPS tracking while you run.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
+              <span><strong>Stream Apple Music</strong> — 100 million songs without your phone</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
+              <span><strong>Take calls and texts</strong> — Full connectivity on the go</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
+              <span><strong>GPS tracking</strong> — Accurate route mapping without your phone</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
+              <span><strong>Emergency SOS</strong> — Help is always reachable</span>
+            </li>
+          </ul>
+          <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+            Check Cellular Models on Amazon →
+          </a>
+        </div>
+        <div class="relative">
+          <img 
+            src="https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Series_11_Product_Page_L__en-US_06._CB800260814_.jpg" 
+            alt="Apple Watch Series 11 5G Cellular"
+            class="rounded-xl shadow-2xl"
+            loading="lazy"
+          />
+          <div class="absolute -bottom-4 -right-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4">
+            <p class="text-sm font-semibold text-green-600 dark:text-green-400">5G Ready</p>
+            <p class="text-xs text-muted">Leave your phone behind</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -426,7 +549,7 @@ const metadata = {
     title="Ready to Join the Apple Watch Family?"
     subtitle="Get the most advanced Apple Watch at the best price. Limited 25% off discount saves you $100. Check current Amazon price and availability now."
     actions={[
-      { variant: 'primary', text: '🎁 Check Price on Amazon', href: 'https://amzn.to/4b5SjD3', target: '_blank' },
+      { variant: 'primary', text: '🎁 Check Current Discount on Amazon (Save $100)', href: 'https://amzn.to/4b5SjD3', target: '_blank' },
     ]}
   />
 </Layout>
