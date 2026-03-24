@@ -156,7 +156,145 @@
             .section-header h2 { font-size: 24px; }
             .final-cta h2 { font-size: 24px; }
         }
+    
+        
+        /* Detailed Product Section */
+        .detailed-products { padding: 80px 0; }
+        .detailed-product { 
+            padding: 60px 0; 
+            border-bottom: 1px solid var(--border); 
+        }
+        .detailed-product:last-child { border-bottom: none; }
+        .detailed-header { 
+            display: flex; 
+            gap: 40px; 
+            align-items: flex-start; 
+            margin-bottom: 40px; 
+        }
+        .detailed-image { 
+            flex: 0 0 400px; 
+            max-width: 400px; 
+        }
+        .detailed-image img { 
+            width: 100%; 
+            border-radius: var(--radius); 
+        }
+        .detailed-info { flex: 1; }
+        .detailed-badge { 
+            display: inline-block; 
+            padding: 4px 12px; 
+            background: rgba(0,196,180,0.15); 
+            border: 1px solid var(--accent-secondary); 
+            border-radius: 20px; 
+            font-size: 12px; 
+            font-weight: 600; 
+            color: var(--accent-secondary); 
+            margin-bottom: 12px; 
+        }
+        .detailed-info h3 { 
+            font-size: 32px; 
+            margin-bottom: 8px; 
+        }
+        .detailed-tagline { 
+            font-size: 18px; 
+            color: var(--accent); 
+            margin-bottom: 16px; 
+        }
+        .detailed-rating { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+            margin-bottom: 20px; 
+        }
+        .detailed-price { 
+            font-size: 36px; 
+            font-weight: 700; 
+            color: var(--text-primary); 
+        }
+        .detailed-price-original { 
+            font-size: 18px; 
+            color: var(--text-muted); 
+            text-decoration: line-through; 
+            margin-left: 12px; 
+        }
+        .detailed-cta { 
+            display: inline-block; 
+            padding: 14px 32px; 
+            background: linear-gradient(180deg, #FFD814 0%, #FFBB50 100%); 
+            color: #0F1111; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: 700; 
+            font-size: 16px; 
+            margin-top: 20px; 
+        }
+        .detailed-cta:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 24px rgba(255,153,0,0.4); 
+        }
+        
+        .detailed-content { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 40px; 
+        }
+        .detailed-benefits { background: var(--bg-card); border-radius: var(--radius); padding: 32px; }
+        .detailed-benefits h4 { 
+            font-size: 18px; 
+            margin-bottom: 20px; 
+            color: var(--accent-secondary); 
+        }
+        .detailed-benefits ul { list-style: none; }
+        .detailed-benefits li { 
+            padding: 12px 0; 
+            border-bottom: 1px solid var(--border); 
+            display: flex; 
+            align-items: flex-start; 
+            gap: 12px; 
+        }
+        .detailed-benefits li:last-child { border-bottom: none; }
+        .detailed-benefits li::before { 
+            content: '✓'; 
+            color: var(--accent-secondary); 
+            font-weight: 700; 
+            font-size: 16px; 
+        }
+        .detailed-story { background: var(--bg-card); border-radius: var(--radius); padding: 32px; }
+        .detailed-story h4 { 
+            font-size: 18px; 
+            margin-bottom: 16px; 
+            color: var(--accent); 
+        }
+        .detailed-story p { 
+            color: var(--text-secondary); 
+            font-size: 15px; 
+            line-height: 1.8; 
+            margin-bottom: 16px; 
+        }
+        .detailed-review-blockquote { 
+            background: var(--bg-secondary); 
+            border-left: 3px solid var(--accent); 
+            padding: 16px 20px; 
+            border-radius: 0 8px 8px 0; 
+            margin-top: 20px; 
+        }
+        .detailed-review-blockquote p { 
+            font-style: italic; 
+            color: var(--text-primary); 
+            margin-bottom: 8px; 
+        }
+        .detailed-review-blockquote cite { 
+            color: var(--text-muted); 
+            font-size: 13px; 
+        }
+        
+        @media (max-width: 768px) {
+            .detailed-header { flex-direction: column; }
+            .detailed-image { flex: none; max-width: 100%; }
+            .detailed-content { grid-template-columns: 1fr; }
+        }
     </style>
+
 </head>
 <body>
     <section class="hero">
@@ -249,21 +387,11 @@
                             <span class="stars">★★★★☆</span>
                             <span class="rating-text">4.7 (3.2K reviews)</span>
                         </div>
-                        
-        <div class="pain-point">
-            <div class="pain-point-label">The Problem</div>
-            <p>Kids are glued to screens after school. They need a reason to go outside — especially when the sun goes down.</p>
-        </div>
-    
+                        <div class="pain-point"><div class="pain-point-label">The Problem</div><p>Kids are glued to screens after school. They need a reason to go outside — especially when the sun goes down.</p></div>
                         <ul class="product-benefits">
                             <li>Gets kids OFF screens and OUTSIDE at night</li><li>Light-up design creates magical memories</li><li>Durable enough to survive hundreds of crashes</li><li>Waterproof — works at pool parties, beach trips, camping</li>
                         </ul>
-                        
-        <div class="product-review">
-            <p class="review-quote">My screen-addicted 10-year-old son loves going outside at night to play with it. It's crashed into cars, pavement, and our house hundreds of times — yet it still lights up and has never broken. Worth every single cent!</p>
-            <p class="review-author">— Verified Amazon Buyer</p>
-        </div>
-        
+                        <div class="product-review"><p class="review-quote">My screen-addicted 10-year-old son loves going outside at night to play with it. It's crashed into cars, pavement, and our house hundreds of times — yet it still lights up and has never broken. Worth every single cent!</p><p class="review-author">— Verified Amazon Buyer</p></div>
                         <div class="product-tags">
                             <span class="product-tag">#Easter Gifts</span><span class="product-tag">#Outdoor Play</span><span class="product-tag">#Family Fun</span>
                         </div>
@@ -289,21 +417,11 @@
                             <span class="stars">★★★★☆</span>
                             <span class="rating-text">4.5 (1.8K reviews)</span>
                         </div>
-                        
-        <div class="pain-point">
-            <div class="pain-point-label">The Problem</div>
-            <p>Kids get restless in waiting rooms, long car rides, or after school when they can't settle down.</p>
-        </div>
-    
+                        <div class="pain-point"><div class="pain-point-label">The Problem</div><p>Kids get restless in waiting rooms, long car rides, or after school when they can't settle down.</p></div>
                         <ul class="product-benefits">
                             <li>Transforms into 6 different shapes — more fun than regular spinners</li><li>Helps kids focus and calm anxiety naturally</li><li>Perfect pocket size for anywhere, anytime</li><li>Share with siblings and friends</li>
                         </ul>
-                        
-        <div class="product-review">
-            <p class="review-quote">The fact that each one can change shape and spin in different ways makes them more fun than a regular fidget spinner. They're well made and feel sturdy. My kids love experimenting with all the ways they can twist and turn them.</p>
-            <p class="review-author">— Verified Amazon Buyer</p>
-        </div>
-        
+                        <div class="product-review"><p class="review-quote">The fact that each one can change shape and spin in different ways makes them more fun than a regular fidget spinner. They're well made and feel sturdy. My kids love experimenting with all the ways they can twist and turn them.</p><p class="review-author">— Verified Amazon Buyer</p></div>
                         <div class="product-tags">
                             <span class="product-tag">#Easter Gifts</span><span class="product-tag">#Stress Relief</span><span class="product-tag">#Classroom Prizes</span>
                         </div>
@@ -329,21 +447,11 @@
                             <span class="stars">★★★★☆</span>
                             <span class="rating-text">4.8 (4.5K reviews)</span>
                         </div>
-                        
-        <div class="pain-point">
-            <div class="pain-point-label">The Problem</div>
-            <p>You need a gift that works for any occasion — and impresses everyone without being too personal or too generic.</p>
-        </div>
-    
+                        <div class="pain-point"><div class="pain-point-label">The Problem</div><p>You need a gift that works for any occasion — and impresses everyone without being too personal or too generic.</p></div>
                         <ul class="product-benefits">
                             <li>Luxurious chocolate truffles in milk, dark & white varieties</li><li>Beautifully packaged — ready to gift immediately</li><li>Perfect for holidays, birthdays, corporate gifting, or 'just because'</li><li>A sweet surprise that makes any gathering memorable</li>
                         </ul>
-                        
-        <div class="product-review">
-            <p class="review-quote">Beautifully presented, it makes a thoughtful gift for holidays, birthdays, get-well wishes, or corporate gifting. The chocolates are rich, flavorful, and indulgent, and the elegant packaging adds a special touch that shows you care.</p>
-            <p class="review-author">— Verified Amazon Buyer</p>
-        </div>
-        
+                        <div class="product-review"><p class="review-quote">Beautifully presented, it makes a thoughtful gift for holidays, birthdays, get-well wishes, or corporate gifting. The chocolates are rich, flavorful, and indulgent, and the elegant packaging adds a special touch that shows you care.</p><p class="review-author">— Verified Amazon Buyer</p></div>
                         <div class="product-tags">
                             <span class="product-tag">#Easter Gifts</span><span class="product-tag">#Food Gifts</span><span class="product-tag">#Holiday Giving</span>
                         </div>
@@ -369,21 +477,11 @@
                             <span class="stars">★★★★☆</span>
                             <span class="rating-text">4.3 (890 reviews)</span>
                         </div>
-                        
-        <div class="pain-point">
-            <div class="pain-point-label">The Problem</div>
-            <p>Kids want surprises. They want to unwrap something and discover a world of imagination — not another generic plastic toy.</p>
-        </div>
-    
+                        <div class="pain-point"><div class="pain-point-label">The Problem</div><p>Kids want surprises. They want to unwrap something and discover a world of imagination — not another generic plastic toy.</p></div>
                         <ul class="product-benefits">
                             <li>Crack open the egg to reveal a poseable crystal dragon</li><li>Sparks imagination and creative play for hours</li><li>Collectible — kids love displaying their dragon on shelves</li><li>The 'wow moment' every Easter basket needs</li>
                         </ul>
-                        
-        <div class="product-review">
-            <p class="review-quote">Very cute and pretty design. The dragon is very detailed. It's a fun little toy that creates excitement — kids can't wait to crack open the egg and see what emerges.</p>
-            <p class="review-author">— Verified Amazon Buyer</p>
-        </div>
-        
+                        <div class="product-review"><p class="review-quote">Very cute and pretty design. The dragon is very detailed. It's a fun little toy that creates excitement — kids can't wait to crack open the egg and see what emerges.</p><p class="review-author">— Verified Amazon Buyer</p></div>
                         <div class="product-tags">
                             <span class="product-tag">#Easter Gifts</span><span class="product-tag">#Collectibles</span><span class="product-tag">#Creative Play</span>
                         </div>
@@ -460,28 +558,175 @@
                 <p>Quick answers to help you decide</p>
             </div>
             <div class="faq-list">
-                
-                <div class="faq-item">
-                    <div class="faq-question">Why buy Easter gifts on Amazon?</div>
-                    <div class="faq-answer"><p>Amazon offers the best selection, competitive prices, and fast Prime shipping — so your Easter baskets arrive on time, every time.</p></div>
-                </div>
-    
-                <div class="faq-item">
-                    <div class="faq-question">Are these suitable for all ages?</div>
-                    <div class="faq-answer"><p>Each product lists recommended age ranges. We've focused on gifts that work for kids ages 6-12, with options for teens and adults too.</p></div>
-                </div>
-    
-                <div class="faq-item">
-                    <div class="faq-question">Can I get these in time for Easter?</div>
-                    <div class="faq-answer"><p>With Amazon Prime, most items arrive within 1-2 days. Order at least 3-5 days before Easter to be safe.</p></div>
-                </div>
-    
-                <div class="faq-item">
-                    <div class="faq-question">Do you only recommend expensive items?</div>
-                    <div class="faq-answer"><p>No! We've included options from $9.99 to $39.99 — because the best gift fits your budget, not your wallet.</p></div>
-                </div>
-    
+                <div class="faq-item"><div class="faq-question">Why buy Easter gifts on Amazon?</div><div class="faq-answer"><p>Amazon offers the best selection, competitive prices, and fast Prime shipping — so your Easter baskets arrive on time, every time.</p></div></div><div class="faq-item"><div class="faq-question">Are these suitable for all ages?</div><div class="faq-answer"><p>Each product lists recommended age ranges. We've focused on gifts that work for kids ages 6-12, with options for teens and adults too.</p></div></div><div class="faq-item"><div class="faq-question">Can I get these in time for Easter?</div><div class="faq-answer"><p>With Amazon Prime, most items arrive within 1-2 days. Order at least 3-5 days before Easter to be safe.</p></div></div><div class="faq-item"><div class="faq-question">Do you only recommend expensive items?</div><div class="faq-answer"><p>No! We've included options from $9.99 to $39.99 — because the best gift fits your budget, not your wallet.</p></div></div>
             </div>
+        </div>
+    </section>
+
+
+    <section class="detailed-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>📖 Detailed Reviews</h2>
+                <p>Why we recommend each one — and why now</p>
+            </div>
+            
+        <div class="detailed-product">
+            <div class="detailed-header">
+                <div class="detailed-image">
+                    <img src="https://m.media-amazon.com/images/I/81OqycnzByL._AC_SX679_.jpg" alt="TOSY Flying Ring">
+                </div>
+                <div class="detailed-info">
+                    <span class="detailed-badge">Best for Nighttime Fun</span>
+                    <h3>TOSY Flying Ring</h3>
+                    <p class="detailed-tagline">The Glowing Ring That Gets Kids Outside After Dark</p>
+                    <div class="detailed-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.7 (3.2K reviews)</span>
+                    </div>
+                    <div class="detailed-price">
+                        $39.27
+                        <span class="detailed-price-original">$49.99</span>
+                    </div>
+                    <a href="https://amzn.to/47es5w8" class="detailed-cta" target="_blank" rel="noopener">Check Current Price →</a>
+                </div>
+            </div>
+            <div class="detailed-content">
+                <div class="detailed-benefits">
+                    <h4>✨ Why This Wins</h4>
+                    <ul>
+                        <li>Gets kids OFF screens and OUTSIDE at night</li><li>Light-up design creates magical memories</li><li>Durable enough to survive hundreds of crashes</li><li>Waterproof — works at pool parties, beach trips, camping</li>
+                    </ul>
+                </div>
+                <div class="detailed-story">
+                    <h4>💡 Why Buy Now</h4>
+                    <p>Kids are glued to screens after school. They need a reason to go outside — especially when the sun goes down.</p>
+                    <p>Spring evenings are coming — it's the perfect time to get kids outside before summer heat. Plus, Easter baskets are selling fast.</p>
+                    <div class="detailed-review-blockquote">
+                        <p>"My screen-addicted 10-year-old son loves going outside at night to play with it. It's crashed into cars, pavement, and our house hundreds of times — yet it still lights up and has never broken. Worth every single cent!"</p>
+                        <cite>— Verified Amazon Buyer</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="detailed-product">
+            <div class="detailed-header">
+                <div class="detailed-image">
+                    <img src="https://m.media-amazon.com/images/I/71q4u8Y4PmL._AC_SY300_SX300_QL70_FMwebp_.jpg" alt="Transformable Fidget Spinners 4-Pack">
+                </div>
+                <div class="detailed-info">
+                    <span class="detailed-badge">Best for Focus & Stress Relief</span>
+                    <h3>Transformable Fidget Spinners 4-Pack</h3>
+                    <p class="detailed-tagline">The 6-in-1 Toy That Keeps Little Hands Busy for Hours</p>
+                    <div class="detailed-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.5 (1.8K reviews)</span>
+                    </div>
+                    <div class="detailed-price">
+                        $9.99
+                        
+                    </div>
+                    <a href="https://amzn.to/4lLgF9b" class="detailed-cta" target="_blank" rel="noopener">Check Current Price →</a>
+                </div>
+            </div>
+            <div class="detailed-content">
+                <div class="detailed-benefits">
+                    <h4>✨ Why This Wins</h4>
+                    <ul>
+                        <li>Transforms into 6 different shapes — more fun than regular spinners</li><li>Helps kids focus and calm anxiety naturally</li><li>Perfect pocket size for anywhere, anytime</li><li>Share with siblings and friends</li>
+                    </ul>
+                </div>
+                <div class="detailed-story">
+                    <h4>💡 Why Buy Now</h4>
+                    <p>Kids get restless in waiting rooms, long car rides, or after school when they can't settle down.</p>
+                    <p>End of school year = restless kids. These keep them focused during long car rides and waiting rooms.</p>
+                    <div class="detailed-review-blockquote">
+                        <p>"The fact that each one can change shape and spin in different ways makes them more fun than a regular fidget spinner. They're well made and feel sturdy. My kids love experimenting with all the ways they can twist and turn them."</p>
+                        <cite>— Verified Amazon Buyer</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="detailed-product">
+            <div class="detailed-header">
+                <div class="detailed-image">
+                    <img src="https://m.media-amazon.com/images/I/81bnwjXx4LL._SX679_.jpg" alt="Bonnie & Pop Chocolate Gift Basket">
+                </div>
+                <div class="detailed-info">
+                    <span class="detailed-badge">Best Gourmet Food Gift</span>
+                    <h3>Bonnie & Pop Chocolate Gift Basket</h3>
+                    <p class="detailed-tagline">The Gift That Says 'I Care' Without Saying a Word</p>
+                    <div class="detailed-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.8 (4.5K reviews)</span>
+                    </div>
+                    <div class="detailed-price">
+                        $38.99
+                        
+                    </div>
+                    <a href="https://amzn.to/487bACf" class="detailed-cta" target="_blank" rel="noopener">Check Current Price →</a>
+                </div>
+            </div>
+            <div class="detailed-content">
+                <div class="detailed-benefits">
+                    <h4>✨ Why This Wins</h4>
+                    <ul>
+                        <li>Luxurious chocolate truffles in milk, dark & white varieties</li><li>Beautifully packaged — ready to gift immediately</li><li>Perfect for holidays, birthdays, corporate gifting, or 'just because'</li><li>A sweet surprise that makes any gathering memorable</li>
+                    </ul>
+                </div>
+                <div class="detailed-story">
+                    <h4>💡 Why Buy Now</h4>
+                    <p>You need a gift that works for any occasion — and impresses everyone without being too personal or too generic.</p>
+                    <p>Easter is approaching fast. This arrives beautifully packaged — no extra wrapping needed.</p>
+                    <div class="detailed-review-blockquote">
+                        <p>"Beautifully presented, it makes a thoughtful gift for holidays, birthdays, get-well wishes, or corporate gifting. The chocolates are rich, flavorful, and indulgent, and the elegant packaging adds a special touch that shows you care."</p>
+                        <cite>— Verified Amazon Buyer</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="detailed-product">
+            <div class="detailed-header">
+                <div class="detailed-image">
+                    <img src="https://m.media-amazon.com/images/I/816DOjjDNkL._SX679_.jpg" alt="3D Printed Dragon Egg Toy">
+                </div>
+                <div class="detailed-info">
+                    <span class="detailed-badge">Best for Imagination & Surprise</span>
+                    <h3>3D Printed Dragon Egg Toy</h3>
+                    <p class="detailed-tagline">The Magical Unboxing Experience Every Kid Dreams About</p>
+                    <div class="detailed-rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.3 (890 reviews)</span>
+                    </div>
+                    <div class="detailed-price">
+                        $12.99
+                        <span class="detailed-price-original">$16.99</span>
+                    </div>
+                    <a href="https://amzn.to/4sv6Rm0" class="detailed-cta" target="_blank" rel="noopener">Check Current Price →</a>
+                </div>
+            </div>
+            <div class="detailed-content">
+                <div class="detailed-benefits">
+                    <h4>✨ Why This Wins</h4>
+                    <ul>
+                        <li>Crack open the egg to reveal a poseable crystal dragon</li><li>Sparks imagination and creative play for hours</li><li>Collectible — kids love displaying their dragon on shelves</li><li>The 'wow moment' every Easter basket needs</li>
+                    </ul>
+                </div>
+                <div class="detailed-story">
+                    <h4>💡 Why Buy Now</h4>
+                    <p>Kids want surprises. They want to unwrap something and discover a world of imagination — not another generic plastic toy.</p>
+                    <p>The 'wow moment' every kid remembers. Not another generic toy — a real surprise they'll talk about.</p>
+                    <div class="detailed-review-blockquote">
+                        <p>"Very cute and pretty design. The dragon is very detailed. It's a fun little toy that creates excitement — kids can't wait to crack open the egg and see what emerges."</p>
+                        <cite>— Verified Amazon Buyer</cite>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
         </div>
     </section>
 
@@ -490,10 +735,7 @@
             <h2>Ready to Find the Perfect Easter Gift?</h2>
             <p>Whether you're filling an Easter basket or looking for a last-minute gift, these picks deliver joy. Each one is chosen for quality, value, and making someone smile.</p>
             <div class="final-cta-buttons">
-                
-                <a href="https://amzn.to/47es5w8" class="final-cta-btn" target="_blank" rel="noopener">Shop Our #1 Pick</a>
-                <a href="#products" class="final-cta-btn secondary">View All Recommendations</a>
-    
+                <a href="https://amzn.to/47es5w8" class="final-cta-btn" target="_blank" rel="noopener">Shop Our #1 Pick</a><a href="#products" class="final-cta-btn secondary">View All Recommendations</a>
             </div>
         </div>
     </section>
