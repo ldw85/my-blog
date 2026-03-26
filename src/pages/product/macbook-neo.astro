@@ -1,0 +1,399 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+const metadata = {
+  title: 'MacBook Neo Review 2026 - Apple\'s Most Affordable AI-Ready Laptop',
+  description: 'Complete MacBook Neo review with A18 Pro chip, 13-inch Liquid Retina display, and up to 16 hours battery life. Is it worth $599? Updated March 2026.',
+};
+
+const amazonLink = 'https://amzn.to/4bVD6nE';
+
+const images = [
+  'https://m.media-amazon.com/images/G/01/apple/MacBook_Neo_Product_Page_L__en-US_01._CB786091951_.jpg',
+  'https://m.media-amazon.com/images/G/01/apple/MacBook_Neo_Product_Page_L__en-US_02._CB786091951_.jpg',
+  'https://m.media-amazon.com/images/G/01/apple/MacBook_Neo_Product_Page_L__en-US_03._CB786091951_.jpg',
+  'https://m.media-amazon.com/images/G/01/apple/MacBook_Neo_Product_Page_L__en-US_04._CB786091951_.jpg',
+  'https://m.media-amazon.com/images/G/01/apple/MacBook_Neo_Product_Page_L__en-US_05._CB786091951_.jpg',
+  'https://m.media-amazon.com/images/G/01/apple/MacBook_Neo_Product_Page_L__en-US_06._CB786091951_.jpg',
+  'https://m.media-amazon.com/images/G/01/apple/MacBook_Neo_Product_Page_L__en-US_07._CB786091951_.jpg',
+  'https://m.media-amazon.com/images/G/01/apple/MacBook_Neo_Product_Page_L__en-US_08._CB786091951_.jpg',
+  'https://m.media-amazon.com/images/G/01/apple/MacBook_Neo_Product_Page_L__en-US_09._CB786091951_.jpg',
+  'https://m.media-amazon.com/images/I/61ldyVaYZIL.jpg',
+  'https://m.media-amazon.com/images/I/61VzRA1BrZL.jpg',
+];
+---
+
+<style is:global>
+  /* Override intersection animations for Hero section - show immediately */
+  .hero-section .intersect-once {
+    opacity: 1 !important;
+  }
+  .hero-section .motion-safe\:md\:opacity-0 {
+    opacity: 1 !important;
+  }
+  .hero-section {
+    animation: none !important;
+  }
+  /* Mid-CTA styling */
+  .mid-cta {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  }
+  .dark .mid-cta {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  }
+  /* Image Gallery */
+  .gallery-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #94a3b8 transparent;
+  }
+  .gallery-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  .gallery-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .gallery-scroll::-webkit-scrollbar-thumb {
+    background-color: #94a3b8;
+    border-radius: 4px;
+  }
+  /* Comparison table */
+  .comparison-table {
+    overflow-x: auto;
+  }
+  .comparison-table table {
+    min-width: 600px;
+  }
+  /* Scarcity pulse animation */
+  @keyframes pulse-orange {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+  .pulse-orange {
+    animation: pulse-orange 2s ease-in-out infinite;
+  }
+</style>
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <section class="relative md:-mt-[76px] not-prose hero-section">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="py-12 md:py-20">
+        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+          <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2">
+            Updated March 2026
+          </p>
+          <h1 class="text-4xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+            MacBook Neo Review — Apple Intelligence at a Surprising Price
+          </h1>
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl text-muted mb-6 dark:text-slate-300">
+              A18 Pro chip built for AI · 13-inch Liquid Retina display · Up to 16 hours battery life · Fanless design
+            </p>
+            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+              <a href={amazonLink} target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0 amazon-btn">
+                <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
+                Check Current Price on Amazon — $599
+              </a>
+              <a href="#gallery" class="btn btn-secondary sm:mb-0">
+                View Gallery
+              </a>
+            </div>
+            <p class="mt-4 text-sm text-orange-600 dark:text-orange-400 font-medium pulse-orange">
+              ⚡ MacBook Neo in Silver is currently in stock
+            </p>
+          </div>
+        </div>
+        <div class="relative m-auto max-w-5xl">
+          <img 
+            src={images[0]} 
+            alt="MacBook Neo - Apple 2026 Laptop with A18 Pro chip"
+            class="mx-auto rounded-md w-full"
+            loading="eager"
+            width="1024"
+            height="576"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Stats -->
+  <Stats
+    title=""
+    items={[
+      { title: 'Chip', amount: 'A18 Pro', description: 'Built for Apple Intelligence' },
+      { title: 'Battery Life', amount: '16hrs', description: 'All-day power' },
+      { title: 'Display', amount: '13"', description: 'Liquid Retina' },
+      { title: 'Storage', amount: '256GB', description: 'SSD' },
+    ]}
+  />
+
+  <!-- Color Options -->
+  <section class="py-12 bg-gradient-to-b from-primary/5 to-transparent">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">The Most Colorful MacBook Lineup Ever</h2>
+        <p class="text-muted">Choose your style — each with a color-coordinated keyboard</p>
+      </div>
+      
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg text-center border-2 border-gray-300">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-300 to-gray-400 mx-auto mb-3"></div>
+          <h3 class="font-semibold">Silver</h3>
+          <p class="text-sm text-muted">Classic Apple</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg text-center">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink-200 to-pink-400 mx-auto mb-3"></div>
+          <h3 class="font-semibold">Blush</h3>
+          <p class="text-sm text-muted">Soft & elegant</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg text-center">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-yellow-300 to-yellow-500 mx-auto mb-3"></div>
+          <h3 class="font-semibold">Citrus</h3>
+          <p class="text-sm text-muted">Bold & bright</p>
+        </div>
+        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg text-center">
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 mx-auto mb-3"></div>
+          <h3 class="font-semibold">Indigo</h3>
+          <p class="text-sm text-muted">Deep & modern</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <Features
+    title="Why MacBook Neo Is Worth It"
+    subtitle="More than features — these are the real benefits that matter every day"
+    items={[
+      {
+        title: 'Fanless Design = Total Silence',
+        description: 'No fan noise means you can work in libraries, coffee shops, or late at night without disturbing anyone. Completely silent performance.',
+      },
+      {
+        title: 'A18 Pro Handles AI Like a Pro',
+        description: 'Apple Intelligence runs entirely on-device — from writing tools to photo editing to Siri commands. Your data stays private while AI works for you.',
+      },
+      {
+        title: '16 Hours of Real-World Battery',
+        description: 'From early-morning classes to late-night study sessions, MacBook Neo keeps going. No hunting for outlets, no anxiety about running low.',
+      },
+      {
+        title: 'Crystal-Clear Video Calls',
+        description: '1080p FaceTime HD camera paired with dual-mic array and side-firing speakers with Spatial Audio — you look and sound professional on every call.',
+      },
+      {
+        title: 'Vivid Display for Work & Play',
+        description: '500 nits brightness, P3 wide color, and 1 billion colors make photos, videos, and documents look stunning — even in bright sunlight.',
+      },
+      {
+        title: 'Works Seamlessly With Your iPhone',
+        description: 'View and control your iPhone from your Mac, copy and paste between devices, send texts, and answer FaceTime calls — all from your laptop.',
+      },
+    ]}
+  />
+
+  <!-- Mid-CTA -->
+  <section class="mid-cta py-12">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-lg font-semibold text-primary mb-2">🔥 Today\'s Best Deal</p>
+      <h3 class="text-2xl md:text-3xl font-bold mb-4">MacBook Neo — Only $599</h3>
+      <p class="text-muted mb-6">The most affordable Mac ever with A18 Pro chip and Apple Intelligence built in.</p>
+      <a href={amazonLink} class="btn btn-primary amazon-btn inline-flex items-center gap-2">
+        Check Current Price on Amazon ($599) →
+      </a>
+      <p class="mt-3 text-sm text-orange-600 pulse-orange">
+        ⚡ Silver model is currently in stock
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">MacBook Neo Gallery</h2>
+        <p class="text-xl text-muted">See the MacBook Neo from every angle</p>
+      </div>
+      
+      <div class="gallery-scroll flex gap-4 overflow-x-auto pb-4">
+        {images.map((img, index) => (
+          <img 
+            src={img} 
+            alt={`MacBook Neo - Image ${index + 1}`}
+            class="rounded-lg shadow-lg flex-shrink-0 h-64 w-auto object-cover"
+            loading="lazy"
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Built for AI Section -->
+  <section class="py-16 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block bg-purple-100 text-purple-700 dark:bg-purple-900/50 dark:text-purple-300 text-sm font-semibold px-3 py-1 rounded-full mb-4">
+            BUILT FOR AI
+          </span>
+          <h2 class="text-3xl font-bold mb-4">Apple Intelligence — On Your Terms, On Your Device</h2>
+          <p class="text-lg text-muted mb-6">Every component in MacBook Neo is designed to run AI efficiently on-device. Your data stays on your laptop — private and secure.</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
+              <span><strong>Write Tools</strong> — Proofread, rewrite, and summarize across all your apps</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
+              <span><strong>Image Playground</strong> — Create original images and Memojis effortlessly</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
+              <span><strong>Enhanced Siri</strong> — More natural, context-aware conversations</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
+              <span><strong>Privacy First</strong> — No data sent to servers, no account required</span>
+            </li>
+          </ul>
+          <a href={amazonLink} class="inline-flex items-center gap-2 bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-purple-700 transition">
+            Check Apple Intelligence on Amazon →
+          </a>
+        </div>
+        <div>
+          <img src={images[2]} alt="MacBook Neo A18 Pro chip" class="rounded-xl shadow-2xl" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy & Security -->
+  <section class="py-16">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold mb-4">🔒 Privacy & Security You Can Count On</h2>
+        <p class="text-lg text-muted">MacBook Neo comes with industry-leading security features built in</p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-3">FileVault Encryption</h3>
+          <p class="text-muted">Automatically encrypts your files so others can't access them — even if your MacBook falls into the wrong hands.</p>
+        </div>
+        <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-3">Find My Protection</h3>
+          <p class="text-muted">Locate your lost or stolen MacBook Neo from any device. Get alerts if you leave it behind.</p>
+        </div>
+        <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-3">Touch ID or Lock Key</h3>
+          <p class="text-muted">Unlock your Mac, authorize payments, and sign in to apps securely with your fingerprint or lock key.</p>
+        </div>
+        <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
+          <h3 class="font-bold text-lg mb-3">Free Software Updates</h3>
+          <p class="text-muted">Built-in antivirus protection and regular security updates keep your MacBook Neo running smoothly and securely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pros & Cons -->
+  <section class="py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-green-700 dark:text-green-400 mb-4">✅ Pros</h3>
+          <ul class="space-y-3">
+            <li><strong>A18 Pro chip</strong> — Fast performance for everyday tasks, web browsing, and creative work</li>
+            <li><strong>Fanless design</strong> — Completely silent operation, perfect for quiet environments</li>
+            <li><strong>16-hour battery life</strong> — All-day power without hunting for outlets</li>
+            <li><strong>Affordable price</strong> — Most accessible MacBook ever at just $599</li>
+            <li><strong>Apple Intelligence built-in</strong> — On-device AI without subscription fees</li>
+            <li><strong>Lightweight design</strong> — Easy to carry between home, office, and campus</li>
+          </ul>
+        </div>
+        
+        <div class="bg-orange-50 dark:bg-orange-900/20 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-orange-700 dark:text-orange-400 mb-4">⚠️ Cons</h3>
+          <ul class="space-y-3">
+            <li><strong>256GB storage only</strong> — No larger SSD options available; may need external storage for large video projects</li>
+            <li><strong>8GB unified memory</strong> — Good for everyday use, but heavy video editing or VM work may push limits</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Testimonial -->
+  <section class="py-12 bg-gradient-to-b from-transparent to-primary/5">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">What Real Users Are Saying</h2>
+      </div>
+      <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg">
+        <div class="flex items-center gap-1 mb-4">
+          {[1,2,3,4,5].map(() => (
+            <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+          ))}
+        </div>
+        <blockquote class="text-lg mb-4">
+          "I've been using the MacBook Neo for a little while now and I'm honestly really impressed with it. The A18 Pro chip feels fast for everything I do — web browsing, work apps, and even some light creative tasks — and everything runs smoothly. The laptop is super lightweight and the battery life has been great, easily lasting through most of my day without needing to recharge. I also really like how quiet it is since there's no fan noise at all. Overall, it feels like a premium Apple laptop at a really reasonable price and I'm very happy with the purchase."
+        </blockquote>
+        <div class="flex items-center gap-3">
+          <div class="bg-gray-200 dark:bg-gray-700 w-12 h-12 rounded-full flex items-center justify-center text-xl">⭐</div>
+          <div>
+            <p class="font-semibold">Verified Amazon Customer</p>
+            <p class="text-sm text-muted">Silver 13-inch MacBook Neo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        question: "Is MacBook Neo good for students?",
+        description: "Absolutely! At $599, it's Apple's most affordable laptop with A18 Pro chip and Apple Intelligence. The 16-hour battery, fanless design, and lightweight build make it perfect for students in classes, libraries, and study sessions.",
+      },
+      {
+        question: "What's the difference between MacBook Neo and MacBook Air?",
+        description: "MacBook Neo features the A18 Pro chip built specifically for Apple Intelligence, while MacBook Air uses M-series chips. Both have 13-inch displays and similar battery life, but Neo targets users wanting the latest AI capabilities at a lower price point.",
+      },
+      {
+        question: "Does MacBook Neo support Apple Intelligence?",
+        description: "Yes! The A18 Pro chip is specifically designed to run Apple Intelligence features on-device, including Writing Tools, Image Playground, enhanced Siri, and more — all with privacy protections built in.",
+      },
+      {
+        question: "How long does MacBook Neo battery last?",
+        description: "MacBook Neo provides up to 16 hours of battery life on a single charge — enough for all-day classes, work, or study sessions without needing to find an outlet.",
+      },
+      {
+        question: "Is the MacBook Neo fanless?",
+        description: "Yes! MacBook Neo features a completely fanless design. This means silent operation — no fan noise in quiet environments like libraries, classrooms, or late-night work sessions.",
+      },
+    ]}
+  />
+
+  <!-- Final CTA -->
+  <CallToAction
+    title="Ready to Experience MacBook Neo?"
+    subtitle="Check the current Amazon price and get Apple's most affordable AI-ready laptop today."
+    actions={[
+      { variant: 'primary', text: '🎁 Check Current Price on Amazon ($599)', href: amazonLink, target: '_blank' },
+    ]}
+  />
+
+  <!-- Affiliate Disclosure -->
+  <div class="text-center text-sm text-muted py-8 border-t border-gray-200 dark:border-gray-700">
+    <p>As an Amazon Associate, we earn from qualifying purchases. This means we may receive a small commission when you click our links and make a purchase on Amazon. This comes at no additional cost to you and helps support our editorial process.</p>
+  </div>
+</Layout>
