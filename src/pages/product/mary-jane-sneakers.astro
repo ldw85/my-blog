@@ -1,0 +1,334 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+
+const metadata = {
+  title: 'Mary Jane Sneakers for Women - Best Classic & Comfortable Picks 2026 | TechReviews',
+  description: 'Discover the best Mary Jane sneakers for women in 2026. From classic retro styles to barefoot comfort. Our curated picks combine timeless fashion with all-day comfort.',
+};
+---
+
+<style is:global>
+  .hero-section .intersect-once {
+    opacity: 1 !important;
+  }
+  .hero-section .motion-safe\:md\:opacity-0 {
+    opacity: 1 !important;
+  }
+  .hero-section {
+    animation: none !important;
+  }
+</style>
+
+<Layout metadata={metadata}>
+  <!-- Hero Section -->
+  <section class="relative md:-mt-[76px] not-prose hero-section">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="py-12 md:py-20">
+        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
+          <p class="text-base text-secondary dark:text-pink-200 font-bold tracking-wide uppercase">
+            👟 2026 Trends
+          </p>
+          <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
+            Mary Jane Sneakers
+          </h1>
+          <div class="max-w-3xl mx-auto">
+            <p class="text-xl text-muted mb-6 dark:text-slate-300">
+              Timeless Mary Jane style meets modern comfort. Discover our curated picks for classic retro elegance and all-day wearability.
+            </p>
+            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
+              <a href="#products" class="btn btn-primary sm:mb-0">
+                View Our Picks
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="relative m-auto max-w-5xl">
+          <img 
+            src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4b1c1e9-7b1c-495b-9aeb-02aa13c355c9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" 
+            alt="Mary Jane Sneakers Collection"
+            class="mx-auto rounded-md w-full"
+            loading="eager"
+            width="1024"
+            height="576"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem Section -->
+  <Features
+    id="products"
+    title="The Mary Jane Struggle Is Real"
+    subtitle="Why finding the perfect pair is harder than it looks"
+    columns={2}
+    items={[
+      {
+        title: 'Style vs. Comfort',
+        description: 'Most Mary Jane shoes either look dated and juvenile or feel stiff and uncomfortable after a few hours of wear.',
+      },
+      {
+        title: 'Narrow Toe Boxes',
+        description: 'Traditional designs squeeze your toes. After a long day, your feet ache from cramped, unforgiving shoe shapes.',
+      },
+      {
+        title: 'Limited Versatility',
+        description: 'You want shoes that transition from casual hangouts to work-appropriate settings — without looking out of place either way.',
+      },
+      {
+        title: 'Quality Concerns',
+        description: 'Cheap materials fall apart quickly. You end up replacing budget shoes multiple times instead of investing wisely.',
+      },
+    ]}
+  />
+
+  <!-- Our Top Pick -->
+  <Content
+    title="Best Classic Mary Jane: Women's Fashion Retro Sneakers"
+    subtitle="The perfect balance of style and comfort"
+    items={[
+      {
+        title: 'Premium Synthetic Leather',
+        description: 'Soft, water-resistant, and easy to wipe clean. Long-lasting quality that maintains its look wear after wear.',
+      },
+      {
+        title: 'Non-Slip Grip',
+        description: 'Sturdy rubber outsoles with specially textured bottoms provide enhanced traction on any surface.',
+      },
+      {
+        title: 'Adjustable Strap',
+        description: 'Customizable fit that adapts to your foot shape. Easy to slip on and off without sacrificing security.',
+      },
+      {
+        title: 'Endless Styling Options',
+        description: 'Pairs perfectly with jeans, shorts, dresses, or skirts. From street strolls to weekend hangouts.',
+      },
+    ]}
+    image={{
+      src: 'https://m.media-amazon.com/images/I/616Rx2xfUTL._AC_UF480,480_SR480,480_.jpg',
+      alt: 'Women Fashion Retro Mary Jane Sneakers',
+    }}
+  />
+
+  <!-- Quick Comparison -->
+  <Features
+    title="Which Mary Jane Is Right for You?"
+    subtitle="Compare our top picks"
+    columns={2}
+    items={[
+      {
+        title: 'Classic Retro Style',
+        description: '$35.99 - Premium leather, adjustable strap, non-slip sole. Perfect for everyday wear with timeless appeal.',
+      },
+      {
+        title: 'Barefoot Comfort',
+        description: '$44.95 - Wide toe box, zero drop sole, breathable fabric. Ideal for wide feet and natural movement.',
+      },
+      {
+        title: 'Slip-On Convenience',
+        description: '$32.99 - No-lace design, thin soft sole, lightweight. Great for quick on-and-off lifestyles.',
+      },
+      {
+        title: 'Feminine Detail',
+        description: '$38.99 - Lace detailing, soft cushioning, skate-inspired. Best for those who want unique feminine style.',
+      },
+    ]}
+  />
+
+  <!-- Product Cards -->
+  <section class="py-16 bg-gray-50 dark:bg-slate-800/50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Top Mary Jane Picks</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product 1 -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden">
+          <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4b1c1e9-7b1c-495b-9aeb-02aa13c355c9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="Women's Fashion Retro Mary Jane Sneakers" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <div class="flex items-center mb-2">
+              <span class="text-yellow-500">★★★★★</span>
+              <span class="text-sm text-gray-500 ml-2">4.5 (2,847)</span>
+            </div>
+            <h3 class="font-bold mb-1 text-sm">Women's Fashion Retro Mary Jane</h3>
+            <p class="text-lg font-bold text-blue-600 mb-2">$35.99</p>
+            <p class="text-gray-600 text-xs mb-3 line-clamp-2">Classic Mary Jane style with premium comfort and non-slip sole</p>
+            <a href="https://amzn.to/4bKZqjC" target="_blank" rel="noopener" class="block text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-2 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition">
+              Check Price
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/81VLuzYwGAL._AC_UL330_SR330,330_.jpg" alt="WHITIN Women's Barefoot Mary Jane Flats" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <div class="flex items-center mb-2">
+              <span class="text-yellow-500">★★★★★</span>
+              <span class="text-sm text-gray-500 ml-2">4.6 (1,923)</span>
+            </div>
+            <h3 class="font-bold mb-1 text-sm">WHITIN Barefoot Mary Jane Flats</h3>
+            <p class="text-lg font-bold text-blue-600 mb-2">$44.95</p>
+            <p class="text-gray-600 text-xs mb-3 line-clamp-2">Wide toe box + zero drop sole for natural, comfortable wear</p>
+            <a href="https://amzn.to/4bCE2yj" target="_blank" rel="noopener" class="block text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-2 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition">
+              Check Price
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden">
+          <img src="https://m.media-amazon.com/images/I/61ndKL7cJzL._AC_SY695_.jpg" alt="Women's Classic Retro Sneakers Slip On" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <div class="flex items-center mb-2">
+              <span class="text-yellow-500">★★★★☆</span>
+              <span class="text-sm text-gray-500 ml-2">4.4 (3,156)</span>
+            </div>
+            <h3 class="font-bold mb-1 text-sm">Classic Retro Slip-On Sneakers</h3>
+            <p class="text-lg font-bold text-blue-600 mb-2">$32.99</p>
+            <p class="text-gray-600 text-xs mb-3 line-clamp-2">Thin sole flat loafers with soft cushioning, no-lace convenience</p>
+            <a href="https://amzn.to/4sDNrM0" target="_blank" rel="noopener" class="block text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-2 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition">
+              Check Price
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden">
+          <img src="https://m.media-amazon.com/images/I/71kUOx1BGWL._AC_SY695_.jpg" alt="Women's Fashion Classic Retro Sneakers" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <div class="flex items-center mb-2">
+              <span class="text-yellow-500">★★★★★</span>
+              <span class="text-sm text-gray-500 ml-2">4.7 (2,234)</span>
+            </div>
+            <h3 class="font-bold mb-1 text-sm">Fashion Classic Retro Sneakers</h3>
+            <p class="text-lg font-bold text-blue-600 mb-2">$38.99</p>
+            <p class="text-gray-600 text-xs mb-3 line-clamp-2">Feminine lace detailing with soft sole for all-day comfort</p>
+            <a href="https://amzn.to/4sCoMHt" target="_blank" rel="noopener" class="block text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-2 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition">
+              Check Price
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best For Scenarios -->
+  <Content
+    title="Find Your Perfect Mary Jane"
+    subtitle="Which style matches your lifestyle?"
+    items={[
+      {
+        title: 'For the Classic Fashionista',
+        description: 'The retro Mary Jane with premium leather and adjustable strap. Timeless style that never goes out of fashion.',
+      },
+      {
+        title: 'For Wide Feet & Natural Movement',
+        description: 'The barefoot flats with zero drop sole and wide toe box. No breaking in, no squeezing, just pure comfort.',
+      },
+      {
+        title: 'For Busy Lifestyles',
+        description: 'The slip-on design with thin soft sole. Quick to put on, lightweight to wear, perfect for on-the-go days.',
+      },
+      {
+        title: 'For Feminine Style Seekers',
+        description: 'The lace-detailed skate sneaker. Unique feminine touch with all-day comfort for any outfit.',
+      },
+    ]}
+    image={{
+      src: 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/3c1ded5d-f919-466b-ab14-f4274632238e.__CR0,0,1464,600_PT0_SX1464_V1___.jpg',
+      alt: 'Mary Jane Sneakers Styling',
+    }}
+    reverse={true}
+  />
+
+  <!-- Customer Reviews -->
+  <Testimonials
+    title="What Real Buyers Say"
+    subtitle="Verified Amazon customer reviews"
+    items={[
+      {
+        title: 'True to Size & Comfy',
+        description: 'Oh, these are so, so cute! I wear a 6.5, ordered such, and length-wise, a perfect fit. They seemed to be well-made, and were very comfy!',
+        author: 'Verified Amazon Buyer',
+      },
+      {
+        title: 'Perfect Wide Toe Box',
+        description: 'True to size, and comfortable. The wide toe box is perfect for my foot, no squeezing or breaking in necessary. The quality of shoe is good.',
+        author: 'Verified Amazon Buyer',
+      },
+      {
+        title: 'Great Fit & Versatile',
+        description: 'These are a great Mary Jane! Perfect fit and I will be able to wear with light bobby sock or no socks. They are really cute and will match with everything.',
+        author: 'Verified Amazon Buyer',
+      },
+      {
+        title: 'Would Buy Again',
+        description: 'These are a great Mary Jane! I was unsure if I should order my regular 9 or size down. I am glad I went with the 9, perfect fit.',
+        author: 'Verified Amazon Buyer',
+      },
+    ]}
+  />
+
+  <!-- FAQ -->
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        question: 'What makes Mary Jane sneakers comfortable?',
+        description: 'The best Mary Jane sneakers feature cushioned insoles, flexible rubber outsoles, and adjustable straps for a customized fit. Look for breathable materials and arch support.',
+      },
+      {
+        question: 'Are Mary Jane sneakers true to size?',
+        description: 'Most customers find our recommended Mary Jane sneakers run true to size. However, if you have wide feet, consider sizing up or choosing the barefoot style with its wide toe box design.',
+      },
+      {
+        question: 'Can I wear Mary Jane sneakers with formal outfits?',
+        description: 'Yes! Mary Jane sneakers have evolved from purely casual to versatile enough for business casual settings. Choose classic leather styles in neutral colors for a more polished look.',
+      },
+      {
+        question: 'How do I clean Mary Jane sneakers?',
+        description: 'Most synthetic leather Mary Jane sneakers can be wiped clean with a damp cloth. For deeper cleaning, use mild soap and water. Avoid machine washing to maintain shape.',
+      },
+      {
+        question: 'What\'s the difference between regular and barefoot Mary Janes?',
+        description: 'Regular Mary Janes have cushioned soles with some arch support. Barefoot styles feature zero drop soles and wide toe boxes, allowing your feet to move more naturally.',
+      },
+    ]}
+  />
+
+  <!-- Final CTA -->
+  <CallToAction
+    title="Step Into Style & Comfort"
+    subtitle="Whether you prefer classic retro or barefoot comfort, there\'s a perfect Mary Jane sneaker for you."
+    actions={[
+      { variant: 'primary', text: 'Shop Best Seller ($35.99)', href: 'https://amzn.to/4bKZqjC', target: '_blank' },
+      { variant: 'secondary', text: 'View All Picks', href: '#products', target: '_self' },
+    ]}
+  />
+</Layout>
+
+<style is:global>
+.amazon-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  background: linear-gradient(180deg, #FFD814 0%, #FFBB50 100%) !important;
+  border: 1px solid #FCD200 !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+  font-weight: 600 !important;
+  color: #0F1111 !important;
+}
+.amazon-btn:hover {
+  background: linear-gradient(180deg, #F7CA00 0%, #F7CA00 100%) !important;
+  border-color: #FCD200 !important;
+}
+.amazon-icon {
+  width: 20px;
+  height: 20px;
+}
+</style>
