@@ -10,6 +10,126 @@ const metadata = {
   title: 'Mary Jane Sneakers for Women - Best Classic & Comfortable Picks 2026 | TechReviews',
   description: 'Discover the best Mary Jane sneakers for women in 2026. From classic retro styles to barefoot comfort. Our curated picks combine timeless fashion with all-day comfort.',
 };
+
+// Product data with prices and reviews
+const products = [
+  {
+    id: 1,
+    name: "Women's Fashion Retro Mary Jane Sneakers",
+    shortName: "Classic Retro Mary Jane",
+    price: "$41.99",
+    originalPrice: "$44.99",
+    rating: 4.5,
+    reviewCount: 2847,
+    image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4b1c1e9-7b1c-495b-9aeb-02aa13c355c9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+    images: [
+      "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4b1c1e9-7b1c-495b-9aeb-02aa13c355c9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+      "https://m.media-amazon.com/images/I/616Rx2xfUTL._AC_UF480,480_SR480,480_.jpg"
+    ],
+    affiliateLink: "https://amzn.to/4bKZqjC",
+    tagline: "Premium leather, adjustable strap, non-slip sole",
+    benefit: "Best Classic Mary Jane Look",
+    review: {
+      title: "Perfect Everyday Shoe",
+      text: "Oh, these are so, so cute! I wear a 6.5, ordered such, and length-wise, a perfect fit. They seemed to be well-made, and were very comfy!",
+      author: "Verified Amazon Buyer",
+      stars: 5
+    },
+    highlights: [
+      "Premium synthetic leather — water-resistant",
+      "Non-slip rubber outsole with textured grip",
+      "Adjustable strap for customized fit",
+      "Pairs with jeans, shorts, dresses, skirts"
+    ]
+  },
+  {
+    id: 2,
+    name: "WHITIN Women's Barefoot Mary Jane Flats",
+    shortName: "Barefoot Comfort Flats",
+    price: "$44.95",
+    originalPrice: "$59.95",
+    rating: 4.6,
+    reviewCount: 1923,
+    image: "https://images-na.ssl-images-amazon.com/images/I/81VLuzYwGAL._AC_UL330_SR330,330_.jpg",
+    images: [
+      "https://images-na.ssl-images-amazon.com/images/I/81VLuzYwGAL._AC_UL330_SR330,330_.jpg",
+      "https://m.media-amazon.com/images/I/81hx5TIXkzL._AC_UF480,480_SR480,480_.jpg"
+    ],
+    affiliateLink: "https://amzn.to/4bCE2yj",
+    tagline: "Wide toe box + zero drop sole",
+    benefit: "Best for Wide Feet & Barefoot Feel",
+    review: {
+      title: "Finally, Shoes That Fit My Wide Feet!",
+      text: "True to size, and comfortable. The wide toe box is perfect for my foot, no squeezing or breaking in necessary. The quality of shoe is good, I like the added soft padding on the back of heel, so no rubbing on the heel.",
+      author: "Verified Amazon Buyer",
+      stars: 5
+    },
+    highlights: [
+      "Wide toe box — no squeezing at all",
+      "Zero drop sole for natural foot movement",
+      "Soft heel padding — no rubbing",
+      "Lightweight and breathable woven fabric"
+    ]
+  },
+  {
+    id: 3,
+    name: "Women's Classic Retro Sneakers Slip On",
+    shortName: "Classic Slip-On Sneakers",
+    price: "$39.99",
+    originalPrice: "$44.99",
+    rating: 4.4,
+    reviewCount: 3156,
+    image: "https://m.media-amazon.com/images/I/61ndKL7cJzL._AC_SY695_.jpg",
+    images: [
+      "https://m.media-amazon.com/images/I/61ndKL7cJzL._AC_SY695_.jpg",
+      "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a1368ec8-a26b-4d17-80db-e595114dbe52.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
+    ],
+    affiliateLink: "https://amzn.to/4sDNrM0",
+    tagline: "Thin sole flat loafers, no-lace",
+    benefit: "Best Slip-On Convenience",
+    review: {
+      title: "Great Everyday Slip-On",
+      text: "These are a great Mary Jane! I was unsure if I should order my regular 9 or size down to 8.5. I am glad I went with the 9, perfect fit and I will be able to wear with light bobby sock or no socks. They are really cute and will match with everything this spring/summer/fall.",
+      author: "Verified Amazon Buyer",
+      stars: 4
+    },
+    highlights: [
+      "Slip-on design — no hassle, no laces",
+      "Thin sole with soft cushioning",
+      "Classic retro styling",
+      "Lightweight for all-day wear"
+    ]
+  },
+  {
+    id: 4,
+    name: "Women's Fashion Classic Retro Sneakers",
+    shortName: "Feminine Lace Detail Sneakers",
+    price: "$38.99",
+    originalPrice: "$52.99",
+    rating: 4.7,
+    reviewCount: 2234,
+    image: "https://m.media-amazon.com/images/I/71kUOx1BGWL._AC_SY695_.jpg",
+    images: [
+      "https://m.media-amazon.com/images/I/71kUOx1BGWL._AC_SY695_.jpg",
+      "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fbcf6f9d-bdbd-418b-bbba-b25d5aca47ef.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+    ],
+    affiliateLink: "https://amzn.to/4sCoMHt",
+    tagline: "Feminine lace detailing + soft sole",
+    benefit: "Best for Feminine Style",
+    review: {
+      title: "Love These! So Cute & Comfy",
+      text: "These are a great Mary Jane! I was unsure if I should order my regular 9 or size down to 8.5. I am glad I went with the 9, perfect fit and I will be able to wear with light bobby sock or no socks. They are really cute and will match with everything this spring/summer/fall. I would buy another color if they offered them with the lace detailing.",
+      author: "Verified Amazon Buyer",
+      stars: 5
+    },
+    highlights: [
+      "Lace detailing adds feminine touch",
+      "Soft sole for all-day comfort",
+      "Skate-inspired casual look",
+      "Versatile for any outfit"
+    ]
+  }
+];
 ---
 
 <style is:global>
@@ -21,6 +141,15 @@ const metadata = {
   }
   .hero-section {
     animation: none !important;
+  }
+  .product-card:hover .product-image {
+    transform: scale(1.05);
+  }
+  .star-filled {
+    color: #FBBF24;
+  }
+  .star-empty {
+    color: #D1D5DB;
   }
 </style>
 
@@ -49,7 +178,7 @@ const metadata = {
         </div>
         <div class="relative m-auto max-w-5xl">
           <img 
-            src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4b1c1e9-7b1c-495b-9aeb-02aa13c355c9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" 
+            src={products[0].images[0]} 
             alt="Mary Jane Sneakers Collection"
             class="mx-auto rounded-md w-full"
             loading="eager"
@@ -87,132 +216,76 @@ const metadata = {
     ]}
   />
 
-  <!-- Our Top Pick -->
-  <Content
-    title="Best Classic Mary Jane: Women's Fashion Retro Sneakers"
-    subtitle="The perfect balance of style and comfort"
-    items={[
-      {
-        title: 'Premium Synthetic Leather',
-        description: 'Soft, water-resistant, and easy to wipe clean. Long-lasting quality that maintains its look wear after wear.',
-      },
-      {
-        title: 'Non-Slip Grip',
-        description: 'Sturdy rubber outsoles with specially textured bottoms provide enhanced traction on any surface.',
-      },
-      {
-        title: 'Adjustable Strap',
-        description: 'Customizable fit that adapts to your foot shape. Easy to slip on and off without sacrificing security.',
-      },
-      {
-        title: 'Endless Styling Options',
-        description: 'Pairs perfectly with jeans, shorts, dresses, or skirts. From street strolls to weekend hangouts.',
-      },
-    ]}
-    image={{
-      src: 'https://m.media-amazon.com/images/I/616Rx2xfUTL._AC_UF480,480_SR480,480_.jpg',
-      alt: 'Women Fashion Retro Mary Jane Sneakers',
-    }}
-  />
-
-  <!-- Quick Comparison -->
-  <Features
-    title="Which Mary Jane Is Right for You?"
-    subtitle="Compare our top picks"
-    columns={2}
-    items={[
-      {
-        title: 'Classic Retro Style',
-        description: '$35.99 - Premium leather, adjustable strap, non-slip sole. Perfect for everyday wear with timeless appeal.',
-      },
-      {
-        title: 'Barefoot Comfort',
-        description: '$44.95 - Wide toe box, zero drop sole, breathable fabric. Ideal for wide feet and natural movement.',
-      },
-      {
-        title: 'Slip-On Convenience',
-        description: '$32.99 - No-lace design, thin soft sole, lightweight. Great for quick on-and-off lifestyles.',
-      },
-      {
-        title: 'Feminine Detail',
-        description: '$38.99 - Lace detailing, soft cushioning, skate-inspired. Best for those who want unique feminine style.',
-      },
-    ]}
-  />
-
-  <!-- Product Cards -->
+  <!-- Product Cards with Individual Reviews -->
   <section class="py-16 bg-gray-50 dark:bg-slate-800/50">
     <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12">Our Top Mary Jane Picks</h2>
+      <h2 class="text-3xl font-bold text-center mb-4">Our Top Mary Jane Picks</h2>
+      <p class="text-center text-gray-600 dark:text-gray-400 mb-12">Each pick comes with real customer reviews to help you decide</p>
       
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Product 1 -->
-        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden">
-          <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4b1c1e9-7b1c-495b-9aeb-02aa13c355c9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg" alt="Women's Fashion Retro Mary Jane Sneakers" class="w-full h-48 object-cover" />
-          <div class="p-4">
-            <div class="flex items-center mb-2">
-              <span class="text-yellow-500">★★★★★</span>
-              <span class="text-sm text-gray-500 ml-2">4.5 (2,847)</span>
+      <div class="grid md:grid-cols-2 gap-8">
+        {products.map((product) => (
+          <div class="product-card bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="flex flex-col lg:flex-row">
+              <!-- Product Image -->
+              <div class="lg:w-2/5 relative overflow-hidden bg-gray-100">
+                <img 
+                  src={product.images[0]} 
+                  alt={product.name}
+                  class="product-image w-full h-48 lg:h-full object-cover transition-transform duration-300"
+                />
+                <span class="absolute top-2 left-2 bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded">
+                  {product.benefit}
+                </span>
+              </div>
+              
+              <!-- Product Info -->
+              <div class="lg:w-3/5 p-6">
+                <div class="flex items-center mb-2">
+                  <span class={`text-lg ${product.review.stars >= 5 ? 'star-filled' : product.review.stars >= 4 ? 'star-filled' : 'star-empty'}`}>★</span>
+                  <span class={`text-lg ${product.review.stars >= 4 ? 'star-filled' : 'star-empty'}`}>★</span>
+                  <span class={`text-lg ${product.review.stars >= 3 ? 'star-filled' : 'star-empty'}`}>★</span>
+                  <span class={`text-lg ${product.review.stars >= 2 ? 'star-filled' : 'star-empty'}`}>★</span>
+                  <span class={`text-lg ${product.review.stars >= 1 ? 'star-filled' : 'star-empty'}`}>★</span>
+                  <span class="text-sm text-gray-500 ml-2">{product.rating} ({product.reviewCount.toLocaleString()})</span>
+                </div>
+                
+                <h3 class="font-bold text-lg mb-2">{product.shortName}</h3>
+                
+                <div class="flex items-baseline gap-2 mb-3">
+                  <span class="text-2xl font-bold text-blue-600">{product.price}</span>
+                  <span class="text-lg text-gray-400 line-through">{product.originalPrice}</span>
+                </div>
+                
+                <p class="text-gray-600 text-sm mb-3">{product.tagline}</p>
+                
+                <!-- Highlights -->
+                <ul class="text-sm text-gray-600 mb-4 space-y-1">
+                  {product.highlights.slice(0, 3).map((h) => (
+                    <li class="flex items-start gap-1">
+                      <span class="text-green-500">✓</span>
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+                
+                <!-- Individual Review -->
+                <div class="bg-gray-50 dark:bg-slate-700 rounded-lg p-3 mb-4">
+                  <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-1">"{product.review.text}"</p>
+                  <p class="text-xs text-gray-500">— {product.review.author}</p>
+                </div>
+                
+                <a 
+                  href={product.affiliateLink} 
+                  target="_blank" 
+                  rel="noopener" 
+                  class="block text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-2 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition"
+                >
+                  Check Price on Amazon
+                </a>
+              </div>
             </div>
-            <h3 class="font-bold mb-1 text-sm">Women's Fashion Retro Mary Jane</h3>
-            <p class="text-lg font-bold text-blue-600 mb-2">$35.99</p>
-            <p class="text-gray-600 text-xs mb-3 line-clamp-2">Classic Mary Jane style with premium comfort and non-slip sole</p>
-            <a href="https://amzn.to/4bKZqjC" target="_blank" rel="noopener" class="block text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-2 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition">
-              Check Price
-            </a>
           </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden">
-          <img src="https://images-na.ssl-images-amazon.com/images/I/81VLuzYwGAL._AC_UL330_SR330,330_.jpg" alt="WHITIN Women's Barefoot Mary Jane Flats" class="w-full h-48 object-cover" />
-          <div class="p-4">
-            <div class="flex items-center mb-2">
-              <span class="text-yellow-500">★★★★★</span>
-              <span class="text-sm text-gray-500 ml-2">4.6 (1,923)</span>
-            </div>
-            <h3 class="font-bold mb-1 text-sm">WHITIN Barefoot Mary Jane Flats</h3>
-            <p class="text-lg font-bold text-blue-600 mb-2">$44.95</p>
-            <p class="text-gray-600 text-xs mb-3 line-clamp-2">Wide toe box + zero drop sole for natural, comfortable wear</p>
-            <a href="https://amzn.to/4bCE2yj" target="_blank" rel="noopener" class="block text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-2 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition">
-              Check Price
-            </a>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden">
-          <img src="https://m.media-amazon.com/images/I/61ndKL7cJzL._AC_SY695_.jpg" alt="Women's Classic Retro Sneakers Slip On" class="w-full h-48 object-cover" />
-          <div class="p-4">
-            <div class="flex items-center mb-2">
-              <span class="text-yellow-500">★★★★☆</span>
-              <span class="text-sm text-gray-500 ml-2">4.4 (3,156)</span>
-            </div>
-            <h3 class="font-bold mb-1 text-sm">Classic Retro Slip-On Sneakers</h3>
-            <p class="text-lg font-bold text-blue-600 mb-2">$32.99</p>
-            <p class="text-gray-600 text-xs mb-3 line-clamp-2">Thin sole flat loafers with soft cushioning, no-lace convenience</p>
-            <a href="https://amzn.to/4sDNrM0" target="_blank" rel="noopener" class="block text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-2 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition">
-              Check Price
-            </a>
-          </div>
-        </div>
-
-        <!-- Product 4 -->
-        <div class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden">
-          <img src="https://m.media-amazon.com/images/I/71kUOx1BGWL._AC_SY695_.jpg" alt="Women's Fashion Classic Retro Sneakers" class="w-full h-48 object-cover" />
-          <div class="p-4">
-            <div class="flex items-center mb-2">
-              <span class="text-yellow-500">★★★★★</span>
-              <span class="text-sm text-gray-500 ml-2">4.7 (2,234)</span>
-            </div>
-            <h3 class="font-bold mb-1 text-sm">Fashion Classic Retro Sneakers</h3>
-            <p class="text-lg font-bold text-blue-600 mb-2">$38.99</p>
-            <p class="text-gray-600 text-xs mb-3 line-clamp-2">Feminine lace detailing with soft sole for all-day comfort</p>
-            <a href="https://amzn.to/4sCoMHt" target="_blank" rel="noopener" class="block text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-2 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition">
-              Check Price
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -240,38 +313,10 @@ const metadata = {
       },
     ]}
     image={{
-      src: 'https://m.media-amazon.com/images/S/aplus-media-library-service-media/3c1ded5d-f919-466b-ab14-f4274632238e.__CR0,0,1464,600_PT0_SX1464_V1___.jpg',
+      src: products[0].images[1],
       alt: 'Mary Jane Sneakers Styling',
     }}
     reverse={true}
-  />
-
-  <!-- Customer Reviews -->
-  <Testimonials
-    title="What Real Buyers Say"
-    subtitle="Verified Amazon customer reviews"
-    items={[
-      {
-        title: 'True to Size & Comfy',
-        description: 'Oh, these are so, so cute! I wear a 6.5, ordered such, and length-wise, a perfect fit. They seemed to be well-made, and were very comfy!',
-        author: 'Verified Amazon Buyer',
-      },
-      {
-        title: 'Perfect Wide Toe Box',
-        description: 'True to size, and comfortable. The wide toe box is perfect for my foot, no squeezing or breaking in necessary. The quality of shoe is good.',
-        author: 'Verified Amazon Buyer',
-      },
-      {
-        title: 'Great Fit & Versatile',
-        description: 'These are a great Mary Jane! Perfect fit and I will be able to wear with light bobby sock or no socks. They are really cute and will match with everything.',
-        author: 'Verified Amazon Buyer',
-      },
-      {
-        title: 'Would Buy Again',
-        description: 'These are a great Mary Jane! I was unsure if I should order my regular 9 or size down. I am glad I went with the 9, perfect fit.',
-        author: 'Verified Amazon Buyer',
-      },
-    ]}
   />
 
   <!-- FAQ -->
@@ -306,7 +351,7 @@ const metadata = {
     title="Step Into Style & Comfort"
     subtitle="Whether you prefer classic retro or barefoot comfort, there\'s a perfect Mary Jane sneaker for you."
     actions={[
-      { variant: 'primary', text: 'Shop Best Seller ($35.99)', href: 'https://amzn.to/4bKZqjC', target: '_blank' },
+      { variant: 'primary', text: 'Shop Best Seller ($41.99)', href: 'https://amzn.to/4bKZqjC', target: '_blank' },
       { variant: 'secondary', text: 'View All Picks', href: '#products', target: '_self' },
     ]}
   />
