@@ -70,30 +70,7 @@ const comparisonProducts = [
   },
 ];
 
-const otherProducts = [
-  {
-    name: "Apple Watch Ultra 2",
-    shortName: "Ultra 2 — Athletes & Adventurers",
-    price: "$799",
-    rating: 4.9,
-    reviewCount: "5,200+",
-    image: "https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Ultra_2_Product_Page_ L__en-US.__CB800260814_.jpg",
-    affiliateLink: "https://amzn.to/4b5SjD3",
-    badge: "🏔️ Ultra Pick",
-    highlights: "49mm · 100m water · 36–72hr battery",
-  },
-  {
-    name: "Apple Watch Series 10",
-    shortName: "Series 10 — Thinner Design",
-    price: "$399",
-    rating: 4.7,
-    reviewCount: "8,900+",
-    image: "https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Series_10_Product_Page_L__en-US.__CB800260814_.jpg",
-    affiliateLink: "https://amzn.to/4b5SjD3",
-    badge: "📱 Series 10 Pick",
-    highlights: "45mm · Always-On · GPS + Cellular",
-  },
-];
+const otherProducts = []; // 只有一个主推产品时为空，Other Picks区域自动隐藏
 ---
 
 <!DOCTYPE html>
@@ -612,6 +589,7 @@ body{
   </div>
 </section>
 
+{otherProducts.length > 0 && (
 <!-- ── OTHER PICKS ── -->
 <section class="other-section">
   <h2>Other Apple Watch Options →</h2>
@@ -633,6 +611,7 @@ body{
     ))}
   </div>
 </section>
+)}
 
 <!-- ── FAQ ── -->
 <section class="faq-section">
