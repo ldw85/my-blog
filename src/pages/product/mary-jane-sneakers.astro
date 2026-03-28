@@ -1,47 +1,32 @@
 ---
-import Layout from '~/layouts/LandingLayout.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features from '~/components/widgets/Features.astro';
-import Content from '~/components/widgets/Content.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-
 const metadata = {
-  title: 'Mary Jane Sneakers for Women - Best Classic & Comfortable Picks 2026 | TechReviews',
-  description: 'Discover the best Mary Jane sneakers for women in 2026. From classic retro styles to barefoot comfort. Our curated picks combine timeless fashion with all-day comfort.',
+  title: 'Best Mary Jane Sneakers for Women 2026 — Classic Retro Style Meets All-Day Comfort | TechRuling',
+  description: 'Discover the best Mary Jane sneakers for women in 2026. From classic retro leather to barefoot comfort — our curated pick delivers timeless style and all-day wearability.',
 };
 
-// Product data with prices and reviews
-const products = [
-  {
-    id: 1,
-    name: "Women's Fashion Retro Mary Jane Sneakers",
-    shortName: "Classic Retro Mary Jane",
-    price: "$41.99",
-    originalPrice: "$44.99",
-    rating: 4.5,
-    reviewCount: 2847,
-    image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4b1c1e9-7b1c-495b-9aeb-02aa13c355c9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
-    images: [
-      "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4b1c1e9-7b1c-495b-9aeb-02aa13c355c9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
-      "https://m.media-amazon.com/images/I/616Rx2xfUTL._AC_UF480,480_SR480,480_.jpg"
-    ],
-    affiliateLink: "https://amzn.to/4bKZqjC",
-    tagline: "Premium leather, adjustable strap, non-slip sole",
-    benefit: "Best Classic Mary Jane Look",
-    review: {
-      title: "Perfect Everyday Shoe",
-      text: "Oh, these are so, so cute! I wear a 6.5, ordered such, and length-wise, a perfect fit. They seemed to be well-made, and were very comfy!",
-      author: "Verified Amazon Buyer",
-      stars: 5
-    },
-    highlights: [
-      "Premium synthetic leather — water-resistant",
-      "Non-slip rubber outsole with textured grip",
-      "Adjustable strap for customized fit",
-      "Pairs with jeans, shorts, dresses, skirts"
-    ]
-  },
+const heroProduct = {
+  id: 1,
+  name: "Women's Fashion Retro Mary Jane Sneakers",
+  shortName: "Classic Retro Mary Jane",
+  price: "$41.99",
+  originalPrice: "$44.99",
+  rating: 4.5,
+  reviewCount: "2,847",
+  image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4b1c1e9-7b1c-495b-9aeb-02aa13c355c9.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+  affiliateLink: "https://amzn.to/4bKZqjC",
+  tagline: "Premium leather, adjustable strap, non-slip sole",
+  badge: "🏆 #1 Classic Pick",
+  reviewText: "Oh, these are so, so cute! I wear a 6.5, ordered such, and length-wise, a perfect fit. They seemed to be well-made, and were very comfy!",
+  reviewStars: 5,
+  benefits: [
+    "Premium leather — water-resistant, looks premium",
+    "Adjustable strap — customized fit every time",
+    "Non-slip rubber outsole — safe on any surface",
+    "Pairs perfectly with jeans, dresses, skirts",
+  ],
+};
+
+const otherProducts = [
   {
     id: 2,
     name: "WHITIN Women's Barefoot Mary Jane Flats",
@@ -49,27 +34,11 @@ const products = [
     price: "$44.95",
     originalPrice: "$59.95",
     rating: 4.6,
-    reviewCount: 1923,
+    reviewCount: "1,923",
     image: "https://images-na.ssl-images-amazon.com/images/I/81VLuzYwGAL._AC_UL330_SR330,330_.jpg",
-    images: [
-      "https://images-na.ssl-images-amazon.com/images/I/81VLuzYwGAL._AC_UL330_SR330,330_.jpg",
-      "https://m.media-amazon.com/images/I/81hx5TIXkzL._AC_UF480,480_SR480,480_.jpg"
-    ],
     affiliateLink: "https://amzn.to/4bCE2yj",
-    tagline: "Wide toe box + zero drop sole",
-    benefit: "Best for Wide Feet & Barefoot Feel",
-    review: {
-      title: "Finally, Shoes That Fit My Wide Feet!",
-      text: "True to size, and comfortable. The wide toe box is perfect for my foot, no squeezing or breaking in necessary. The quality of shoe is good, I like the added soft padding on the back of heel, so no rubbing on the heel.",
-      author: "Verified Amazon Buyer",
-      stars: 5
-    },
-    highlights: [
-      "Wide toe box — no squeezing at all",
-      "Zero drop sole for natural foot movement",
-      "Soft heel padding — no rubbing",
-      "Lightweight and breathable woven fabric"
-    ]
+    badge: "🩰 Best Barefoot Pick",
+    highlights: "Wide toe box · Zero drop sole",
   },
   {
     id: 3,
@@ -78,27 +47,11 @@ const products = [
     price: "$39.99",
     originalPrice: "$44.99",
     rating: 4.4,
-    reviewCount: 3156,
+    reviewCount: "3,156",
     image: "https://m.media-amazon.com/images/I/61ndKL7cJzL._AC_SY695_.jpg",
-    images: [
-      "https://m.media-amazon.com/images/I/61ndKL7cJzL._AC_SY695_.jpg",
-      "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a1368ec8-a26b-4d17-80db-e595114dbe52.__CR0,0,1464,600_PT0_SX1464_V1___.jpg"
-    ],
     affiliateLink: "https://amzn.to/4sDNrM0",
-    tagline: "Thin sole flat loafers, no-lace",
-    benefit: "Best Slip-On Convenience",
-    review: {
-      title: "Great Everyday Slip-On",
-      text: "These are a great Mary Jane! I was unsure if I should order my regular 9 or size down to 8.5. I am glad I went with the 9, perfect fit and I will be able to wear with light bobby sock or no socks. They are really cute and will match with everything this spring/summer/fall.",
-      author: "Verified Amazon Buyer",
-      stars: 4
-    },
-    highlights: [
-      "Slip-on design — no hassle, no laces",
-      "Thin sole with soft cushioning",
-      "Classic retro styling",
-      "Lightweight for all-day wear"
-    ]
+    badge: "⚡ Best Slip-On Pick",
+    highlights: "No laces · Thin soft sole",
   },
   {
     id: 4,
@@ -107,275 +60,453 @@ const products = [
     price: "$38.99",
     originalPrice: "$52.99",
     rating: 4.7,
-    reviewCount: 2234,
+    reviewCount: "2,234",
     image: "https://m.media-amazon.com/images/I/71kUOx1BGWL._AC_SY695_.jpg",
-    images: [
-      "https://m.media-amazon.com/images/I/71kUOx1BGWL._AC_SY695_.jpg",
-      "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fbcf6f9d-bdbd-418b-bbba-b25d5aca47ef.__CR0,0,970,600_PT0_SX970_V1___.jpg"
-    ],
     affiliateLink: "https://amzn.to/4sCoMHt",
-    tagline: "Feminine lace detailing + soft sole",
-    benefit: "Best for Feminine Style",
-    review: {
-      title: "Love These! So Cute & Comfy",
-      text: "These are a great Mary Jane! I was unsure if I should order my regular 9 or size down to 8.5. I am glad I went with the 9, perfect fit and I will be able to wear with light bobby sock or no socks. They are really cute and will match with everything this spring/summer/fall. I would buy another color if they offered them with the lace detailing.",
-      author: "Verified Amazon Buyer",
-      stars: 5
-    },
-    highlights: [
-      "Lace detailing adds feminine touch",
-      "Soft sole for all-day comfort",
-      "Skate-inspired casual look",
-      "Versatile for any outfit"
-    ]
-  }
+    badge: "🌸 Best Feminine Pick",
+    highlights: "Lace detail · Skate-inspired look",
+  },
 ];
 ---
 
-<style is:global>
-  .hero-section .intersect-once {
-    opacity: 1 !important;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5">
+<title>{metadata.title}</title>
+<meta name="description" content={metadata.description}>
+<style>
+:root{
+  --bg:#FEF9F3;
+  --card:#FFFFFF;
+  --text:#1A1A1A;
+  --text-mid:#555;
+  --text-light:#888;
+  --coral:#D4527A;
+  --coral-dark:#B33D63;
+  --sky:#3B9ED8;
+  --gold:#F5A623;
+  --border:#EEE6DD;
+  --shadow:0 2px 16px rgba(0,0,0,0.08);
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+  font-size:16px;
+  overflow-x:hidden;
+}
+
+/* ── HERO ── */
+.hero{
+  min-height:100dvh;
+  display:flex;flex-direction:column;
+  justify-content:center;
+  padding:24px 20px 130px;
+  background:linear-gradient(160deg,#FDF0F5 0%,#FEF6F8 60%,#FEF9F3 100%);
+  text-align:center;
+  position:relative;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(212,82,122,0.07) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 16px;
+  background:linear-gradient(135deg,var(--coral),#E07090);
+  color:#fff;border-radius:20px;font-size:13px;font-weight:700;
+  margin-bottom:20px;
+}
+.hero-badge span{font-size:16px}
+.hero h1{
+  font-size:clamp(26px,7vw,46px);
+  font-weight:800;line-height:1.15;
+  letter-spacing:-0.5px;margin-bottom:10px;
+}
+.hero h1 span{display:block;color:var(--coral)}
+.hero-sub{
+  font-size:clamp(14px,3.5vw,17px);
+  color:var(--text-mid);
+  max-width:520px;margin:0 auto 24px;line-height:1.7;
+}
+
+/* ── HERO PRODUCT CARD ── */
+.hero-product{
+  background:var(--card);
+  border-radius:20px;
+  box-shadow:0 6px 32px rgba(0,0,0,0.10);
+  overflow:hidden;
+  max-width:460px;margin:0 auto 20px;
+  text-align:left;
+}
+.hero-product-img{
+  width:100%;aspect-ratio:4/3;
+  background:linear-gradient(135deg,#FDF8F5,#FDF0F5);
+  display:flex;align-items:center;justify-content:center;
+  padding:14px;position:relative;
+}
+.hero-product-img img{
+  max-width:100%;max-height:250px;
+  object-fit:contain;border-radius:8px;
+}
+.img-badge{
+  position:absolute;top:12px;left:12px;
+  background:linear-gradient(135deg,var(--coral),var(--coral-dark));
+  color:#fff;font-size:11px;font-weight:700;
+  padding:5px 12px;border-radius:20px;
+}
+.hero-product-body{padding:18px 20px}
+.hero-product-name{font-size:19px;font-weight:800;margin-bottom:4px;line-height:1.3}
+.hero-product-tagline{font-size:13px;color:var(--coral);font-weight:600;margin-bottom:12px}
+.hero-product-rating{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.hero-product-stars{color:var(--gold);font-size:14px}
+.hero-product-reviews{font-size:12px;color:var(--text-light)}
+.hero-product-price{font-size:30px;font-weight:800;margin-bottom:2px}
+.hero-product-price-note{font-size:12px;color:var(--text-light);margin-bottom:14px}
+.hero-product-benefit{
+  display:flex;align-items:flex-start;gap:8px;
+  padding:7px 0;border-top:1px solid var(--border);
+  font-size:13px;color:var(--text-mid);
+}
+.hero-product-benefit::before{content:"✓";color:var(--sky);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── HERO CTA ── */
+.hero-cta{
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+  max-width:460px;margin:0 auto;
+}
+.hero-cta-btn{
+  display:inline-block;width:100%;
+  background:linear-gradient(135deg,var(--coral),var(--coral-dark));
+  color:#fff;border-radius:16px;
+  font-size:17px;font-weight:800;
+  padding:16px 28px;text-decoration:none;
+  box-shadow:0 5px 18px rgba(212,82,122,0.38);
+  transition:transform 0.15s;
+}
+.hero-cta-btn:active{transform:scale(0.97)}
+.hero-trust{
+  font-size:12px;color:var(--text-light);
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+}
+
+/* ── STICKY CTA ── */
+.sticky-cta{
+  position:fixed;bottom:0;left:0;right:0;
+  background:#fff;border-top:1px solid var(--border);
+  padding:12px 16px 18px;z-index:100;
+  display:flex;align-items:center;gap:12px;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.08);
+}
+.sticky-cta-info{flex:1}
+.sticky-cta-price{font-size:20px;font-weight:800}
+.sticky-cta-note{font-size:11px;color:var(--text-light)}
+.sticky-cta-btn{
+  background:linear-gradient(135deg,var(--coral),var(--coral-dark));
+  color:#fff;border:none;border-radius:14px;
+  font-size:15px;font-weight:800;
+  padding:13px 22px;cursor:pointer;text-decoration:none;
+  display:inline-block;
+  box-shadow:0 4px 14px rgba(212,82,122,0.38);
+  transition:transform 0.15s;white-space:nowrap;
+}
+.sticky-cta-btn:active{transform:scale(0.97)}
+
+/* ── WHY THIS ── */
+.why-section{padding:52px 20px;background:#fff;text-align:center}
+.why-section h2{font-size:clamp(20px,5vw,28px);font-weight:800;margin-bottom:24px;letter-spacing:-0.3px}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;max-width:700px;margin:0 auto}
+.why-card{background:var(--bg);border-radius:14px;padding:18px 14px;text-align:left}
+.why-icon{font-size:26px;margin-bottom:8px}
+.why-card h3{font-size:13px;font-weight:700;margin-bottom:5px}
+.why-card p{font-size:12px;color:var(--text-mid);line-height:1.6}
+
+/* ── SOCIAL PROOF ── */
+.proof-section{padding:44px 20px;background:var(--bg)}
+.proof-inner{max-width:600px;margin:0 auto;text-align:center}
+.proof-quote{
+  background:#fff;border-radius:16px;padding:24px 20px;margin-bottom:16px;
+  border-left:4px solid var(--coral);
+  box-shadow:var(--shadow);text-align:left;
+  position:relative;
+}
+.proof-quote::before{
+  content:"“";font-size:56px;color:var(--coral);
+  position:absolute;top:-6px;left:14px;line-height:1;opacity:0.2;
+}
+.proof-quote p{font-size:15px;color:var(--text-mid);line-height:1.75;font-style:italic;padding-left:6px}
+.proof-stars{color:var(--gold);font-size:15px;margin-bottom:8px;letter-spacing:2px}
+.proof-author{font-size:12px;color:var(--text-light);font-weight:600;margin-top:8px}
+.proof-verified{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:11px;color:#1A7F37;font-weight:600;
+  background:#EBF7EE;border-radius:6px;padding:4px 10px;
+}
+
+/* ── OTHER PICKS ── */
+.other-section{padding:52px 20px;background:#fff}
+.other-section h2{font-size:clamp(19px,4.5vw,25px);font-weight:800;text-align:center;margin-bottom:24px}
+.other-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.other-card{
+  border:1.5px solid var(--border);border-radius:14px;
+  padding:14px;display:flex;flex-direction:column;gap:10px;
+  text-decoration:none;color:inherit;
+  transition:border-color 0.2s,box-shadow 0.2s;
+}
+.other-card:hover{border-color:var(--coral);box-shadow:0 4px 14px rgba(212,82,122,0.1)}
+.other-card-img{
+  width:100%;aspect-ratio:16/9;
+  background:linear-gradient(135deg,#FDF6F8,#FDF0F5);
+  border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.other-card-img img{max-width:80%;max-height:72px;object-fit:contain}
+.other-card-badge{
+  display:inline-block;padding:3px 10px;
+  background:#FDF0F5;color:var(--coral);
+  border-radius:20px;font-size:11px;font-weight:700;
+}
+.other-card h3{font-size:13px;font-weight:700;line-height:1.4}
+.other-card-price{font-size:17px;font-weight:800}
+.other-card-meta{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text-light)}
+.other-card-highlights{font-size:11px;color:var(--text-mid)}
+.other-card-cta{margin-top:auto;padding-top:8px;color:var(--coral);font-size:12px;font-weight:700;display:flex;align-items:center;gap:4px}
+
+/* ── FAQ ── */
+.faq-section{padding:48px 20px;background:var(--bg)}
+.faq-section h2{font-size:clamp(19px,4.5vw,25px);font-weight:800;text-align:center;margin-bottom:22px}
+.faq-list{max-width:540px;margin:0 auto}
+.faq-item{background:#fff;border-radius:12px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.05)}
+.faq-q{
+  padding:15px 18px;font-weight:700;font-size:14px;
+  cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  user-select:none;
+}
+.faq-q::after{content:"+";font-size:20px;color:var(--coral);transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s,padding 0.3s;padding:0 18px}
+.faq-item.open .faq-a{max-height:200px;padding:0 18px 14px}
+.faq-a p{font-size:13px;color:var(--text-mid);line-height:1.75}
+
+/* ── FINAL CTA ── */
+.final-section{padding:60px 20px;background:linear-gradient(160deg,#FDF0F5,#FEF9F3);text-align:center}
+.final-section h2{font-size:clamp(21px,5vw,29px);font-weight:800;margin-bottom:10px}
+.final-section p{font-size:15px;color:var(--text-mid);margin-bottom:22px}
+.final-btn{
+  display:inline-block;padding:16px 36px;
+  background:linear-gradient(135deg,var(--coral),var(--coral-dark));
+  color:#fff;border-radius:16px;font-size:17px;font-weight:800;
+  text-decoration:none;box-shadow:0 6px 20px rgba(212,82,122,0.35);
+  transition:transform 0.15s;
+}
+.final-btn:active{transform:scale(0.97)}
+
+/* ── TRUST BAR ── */
+.trust-bar{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;padding:18px;background:#fff;border-top:1px solid var(--border)}
+.trust-item{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text-mid);font-weight:600}
+.trust-icon{font-size:15px}
+.disclosure{padding:14px;text-align:center;color:var(--text-light);font-size:11px;background:var(--bg)}
+
+/* ── RESPONSIVE ── */
+@media(min-width:768px){
+  .hero-cta{flex-direction:row;align-items:center}
+  .hero-cta-btn{width:auto;flex:1}
+  .sticky-cta-wrap{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:460px;z-index:100;pointer-events:none}
+  .sticky-cta{
+    border-radius:0 0 16px 16px;max-width:460px;margin:0 auto;
+    background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);
+    padding:12px 20px;opacity:0;transform:translateY(-100%);
+    transition:opacity 0.3s,transform 0.3s;pointer-events:auto;
   }
-  .hero-section .motion-safe\:md\:opacity-0 {
-    opacity: 1 !important;
-  }
-  .hero-section {
-    animation: none !important;
-  }
-  .product-card:hover .product-image {
-    transform: scale(1.05);
-  }
-  .star-filled {
-    color: #FBBF24;
-  }
-  .star-empty {
-    color: #D1D5DB;
-  }
+  .sticky-cta-wrap.visible .sticky-cta{opacity:1;transform:translateY(0)}
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+}
 </style>
+</head>
+<body>
 
-<Layout metadata={metadata}>
-  <!-- Hero Section -->
-  <section class="relative md:-mt-[76px] not-prose hero-section">
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="py-12 md:py-20">
-        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
-          <p class="text-base text-secondary dark:text-pink-200 font-bold tracking-wide uppercase">
-            👟 2026 Trends
-          </p>
-          <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
-            Mary Jane Sneakers
-          </h1>
-          <div class="max-w-3xl mx-auto">
-            <p class="text-xl text-muted mb-6 dark:text-slate-300">
-              Timeless Mary Jane style meets modern comfort. Discover our curated picks for classic retro elegance and all-day wearability.
-            </p>
-            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-              <a href="#products" class="btn btn-primary sm:mb-0">
-                View Our Picks
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="relative m-auto max-w-5xl">
-          <img 
-            src={products[0].images[0]} 
-            alt="Mary Jane Sneakers Collection"
-            class="mx-auto rounded-md w-full"
-            loading="eager"
-            width="1024"
-            height="576"
-          />
-        </div>
-      </div>
+<!-- ── STICKY CTA ── -->
+<div class="sticky-cta-wrap" id="stickyWrap">
+  <div class="sticky-cta">
+    <div class="sticky-cta-info">
+      <div class="sticky-cta-price">{heroProduct.price}</div>
+      <div class="sticky-cta-note">⭐ {heroProduct.rating} · {heroProduct.reviewCount} reviews</div>
     </div>
-  </section>
+    <a href={heroProduct.affiliateLink} class="sticky-cta-btn" target="_blank" rel="noopener">
+      👟 See Price on Amazon →
+    </a>
+  </div>
+</div>
 
-  <!-- The Problem Section -->
-  <Features
-    id="products"
-    title="The Mary Jane Struggle Is Real"
-    subtitle="Why finding the perfect pair is harder than it looks"
-    columns={2}
-    items={[
-      {
-        title: 'Style vs. Comfort',
-        description: 'Most Mary Jane shoes either look dated and juvenile or feel stiff and uncomfortable after a few hours of wear.',
-      },
-      {
-        title: 'Narrow Toe Boxes',
-        description: 'Traditional designs squeeze your toes. After a long day, your feet ache from cramped, unforgiving shoe shapes.',
-      },
-      {
-        title: 'Limited Versatility',
-        description: 'You want shoes that transition from casual hangouts to work-appropriate settings — without looking out of place either way.',
-      },
-      {
-        title: 'Quality Concerns',
-        description: 'Cheap materials fall apart quickly. You end up replacing budget shoes multiple times instead of investing wisely.',
-      },
-    ]}
-  />
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-badge"><span>👟</span> 2026 Women's Shoe Trends</div>
 
-  <!-- Product Cards with Individual Reviews -->
-  <section class="py-16 bg-gray-50 dark:bg-slate-800/50">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-4">Our Top Mary Jane Picks</h2>
-      <p class="text-center text-gray-600 dark:text-gray-400 mb-12">Each pick comes with real customer reviews to help you decide</p>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {products.map((product) => (
-          <div class="product-card bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
-            <!-- Product Image - Full width on top -->
-            <div class="relative overflow-hidden bg-gray-100 aspect-square">
-              <img 
-                src={product.images[0]} 
-                alt={product.name}
-                class="product-image w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-              <span class="absolute top-2 left-2 bg-pink-500 text-white text-xs font-bold px-2 py-1 rounded">
-                {product.benefit}
-              </span>
-            </div>
-            
-            <!-- Product Info - Below image -->
-            <div class="p-4 flex flex-col flex-grow">
-              <!-- Rating -->
-              <div class="flex items-center mb-1">
-                <span class={`text-sm ${product.review.stars >= 1 ? 'star-filled' : 'star-empty'}`}>★</span>
-                <span class={`text-sm ${product.review.stars >= 2 ? 'star-filled' : 'star-empty'}`}>★</span>
-                <span class={`text-sm ${product.review.stars >= 3 ? 'star-filled' : 'star-empty'}`}>★</span>
-                <span class={`text-sm ${product.review.stars >= 4 ? 'star-filled' : 'star-empty'}`}>★</span>
-                <span class={`text-sm ${product.review.stars >= 5 ? 'star-filled' : 'star-empty'}`}>★</span>
-                <span class="text-xs text-gray-500 ml-1">{product.rating} ({product.reviewCount.toLocaleString()})</span>
-              </div>
-              
-              <!-- Product Name -->
-              <h3 class="font-bold text-sm mb-1 line-clamp-2">{product.shortName}</h3>
-              
-              <!-- Price -->
-              <div class="flex items-baseline gap-2 mb-2">
-                <span class="text-lg font-bold text-blue-600">{product.price}</span>
-                <span class="text-sm text-gray-400 line-through">{product.originalPrice}</span>
-              </div>
-              
-              <!-- Tagline -->
-              <p class="text-gray-600 text-xs mb-3 line-clamp-2">{product.tagline}</p>
-              
-              <!-- Highlights -->
-              <ul class="text-xs text-gray-600 mb-3 space-y-0.5">
-                {product.highlights.slice(0, 2).map((h) => (
-                  <li class="flex items-start gap-1">
-                    <span class="text-green-500 shrink-0">✓</span>
-                    <span class="line-clamp-1">{h}</span>
-                  </li>
-                ))}
-              </ul>
-              
-              <!-- Mini Review -->
-              <div class="bg-gray-50 dark:bg-slate-700 rounded-lg p-2 mb-3 flex-grow">
-                <p class="text-xs italic text-gray-700 dark:text-gray-300 line-clamp-3">"{product.review.text}"</p>
-              </div>
-              
-              <!-- CTA Button -->
-              <a 
-                href={product.affiliateLink} 
-                target="_blank" 
-                rel="noopener" 
-                class="block text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-bold py-2 rounded-lg hover:from-yellow-500 hover:to-yellow-600 transition text-sm mt-auto"
-              >
-                Check Price
-              </a>
-            </div>
-          </div>
-        ))}
-      </div>
+  <h1>The Best Mary Jane Sneakers <span>Under $45</span></h1>
+
+  <p class="hero-sub">
+    Timeless Mary Jane style meets all-day comfort.<br>
+    <strong>Premium leather · Adjustable strap · Non-slip sole</strong>
+  </p>
+
+  <!-- Hero Product Card -->
+  <div class="hero-product" id="hero-product">
+    <div class="hero-product-img">
+      <span class="img-badge">{heroProduct.badge}</span>
+      <img src={heroProduct.image} alt={heroProduct.shortName} loading="eager">
     </div>
-  </section>
+    <div class="hero-product-body">
+      <div class="hero-product-name">{heroProduct.shortName}</div>
+      <div class="hero-product-tagline">{heroProduct.tagline}</div>
+      <div class="hero-product-rating">
+        <span class="hero-product-stars">{"★".repeat(heroProduct.reviewStars)}</span>
+        <span class="hero-product-reviews">{heroProduct.rating} · {heroProduct.reviewCount} reviews</span>
+      </div>
+      <div class="hero-product-price">{heroProduct.price} <span style="font-size:14px;color:var(--text-light);text-decoration:line-through;font-weight:400">was {heroProduct.originalPrice}</span></div>
+      <div class="hero-product-price-note">Premium leather · Amazon Prime delivery</div>
+      {heroProduct.benefits.map(b => (
+        <div class="hero-product-benefit">{b}</div>
+      ))}
+    </div>
+  </div>
 
-  <!-- Best For Scenarios -->
-  <Content
-    title="Find Your Perfect Mary Jane"
-    subtitle="Which style matches your lifestyle?"
-    items={[
-      {
-        title: 'For the Classic Fashionista',
-        description: 'The retro Mary Jane with premium leather and adjustable strap. Timeless style that never goes out of fashion.',
-      },
-      {
-        title: 'For Wide Feet & Natural Movement',
-        description: 'The barefoot flats with zero drop sole and wide toe box. No breaking in, no squeezing, just pure comfort.',
-      },
-      {
-        title: 'For Busy Lifestyles',
-        description: 'The slip-on design with thin soft sole. Quick to put on, lightweight to wear, perfect for on-the-go days.',
-      },
-      {
-        title: 'For Feminine Style Seekers',
-        description: 'The lace-detailed skate sneaker. Unique feminine touch with all-day comfort for any outfit.',
-      },
-    ]}
-    image={{
-      src: products[0].images[1],
-      alt: 'Mary Jane Sneakers Styling',
-    }}
-    reverse={true}
-  />
+  <div class="hero-cta">
+    <a href={heroProduct.affiliateLink} class="hero-cta-btn" target="_blank" rel="noopener">
+      👟 See Price on Amazon →
+    </a>
+  </div>
 
-  <!-- FAQ -->
-  <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        question: 'What makes Mary Jane sneakers comfortable?',
-        description: 'The best Mary Jane sneakers feature cushioned insoles, flexible rubber outsoles, and adjustable straps for a customized fit. Look for breathable materials and arch support.',
-      },
-      {
-        question: 'Are Mary Jane sneakers true to size?',
-        description: 'Most customers find our recommended Mary Jane sneakers run true to size. However, if you have wide feet, consider sizing up or choosing the barefoot style with its wide toe box design.',
-      },
-      {
-        question: 'Can I wear Mary Jane sneakers with formal outfits?',
-        description: 'Yes! Mary Jane sneakers have evolved from purely casual to versatile enough for business casual settings. Choose classic leather styles in neutral colors for a more polished look.',
-      },
-      {
-        question: 'How do I clean Mary Jane sneakers?',
-        description: 'Most synthetic leather Mary Jane sneakers can be wiped clean with a damp cloth. For deeper cleaning, use mild soap and water. Avoid machine washing to maintain shape.',
-      },
-      {
-        question: 'What\'s the difference between regular and barefoot Mary Janes?',
-        description: 'Regular Mary Janes have cushioned soles with some arch support. Barefoot styles feature zero drop soles and wide toe boxes, allowing your feet to move more naturally.',
-      },
-    ]}
-  />
+  <p class="hero-trust">
+    <span>🚚 Prime delivery</span>
+    <span>↩️ 30-day returns</span>
+    <span>🔒 Secure payment</span>
+  </p>
+</section>
 
-  <!-- Final CTA -->
-  <CallToAction
-    title="Step Into Style & Comfort"
-    subtitle="Whether you prefer classic retro or barefoot comfort, there\'s a perfect Mary Jane sneaker for you."
-    actions={[
-      { variant: 'primary', text: 'Shop Best Seller ($41.99)', href: 'https://amzn.to/4bKZqjC', target: '_blank' },
-      { variant: 'secondary', text: '← All Products', href: '/products' },
-    ]}
-  />
-</Layout>
+<!-- ── WHY THIS ── -->
+<section class="why-section">
+  <h2>Why This Is Our #1 Pick</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">👠</div>
+      <h3>Premium Leather</h3>
+      <p>Water-resistant leather looks expensive and lasts for years.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🔧</div>
+      <h3>Adjustable Strap</h3>
+      <p>Customized fit for narrow or wide feet — no break-in needed.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🦶</div>
+      <h3>Non-Slip Sole</h3>
+      <p>Textured rubber outsole grips any surface safely.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">👗</div>
+      <h3>Endlessly Versatile</h3>
+      <p>Jeans, shorts, dresses, skirts — it goes with everything.</p>
+    </div>
+  </div>
+</section>
 
-<style is:global>
-.amazon-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  background: linear-gradient(180deg, #FFD814 0%, #FFBB50 100%) !important;
-  border: 1px solid #FCD200 !important;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
-  font-weight: 600 !important;
-  color: #0F1111 !important;
-}
-.amazon-btn:hover {
-  background: linear-gradient(180deg, #F7CA00 0%, #F7CA00 100%) !important;
-  border-color: #FCD200 !important;
-}
-.amazon-icon {
-  width: 20px;
-  height: 20px;
-}
-</style>
+<!-- ── SOCIAL PROOF ── -->
+<section class="proof-section">
+  <div class="proof-inner">
+    <div class="proof-quote">
+      <div class="proof-stars">{"★".repeat(heroProduct.reviewStars)}</div>
+      <p>"{heroProduct.reviewText}"</p>
+      <div class="proof-author">— Verified Amazon Buyer</div>
+    </div>
+    <div class="proof-verified">✓ Verified Purchase</div>
+  </div>
+</section>
+
+<!-- ── OTHER PICKS ── -->
+<section class="other-section">
+  <h2>More Styles to Consider →</h2>
+  <div class="other-grid">
+    {otherProducts.map(p => (
+      <a href={p.affiliateLink} class="other-card" target="_blank" rel="noopener">
+        <div class="other-card-img">
+          <img src={p.image} alt={p.shortName} loading="lazy">
+        </div>
+        <div>
+          <span class="other-card-badge">{p.badge}</span>
+          <h3 style="margin-top:7px">{p.shortName}</h3>
+          <div class="other-card-price">{p.price}</div>
+          <div class="other-card-meta">{"★".repeat(Math.round(p.rating))} {p.rating} · {p.reviewCount} reviews</div>
+          <div class="other-card-highlights">{p.highlights}</div>
+        </div>
+        <div class="other-card-cta">See on Amazon →</div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section">
+  <h2>Quick Answers</h2>
+  <div class="faq-list">
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Do Mary Jane sneakers run true to size?</div>
+      <div class="faq-a"><p>Most customers find they run true to size. If you have wide feet, consider sizing up or choosing the Barefoot Comfort style with its wide toe box.</p></div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Are these comfortable enough for all-day wear?</div>
+      <div class="faq-a"><p>Yes — the cushioned insole and flexible rubber outsole make these comfortable for walking, commuting, and light errands. The adjustable strap prevents slipping.</p></div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Can I wear them with formal outfits?</div>
+      <div class="faq-a"><p>Absolutely. The classic retro leather style works well with business casual, dresses, and skirts — not just casual wear.</p></div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">How do I clean them?</div>
+      <div class="faq-a"><p>Wipe with a damp cloth for daily care. For deeper cleaning, use mild soap and water. Avoid machine washing to maintain the leather shape and strap.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="final-section">
+  <h2>👠 Step Into Timeless Style</h2>
+  <p>{heroProduct.price} · Premium leather · Adjustable strap · Non-slip sole</p>
+  <a href={heroProduct.affiliateLink} class="final-btn" target="_blank" rel="noopener">
+    👟 Shop Top Pick on Amazon →
+  </a>
+</section>
+
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">🚚</span> Prime Delivery</div>
+  <div class="trust-item"><span class="trust-icon">↩️</span> 30-Day Returns</div>
+  <div class="trust-item"><span class="trust-icon">🔒</span> Secure Amazon Pay</div>
+  <div class="trust-item"><span class="trust-icon">💰</span> Commission earned</div>
+</div>
+<div class="disclosure">
+  <p>As an Amazon Associate, we earn from qualifying purchases — but we only recommend products we'd buy ourselves.</p>
+</div>
+
+<script>
+function toggleFaq(el){ el.classList.toggle('open'); }
+
+(function(){
+  var wrap = document.getElementById('stickyWrap');
+  var hero = document.getElementById('hero-product');
+  if (!wrap || !hero) return;
+  new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      wrap.classList.toggle('visible', !e.isIntersecting);
+    });
+  },{ threshold: 0 }).observe(hero);
+})();
+</script>
+
+</body>
+</html>
