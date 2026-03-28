@@ -1,0 +1,22 @@
+---
+// Google Tag component for per-page tracking
+// Usage:
+//   import GoogleTag from '~/components/GoogleTag.astro';
+//   <GoogleTag tagId="AW-17760696639" conversionId="AW-17760696639/OnXhCPTE1oocEL_y-pRC" />
+export interface Props {
+  tagId: string;
+  conversionId?: string;
+}
+const { tagId, conversionId } = Astro.props;
+---
+<!-- Google Tag (gtag.js) -->
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${tagId}`}></script>
+<script is:inline define:vars={{ tagId, conversionId }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', tagId);
+  if (conversionId) {
+    gtag('event', 'conversion', {'send_to': conversionId});
+  }
+</script>
