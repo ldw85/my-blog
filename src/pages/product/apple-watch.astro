@@ -1,556 +1,696 @@
 ---
-import Layout from '~/layouts/LandingLayout.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Features from '~/components/widgets/Features.astro';
-import Content from '~/components/widgets/Content.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-
 const metadata = {
-  title: 'Apple Watch Series 11 Review 2026 - Should You Buy?',
-  description: 'Complete Apple Watch Series 11 review with comparison vs Series 10 & Ultra 2. Discover the best deals, key health features, and if upgrading is worth it.',
+  title: 'Apple Watch Series 11 Review 2026 — Save $100 | TechRuling',
+  description: 'Apple Watch Series 11 review: 40% larger display, fast charging, skin temperature sensing. Save 25% off on Amazon. Honest comparison vs Series 10 & Ultra 2.',
 };
+
+const heroProduct = {
+  name: "Apple Watch Series 11 (45mm)",
+  price: "From $299",
+  originalPrice: "From $399",
+  rating: 4.8,
+  reviewCount: "12,400+",
+  image: "https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Series_11_Product_Page_L__en-US_01._CB800260814_.jpg",
+  affiliateLink: "https://amzn.to/4b5SjD3",
+  discount: "Save $100 (25% off)",
+  scarcity: "⚡ Space Gray 46mm is running low today",
+  badge: "🏆 Best Value Pick",
+  benefits: [
+    "40% larger display — biggest Apple Watch screen ever",
+    "Fast charging: 0–80% in just 45 minutes",
+    "Skin temperature sensing — new health feature",
+    "Always-On Retina display up to 2000 nits",
+  ],
+  reviewText: "The Series 11 is a game-changer. The larger display makes everything so much easier to read, and the battery life is incredible. The fast charging alone is worth the upgrade!",
+  reviewStars: 5,
+};
+
+const comparisonProducts = [
+  {
+    name: "Series 11 ⭐",
+    price: "From $299",
+    display: "46mm (largest)",
+    thickness: "9.7mm (thinnest)",
+    battery: "18–36 hrs",
+    fastCharge: "✅ 0–80% in 45min",
+    skinTemp: "✅ Yes",
+    water: "50m",
+    bestFor: "Most people — best value",
+    recommend: "RECOMMENDED",
+    recColor: "green",
+    link: "https://amzn.to/4b5SjD3",
+  },
+  {
+    name: "Series 10",
+    price: "From $399",
+    display: "45mm",
+    thickness: "10.1mm",
+    battery: "18–36 hrs",
+    fastCharge: "✅ 0–80% in 45min",
+    skinTemp: "❌ No",
+    water: "50m",
+    bestFor: "Upgraders from Series 7/8",
+    recommend: "CONSIDER",
+    recColor: "yellow",
+    link: "https://amzn.to/4b5SjD3",
+  },
+  {
+    name: "Ultra 2",
+    price: "From $799",
+    display: "49mm",
+    thickness: "14.4mm",
+    battery: "36–72 hrs",
+    fastCharge: "❌ No",
+    skinTemp: "❌ No",
+    water: "100m",
+    bestFor: "Athletes, adventurers",
+    recommend: "PREMIUM",
+    recColor: "blue",
+    link: "https://amzn.to/4b5SjD3",
+  },
+];
+
+const otherProducts = [
+  {
+    name: "Apple Watch Ultra 2",
+    shortName: "Ultra 2 — Athletes & Adventurers",
+    price: "$799",
+    rating: 4.9,
+    reviewCount: "5,200+",
+    image: "https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Ultra_2_Product_Page_ L__en-US.__CB800260814_.jpg",
+    affiliateLink: "https://amzn.to/4b5SjD3",
+    badge: "🏔️ Ultra Pick",
+    highlights: "49mm · 100m water · 36–72hr battery",
+  },
+  {
+    name: "Apple Watch Series 10",
+    shortName: "Series 10 — Thinner Design",
+    price: "$399",
+    rating: 4.7,
+    reviewCount: "8,900+",
+    image: "https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Series_10_Product_Page_L__en-US.__CB800260814_.jpg",
+    affiliateLink: "https://amzn.to/4b5SjD3",
+    badge: "📱 Series 10 Pick",
+    highlights: "45mm · Always-On · GPS + Cellular",
+  },
+];
 ---
 
-<style is:global>
-  /* Override intersection animations for Hero section - show immediately */
-  .hero-section .intersect-once {
-    opacity: 1 !important;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5">
+<title>{metadata.title}</title>
+<meta name="description" content={metadata.description}>
+<link rel="canonical" href="https://techruling.com/product/apple-watch/">
+<style>
+:root{
+  --bg:#F8FAFF;
+  --card:#FFFFFF;
+  --text:#1A1A2E;
+  --text-mid:#444;
+  --text-light:#777;
+  --coral:#E5523A;
+  --coral-dark:#C73E1D;
+  --sky:#3B7BED;
+  --sky-light:#EBF2FF;
+  --gold:#F5A623;
+  --green:#1A7F37;
+  --green-bg:#EBF7EE;
+  --yellow:#D97706;
+  --yellow-bg:#FFFBEB;
+  --border:#E4EAF4;
+  --shadow:0 2px 16px rgba(0,0,0,0.07);
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.65;
+  font-size:16px;
+  overflow-x:hidden;
+}
+
+/* ── HERO ── */
+.hero{
+  min-height:100dvh;
+  display:flex;flex-direction:column;
+  justify-content:center;
+  padding:20px 16px 130px;
+  background:linear-gradient(160deg,#EDF2FF 0%,#F8FAFF 60%,#fff 100%);
+  text-align:center;
+  position:relative;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(59,123,237,0.07) 0%,transparent 65%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 16px;
+  background:linear-gradient(135deg,var(--coral),#F07050);
+  color:#fff;border-radius:20px;font-size:13px;font-weight:700;
+  margin-bottom:18px;
+}
+.hero-badge span{font-size:16px}
+.hero h1{
+  font-size:clamp(28px,7vw,50px);
+  font-weight:800;line-height:1.12;
+  letter-spacing:-0.5px;margin-bottom:10px;
+}
+.hero h1 span{display:block;color:var(--sky)}
+.hero-sub{
+  font-size:clamp(14px,3.5vw,17px);
+  color:var(--text-mid);
+  max-width:540px;margin:0 auto 20px;line-height:1.7;
+}
+
+/* ── HERO PRODUCT CARD ── */
+.hero-product{
+  background:var(--card);
+  border-radius:20px;
+  box-shadow:0 6px 32px rgba(59,123,237,0.12);
+  overflow:hidden;
+  max-width:480px;margin:0 auto 16px;
+  text-align:left;
+  border:1px solid var(--border);
+}
+.hero-product-img{
+  width:100%;aspect-ratio:16/9;
+  background:linear-gradient(135deg,#EDF2FF,#F8FAFF);
+  display:flex;align-items:center;justify-content:center;
+  padding:10px;position:relative;
+}
+.hero-product-img img{
+  width:100%;height:auto;
+  object-fit:contain;border-radius:8px;
+}
+.img-badge{
+  position:absolute;top:12px;left:12px;
+  background:linear-gradient(135deg,var(--sky),#5B9AF5);
+  color:#fff;font-size:11px;font-weight:700;
+  padding:5px 12px;border-radius:20px;
+}
+.hero-product-body{padding:18px 20px}
+.hero-product-name{font-size:18px;font-weight:800;margin-bottom:4px;line-height:1.3}
+.hero-product-tagline{font-size:12px;color:var(--sky);font-weight:600;margin-bottom:12px}
+.hero-product-rating{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.hero-product-stars{color:var(--gold);font-size:14px}
+.hero-product-reviews{font-size:12px;color:var(--text-light)}
+.hero-product-price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:4px}
+.hero-product-price{font-size:28px;font-weight:800;color:var(--text)}
+.hero-product-price-was{font-size:14px;color:var(--text-light);text-decoration:line-through}
+.hero-product-discount{font-size:13px;color:var(--green);font-weight:700;margin-bottom:12px}
+.hero-product-benefit{
+  display:flex;align-items:flex-start;gap:8px;
+  padding:7px 0;border-top:1px solid var(--border);
+  font-size:13px;color:var(--text-mid);
+}
+.hero-product-benefit::before{content:"✓";color:var(--sky);font-weight:700;flex-shrink:0;margin-top:1px}
+
+/* ── HERO CTA ── */
+.hero-cta{display:flex;flex-direction:column;align-items:center;gap:10px;max-width:480px;margin:0 auto}
+.hero-cta-btn{
+  display:inline-block;width:100%;
+  background:linear-gradient(135deg,var(--coral),var(--coral-dark));
+  color:#fff;border-radius:16px;
+  font-size:16px;font-weight:800;
+  padding:15px 24px;text-decoration:none;
+  box-shadow:0 5px 18px rgba(232,82,58,0.35);
+  transition:transform 0.15s;
+}
+.hero-cta-btn:active{transform:scale(0.97)}
+.hero-scarcity{font-size:13px;color:var(--coral);font-weight:600}
+.hero-trust{
+  font-size:12px;color:var(--text-light);
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:center;
+}
+
+/* ── STICKY CTA ── */
+.sticky-cta{
+  position:fixed;bottom:0;left:0;right:0;
+  background:#fff;border-top:1px solid var(--border);
+  padding:12px 16px 18px;z-index:100;
+  display:flex;align-items:center;gap:12px;
+  box-shadow:0 -4px 20px rgba(0,0,0,0.08);
+}
+.sticky-cta-info{flex:1}
+.sticky-cta-price{font-size:20px;font-weight:800}
+.sticky-cta-note{font-size:11px;color:var(--text-light)}
+.sticky-cta-btn{
+  background:linear-gradient(135deg,var(--coral),var(--coral-dark));
+  color:#fff;border:none;border-radius:14px;
+  font-size:15px;font-weight:800;
+  padding:13px 22px;cursor:pointer;text-decoration:none;
+  display:inline-block;
+  box-shadow:0 4px 14px rgba(232,82,58,0.35);
+  transition:transform 0.15s;white-space:nowrap;
+}
+.sticky-cta-btn:active{transform:scale(0.97)}
+
+/* ── QUICK STATS ── */
+.stats-section{padding:40px 20px;background:#fff;border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:640px;margin:0 auto}
+.stat-card{
+  background:var(--bg);border-radius:12px;
+  padding:14px 10px;text-align:center;
+}
+.stat-value{font-size:22px;font-weight:800;color:var(--sky);margin-bottom:2px}
+.stat-label{font-size:11px;color:var(--text-light);line-height:1.4}
+
+/* ── COMPARISON ── */
+.compare-section{padding:56px 20px;background:#fff}
+.compare-section h2{font-size:clamp(20px,5vw,28px);font-weight:800;text-align:center;margin-bottom:8px}
+.compare-section .compare-sub{font-size:14px;color:var(--text-mid);text-align:center;margin-bottom:28px}
+.compare-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:800px;margin:0 auto}
+.compare-card{
+  border-radius:16px;padding:20px 16px;
+  border:2px solid var(--border);
+  text-align:left;display:flex;flex-direction:column;gap:0;
+}
+.compare-card.rec-green{border-color:var(--green);background:var(--green-bg)}
+.compare-card.rec-yellow{border-color:var(--yellow);background:var(--yellow-bg)}
+.compare-card.rec-blue{border-color:var(--sky);background:var(--sky-light)}
+.compare-badge{
+  display:inline-block;padding:3px 10px;
+  border-radius:20px;font-size:10px;font-weight:800;
+  margin-bottom:10px;
+}
+.rec-green .compare-badge{background:var(--green);color:#fff}
+.rec-yellow .compare-badge{background:var(--yellow);color:#fff}
+.rec-blue .compare-badge{background:var(--sky);color:#fff}
+.compare-card-name{font-size:14px;font-weight:800;margin-bottom:4px}
+.compare-card-price{font-size:20px;font-weight:800;margin-bottom:12px;color:var(--text)}
+.compare-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-top:1px solid rgba(0,0,0,0.07);font-size:12px}
+.compare-row-label{color:var(--text-light)}
+.compare-row-val{font-weight:600;text-align:right}
+.compare-card-cta{
+  display:block;width:100%;margin-top:14px;
+  padding:10px;text-align:center;
+  border-radius:10px;font-size:13px;font-weight:700;
+  text-decoration:none;transition:transform 0.15s;
+}
+.rec-green .compare-card-cta{background:var(--green);color:#fff}
+.rec-yellow .compare-card-cta{background:var(--yellow);color:#fff}
+.rec-blue .compare-card-cta{background:var(--sky);color:#fff}
+.compare-card-cta:active{transform:scale(0.97)}
+
+/* ── WHY THIS ── */
+.why-section{padding:52px 20px;background:var(--bg)}
+.why-section h2{font-size:clamp(20px,5vw,28px);font-weight:800;text-align:center;margin-bottom:24px}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;max-width:700px;margin:0 auto}
+.why-card{background:#fff;border-radius:14px;padding:18px 14px;text-align:left;border:1px solid var(--border)}
+.why-icon{font-size:26px;margin-bottom:8px}
+.why-card h3{font-size:13px;font-weight:700;margin-bottom:5px}
+.why-card p{font-size:12px;color:var(--text-mid);line-height:1.6}
+
+/* ── SOCIAL PROOF ── */
+.proof-section{padding:44px 20px;background:#fff}
+.proof-inner{max-width:600px;margin:0 auto;text-align:center}
+.proof-quote{
+  background:var(--bg);border-radius:16px;padding:24px 20px;margin-bottom:16px;
+  border-left:4px solid var(--sky);box-shadow:var(--shadow);text-align:left;
+  position:relative;
+}
+.proof-quote::before{content:"“";font-size:56px;color:var(--sky);position:absolute;top:-6px;left:14px;line-height:1;opacity:0.15}
+.proof-quote p{font-size:15px;color:var(--text-mid);line-height:1.75;font-style:italic;padding-left:6px}
+.proof-stars{color:var(--gold);font-size:15px;margin-bottom:8px;letter-spacing:2px}
+.proof-author{font-size:12px;color:var(--text-light);font-weight:600;margin-top:8px}
+.proof-verified{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:11px;color:var(--green);font-weight:600;
+  background:var(--green-bg);border-radius:6px;padding:4px 10px;
+}
+
+/* ── BENEFITS GRID ── */
+.benefits-section{padding:52px 20px;background:var(--bg)}
+.benefits-section h2{font-size:clamp(20px,5vw,26px);font-weight:800;text-align:center;margin-bottom:24px}
+.benefits-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;max-width:800px;margin:0 auto}
+.benefit-card{background:#fff;border-radius:14px;padding:20px 16px;border:1px solid var(--border)}
+.benefit-icon{font-size:28px;margin-bottom:10px}
+.benefit-card h3{font-size:14px;font-weight:700;margin-bottom:6px;line-height:1.4}
+.benefit-card p{font-size:13px;color:var(--text-mid);line-height:1.7}
+
+/* ── OTHER PICKS ── */
+.other-section{padding:52px 20px;background:#fff}
+.other-section h2{font-size:clamp(19px,4.5vw,25px);font-weight:800;text-align:center;margin-bottom:24px}
+.other-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;max-width:640px;margin:0 auto}
+.other-card{
+  border:1.5px solid var(--border);border-radius:14px;
+  padding:14px;display:flex;flex-direction:column;gap:10px;
+  text-decoration:none;color:inherit;
+  transition:border-color 0.2s,box-shadow 0.2s;
+}
+.other-card:hover{border-color:var(--sky);box-shadow:0 4px 14px rgba(59,123,237,0.1)}
+.other-card-img{
+  width:100%;aspect-ratio:16/9;
+  background:linear-gradient(135deg,#EDF2FF,#F8FAFF);
+  border-radius:10px;display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.other-card-img img{max-width:80%;max-height:80px;object-fit:contain}
+.other-card-badge{
+  display:inline-block;padding:3px 10px;
+  background:#EDF2FF;color:var(--sky);
+  border-radius:20px;font-size:11px;font-weight:700;
+}
+.other-card h3{font-size:13px;font-weight:700;line-height:1.4}
+.other-card-price{font-size:17px;font-weight:800}
+.other-card-meta{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text-light)}
+.other-card-highlights{font-size:11px;color:var(--text-mid)}
+.other-card-cta{margin-top:auto;padding-top:8px;color:var(--sky);font-size:12px;font-weight:700;display:flex;align-items:center;gap:4px}
+
+/* ── FAQ ── */
+.faq-section{padding:48px 20px;background:var(--bg)}
+.faq-section h2{font-size:clamp(19px,4.5vw,25px);font-weight:800;text-align:center;margin-bottom:22px}
+.faq-list{max-width:560px;margin:0 auto}
+.faq-item{background:#fff;border-radius:12px;margin-bottom:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.04);border:1px solid var(--border)}
+.faq-q{
+  padding:15px 18px;font-weight:700;font-size:14px;
+  cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  user-select:none;
+}
+.faq-q::after{content:"+";font-size:20px;color:var(--sky);transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s,padding 0.3s;padding:0 18px}
+.faq-item.open .faq-a{max-height:220px;padding:0 18px 14px}
+.faq-a p{font-size:13px;color:var(--text-mid);line-height:1.75}
+
+/* ── FINAL CTA ── */
+.final-section{padding:60px 20px;background:linear-gradient(160deg,#EDF2FF,#F8FAFF);text-align:center}
+.final-section h2{font-size:clamp(21px,5vw,29px);font-weight:800;margin-bottom:10px}
+.final-section p{font-size:15px;color:var(--text-mid);margin-bottom:22px}
+.final-btn{
+  display:inline-block;padding:16px 36px;
+  background:linear-gradient(135deg,var(--coral),var(--coral-dark));
+  color:#fff;border-radius:16px;font-size:17px;font-weight:800;
+  text-decoration:none;box-shadow:0 6px 20px rgba(232,82,58,0.32);
+  transition:transform 0.15s;
+}
+.final-btn:active{transform:scale(0.97)}
+
+/* ── TRUST BAR ── */
+.trust-bar{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;padding:18px;background:#fff;border-top:1px solid var(--border)}
+.trust-item{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--text-mid);font-weight:600}
+.trust-icon{font-size:15px}
+.disclosure{padding:14px;text-align:center;color:var(--text-light);font-size:11px;background:var(--bg)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:600px){
+  .compare-grid{grid-template-columns:1fr;gap:12px;max-width:360px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:768px){
+  .hero-cta{flex-direction:row;align-items:center}
+  .hero-cta-btn{width:auto;flex:1}
+  .compare-grid{grid-template-columns:repeat(3,1fr);max-width:none}
+  .stats-grid{grid-template-columns:repeat(4,1fr)}
+  .sticky-cta-wrap{position:fixed;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;z-index:100;pointer-events:none}
+  .sticky-cta{
+    border-radius:0 0 16px 16px;max-width:480px;margin:0 auto;
+    background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);
+    padding:12px 20px;opacity:0;transform:translateY(-100%);
+    transition:opacity 0.3s,transform 0.3s;pointer-events:auto;
   }
-  .hero-section .motion-safe\:md\:opacity-0 {
-    opacity: 1 !important;
-  }
-  .hero-section {
-    animation: none !important;
-  }
-  /* Mid-CTA styling */
-  .mid-cta {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  }
-  .dark .mid-cta {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  }
-  .comparison-table {
-    overflow-x: auto;
-  }
-  .comparison-table table {
-    min-width: 600px;
-  }
+  .sticky-cta-wrap.visible .sticky-cta{opacity:1;transform:translateY(0)}
+  .why-grid{grid-template-columns:repeat(4,1fr)}
+  .other-grid{max-width:none;grid-template-columns:repeat(2,1fr)}
+  .benefits-grid{max-width:none;grid-template-columns:repeat(3,1fr)}
+}
 </style>
+</head>
+<body>
 
-<Layout metadata={metadata}>
-  <!-- Optimized Hero Section -->
-  <section class="relative md:-mt-[76px] not-prose hero-section">
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-      <div class="py-12 md:py-20">
-        <div class="text-center pb-10 md:pb-16 max-w-5xl mx-auto">
-          <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase">
-            Limited Time: 25% Off - Save $100
-          </p>
-          <h1 class="text-5xl md:text-6xl font-bold leading-tighter tracking-tighter mb-4 font-heading dark:text-gray-200">
-            Apple Watch Series 11 Review
-          </h1>
-          <div class="max-w-3xl mx-auto">
-            <p class="text-xl text-muted mb-6 dark:text-slate-300">
-              Thinner design. Largest display ever. Breakthrough health features. Plus faster charging — get a full day's battery in just 30 minutes.
-            </p>
-            <div class="max-w-xs sm:max-w-md m-auto flex flex-nowrap flex-col sm:flex-row sm:justify-center gap-4">
-              <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary sm:mb-0 amazon-btn">
-                <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
-                Check Current Discount on Amazon
-              </a>
-              <a href="#comparison" class="btn btn-secondary sm:mb-0">
-                View Comparison
-              </a>
-            </div>
-            <!-- Scarcity Message -->
-            <p class="mt-4 text-sm text-orange-600 dark:text-orange-400 font-medium">
-              ⚡ Limited inventory — Space Gray 46mm is running low today
-            </p>
-          </div>
-        </div>
-        <div class="relative m-auto max-w-5xl">
-          <img 
-            src="https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Series_11_Product_Page_L__en-US_01._CB800260814_.jpg" 
-            alt="Apple Watch Series 11"
-            class="mx-auto rounded-md w-full"
-            loading="eager"
-            width="1024"
-            height="576"
-          />
-        </div>
-      </div>
+<!-- ── STICKY CTA ── -->
+<div class="sticky-cta-wrap" id="stickyWrap">
+  <div class="sticky-cta">
+    <div class="sticky-cta-info">
+      <div class="sticky-cta-price">{heroProduct.price}</div>
+      <div class="sticky-cta-note">⭐ {heroProduct.rating} · {heroProduct.reviewCount} reviews</div>
     </div>
-  </section>
+    <a href={heroProduct.affiliateLink} class="sticky-cta-btn" target="_blank" rel="noopener">
+      ⌚ See Price on Amazon →
+    </a>
+  </div>
+</div>
 
-  <!-- Quick Stats -->
-  <Stats
-    title=""
-    items={[
-      { title: 'Display Size', amount: '40%', description: 'larger than Series 6' },
-      { title: 'Charging Speed', amount: '45', description: 'min to 80%' },
-      { title: 'Battery Life', amount: '18-36', description: 'hours' },
-      { title: 'Water Resistance', amount: '50m', description: 'swim-proof' },
-    ]}
-  />
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-badge"><span>⌚</span> Limited Offer — {heroProduct.discount}</div>
 
-  <!-- Quick Choice Table - Should You Upgrade? -->
-  <section class="py-12 md:py-16 bg-gradient-to-b from-primary/5 to-transparent">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl md:text-3xl font-bold mb-2">Should You Upgrade?</h2>
-        <p class="text-muted"> Honest recommendations based on your current watch</p>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-6">
-        <!-- Series 9 or older -->
-        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border-2 border-green-500 relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-            RECOMMENDED
-          </div>
-          <h3 class="text-lg font-bold mb-3">Series 9 or Older</h3>
-          <p class="text-muted text-sm mb-4">Major leap in display, charging speed, and health sensors</p>
-          <ul class="space-y-2 text-sm mb-4">
-            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> 40% larger display</li>
-            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> 2x faster charging</li>
-            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> New temperature sensor</li>
-            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> Skin temp tracking</li>
-          </ul>
-          <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
-            Upgrade Now →
-          </a>
-        </div>
-        
-        <!-- Series 10 -->
-        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border-2 border-yellow-500 relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-            CONSIDER
-          </div>
-          <h3 class="text-lg font-bold mb-3">Series 10</h3>
-          <p class="text-muted text-sm mb-4">Only upgrade if you need these specific features</p>
-          <ul class="space-y-2 text-sm mb-4">
-            <li class="flex items-start gap-2"><span class="text-yellow-500">•</span> Temperature sensing</li>
-            <li class="flex items-start gap-2"><span class="text-yellow-500">•</span> Slightly thinner</li>
-            <li class="flex items-start gap-2"><span class="text-gray-400">✗</span> Similar battery life</li>
-            <li class="flex items-start gap-2"><span class="text-gray-400">✗</span> Same processor speed</li>
-          </ul>
-          <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
-            Check Deals →
-          </a>
-        </div>
-        
-        <!-- First Gen / SE -->
-        <div class="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg border-2 border-green-500 relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-            HIGHLY RECOMMENDED
-          </div>
-          <h3 class="text-lg font-bold mb-3">Series 6 or Older</h3>
-          <p class="text-muted text-sm mb-4">Transformative upgrade — you'll notice every difference</p>
-          <ul class="space-y-2 text-sm mb-4">
-            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> All new features</li>
-            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> Battery optimization</li>
-            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> Always-On display</li>
-            <li class="flex items-start gap-2"><span class="text-green-500">✓</span> 5G Cellular option</li>
-          </ul>
-          <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-sm">
-            Get Series 11 →
-          </a>
-        </div>
-      </div>
+  <h1>Apple Watch Series 11 <span>2026 Review</span></h1>
+
+  <p class="hero-sub">
+    40% larger display · Fast charging · Skin temperature sensing<br>
+    <strong>The most advanced Apple Watch yet — now at best price</strong>
+  </p>
+
+  <!-- Hero Product Card -->
+  <div class="hero-product" id="hero-product">
+    <div class="hero-product-img">
+      <span class="img-badge">{heroProduct.badge}</span>
+      <img src={heroProduct.image} alt="Apple Watch Series 11" loading="eager">
     </div>
-  </section>
-
-  <!-- Key Benefits -->
-  <Features
-    title="Why Apple Watch Series 11 Is Worth It"
-    subtitle="More than features — these are the real benefits that matter in your daily life"
-    items={[
-      {
-        title: 'Know If Your Heart Is Healthy — While You Sleep',
-        description: 'Continuous ECG monitoring detects irregular heart rhythms early. Get alerts before symptoms appear, giving you peace of mind 24/7.',
-      },
-      {
-        title: 'Never Miss a Message — Even in Bright Sunlight',
-        description: 'The brightest Always-On Retina display (2000 nits) means you can read notifications at the beach, on the trail, or anywhere without raising your wrist.',
-      },
-      {
-        title: 'Get a Full Day\'s Battery in 30 Minutes',
-        description: 'Fast charging means you\'re never tied to an outlet. A morning coffee is enough to keep your watch running all day.',
-      },
-      {
-        title: 'Understand Your Sleep Quality — Finally',
-        description: 'New skin temperature sensors track overnight trends and provide insights into your sleep patterns. Wake up knowing how well you actually rested.',
-      },
-      {
-        title: 'Close Your Rings, Every Single Day',
-        description: 'The three-ring system makes staying active feel like a game. Compete with friends, earn badges, and build lasting healthy habits.',
-      },
-      {
-        title: 'Swim, Surf, and Dive — No Worries',
-        description: '50m water resistance means the ocean is your gym. Track your lap times, monitor heart rate underwater, and rinse off when you\'re done.',
-      },
-    ]}
-  />
-
-  <!-- Mid-Page CTA -->
-  <section class="mid-cta py-12">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="text-lg font-semibold text-primary mb-2">🔥 Today's Best Deal</p>
-      <h3 class="text-2xl md:text-3xl font-bold mb-4">Save $100 on Apple Watch Series 11</h3>
-      <p class="text-muted mb-6">Check the current discount on Amazon — deals change daily.</p>
-      <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary amazon-btn inline-flex items-center gap-2">
-        <svg class="amazon-icon w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
-        Check Current Discount on Amazon (Save $100) →
-      </a>
-      <p class="mt-3 text-sm text-orange-600 dark:text-orange-400">
-        ⚡ Space Gray 46mm is running low today
-      </p>
+    <div class="hero-product-body">
+      <div class="hero-product-name">{heroProduct.name}</div>
+      <div class="hero-product-tagline">2026 Latest Model · Aluminum Case</div>
+      <div class="hero-product-rating">
+        <span class="hero-product-stars">{"★".repeat(heroProduct.reviewStars)}</span>
+        <span class="hero-product-reviews">{heroProduct.rating} · {heroProduct.reviewCount} reviews</span>
+      </div>
+      <div class="hero-product-price-row">
+        <span class="hero-product-price">{heroProduct.price}</span>
+        <span class="hero-product-price-was">{heroProduct.originalPrice}</span>
+      </div>
+      <div class="hero-product-discount">{heroProduct.discount} — {heroProduct.scarcity}</div>
+      {heroProduct.benefits.map(b => (
+        <div class="hero-product-benefit">{b}</div>
+      ))}
     </div>
-  </section>
+  </div>
 
-  <!-- Comparison Table Section -->
-  <section id="comparison" class="py-16 md:py-20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Series 11 vs Series 10 vs Ultra 2</h2>
-        <p class="text-xl text-muted max-w-2xl mx-auto">Not sure which Apple Watch is right for you? Here's the honest comparison to help you decide.</p>
-      </div>
-      
-      <div class="comparison-table">
-        <table class="w-full border-collapse bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-lg">
-          <thead>
-            <tr class="bg-primary text-white">
-              <th class="p-4 text-left font-semibold">Feature</th>
-              <th class="p-4 text-center font-semibold bg-green-600">Series 11 ⭐</th>
-              <th class="p-4 text-center font-semibold">Series 10</th>
-              <th class="p-4 text-center font-semibold">Ultra 2</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-200 dark:divide-slate-700">
-            <tr>
-              <td class="p-4 font-medium">Display Size</td>
-              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">46mm (largest)</td>
-              <td class="p-4 text-center">45mm</td>
-              <td class="p-4 text-center">49mm</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-medium">Thickness</td>
-              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">9.7mm (thinnest)</td>
-              <td class="p-4 text-center">10.1mm</td>
-              <td class="p-4 text-center">14.4mm</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-medium">Battery Life</td>
-              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">18-36 hrs</td>
-              <td class="p-4 text-center">18-36 hrs</td>
-              <td class="p-4 text-center">36-72 hrs</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-medium">Fast Charging</td>
-              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">✅ 0-80% in 45min</td>
-              <td class="p-4 text-center">✅ 0-80% in 45min</td>
-              <td class="p-4 text-center">❌ No</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-medium">Blood Oxygen Sensor</td>
-              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">✅ Yes</td>
-              <td class="p-4 text-center">✅ Yes</td>
-              <td class="p-4 text-center">✅ Yes</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-medium">ECG App</td>
-              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">✅ Yes</td>
-              <td class="p-4 text-center">✅ Yes</td>
-              <td class="p-4 text-center">✅ Yes</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-medium">Skin Temperature</td>
-              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">✅ Yes</td>
-              <td class="p-4 text-center">❌ No</td>
-              <td class="p-4 text-center">❌ No</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-medium">Water Resistance</td>
-              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">50m</td>
-              <td class="p-4 text-center">50m</td>
-              <td class="p-4 text-center">100m</td>
-            </tr>
-            <tr>
-              <td class="p-4 font-medium">Price (Aluminum)</td>
-              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold text-green-600 dark:text-green-400">From $299</td>
-              <td class="p-4 text-center">From $399</td>
-              <td class="p-4 text-center">From $799</td>
-            </tr>
-            <tr class="bg-gray-50 dark:bg-slate-700/50">
-              <td class="p-4 font-bold">Best For</td>
-              <td class="p-4 text-center bg-green-50 dark:bg-green-900/20 font-semibold">Most people — best value</td>
-              <td class="p-4 text-center">Upgraders from Series 7/8</td>
-              <td class="p-4 text-center">Athletes, adventurers</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <div class="text-center mt-8">
-        <p class="text-muted mb-4">Series 11 offers the newest features at the best price point.</p>
-        <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary amazon-btn inline-flex items-center gap-2">
-          <svg class="amazon-icon w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
-          Check Current Discount (Save $100) →
+  <div class="hero-cta">
+    <a href={heroProduct.affiliateLink} class="hero-cta-btn" target="_blank" rel="noopener">
+      ⌚ Check Price on Amazon →
+    </a>
+  </div>
+
+  <p class="hero-scarcity">{heroProduct.scarcity}</p>
+
+  <p class="hero-trust" style="margin-top:8px">
+    <span>🚚 Prime delivery</span>
+    <span>↩️ 30-day returns</span>
+    <span>🔒 Secure payment</span>
+  </p>
+</section>
+
+<!-- ── QUICK STATS ── -->
+<section class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-value">40%</div>
+      <div class="stat-label">Larger Display</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">45min</div>
+      <div class="stat-label">0–80% Fast Charge</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">18–36h</div>
+      <div class="stat-label">Battery Life</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value">50m</div>
+      <div class="stat-label">Water Resistance</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── COMPARISON ── -->
+<section class="compare-section">
+  <h2>Series 11 vs Series 10 vs Ultra 2</h2>
+  <p class="compare-sub">Honest comparison — find the right Apple Watch for you</p>
+
+  <div class="compare-grid">
+    {comparisonProducts.map(p => (
+      <div class={`compare-card rec-${p.recColor}`}>
+        <span class="compare-badge">{p.recommend}</span>
+        <div class="compare-card-name">{p.name}</div>
+        <div class="compare-card-price">{p.price}</div>
+        <div class="compare-row"><span class="compare-row-label">Display</span><span class="compare-row-val">{p.display}</span></div>
+        <div class="compare-row"><span class="compare-row-label">Thickness</span><span class="compare-row-val">{p.thickness}</span></div>
+        <div class="compare-row"><span class="compare-row-label">Battery</span><span class="compare-row-val">{p.battery}</span></div>
+        <div class="compare-row"><span class="compare-row-label">Fast Charge</span><span class="compare-row-val">{p.fastCharge}</span></div>
+        <div class="compare-row"><span class="compare-row-label">Skin Temp</span><span class="compare-row-val">{p.skinTemp}</span></div>
+        <div class="compare-row"><span class="compare-row-label">Water</span><span class="compare-row-val">{p.water}</span></div>
+        <div class="compare-row"><span class="compare-row-label">Best For</span><span class="compare-row-val">{p.bestFor}</span></div>
+        <a href={p.link} class="compare-card-cta" target="_blank" rel="noopener">
+          {p.name.includes("Series 11") ? "Get Series 11 →" : p.name.includes("Series 10") ? "Check Series 10 →" : "Check Ultra 2 →"}
         </a>
       </div>
+    ))}
+  </div>
+</section>
+
+<!-- ── WHY THIS ── -->
+<section class="why-section">
+  <h2>Why Series 11 Is the Best Choice</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <h3>Best Price Point</h3>
+      <p>Starts at $299 — $100 less than Series 10 with more features.</p>
     </div>
-  </section>
-
-  <!-- Health Features Deep Dive -->
-  <Content
-    title="Your Personal Health Guardian"
-    subtitle="Advanced sensors that watch over you around the clock"
-    items={[
-      {
-        title: 'ECG — Catch Heart Issues Before They Become Problems',
-        description: 'Take an electrocardiogram in 30 seconds. Detects atrial fibrillation, the most common heart arrhythmia. Early detection saves lives.',
-      },
-      {
-        title: 'Blood Oxygen — Monitor Respiratory Health 24/7',
-        description: 'Track blood oxygen levels during workouts and sleep. Athletes use it to optimize training. Everyone else uses it for peace of mind.',
-      },
-      {
-        title: 'Sleep Tracking — Finally Understand Your Rest',
-        description: 'Detailed nightly analysis shows REM, Core, and Deep sleep stages. Wake up to personalized insights that help you actually improve your rest.',
-      },
-      {
-        title: 'Temperature Sensing — New in Series 11',
-        description: 'Tracks skin temperature overnight, providing insights for cycle tracking and wellness. Know your body better, day by day.',
-      },
-    ]}
-    image={{
-      src: 'https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Series_11_Product_Page_L__en-US_02._CB800260814_.jpg',
-      alt: 'Apple Watch Health Features',
-    }}
-  />
-
-  <!-- Specs -->
-  <Features
-    title="Technical Specifications"
-    subtitle="Premium hardware that delivers"
-    columns={2}
-    items={[
-      {
-        title: 'Thickness',
-        description: '9.7mm — thinnest Apple Watch ever',
-      },
-      {
-        title: 'Battery Life',
-        description: 'Up to 18 hours (36 hours in Low Power Mode)',
-      },
-      {
-        title: 'Water Resistance',
-        description: '50m — swim, surf, or shower with confidence',
-      },
-      {
-        title: 'Chip',
-        description: 'S10 SiP with 64-bit dual-core processor',
-      },
-      {
-        title: 'Storage',
-        description: '64GB — room for your music and apps',
-      },
-      {
-        title: 'Connectivity',
-        description: 'GPS + Cellular models available',
-      },
-      {
-        title: 'Display',
-        description: 'Always-On Retina OLED up to 2000 nits',
-      },
-      {
-        title: 'Materials',
-        description: 'Aluminum or Titanium case options',
-      },
-    ]}
-  />
-
-  <!-- Design & Display -->
-  <Content
-    title="Stunning Design, Incredible Display"
-    subtitle="Looks great on your wrist, works great outdoors"
-    isReversed={true}
-    items={[
-      {
-        title: '40% Larger Display',
-        description: 'The biggest Apple Watch screen ever. More complications, easier navigation, no more squinting.',
-      },
-      {
-        title: 'Thinnest Design Ever',
-        description: 'So comfortable you\'ll forget you\'re wearing it. Wear it to sleep for health tracking without bulk.',
-      },
-      {
-        title: '2000 Nits Brightness',
-        description: 'The brightest Apple Watch display. Read your screen at the beach, on the ski slopes, or under harsh fluorescent lights.',
-      },
-      {
-        title: 'Premium Materials',
-        description: 'Choose aluminum for everyday durability or titanium for a premium finish. Multiple colors available.',
-      },
-    ]}
-    image={{
-      src: 'https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Series_11_Product_Page_L__en-US_05._CB800260814_.jpg',
-      alt: 'Apple Watch Design',
-    }}
-  />
-
-  <!-- Mid-Page CTA -->
-  <section class="mid-cta py-12">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <p class="text-lg font-semibold text-primary mb-2">Still Deciding?</p>
-      <h3 class="text-2xl md:text-3xl font-bold mb-4">Check Today's Discount Before You Buy</h3>
-      <p class="text-muted mb-6">Prices and deals on Amazon change daily — verify before checkout.</p>
-      <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="btn btn-primary amazon-btn inline-flex items-center gap-2">
-        <svg class="amazon-icon w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.12.221-.06.385-.03.533.09.146.124.19.3.13.53-.06.23-.193.385-.404.466-.673.27-1.42.404-2.242.404-2.35 0-4.577-.782-6.683-2.347-2.105-1.565-3.164-3.542-3.178-5.928-.016-2.32.923-4.334 2.816-6.04 1.893-1.706 4.272-2.56 7.137-2.56 2.536 0 4.79.654 6.762 1.96 1.973 1.307 3.352 3.12 4.138 5.44.067.2.103.415.103.646 0 .327-.093.63-.28.91-.186.278-.445.417-.776.417-.24 0-.52-.088-.84-.265a3.44 3.44 0 01-.96-.765 10.204 10.204 0 01-.96-1.235c-1.04-1.357-2.283-2.42-3.727-3.186-1.444-.767-3.097-1.15-4.958-1.15-2.578 0-4.843.628-6.795 1.886-1.95 1.256-3.352 2.98-4.206 5.168-.854 2.187-1.03 4.483-.53 6.885zm9.12-3.602c-1.073.79-2.48 1.185-4.22 1.185-1.353 0-2.555-.314-3.604-.944-1.05-.63-1.82-1.485-2.31-2.566-.49-1.08-.657-2.256-.502-3.525.17-1.385.703-2.593 1.6-3.622.896-1.03 2.055-1.78 3.477-2.25 1.42-.47 2.982-.643 4.683-.52.846.062 1.627.196 2.343.404.716.207 1.332.502 1.848.884.073.06.134.126.183.197.05.07.087.145.112.224.025.08.037.16.037.24 0 .17-.062.317-.186.442-.124.125-.285.187-.483.187-.255 0-.567-.117-.937-.352-.37-.234-.773-.53-1.21-.886-1.24-1.01-2.65-1.516-4.23-1.516-1.795 0-3.346.616-4.653 1.848-1.307 1.233-1.98 2.826-2.016 4.78-.036 1.763.488 3.258 1.57 4.484 1.082 1.227 2.514 1.876 4.296 1.948.856.034 1.64-.022 2.353-.168.713-.147 1.3-.368 1.762-.664v-3.204c-.337.226-.73.403-1.178.53-.447.128-.94.192-1.477.192-.838 0-1.555-.178-2.152-.533-.597-.356-.96-.812-1.09-1.37h6.374z"/></svg>
-        Check Current Discount on Amazon →
-      </a>
+    <div class="why-card">
+      <div class="why-icon">⚡</div>
+      <h3>Fastest Charging</h3>
+      <p>0–80% in 45 min. Morning coffee = all-day battery.</p>
     </div>
-  </section>
+    <div class="why-card">
+      <div class="why-icon">🌡️</div>
+      <h3>Skin Temperature</h3>
+      <p>Series 10 and Ultra 2 don't have it. Series 11 does.</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📱</div>
+      <h3>Largest Display</h3>
+      <p>46mm — biggest Apple Watch screen ever made.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- 5G Cellular Section -->
-  <section class="py-16 md:py-20 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+<!-- ── SOCIAL PROOF ── -->
+<section class="proof-section">
+  <div class="proof-inner">
+    <div class="proof-quote">
+      <div class="proof-stars">{"★".repeat(heroProduct.reviewStars)}</div>
+      <p>"{heroProduct.reviewText}"</p>
+      <div class="proof-author">— Verified Amazon Buyer</div>
+    </div>
+    <div class="proof-verified">✓ Verified Purchase</div>
+  </div>
+</section>
+
+<!-- ── BENEFITS ── -->
+<section class="benefits-section">
+  <h2>What Series 11 Does for You</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">❤️</div>
+      <h3>ECG — Heart Health 24/7</h3>
+      <p>Detect atrial fibrillation early. 30-second check from your wrist, anytime.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">😴</div>
+      <h3>Sleep Tracking</h3>
+      <p>Track REM, Core, Deep sleep. Wake up to personalized health insights.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🏊</div>
+      <h3>50m Water Resistance</h3>
+      <p>Swim, surf, or dive. Track laps and heart rate underwater.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🌡️</div>
+      <h3>Skin Temperature</h3>
+      <p>New in Series 11. Cycle tracking and overnight wellness insights.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🎯</div>
+      <h3>Activity Rings</h3>
+      <p>Move, Exercise, Stand — gamified fitness that actually motivates.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">☀️</div>
+      <h3>2000 Nits Display</h3>
+      <p>Read notifications at the beach, on the slopes, anywhere.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── OTHER PICKS ── -->
+<section class="other-section">
+  <h2>Other Apple Watch Options →</h2>
+  <div class="other-grid">
+    {otherProducts.map(p => (
+      <a href={p.affiliateLink} class="other-card" target="_blank" rel="noopener">
+        <div class="other-card-img">
+          <img src={p.image} alt={p.shortName} loading="lazy">
+        </div>
         <div>
-          <span class="inline-block bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-sm font-semibold px-3 py-1 rounded-full mb-4">
-            NEW IN SERIES 11
-          </span>
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">5G Cellular: Phone-Free Runs Just Got Better</h2>
-          <p class="text-lg text-muted mb-6">
-            Most users don't know Series 11 supports 5G cellular — letting you leave your phone behind completely. Stream music, take calls, and get GPS tracking while you run.
-          </p>
-          <ul class="space-y-3 mb-6">
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
-              <span><strong>Stream Apple Music</strong> — 100 million songs without your phone</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
-              <span><strong>Take calls and texts</strong> — Full connectivity on the go</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
-              <span><strong>GPS tracking</strong> — Accurate route mapping without your phone</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm">✓</span>
-              <span><strong>Emergency SOS</strong> — Help is always reachable</span>
-            </li>
-          </ul>
-          <a href="https://amzn.to/4b5SjD3" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-            Check Cellular Models on Amazon →
-          </a>
+          <span class="other-card-badge">{p.badge}</span>
+          <h3 style="margin-top:7px">{p.shortName}</h3>
+          <div class="other-card-price">{p.price}</div>
+          <div class="other-card-meta">{"★".repeat(Math.round(p.rating))} {p.rating} · {p.reviewCount} reviews</div>
+          <div class="other-card-highlights">{p.highlights}</div>
         </div>
-        <div class="relative">
-          <img 
-            src="https://m.media-amazon.com/images/G/01/apple/Apple_Watch_Series_11_Product_Page_L__en-US_06._CB800260814_.jpg" 
-            alt="Apple Watch Series 11 5G Cellular"
-            class="rounded-xl shadow-2xl"
-            loading="lazy"
-          />
-          <div class="absolute -bottom-4 -right-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-4">
-            <p class="text-sm font-semibold text-green-600 dark:text-green-400">5G Ready</p>
-            <p class="text-xs text-muted">Leave your phone behind</p>
-          </div>
-        </div>
-      </div>
+        <div class="other-card-cta">See on Amazon →</div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="faq-section">
+  <h2>Quick Answers</h2>
+  <div class="faq-list">
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">What's new in Series 11 vs Series 10?</div>
+      <div class="faq-a"><p>Series 11 adds skin temperature sensing, a thinner 9.7mm design, and is currently $100 cheaper at $299. Series 10 does not have temperature sensing.</p></div>
     </div>
-  </section>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Is it worth upgrading from Series 9 or older?</div>
+      <div class="faq-a"><p>Yes — the 40% larger display, fast charging (0–80% in 45 min), and new skin temperature sensor are significant quality-of-life improvements over Series 9.</p></div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">How long does the battery last?</div>
+      <div class="faq-a"><p>Up to 18 hours normally, or up to 36 hours in Low Power Mode. Most users charge every 1.5–2 days with moderate use.</p></div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Can I swim with it?</div>
+      <div class="faq-a"><p>Yes — 50m water resistance. Perfect for swimming, surfing, or the ocean. Tap the water lock before diving in.</p></div>
+    </div>
+  </div>
+</section>
 
-  <!-- Fitness & Activity -->
-  <Features
-    title="Fitness That Actually Motivates"
-    subtitle="Exercise shouldn't feel like a chore"
-    items={[
-      {
-        title: 'Activity Rings — Make Fitness a Game',
-        description: 'Move, Exercise, and Stand rings visualize your progress. Close them daily to build lasting healthy habits. Compete with friends for extra motivation.',
-      },
-      {
-        title: '100+ Workout Types Tracked',
-        description: 'From HIIT to swimming to dance, your watch knows what you\'re doing. Get advanced metrics and real-time heart rate zones.',
-      },
-      {
-        title: 'Daily Health Insights',
-        description: 'Wake up to personalized health insights based on your trends. Understand how sleep, activity, and heart rate connect.',
-      },
-      {
-        title: 'Friendly Competition',
-        description: 'Challenge friends to Activity competitions. Share your progress, earn achievements, and stay accountable.',
-      },
-    ]}
-  />
+<!-- ── FINAL CTA ── -->
+<section class="final-section">
+  <h2>⌚ The Best Apple Watch Value in 2026</h2>
+  <p>{heroProduct.price} · {heroProduct.discount} · Skin temperature sensing · Fast charging</p>
+  <a href={heroProduct.affiliateLink} class="final-btn" target="_blank" rel="noopener">
+    ⌚ Check Series 11 Price on Amazon →
+  </a>
+</section>
 
-  <!-- Testimonials -->
-  <Testimonials
-    title="What Users Are Saying"
-    subtitle="Real reviews from verified buyers"
-    items={[
-      {
-        title: 'Game-Changer!',
-        description: 'The Series 11 is a game-changer. The larger display makes everything so much easier to read, and the battery life is incredible. Plus with 25% off, it\'s an amazing deal!',
-        author: 'Michael J.',
-        avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-      },
-      {
-        title: 'Fitness Essential',
-        description: 'As a fitness enthusiast, the health tracking features are phenomenal. The sleep tracking has helped me improve my rest significantly.',
-        author: 'Sarah C.',
-        avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-      },
-      {
-        title: 'Finally Fast Charging!',
-        description: 'Finally, fast charging! I never have to worry about battery anymore. The design is beautiful and the screen is so bright outdoors.',
-        author: 'David W.',
-        avatar: 'https://randomuser.me/api/portraits/men/75.jpg',
-      },
-    ]}
-  />
+<!-- ── TRUST BAR ── -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="trust-icon">🚚</span> Prime Delivery</div>
+  <div class="trust-item"><span class="trust-icon">↩️</span> 30-Day Returns</div>
+  <div class="trust-item"><span class="trust-icon">🔒</span> Secure Amazon Pay</div>
+  <div class="trust-item"><span class="trust-icon">💰</span> Commission earned</div>
+</div>
+<div class="disclosure">
+  <p>As an Amazon Associate, we earn from qualifying purchases — but we only recommend products we'd buy ourselves.</p>
+</div>
 
-  <!-- FAQ -->
-  <FAQs
-    title="Frequently Asked Questions"
-    items={[
-      {
-        question: 'What\'s new in Apple Watch Series 11 compared to Series 10?',
-        description: 'Series 11 adds skin temperature sensing for health tracking, a thinner design, and is currently available at a discount (25% off, saving $100). Series 10 does not have temperature sensing.',
-      },
-      {
-        question: 'Is the Series 11 worth upgrading from Series 8 or older?',
-        description: 'Yes, especially if you want the larger display, faster charging, and the new skin temperature sensor. The 40% bigger screen and 0-80% charging in 45 minutes are significant quality-of-life improvements.',
-      },
-      {
-        question: 'How long does the battery last?',
-        description: 'Up to 18 hours of regular use, or up to 36 hours in Low Power Mode. Most users find they can go 1.5-2 days between charges with moderate use.',
-      },
-      {
-        question: 'Can I swim with Apple Watch Series 11?',
-        description: 'Absolutely. With 50m water resistance, it\'s perfect for swimming, surfing, or playing in the ocean. Just remember to tap the water lock before diving in.',
-      },
-      {
-        question: 'Do I need an iPhone to use Apple Watch?',
-        description: 'Yes, Apple Watch requires an iPhone XS or later with iOS 18 or later for initial setup and full functionality.',
-      },
-      {
-        question: 'What\'s included in the box?',
-        description: 'Each Apple Watch Series 11 comes with: the watch, a Sport Band (S/M and M/L sizes), a 1m magnetic fast charger to USB-C cable, and documentation.',
-      },
-    ]}
-  />
+<script>
+function toggleFaq(el){ el.classList.toggle('open'); }
 
-  <!-- Final CTA -->
-  <CallToAction
-    title="Ready to Join the Apple Watch Family?"
-    subtitle="Get the most advanced Apple Watch at the best price. Limited 25% off discount saves you $100. Check current Amazon price and availability now."
-    actions={[
-      { variant: 'primary', text: '🎁 Check Current Discount on Amazon (Save $100)', href: 'https://amzn.to/4b5SjD3', target: '_blank' },
-      { variant: 'secondary', text: '← All Products', href: '/products' },
-    ]}
-  />
-</Layout>
+(function(){
+  var wrap = document.getElementById('stickyWrap');
+  var hero = document.getElementById('hero-product');
+  if (!wrap || !hero) return;
+  new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      wrap.classList.toggle('visible', !e.isIntersecting);
+    });
+  },{ threshold: 0 }).observe(hero);
+})();
+</script>
+
+</body>
+</html>
