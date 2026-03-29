@@ -496,6 +496,29 @@ body{
   <p>As an Amazon Associate, we earn from qualifying purchases — but we only recommend products we'd buy ourselves.</p>
 </div>
 
+<!-- Begin Checkout Conversion Tracking -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18013696631/-luUCMfpjZEcEPfkzI1D',
+      'value': 0.5,
+      'currency': 'CNY',
+      'event_callback': callback
+  });
+  return false;
+}
+document.querySelectorAll('a.hero-cta-btn, a.sticky-cta-btn, a.final-btn, a.other-card').forEach(function(el) {
+  el.addEventListener('click', function() {
+    gtag_report_conversion(this.href);
+  });
+});
+</script>
+
 <script>
 function toggleFaq(el){ el.classList.toggle('open'); }
 

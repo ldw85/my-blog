@@ -577,4 +577,27 @@ body {
   <a href="/products" style="color: #3b82f6; font-weight: 600;">← All Products</a>
 </div>
 
+<!-- Begin Checkout Conversion Tracking -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18013696631/-luUCMfpjZEcEPfkzI1D',
+      'value': 0.5,
+      'currency': 'CNY',
+      'event_callback': callback
+  });
+  return false;
+}
+document.querySelectorAll('a.cta-button').forEach(function(el) {
+  el.addEventListener('click', function() {
+    gtag_report_conversion(this.href);
+  });
+});
+</script>
+
 </Layout>

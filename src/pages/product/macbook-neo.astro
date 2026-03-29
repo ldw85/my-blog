@@ -399,4 +399,27 @@ const images = [
   <div class="text-center text-sm text-muted py-8 border-t border-gray-200 dark:border-gray-700">
     <p>As an Amazon Associate, we earn from qualifying purchases. This means we may receive a small commission when you click our links and make a purchase on Amazon. This comes at no additional cost to you and helps support our editorial process.</p>
   </div>
+
+  <!-- Begin Checkout Conversion Tracking -->
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18013696631/-luUCMfpjZEcEPfkzI1D',
+        'value': 0.5,
+        'currency': 'CNY',
+        'event_callback': callback
+    });
+    return false;
+  }
+  document.querySelectorAll('a.amazon-btn').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag_report_conversion(this.href);
+    });
+  });
+  </script>
 </Layout>
