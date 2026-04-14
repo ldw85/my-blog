@@ -34,7 +34,7 @@ Satin's smooth, glossy finish adds instant elegance to any outfit. This year, we
 
 ### 1. Women's Bowknot Flat Satin Sandals — Best Overall
 
-[![Women's Bowknot Flat Satin Sandals - Product Image Needed](https://via.placeholder.com/445x445?text=Bowknot+Satin+Sandals)](AMZN_PLACEHOLDER_1)
+[![Women's Bowknot Flat Satin Sandals - Product Image Needed](https://m.media-amazon.com/images/I/51zXUrjBSfL._AC_SY695_.jpg)](https://amzn.to/4crJBic)
 
 **Why We Love It:**
 - Delicate bowknot detail adds feminine charm
@@ -46,13 +46,13 @@ These bowknot satin flats are our top pick for their versatility and comfort. Th
 
 **Price**: ~$18  
 **Rating**: ⭐ 4.5/5  
-**[Shop Now](AMZN_PLACEHOLDER_1)**
+**[Shop Now](https://amzn.to/4crJBic)**
 
 ---
 
 ### 2. Strappy Satin Heeled Sandals — Best for Dressy Occasions
 
-[![Strappy Satin Heeled Sandals - Product Image Needed](https://via.placeholder.com/445x445?text=Strappy+Satin+Heels)](AMZN_PLACEHOLDER_2)
+[![Strappy Satin Heeled Sandals - Product Image Needed](https://m.media-amazon.com/images/I/61sDT3bVuzL._AC_SY695_.jpg)](https://amzn.to/4t38ibI)
 
 **Why We Love It:**
 - Elegant strappy design with subtle heel
@@ -64,13 +64,13 @@ For special occasions, these strappy satin heels deliver instant glamour. The de
 
 **Price**: ~$35  
 **Rating**: ⭐ 4.4/5  
-**[Shop Now](AMZN_PLACEHOLDER_2)**
+**[Shop Now](https://amzn.to/4t38ibI)**
 
 ---
 
 ### 3. Satin Slide Sandals — Most Comfortable
 
-[![Satin Slide Sandals - Product Image Needed](https://via.placeholder.com/445x445?text=Satin+Slide+Sandals)](AMZN_PLACEHOLDER_3)
+[![Satin Slide Sandals - Product Image Needed](https://m.media-amazon.com/images/I/617YOfzCy8L._AC_SY695_.jpg)](https://amzn.to/47ZuQli)
 
 **Why We Love It:**
 - Easy slip-on design
@@ -82,7 +82,7 @@ Slide sandals are the ultimate in effortless style, and this satin version takes
 
 **Price**: ~$22  
 **Rating**: ⭐ 4.3/5  
-**[Shop Now](AMZN_PLACEHOLDER_3)**
+**[Shop Now](https://amzn.to/47ZuQli)**
 
 ---
 
@@ -92,7 +92,7 @@ Blue continues to be one of the hottest colors in fashion, and blue satin shoes 
 
 ### 1. Women's Blue Satin Pointed Toe Pumps — Best Seller
 
-[![Blue Satin Pointed Toe Pumps - Product Image Needed](https://via.placeholder.com/445x445?text=Blue+Satin+Pumps)](AMZN_PLACEHOLDER_4)
+[![Blue Satin Pointed Toe Pumps - Product Image Needed](https://m.media-amazon.com/images/I/71jbDJqFXeL._AC_SX695_.jpg)](https://amzn.to/3O4YUFr)
 
 **Why We Love It:**
 - Classic pointed toe silhouette
@@ -104,13 +104,13 @@ These blue satin pumps are the definition of timeless elegance. The rich blue co
 
 **Price**: ~$40  
 **Rating**: ⭐ 4.5/5  
-**[Shop Now](AMZN_PLACEHOLDER_4)**
+**[Shop Now](https://amzn.to/3O4YUFr)**
 
 ---
 
 ### 2. Women's Blue Satin Ankle Strap Heels — Most Flattering
 
-[![Blue Satin Ankle Strap Heels - Product Image Needed](https://via.placeholder.com/445x445?text=Blue+Ankle+Strap+Heels)](AMZN_PLACEHOLDER_5)
+[![Blue Satin Ankle Strap Heels - Product Image Needed](https://m.media-amazon.com/images/I/718+94DzLCL._AC_SY695_.jpg)](https://amzn.to/4cpyC92)
 
 **Why We Love It:**
 - Flattering ankle strap design
@@ -122,13 +122,13 @@ The ankle strap design is incredibly flattering, elongating the leg while adding
 
 **Price**: ~$45  
 **Rating**: ⭐ 4.4/5  
-**[Shop Now](AMZN_PLACEHOLDER_5)**
+**[Shop Now](https://amzn.to/4cpyC92)**
 
 ---
 
 ### 3. Women's Blue Satin Flats — Most Versatile
 
-[![Blue Satin Flats - Product Image Needed](https://via.placeholder.com/445x445?text=Blue+Satin+Flats)](AMZN_PLACEHOLDER_6)
+[![Blue Satin Flats - Product Image Needed](https://m.media-amazon.com/images/I/61ci9eonxdL._AC_SY695_.jpg)](https://amzn.to/41AlMQb)
 
 **Why We Love It:**
 - Comfortable ballet flat style
@@ -140,13 +140,13 @@ Not every occasion calls for heels, and these blue satin flats are the perfect s
 
 **Price**: ~$25  
 **Rating**: ⭐ 4.3/5  
-**[Shop Now](AMZN_PLACEHOLDER_6)**
+**[Shop Now](https://amzn.to/41AlMQb)**
 
 ---
 
 ### 4. Blue Satin Block Heel Sandals — Best for Dancing
 
-[![Blue Satin Block Heel Sandals - Product Image Needed](https://via.placeholder.com/445x445?text=Blue+Block+Heel+Sandals)](AMZN_PLACEHOLDER_7)
+[![Blue Satin Block Heel Sandals - Product Image Needed](https://m.media-amazon.com/images/I/61FCTo+Df5L._AC_SX695_.jpg)](https://amzn.to/41vSzGc)
 
 **Why We Love It:**
 - Stable block heel for all-night comfort
@@ -158,13 +158,13 @@ If you need a shoe that can keep up with you all night, these block heel satin s
 
 **Price**: ~$38  
 **Rating**: ⭐ 4.4/5  
-**[Shop Now](AMZN_PLACEHOLDER_7)**
+**[Shop Now](https://amzn.to/41vSzGc)**
 
 ---
 
 ### 5. Women's Blue Satin Mules — Trendiest Pick
 
-[![Blue Satin Mules - Product Image Needed](https://via.placeholder.com/445x445?text=Blue+Satin+Mules)](AMZN_PLACEHOLDER_8)
+[![Blue Satin Mules - Product Image Needed](https://m.media-amazon.com/images/I/61i40qMCRRL._AC_SY695_.jpg)](https://amzn.to/481bGvk)
 
 **Why We Love It:**
 - On-trend mule silhouette
@@ -176,7 +176,7 @@ Mules are having a major moment in 2026, and this satin version is the chicest w
 
 **Price**: ~$32  
 **Rating**: ⭐ 4.3/5  
-**[Shop Now](AMZN_PLACEHOLDER_8)**
+**[Shop Now](https://amzn.to/481bGvk)**
 
 ---
 
