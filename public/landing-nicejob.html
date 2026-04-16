@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NiceJob Review 2026: Get 4× More Reviews on Autopilot</title>
+  <meta name="description" content="Join 50,000+ local businesses using NiceJob to automate reviews, referrals and social sharing. 14-day free trial. No credit card required.">
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #1e293b;
+      --text-mid: #64748b;
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --green: #22c55e;
+      --gold: #f59e0b;
+      --border: #e2e8f0;
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+      --radius: 16px;
+    }
+    * {margin:0;padding:0;box-sizing:border-box}
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+    a {color: inherit;text-decoration: none}
+    img {max-width: 100%;height:auto;display:block}
+    
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      padding: 20px 16px 32px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 7vw, 44px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+    .hero-sub {
+      color: rgba(255,255,255,0.85);
+      font-size: 16px;
+      margin-bottom: 24px;
+    }
+    .hero-sub span {color: #fbbf24;font-weight:600}
+    
+    /* Product Card - Image Links to Affiliate */
+    .hero-product {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+    .hero-product-img {
+      position: relative;
+    }
+    .hero-product-img a {
+      display: block;
+    }
+    .hero-product-img img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      background: #1e3a5f;
+    }
+    .img-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--blue);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .hero-product-body {padding: 20px}
+    .hero-product-name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .hero-product-tagline {
+      color: var(--text-mid);
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .hero-product-rating {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .hero-product-stars {color: var(--gold);font-size:14px}
+    .hero-product-reviews {color: var(--text-mid);font-size:13px}
+    .hero-product-price {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+    .hero-product-price small {
+      font-size: 14px;
+      color: var(--text-mid);
+      font-weight: 400;
+      margin-left: 8px;
+    }
+    .hero-product-benefit {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: var(--text-mid);
+    }
+    .hero-product-benefit::before {
+      content: '✓ ';
+      color: var(--green);
+      font-weight: 700;
+    }
+    
+    /* CTA Button */
+    .hero-cta-btn {
+      display: block;
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color: #fff;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+      margin-bottom: 12px;
+    }
+    .hero-trust {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      text-align: center;
+    }
+    
+    /* WHO IS THIS FOR */
+    .who-section {
+      padding: 40px 16px;
+      background: var(--card);
+    }
+    .who-section h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .who-card {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      border: 1px solid var(--border);
+    }
+    .who-icon {font-size: 32px;margin-bottom: 8px}
+    .who-card h3 {font-size: 14px;font-weight:600}
+    
+    /* WHY SECTION */
+    .why-section {padding: 40px 16px}
+    .why-section h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .why-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .why-icon {font-size: 28px;margin-bottom: 12px}
+    .why-card h3 {font-size: 15px;font-weight:700;margin-bottom:6px}
+    .why-card p {font-size:13px;color:var(--text-mid)}
+    
+    /* SOCIAL PROOF */
+    .proof-section {padding: 40px 16px;background: var(--card)}
+    .proof-quote {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 24px;
+      border-left: 4px solid var(--blue);
+    }
+    .proof-stars {color: var(--gold);margin-bottom:12px;font-size:18px}
+    .proof-quote p {font-size:16px;line-height:1.7;margin-bottom:12px;font-style:italic}
+    .proof-author {color:var(--text-mid);font-size:13px}
+    .proof-verified {
+      display: inline-block;
+      margin-top: 12px;
+      background: #22c55e20;
+      color: #22c55e;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    
+    /* PRICING */
+    .pricing-section {padding: 40px 16px}
+    .pricing-section h2 {font-size:24px;font-weight:700;margin-bottom:24px;text-align:center}
+    .pricing-grid {display:flex;flex-direction:column;gap:16px}
+    .pricing-card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      border: 2px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .pricing-card.featured {border-color: var(--blue)}
+    .pricing-card h3 {font-size:16px;font-weight:700;margin-bottom:8px}
+    .pricing-card .price {font-size:28px;font-weight:800;color:var(--blue);margin-bottom:12px}
+    .pricing-card ul {list-style:none}
+    .pricing-card li {font-size:14px;color:var(--text-mid);margin-bottom:6px;padding-left:20px;position:relative}
+    .pricing-card li::before {content:'✓';position:absolute;left:0;color:var(--green)}
+    
+    /* FINAL CTA */
+    .final-section {
+      padding: 48px 16px;
+      text-align: center;
+      background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+    }
+    .final-section h2 {font-size:24px;font-weight:700;margin-bottom:12px;color:#fff}
+    .final-section p {color:rgba(255,255,255,0.85);margin-bottom:24px;font-size:14px}
+    .final-btn {
+      display: inline-block;
+      background: #fff;
+      color: var(--blue);
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 16px 48px;
+      text-decoration: none;
+    }
+    
+    /* TRUST BAR */
+    .trust-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      padding: 24px 16px;
+      background: var(--card);
+      border-top: 1px solid var(--border);
+    }
+    .trust-item {font-size:13px;color:var(--text-mid);display:flex;align-items:center;gap:6px}
+    .disclosure {padding:16px;font-size:12px;color:var(--text-mid);text-align:center;max-width:600px;margin:0 auto}
+    
+    /* STICKY CTA */
+    .sticky-cta-wrap {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--card);
+      padding: 12px 16px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+      z-index: 999;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .sticky-cta-wrap.visible {transform: translateY(0)}
+    .sticky-cta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .sticky-cta-info .sticky-cta-price {font-size:18px;font-weight:800;color:var(--blue)}
+    .sticky-cta-info .sticky-cta-note {font-size:12px;color:var(--text-mid)}
+    .sticky-cta-btn {
+      background: linear-gradient(135deg, var(--blue), var(--blue-dark));
+      color: #fff;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 12px 20px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    @media (min-width: 768px) {
+      .sticky-cta-wrap {display: none}
+      body {padding-bottom: 0}
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-badge">🏆 #1 Reputation Platform for Local Businesses</div>
+  <h1>Get 4× More Reviews — On Autopilot</h1>
+  <p class="hero-sub">Join <span>50,000+</span> home service & local businesses</p>
+  
+  <div class="hero-product">
+    <div class="hero-product-img">
+      <a href="https://yeahpromos.com/index/index/openurl?track=8b1c33415e3b2894&url=https://www.nicejob.com" target="_blank" rel="noopener">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=630&fit=crop" alt="NiceJob" loading="eager">
+        <span class="img-badge">🚀 Automate Reviews & Referrals</span>
+      </a>
+    </div>
+    <div class="hero-product-body">
+      <div class="hero-product-name">NiceJob</div>
+      <div class="hero-product-tagline">Reputation management for local service businesses</div>
+      <div class="hero-product-rating">
+        <span class="hero-product-stars">★★★★★</span>
+        <span class="hero-product-reviews">4.9 · 50,000+ businesses</span>
+      </div>
+      <div class="hero-product-price">$75<small>/month</small></div>
+      <div class="hero-product-benefit">4× more Google & Facebook reviews</div>
+      <div class="hero-product-benefit">2× more customer referrals</div>
+      <div class="hero-product-benefit">Auto social sharing</div>
+      <div class="hero-product-benefit">AI reply to all reviews</div>
+    </div>
+  </div>
+  
+  <a href="https://yeahpromos.com/index/index/openurl?track=8b1c33415e3b2894&url=https://www.nicejob.com" class="hero-cta-btn" target="_blank" rel="noopener">
+    Start Your Free 14-Day Trial →
+  </a>
+  <p class="hero-trust">No credit card required · No contracts · Cancel anytime</p>
+</section>
+
+<!-- WHO IS THIS FOR -->
+<section class="who-section">
+  <h2>Who Is NiceJob For?</h2>
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-icon">🏠</div>
+      <h3>Home Services</h3>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">💆</div>
+      <h3>Health & Wellness</h3>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">🏢</div>
+      <h3>Professional Services</h3>
+    </div>
+    <div class="who-card">
+      <div class="who-icon">🍽️</div>
+      <h3>Hospitality</h3>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SECTION -->
+<section class="why-section">
+  <h2>What NiceJob Does For Your Business</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">⭐</div>
+      <h3>4× More Reviews</h3>
+      <p>Automated requests after every job</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <h3>2× More Referrals</h3>
+      <p>Happy customers refer automatically</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">📱</div>
+      <h3>Auto Social Sharing</h3>
+      <p>5-star reviews → social posts</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🤖</div>
+      <h3>AI Reply</h3>
+      <p>Respond to every review instantly</p>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="proof-section">
+  <div class="proof-quote">
+    <div class="proof-stars">★★★★★</div>
+    <p>"From 20 to 130 reviews in just a few months! The automated requests made it so easy for our happy customers to leave reviews."</p>
+    <div class="proof-author">— HVAC Contractor, 12 employees</div>
+    <div class="proof-verified">✓ NiceJob Customer</div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section">
+  <h2>Simple, Transparent Pricing</h2>
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <h3>Reviews Plan</h3>
+      <div class="price">$75<small>/month</small></div>
+      <ul>
+        <li>Review generation</li>
+        <li>AI replies to reviews</li>
+        <li>Basic integrations</li>
+      </ul>
+    </div>
+    <div class="pricing-card featured">
+      <h3>Pro Plan 💰</h3>
+      <div class="price">$125<small>/month</small></div>
+      <ul>
+        <li>Reviews + Referrals</li>
+        <li>Social automation</li>
+        <li>Full integrations</li>
+        <li>Priority support</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ROI CALLOUT -->
+<section style="padding:32px 16px;background:#22c55e15;text-align:center">
+  <h3 style="font-size:20px;font-weight:700;margin-bottom:8px;color:#22c55e">ROI Math: It Pays For Itself</h3>
+  <p style="color:var(--text-mid);font-size:14px">One new customer = $200+ value. NiceJob helps you get just 1 extra customer/month → it pays for itself.</p>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-section">
+  <h2>Ready to Automate Your Reputation?</h2>
+  <p>Join 50,000+ businesses already growing with NiceJob</p>
+  <a href="https://yeahpromos.com/index/index/openurl?track=8b1c33415e3b2894&url=https://www.nicejob.com" class="final-btn" target="_blank" rel="noopener">
+    Start Your Free 14-Day Trial →
+  </a>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span>✓</span> 14-Day Free Trial</div>
+  <div class="trust-item"><span>✓</span> No Credit Card</div>
+  <div class="trust-item"><span>✓</span> No Contracts</div>
+  <div class="trust-item"><span>✓</span> Cancel Anytime</div>
+</div>
+<div class="disclosure">
+  <p>This is not an official NiceJob website. NiceJob is a registered trademark of Paystone Inc. This page contains affiliate links. We may earn a commission at no extra cost to you.</p>
+</div>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta-wrap" id="stickyWrap">
+  <div class="sticky-cta">
+    <div class="sticky-cta-info">
+      <div class="sticky-cta-price">$75/month</div>
+      <div class="sticky-cta-note">⭐ 4.9 · 14-day free trial</div>
+    </div>
+    <a href="https://yeahpromos.com/index/index/openurl?track=8b1c33415e3b2894&url=https://www.nicejob.com" class="sticky-cta-btn" target="_blank" rel="noopener">
+      Start Free Trial →
+    </a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var wrap = document.getElementById('stickyWrap');
+  var hero = document.querySelector('.hero-product');
+  if (!wrap || !hero) return;
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      wrap.classList.toggle('visible', !e.isIntersecting);
+    });
+  }, { threshold: 0 });
+  observer.observe(hero);
+})();
+</script>
+
+</body>
+</html>
