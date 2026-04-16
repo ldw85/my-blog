@@ -72,7 +72,7 @@ export default defineConfig({
   ],
 
   image: {
-    domains: ['cdn.pixabay.com', 'plus.unsplash.com', 'images.unsplash.com', 'm.media-amazon.com'],
+    domains: ['cdn.pixabay.com', 'plus.unsplash.com', 'images.unsplash.com', 'm.media-amazon.com', 'p16-capcut-sg-useast5.capcutcdn-us.com'],
     remotePatterns: [
       {
         protocol: 'https',
