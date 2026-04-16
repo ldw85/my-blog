@@ -168,7 +168,7 @@ Stop spending hours chasing reviews. Join 50,000+ home service and local busines
 
 **[👉 Try NiceJob Free for 14 Days](https://yeahpromos.com/index/index/openurl?track=8b1c33415e3b2894&url=https://www.nicejob.com)**
 
-*Already a customer? [Log in here](https://app.nicejob.com)*
+*Already a customer? [Log in here](https://yeahpromos.com/index/index/openurl?track=8b1c33415e3b2894&url=https://app.nicejob.com)*
 
 ---
 
