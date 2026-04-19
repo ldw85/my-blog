@@ -399,8 +399,7 @@ const images = [
     <p>As an Amazon Associate, we earn from qualifying purchases. This means we may receive a small commission when you click our links and make a purchase on Amazon. This comes at no additional cost to you and helps support our editorial process.</p>
   </div>
 
-  <!-- Begin Checkout Conversion Tracking -->
-  <!-- Event snippet for Begin checkout conversion page
+  <!-- Event snippet for Outbound click conversion page
   In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
   <script>
   function gtag_report_conversion(url) {
@@ -410,7 +409,9 @@ const images = [
       }
     };
     gtag('event', 'conversion', {
-        'send_to': 'AW-18013696631/-luUCMfpjZEcEPfkzI1D',
+        'send_to': 'AW-18013696631/Z2KdCIeVv54cEPfkzI1D',
+        'value': 1.0,
+        'currency': 'CNY',
         'event_callback': callback
     });
     return false;
