@@ -400,6 +400,8 @@ const images = [
   </div>
 
   <!-- Begin Checkout Conversion Tracking -->
+  <!-- Event snippet for Begin checkout conversion page
+  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
   <script>
   function gtag_report_conversion(url) {
     var callback = function () {
@@ -409,8 +411,6 @@ const images = [
     };
     gtag('event', 'conversion', {
         'send_to': 'AW-18013696631/-luUCMfpjZEcEPfkzI1D',
-        'value': 0.5,
-        'currency': 'CNY',
         'event_callback': callback
     });
     return false;
