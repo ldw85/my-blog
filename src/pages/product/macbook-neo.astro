@@ -264,7 +264,7 @@ const images = [
               <span><strong>Privacy First</strong> — No data sent to servers, no account required</span>
             </li>
           </ul>
-          <a href={amazonLink} class="inline-flex items-center gap-2 bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-purple-700 transition">
+          <a href={amazonLink} class="inline-flex items-center gap-2 bg-purple-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-purple-700 transition amazon-btn">
             Check Apple Intelligence on Amazon →
           </a>
         </div>
@@ -389,7 +389,7 @@ const images = [
     title="Ready to Experience MacBook Neo?"
     subtitle="Check the current Amazon price and get Apple's most affordable AI-ready laptop today."
     actions={[
-      { variant: 'primary', text: '🎁 Check Current Price on Amazon ($599)', href: amazonLink, target: '_blank' },
+      { variant: 'primary', text: '🎁 Check Current Price on Amazon ($599)', href: amazonLink, target: '_blank', class: 'amazon-btn' },
       { variant: 'secondary', text: '← All Products', href: '/products' },
     ]}
   />
@@ -399,25 +399,28 @@ const images = [
     <p>As an Amazon Associate, we earn from qualifying purchases. This means we may receive a small commission when you click our links and make a purchase on Amazon. This comes at no additional cost to you and helps support our editorial process.</p>
   </div>
 
-  <!-- Event snippet for Outbound click conversion page
-  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+  <!-- Optimized gtag_report_conversion with beacon reliability -->
   <script>
   function gtag_report_conversion(url) {
-    var callback = function () {
+    var callback = function() {
       if (typeof(url) != 'undefined') {
-        window.location = url;
+        // Delay 200ms to ensure beacon fires before navigation
+        setTimeout(function() {
+          window.location.href = url;
+        }, 200);
       }
     };
     gtag('event', 'conversion', {
-        'send_to': 'AW-18013696631/Z2KdCIeVv54cEPfkzI1D',
-        'value': 1.0,
-        'currency': 'CNY',
-        'event_callback': callback
+      'send_to': 'AW-18013696631/Z2KdCIeVv54cEPfkzI1D',
+      'value': 1.0,
+      'currency': 'CNY',
+      'event_callback': callback
     });
     return false;
   }
   document.querySelectorAll('a.amazon-btn').forEach(function(el) {
-    el.addEventListener('click', function() {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
       gtag_report_conversion(this.href);
     });
   });
