@@ -399,27 +399,31 @@ const images = [
     <p>As an Amazon Associate, we earn from qualifying purchases. This means we may receive a small commission when you click our links and make a purchase on Amazon. This comes at no additional cost to you and helps support our editorial process.</p>
   </div>
 
-  <!-- Optimized gtag_report_conversion with beacon reliability -->
+  <!-- Google Ads Conversion Tracking - reliable beacon mode -->
   <script>
-  // gtag conversion tracking - fires beacon reliably during page unload
   function gtag_report_conversion(url) {
-    gtag('event', 'conversion', {
-      'send_to': 'AW-18013696631/Z2KdCIeVv54cEPfkzI1D',
-      'value': 1.0,
-      'currency': 'CNY'
-    });
-    return true;
+    // Fire gtag conversion event with beacon transport
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18013696631/Z2KdCIeVv54cEPfkzI1D',
+        'value': 1.0,
+        'currency': 'CNY'
+      });
+    }
+    
+    // Open in new tab after a small delay to let conversion fire
+    setTimeout(function() {
+      window.open(url, '_blank');
+    }, 100);
+    
+    return false;
   }
   
-  // Attach click handlers - don't prevent default, just fire conversion in background
   document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a.amazon-btn').forEach(function(el) {
       el.addEventListener('click', function(e) {
-        // Fire conversion before navigation (uses beacon/keepalive internally)
+        e.preventDefault();
         gtag_report_conversion(this.href);
-        // Let the natural click proceed - browser handles the navigation
-        // For target="_blank" links, this opens a new tab
-        // For regular links, this navigates normally
       });
     });
   });
