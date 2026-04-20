@@ -399,23 +399,31 @@ const images = [
     <p>As an Amazon Associate, we earn from qualifying purchases. This means we may receive a small commission when you click our links and make a purchase on Amazon. This comes at no additional cost to you and helps support our editorial process.</p>
   </div>
 
-  <!-- Optimized gtag_report_conversion with beacon reliability -->
+  <!-- Optimized gtag_report_conversion with beacon reliability + fallback -->
   <script>
   function gtag_report_conversion(url) {
-    var callback = function() {
-      if (typeof(url) != 'undefined') {
-        // Delay 200ms to ensure beacon fires before navigation
-        setTimeout(function() {
-          window.location.href = url;
-        }, 200);
-      }
-    };
-    gtag('event', 'conversion', {
-      'send_to': 'AW-18013696631/Z2KdCIeVv54cEPfkzI1D',
-      'value': 1.0,
-      'currency': 'CNY',
-      'event_callback': callback
-    });
+    var timeoutOccurred = false;
+    var timer = setTimeout(function() {
+      timeoutOccurred = true;
+      window.location.href = url;
+    }, 300);
+    
+    try {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18013696631/Z2KdCIeVv54cEPfkzI1D',
+        'value': 1.0,
+        'currency': 'CNY',
+        'event_callback': function() {
+          clearTimeout(timer);
+          if (!timeoutOccurred) {
+            window.location.href = url;
+          }
+        }
+      });
+    } catch (e) {
+      clearTimeout(timer);
+      window.location.href = url;
+    }
     return false;
   }
   document.querySelectorAll('a.amazon-btn').forEach(function(el) {
