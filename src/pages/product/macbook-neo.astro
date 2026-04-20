@@ -399,37 +399,28 @@ const images = [
     <p>As an Amazon Associate, we earn from qualifying purchases. This means we may receive a small commission when you click our links and make a purchase on Amazon. This comes at no additional cost to you and helps support our editorial process.</p>
   </div>
 
-  <!-- Optimized gtag_report_conversion with beacon reliability + fallback -->
+  <!-- Optimized gtag_report_conversion with beacon reliability -->
   <script>
+  // gtag conversion tracking - fires beacon reliably during page unload
   function gtag_report_conversion(url) {
-    var timeoutOccurred = false;
-    var timer = setTimeout(function() {
-      timeoutOccurred = true;
-      window.location.href = url;
-    }, 300);
-    
-    try {
-      gtag('event', 'conversion', {
-        'send_to': 'AW-18013696631/Z2KdCIeVv54cEPfkzI1D',
-        'value': 1.0,
-        'currency': 'CNY',
-        'event_callback': function() {
-          clearTimeout(timer);
-          if (!timeoutOccurred) {
-            window.location.href = url;
-          }
-        }
-      });
-    } catch (e) {
-      clearTimeout(timer);
-      window.location.href = url;
-    }
-    return false;
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18013696631/Z2KdCIeVv54cEPfkzI1D',
+      'value': 1.0,
+      'currency': 'CNY'
+    });
+    return true;
   }
-  document.querySelectorAll('a.amazon-btn').forEach(function(el) {
-    el.addEventListener('click', function(e) {
-      e.preventDefault();
-      gtag_report_conversion(this.href);
+  
+  // Attach click handlers - don't prevent default, just fire conversion in background
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a.amazon-btn').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        // Fire conversion before navigation (uses beacon/keepalive internally)
+        gtag_report_conversion(this.href);
+        // Let the natural click proceed - browser handles the navigation
+        // For target="_blank" links, this opens a new tab
+        // For regular links, this navigates normally
+      });
     });
   });
   </script>
