@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NiceJob Review 2026: Get 4× More Reviews on Autopilot</title>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18013696631"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18013696631');
+  </script>
   <meta name="description" content="Join 50,000+ local businesses using NiceJob to automate reviews, referrals and social sharing. 14-day free trial. No credit card required.">
   <style>
     :root {
@@ -490,6 +499,43 @@
     });
   }, { threshold: 0 });
   observer.observe(hero);
+})();
+</script>
+
+<!-- Google Ads Conversion Tracking -->
+<script>
+(function() {
+  // Conversion tracking function
+  function handleConversion(url) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18013696631/tmFtCPCO6J8cEPfkzI1D',
+        'value': 1.0,
+        'currency': 'CNY',
+        'event_callback': function() {
+          console.log('Conversion tracked, redirecting...');
+        }
+      });
+    }
+  }
+
+  // Setup click handlers for all CTA buttons
+  function setupButtons() {
+    var buttons = document.querySelectorAll('.hero-cta-btn, .final-btn, .sticky-cta-btn');
+    buttons.forEach(function(btn) {
+      // Remove existing listeners to avoid duplicates
+      var newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+      
+      newBtn.addEventListener('click', function(e) {
+        var targetUrl = this.href;
+        handleConversion(targetUrl);
+      });
+    });
+  }
+
+  // Initialize on page load
+  setupButtons();
 })();
 </script>
 
