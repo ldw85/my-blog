@@ -11,6 +11,10 @@
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding-bottom:80px}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;height:auto;display:block}
+.partner-bar{background:linear-gradient(90deg,#1a1a2e,#2d2d44);padding:10px 16px;text-align:center;border-bottom:1px solid var(--border)}
+.partner-bar-content{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;font-size:13px}
+.partner-bar-content .badge{background:var(--coral);color:#fff;padding:4px 10px;border-radius:4px;font-weight:700;font-size:11px}
+.partner-bar-content .partner-note{color:var(--text-mid)}
 .hero{background:linear-gradient(135deg,#1a1a2e 0,#0a0a0f 100%);padding:20px 16px 32px;min-height:100vh;display:flex;flex-direction:column}
 .hero-badge{display:inline-block;background:var(--purple);color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;margin-bottom:16px;width:fit-content}
 .hero h1{font-size:clamp(28px,7vw,48px);font-weight:800;line-height:1.15;margin-bottom:12px;background:linear-gradient(135deg,#fff 0,#a0a0b0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -33,6 +37,9 @@ img{max-width:100%;height:auto;display:block}
 .hero-product-benefit::before{content:'✓ ';color:#22c55e;font-weight:700}
 .hero-cta-btn{display:block;background:linear-gradient(135deg,var(--coral),var(--coral-dark));color:#fff;border-radius:12px;font-size:18px;font-weight:700;padding:16px 32px;text-align:center;text-decoration:none;box-shadow:0 6px 20px rgba(255,71,87,.4);margin-bottom:12px}
 .hero-trust{color:var(--text-mid);font-size:13px;text-align:center}
+.about-section{padding:20px 16px;background:var(--card);border-radius:var(--radius);margin-bottom:24px;border:1px solid var(--border)}
+.about-section h3{font-size:15px;font-weight:700;margin-bottom:8px}
+.about-section p{font-size:13px;color:var(--text-mid);line-height:1.6}
 .why-section{padding:40px 16px;background:var(--card)}
 .why-section h2{font-size:24px;font-weight:700;margin-bottom:24px;text-align:center}
 .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -74,6 +81,13 @@ img{max-width:100%;height:auto;display:block}
 </head>
 <body>
 
+<div class="partner-bar">
+<div class="partner-bar-content">
+<span class="badge">OFFICIAL DJI PARTNER</span>
+<span class="partner-note">All products ship directly from DJI warehouse • 2-year DJI warranty included • 30-day returns</span>
+</div>
+</div>
+
 <section class="hero">
 <div class="hero-badge">🚁 Refurbished — 1-Year Warranty</div>
 <h1>Palm-Sized 4K Drone Under $360</h1>
@@ -106,6 +120,11 @@ img{max-width:100%;height:auto;display:block}
 <a href="https://pboost.me/j1gx4Dgmd" rel="noopener" target="_blank" class="hero-cta-btn">Get DJI Mini 4K Fly More Combo — $359 →</a>
 <p class="hero-trust">1-Year DJI Warranty · US Warehouse · Fast Shipping</p>
 </section>
+
+<div class="about-section">
+<h3>🏪 About This Store</h3>
+<p>We are an authorized DJI affiliate partner. All DJI products on this page ship directly from DJI's official warehouse — we never hold inventory. Your order is covered by DJI's official warranty and return policy. No middleman, no gray market — just authentic DJI gear with full manufacturer support.</p>
+</div>
 
 <section class="why-section">
 <h2>Why the Fly More Combo Is the Smart Buy</h2>
@@ -183,9 +202,10 @@ img{max-width:100%;height:auto;display:block}
 </section>
 
 <div class="trust-bar">
-<div class="trust-item"><span>✓</span> 1-Year Warranty</div>
-<div class="trust-item"><span>✓</span> US Warehouse</div>
-<div class="trust-item"><span>✓</span> Fast Shipping</div>
+<div class="trust-item"><span>✓</span> Official DJI Partner</div>
+<div class="trust-item"><span>✓</span> Ships from DJI Warehouse</div>
+<div class="trust-item"><span>✓</span> 1-Year DJI Warranty</div>
+<div class="trust-item"><span>✓</span> 30-Day Returns</div>
 <div class="trust-item"><span>✓</span> Authenticity Guaranteed</div>
 </div>
 
@@ -204,14 +224,7 @@ img{max-width:100%;height:auto;display:block}
 </div>
 
 <script>
-!function(){
-var e=document.getElementById("stickyWrap"),
-t=document.querySelector(".hero-product");
-e&&t&&new IntersectionObserver((function(t){
-t.forEach((function(t){e.classList.toggle("visible",!t.isIntersecting)}))
-}),{threshold:0}).observe(t)
-}();
+var e=document.getElementById("stickyWrap"),t=document.querySelector(".hero-product");e&&t&&new IntersectionObserver(function(t){t.forEach(function(t){e.classList.toggle("visible",!t.isIntersecting)})},{threshold:0}).observe(t);
 </script>
-
 </body>
 </html>
