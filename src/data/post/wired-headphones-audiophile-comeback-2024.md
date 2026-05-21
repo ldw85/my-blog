@@ -41,7 +41,7 @@ Let me be direct: wireless headphones have gotten very good. Sony's WH-1000XM se
 
 ### Audio-Technica ATH-M50x
 
-[![Audio-Technica ATH-M50x](https://m.media-amazon.com/images/I/B00HVLUR86._SX679_.jpg)](https://amzn.to/43n1M4g)
+<a href="https://amzn.to/43n1M4g"><img src="https://m.media-amazon.com/images/I/B00HVLUR86._SX679_.jpg" alt="Audio-Technica ATH-M50x" loading="lazy" style="max-width:300px"></a>
 
 **Price:** ~$149 | **Impedance:** 38 ohms | **Driver Size:** 45mm
 
@@ -63,7 +63,7 @@ Comfort is excellent for sessions up to 3 hours. After that, the clamping force 
 
 ### Sennheiser HD 560S
 
-[![Sennheiser HD 560S](https://m.media-amazon.com/images/I/B08J9MVB6W._SX679_.jpg)](https://amzn.to/3PP8Nb3)
+<a href="https://amzn.to/3PP8Nb3"><img src="https://m.media-amazon.com/images/I/B08J9MVB6W._SX679_.jpg" alt="Sennheiser HD 560S" loading="lazy" style="max-width:300px"></a>
 
 **Price:** ~$199 | **Impedance:** 120 ohms | **Driver Size:** 38mm
 
@@ -83,7 +83,7 @@ Comfort is exceptional. The headband distributes weight beautifully, and the vel
 
 ### Beyerdynamic DT 770 Pro
 
-[![Beyerdynamic DT 770 Pro](https://m.media-amazon.com/images/I/B071XKQQ57._SX679_.jpg)](https://amzn.to/49IY20C)
+<a href="https://amzn.to/49IY20C"><img src="https://m.media-amazon.com/images/I/B071XKQQ57._SX679_.jpg" alt="Beyerdynamic DT 770 Pro" loading="lazy" style="max-width:300px"></a>
 
 **Price:** ~$159 | **Impedance:** 80 ohms | **Driver Size:** 45mm
 
@@ -103,7 +103,7 @@ The clamping force is high out of the box. This settles after the headband break
 
 ### Sennheiser HD 820
 
-[![Sennheiser HD 820](https://m.media-amazon.com/images/I/B07D41MTT7._SX679_.jpg)](https://amzn.to/4f4O3Xb)
+<a href="https://amzn.to/4f4O3Xb"><img src="https://m.media-amazon.com/images/I/B07D41MTT7._SX679_.jpg" alt="Sennheiser HD 820" loading="lazy" style="max-width:300px"></a>
 
 **Price:** ~$2,400 | **Impedance:** 300 ohms | **Driver Size:** 56mm
 
