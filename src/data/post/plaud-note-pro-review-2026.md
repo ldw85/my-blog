@@ -3,7 +3,7 @@ title: "Plaud Note Pro Review: The Credit-Card-Sized AI Recorder That Makes Meet
 description: "We tested it in the real world and cross-checked the pros, cons, and complaints other reviewers found. Here's who the $189 Plaud Note Pro is genuinely worth it for — and who should save the money."
 pubDate: "2026-09-26"
 heroImage: "/blog-placeholder-4.jpg"
-category: "AI"
+category: "AI Tools"
 tags: ["AI", "Product Review", "AI Gadgets", "Meeting Notes", "Transcription"]
 affiliateCategory: "electronics"
 price: "$189"
