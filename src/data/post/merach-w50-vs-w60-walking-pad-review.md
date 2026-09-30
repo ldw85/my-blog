@@ -28,7 +28,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 
 ### MERACH W50 (NovaWalk W50 TrekPad)
 
-![MERACH W50 Walking Pad](/blog-images/merach-novawalk-w50-walking-pad-in-a-hom.jpg)
+![MERACH W50 Walking Pad](/_astro/merach-novawalk-w50-walking-pad-in-a-hom.4pLaIt-q.jpg)
 
 - **Price**: From $359.98 ($449.98)
 - **Motor**: 3.5 HP peak / 1.25 HP continuous brushless motor
@@ -40,7 +40,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 
 ### MERACH W60 (UltraWalk W60 Plus)
 
-![MERACH W60 Walking Pad](/blog-images/merach-ultrawalk-w60-plus-walking-pad.jpg)
+![MERACH W60 Walking Pad](/_astro/merach-ultrawalk-w60-plus-walking-pad.BcTmZvFD.jpg)
 
 - **Price**: From $329.99 ($499.99) + 1-year motor care
 - **Motor**: 3.5 HP peak / 1.25 CHP continuous brushless motor
@@ -93,7 +93,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 **Whisper-quiet brushless motor** — measured under 25 dB, quiet enough for calls, TV, or shared apartments.
 
 **12-level auto incline** — a rare feature at this price; most pads under $400 have no incline at all.
-![W50 Incline Feature](/blog-images/merach-w50-walking-pad-incline-feature.jpg)
+![W50 Incline Feature](/_astro/merach-w50-walking-pad-incline-feature.T1nQBFlT.jpg)
 
 **App + third-party support** — works with the free Merach App, plus Kinomap, Zwift, Apple Health, and Google Fit.
 
@@ -114,7 +114,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 **33% wider deck** — the same 16.5" × 41.3" footprint tuned for a freer stride, plus an 8.2 ft power cord so you can place it anywhere.
 
 **Entertainment built in** — 5W Bluetooth speaker + rhythmic RGB lighting turn walking into an experience, with a child lock for safety.
-![W60 RGB Lighting](/blog-images/merach-w60-walking-pad-with-rgb-light-in.jpg)
+![W60 RGB Lighting](/_astro/merach-w60-walking-pad-with-rgb-light-in.CwUxeoxe.jpg)
 
 **Smartest control in its class** — magnetic remote, Merach App, Apple Health & Google Fit sync, Apple Watch heart-rate display, and pause-memory.
 
@@ -152,13 +152,13 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 - Up to 10 hours continuous use, no forced shutdown
 - Under 25 dB — genuinely quiet for calls and shared spaces
 - 12% auto incline at a budget-friendly price
-![W60 Incline](/blog-images/merach-w60-12-level-auto-incline.jpg)
+![W60 Incline](/_astro/merach-w60-12-level-auto-incline.IArN5bCv.jpg)
 - Works with Kinomap, Zwift, Apple Health, Google Fit
 - 2-year warranty included
 
 ### ⚠️ MERACH W50 Cons
 
-![W50 Remote Control](/blog-images/merach-w50-magnetic-remote-control.jpg)
+![W50 Remote Control](/_astro/merach-w50-magnetic-remote-control.Baa0leTF.jpg)
 - Basic LED display (metrics cycle every 5s)
 - All controls depend on the magnetic remote
 - 4 mph top speed — walking / light jogging only
