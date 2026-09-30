@@ -29,6 +29,7 @@ export const headerData = {
       links: [
         { text: 'Mac mini - AI Server', href: getPermalink('/product/mac-mini') },
         { text: 'Apple Watch Series 11', href: getPermalink('/product/apple-watch') },
+        { text: 'Fitness Equipment', href: getPermalink('/product/fitness') },
         { text: 'All Products', href: getPermalink('/products') },
       ],
     },
