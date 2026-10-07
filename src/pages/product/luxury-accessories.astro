@@ -6,6 +6,10 @@ import Content from '~/components/widgets/Content.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import GoogleTag from '~/components/GoogleTag.astro';
+import AffiliateClick from '~/components/AffiliateClick.astro';
+
+// 转化配置 (单一数据源)
+import { AW_SECONDARY } from '~/config/tracking';
 
 const metadata = {
   title: '2026 Luxury Edit: Designer Accessories Guide | The Luxury Edit',
@@ -350,7 +354,8 @@ body {
 </style>
 
 <Layout metadata={metadata}>
-  <GoogleTag tagId="AW-17760696639" conversionId="AW-17760696639/OnXhCPTE1oocEL_y-pRC" />
+  <!-- 额外 config 一个备用 AW 号 (不进 AD_TAGS, 避免全站 + 本页重复计数 page view) -->
+  <GoogleTag tagId={AW_SECONDARY} />
 
 <!-- Magazine Cover -->
 <section class="magazine-cover">
@@ -577,27 +582,7 @@ body {
   <a href="/products" style="color: #3b82f6; font-weight: 600;">← All Products</a>
 </div>
 
-<!-- Begin Checkout Conversion Tracking -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18013696631/-luUCMfpjZEcEPfkzI1D',
-      'value': 0.5,
-      'currency': 'CNY',
-      'event_callback': callback
-  });
-  return false;
-}
-document.querySelectorAll('a.cta-button').forEach(function(el) {
-  el.addEventListener('click', function() {
-    gtag_report_conversion(this.href);
-  });
-});
-</script>
+<!-- Affiliate CTA 点击转化 (统一组件, 替换旧的复制粘贴脚本) -->
+<AffiliateClick selectors={['a.cta-button']} />
 
 </Layout>

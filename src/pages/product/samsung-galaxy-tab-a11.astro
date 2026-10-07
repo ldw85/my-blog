@@ -239,6 +239,17 @@ body{
   .why-grid{grid-template-columns:repeat(4,1fr)}
 }
 </style>
+<!-- ADS_TAG_HEAD:BEGIN (自动注入, 勿手改) -->
+<!-- 账号清单: src/config/tracking.ts -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18013696631"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+["AW-18013696631","AW-18417039939"].forEach(function(id){ gtag('config', id); });
+["AW-18417039939/oioLCM2MoPQcEMP09s1E"].forEach(function(sendTo){ gtag('event', 'conversion', {'send_to': sendTo}); });
+</script>
+<!-- ADS_TAG_HEAD:END -->
 </head>
 <body>
 
@@ -422,28 +433,7 @@ body{
   <p>As an Amazon Associate, we earn from qualifying purchases — but we only recommend products we'd buy ourselves.</p>
 </div>
 
-<!-- ── BEGIN CHECKOUT CONVERSION TRACKING ── -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18013696631/-luUCMfpjZEcEPfkzI1D',
-      'value': 0.5,
-      'currency': 'CNY',
-      'event_callback': callback
-  });
-  return false;
-}
-document.querySelectorAll('a.hero-cta-btn, a.sticky-cta-btn, a.final-btn').forEach(function(el) {
-  el.addEventListener('click', function() {
-    gtag_report_conversion(this.href);
-  });
-});
-</script>
+<!-- CTA 点击转化已由下方 AFFILIATE_CLICK 自动注入片段统一处理 -->
 
 <script>
 function toggleFaq(el){ el.classList.toggle('open'); }
@@ -460,5 +450,36 @@ function toggleFaq(el){ el.classList.toggle('open'); }
 })();
 </script>
 
+<!-- AFFILIATE_CLICK:BEGIN (自动注入, 勿手改) -->
+<script>
+(function(){
+  var SEL = "a.hero-cta-btn, a.sticky-cta-btn, a.final-btn";
+  var SEND_TO = "AW-18013696631/-luUCMfpjZEcEPfkzI1D";
+  var VALUE = 0.5;
+  var CURRENCY = "CNY";
+  window.__acB = window.__acB || {};
+  function go(url){ window.open(url, '_blank'); }
+  function bind(){
+    if (window.__acB[SEL]) return;
+    document.querySelectorAll(SEL).forEach(function(el){
+      el.addEventListener('click', function(e){
+        var url = this.getAttribute('href');
+        if (!url || url.charAt(0) === '#') return;
+        e.preventDefault();
+        if (typeof gtag === 'undefined') { go(url); return; }
+        gtag('event', 'conversion', {
+          'send_to': SEND_TO, 'value': VALUE, 'currency': CURRENCY,
+          'event_callback': function(){ go(url); }
+        });
+        setTimeout(function(){ go(url); }, 4000);
+      });
+    });
+    window.__acB[SEL] = true;
+  }
+  bind();
+  document.addEventListener('astro:page-load', bind);
+})();
+</script>
+<!-- AFFILIATE_CLICK:END -->
 </body>
 </html>

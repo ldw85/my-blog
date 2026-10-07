@@ -7,6 +7,10 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import GoogleTag from '~/components/GoogleTag.astro';
+import AffiliateClick from '~/components/AffiliateClick.astro';
+
+// 转化配置 (单一数据源)
+import { CTA_CONVERSION_MACBOOK } from '~/config/tracking';
 
 const metadata = {
   title: 'MacBook Neo Review 2026 - Apple\'s Most Affordable AI-Ready Laptop',
@@ -399,53 +403,7 @@ const images = [
     <p>As an Amazon Associate, we earn from qualifying purchases. This means we may receive a small commission when you click our links and make a purchase on Amazon. This comes at no additional cost to you and helps support our editorial process.</p>
   </div>
 
-  <!-- Google Ads Conversion Tracking - using event_callback pattern -->
-  <script>
-    // Define conversion reporting function
-    function handleConversion(url) {
-      // @ts-ignore
-      if (typeof gtag !== 'undefined') {
-        // @ts-ignore
-        gtag('event', 'conversion', {
-          'send_to': 'AW-18013696631/tmFtCPCO6J8cEPfkzI1D',
-          'value': 1.0,
-          'currency': 'CNY',
-          'event_callback': function () {
-            console.log('Conversion tracked successfully, now redirecting');
-            // Open in new tab after conversion fires
-            window.open(url, '_blank');
-          }
-        });
-      } else {
-        // Fallback: if gtag not available, just redirect
-        window.open(url, '_blank');
-      }
-      
-      // Return false to prevent default only if gtag might block
-      return false;
-    }
-
-    // Setup click handlers for all Amazon buttons
-    function setupButtons() {
-      const buttons = document.querySelectorAll('a.amazon-btn');
-      buttons.forEach(function(btn) {
-        // Remove existing listeners to avoid duplicates
-        const newBtn = btn.cloneNode(true);
-        btn.parentNode.replaceChild(newBtn, btn);
-        
-        newBtn.addEventListener('click', function(e) {
-          // Don't prevent default - let the normal link behavior work
-          // But track the conversion first
-          const targetUrl = this.href;
-          handleConversion(targetUrl);
-        });
-      });
-    }
-
-    // Initialize on page load
-    setupButtons();
-
-    // Support Astro View Transitions
-    document.addEventListener('astro:page-load', setupButtons);
-  </script>
+  <!-- Affiliate CTA 点击转化 (统一组件, 替换旧的复制粘贴脚本)
+       macbook-neo 使用独立 label (tmFtCPCO6J8cEPfkzI1D), 与主转化账号 label 分开统计 -->
+  <AffiliateClick selectors={['a.amazon-btn']} conversion={CTA_CONVERSION_MACBOOK} />
 </Layout>

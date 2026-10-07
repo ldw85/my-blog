@@ -1,4 +1,8 @@
 ---
+// Google Ads 埋点 (账号清单: src/config/tracking.ts)
+import AdsTagHead from '~/components/AdsTagHead.astro';
+import AffiliateClick from '~/components/AffiliateClick.astro';
+
 const metadata = {
   title: 'Apple Watch Series 11 Review 2026 — Save $100 | TechRuling',
   description: 'Apple Watch Series 11 review: 40% larger display, fast charging, skin temperature sensing. Save 25% off on Amazon. Honest comparison vs Series 10 & Ultra 2.',
@@ -399,6 +403,8 @@ body{
   .benefits-grid{max-width:none;grid-template-columns:repeat(3,1fr)}
 }
 </style>
+<!-- Google Ads 埋点: gtag.js + 多个 AW 号共用 dataLayer -->
+<AdsTagHead />
 </head>
 <body>
 
@@ -670,6 +676,9 @@ function toggleFaq(el){ el.classList.toggle('open'); }
   },{ threshold: 0 }).observe(hero);
 })();
 </script>
+
+<!-- Affiliate CTA 点击转化 (统一组件) -->
+<AffiliateClick selectors={['a.hero-cta-btn', 'a.sticky-cta-btn', 'a.final-btn']} />
 
 </body>
 </html>

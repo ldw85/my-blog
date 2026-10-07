@@ -1,0 +1,88 @@
+---
+/**
+ * Affiliate CTA 点击转化 (Google Ads)
+ *
+ * 统一替换各产品页原先各自复制的 gtag_report_conversion 脚本。
+ *
+ * 工作方式: 监听指定选择器命中的链接点击 → 上报转化 → 回调里再跳转。
+ * 用 event_callback 而不是直接改 window.location, 是为了保证
+ * 转化请求先发出去再跳走, 否则跳 Amazon 会把请求掐掉。
+ *
+ * 用法:
+ *   import AffiliateClick from '~/components/AffiliateClick.astro';
+ *   <AffiliateClick selectors={['a.cta-button']} />
+ *   <AffiliateClick selectors={['a.cta-button']} conversion={CTA_CONVERSION_MACBOOK} openInNewTab />
+ *
+ * 参数:
+ *   selectors      - 要绑定的链接选择器数组
+ *   conversion     - 转化配置 (send_to / value / currency), 默认 CTA_CONVERSION
+ *   openInNewTab   - true 用 window.open 新标签打开 (默认), false 用当前页跳转
+ *
+ * ⚠️ 页面必须先加载 AdsTagHead.astro (或走 Layout), 否则 gtag 不存在;
+ *   本组件对 gtag 缺失做了兜底, 不会阻断跳转。
+ */
+import { CTA_CONVERSION } from '~/config/tracking';
+
+export interface Props {
+  /** 要绑定转化监听的链接选择器 */
+  selectors: string[];
+  /** 转化配置, 默认主转化账号 */
+  conversion?: typeof CTA_CONVERSION;
+  /** true=新标签打开, false=当前页跳转 */
+  openInNewTab?: boolean;
+}
+
+const { selectors, conversion = CTA_CONVERSION, openInNewTab = true } = Astro.props;
+const selectorList = selectors.join(', ');
+const sendTo = conversion.sendTo;
+const value = conversion.value;
+const currency = conversion.currency;
+---
+<script is:inline
+  define:vars={{ selectorList, sendTo, value, currency, openInNewTab }}>
+  (function () {
+    // @ts-ignore
+    window.__affiliateClickBound = window.__affiliateClickBound || {};
+
+    function reportAndGo(url) {
+      // @ts-ignore
+      var g = typeof gtag !== 'undefined' ? gtag : null;
+      if (!g) {
+        // gtag 未加载 (如广告拦截器) —— 兜底直接跳, 不丢点击
+        openInNewTab ? window.open(url, '_blank') : (window.location.href = url);
+        return;
+      }
+      g('event', 'conversion', {
+        'send_to': sendTo,
+        'value': value,
+        'currency': currency,
+        'event_callback': function () {
+          openInNewTab ? window.open(url, '_blank') : (window.location.href = url);
+        },
+      });
+      // 兜底: 4s 内回调没回来也要跳, 防止用户卡住
+      setTimeout(function () {
+        openInNewTab ? window.open(url, '_blank') : (window.location.href = url);
+      }, 4000);
+    }
+
+    function bind() {
+      // @ts-ignore
+      if (window.__affiliateClickBound[selectorList]) return;
+      document.querySelectorAll(selectorList).forEach(function (el) {
+        el.addEventListener('click', function (e) {
+          var url = this.getAttribute('href');
+          if (!url || url.charAt(0) === '#') return;
+          e.preventDefault();
+          reportAndGo(url);
+        });
+      });
+      // @ts-ignore
+      window.__affiliateClickBound[selectorList] = true;
+    }
+
+    bind();
+    // Astro View Transitions 支持
+    document.addEventListener('astro:page-load', bind);
+  })();
+</script>

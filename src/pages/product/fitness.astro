@@ -1,4 +1,7 @@
 ---
+// Google Ads 埋点 (账号清单: src/config/tracking.ts)
+import AdsTagHead from '~/components/AdsTagHead.astro';
+
 const metadata = {
   title: 'Fitness Equipment Reviews 2026 — Best Home Gym Gear | TechRuling',
   description: 'Expert reviews of fitness equipment: walking pads, treadmills, exercise bikes, and more. Find the best home gym equipment for your needs.',
@@ -212,6 +215,8 @@ body{
   .grid{grid-template-columns:1fr}
 }
 </style>
+<!-- Google Ads 埋点: gtag.js + 多个 AW 号共用 dataLayer -->
+<AdsTagHead />
 </head>
 <body>
 

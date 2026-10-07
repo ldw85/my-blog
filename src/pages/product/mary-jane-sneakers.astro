@@ -1,5 +1,6 @@
 ---
-import GoogleTag from '~/components/GoogleTag.astro';
+import AdsTagHead from '~/components/AdsTagHead.astro';
+import AffiliateClick from '~/components/AffiliateClick.astro';
 
 const metadata = {
   title: 'Best Mary Jane Sneakers for Women 2026 — Classic Retro Style Meets All-Day Comfort | TechRuling',
@@ -330,9 +331,10 @@ body{
   .why-grid{grid-template-columns:repeat(4,1fr)}
 }
 </style>
+<!-- Google Ads 埋点: gtag.js + 多个 AW 号共用 dataLayer -->
+<AdsTagHead />
 </head>
 <body>
-<GoogleTag tagId="AW-17760696639" conversionId="AW-17760696639/OnXhCPTE1oocEL_y-pRC" />
 
 <!-- ── STICKY CTA ── -->
 <div class="sticky-cta-wrap" id="stickyWrap">
@@ -496,28 +498,8 @@ body{
   <p>As an Amazon Associate, we earn from qualifying purchases — but we only recommend products we'd buy ourselves.</p>
 </div>
 
-<!-- Begin Checkout Conversion Tracking -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18013696631/-luUCMfpjZEcEPfkzI1D',
-      'value': 0.5,
-      'currency': 'CNY',
-      'event_callback': callback
-  });
-  return false;
-}
-document.querySelectorAll('a.hero-cta-btn, a.sticky-cta-btn, a.final-btn, a.other-card').forEach(function(el) {
-  el.addEventListener('click', function() {
-    gtag_report_conversion(this.href);
-  });
-});
-</script>
+<!-- Affiliate CTA 点击转化 (统一组件, 替换旧的复制粘贴脚本) -->
+<AffiliateClick selectors={['a.hero-cta-btn', 'a.sticky-cta-btn', 'a.final-btn', 'a.other-card']} />
 
 <script>
 function toggleFaq(el){ el.classList.toggle('open'); }

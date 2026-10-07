@@ -1,22 +1,31 @@
 ---
-// Google Tag component for per-page tracking
-// Usage:
-//   import GoogleTag from '~/components/GoogleTag.astro';
-//   <GoogleTag tagId="AW-17760696639" conversionId="AW-17760696639/OnXhCPTE1oocEL_y-pRC" />
+/**
+ * 按页加载额外 AW 号 (历史遗留兼容组件)
+ *
+ * ⚠️ 2026-10-07 起本组件 **只做 config, 不再上报转化**。
+ *
+ * 原因: 原实现会在页面加载时立即上报 conversionId, 等于「每次刷新都记一次转化」,
+ * 会把该账号的转化数灌成虚高且无业务含义 (对比 CTA 点击转化高出一个量级)。
+ * 转化上报已统一收敛到 AffiliateClick.astro (仅在用户真正点击 CTA 时上报)。
+ *
+ * 使用前提:
+ *   1. 只在「该 AW 号不在 Layout 的 AD_TAGS 里」时使用 —— 否则该账号 page view 会重复计数 2 倍
+ *      (AW_SECONDARY 就是这种情况, 所以它故意不在 AD_TAGS 中)
+ *   2. 页面必须先加载 AdsTagHead.astro (或走 Layout)
+ *
+ * 新页面不要用本组件: 直接把 AW 号加进 src/config/tracking.ts 的 AD_TAGS 即可。
+ */
 export interface Props {
+  /** 要额外 config 的 AW 号 */
   tagId: string;
-  conversionId?: string;
 }
-const { tagId, conversionId } = Astro.props;
+
+const { tagId } = Astro.props;
 ---
-<!-- Google Tag (gtag.js) -->
-<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${tagId}`}></script>
-<script is:inline define:vars={{ tagId, conversionId }}>
+<!-- Google Ads: 追加 config 一个 AW 号 (共用全局 dataLayer) -->
+<script is:inline define:vars={{ tagId }}>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', tagId);
-  if (conversionId) {
-    gtag('event', 'conversion', {'send_to': conversionId});
-  }
 </script>

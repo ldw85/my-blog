@@ -1,0 +1,34 @@
+---
+/**
+ * Google Ads 全站埋点头部 (单一数据源)
+ *
+ * gtag.js 脚本全页只加载一次 (loader id = 第一个 AW 号), 其余 AW 号通过
+ * `gtag('config', id)` 追加 —— 多个 Google Ads 账号共用同一个 gtag.js 与
+ * dataLayer, 不会冲突。重复加载两次 gtag.js 才是冲突根因。
+ *
+ * 账号 / 转化清单: src/config/tracking.ts
+ *
+ * 使用位置:
+ *   - src/layouts/Layout.astro (所有走 Layout 的页面, 含全站博客页)
+ *   - 独立 HTML 页面 (不走 Layout): apple-watch / fitness / samsung /
+ *     easter-gifts / mac-mini-2024 / mary-jane-sneakers 等的 <head>
+ *
+ * ⚠️ 每个页面只能放一次。
+ */
+import { AD_TAGS, GTAG_LOADER_ID, PAGE_VIEW_CONVERSIONS } from '~/config/tracking';
+---
+<!-- Google tag (gtag.js) -->
+<script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_LOADER_ID}`}></script>
+<script is:inline
+  define:vars={{
+    adTags: AD_TAGS.map((t) => t.id),
+    pageViewConversions: PAGE_VIEW_CONVERSIONS.map((c) => c.sendTo),
+  }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  adTags.forEach(function(id){ gtag('config', id); });
+  pageViewConversions.forEach(function(sendTo){
+    gtag('event', 'conversion', { 'send_to': sendTo });
+  });
+</script>
