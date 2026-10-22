@@ -30,7 +30,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 
 ![MERACH W50 Walking Pad](/_astro/merach-novawalk-w50-walking-pad-in-a-hom.4pLaIt-q.jpg)
 
-- **Price**: From $359.98 ($449.98)
+- **Price**: From $299.99
 - **Motor**: 3.5 HP peak / 1.25 HP continuous brushless motor
 - **Weight Capacity**: 400 lb (181 kg)
 - **Incline**: 12-level auto incline (up to 12%)
@@ -42,7 +42,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 
 ![MERACH W60 Walking Pad](/_astro/merach-ultrawalk-w60-plus-walking-pad.BcTmZvFD.jpg)
 
-- **Price**: From $329.99 ($499.99) + 1-year motor care
+- **Price**: From $349.99 + 1-year motor care
 - **Motor**: 3.5 HP peak / 1.25 CHP continuous brushless motor
 - **Weight Capacity**: 330 lb sustained (SGS-verified) / 400 lb peak
 - **Incline**: 12-level auto incline (up to 12%)
@@ -78,7 +78,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 | **Motor Endurance** | 10-hr sessions | 15,000 hr ⭐ |
 | **Smart/Entertainment** | Basic | Speaker + RGB + child lock ⭐ |
 | **Quiet Operation** | <25 dB ⭐ | 53.6–54 dB |
-| **Price** | From $359 ⭐ | From $329 |
+| **Price** | From $299.99 ⭐ | From $349.99 |
 
 ---
 
@@ -203,8 +203,10 @@ You need a compact, under-desk, 12-level incline walking pad with a treadmill-gr
 
 Both models are regularly discounted on Amazon. Check today's price and grab the deal before it's gone — start turning your workday into a workout.
 
-- [MERACH W50 on Amazon](https://yeahpromos.com/index/index/openurl?track=tcccd02c4deda63db8&url=) — From $359.98
-- [MERACH W60 on Amazon](https://yeahpromos.com/index/index/openurl?track=tc974c9e7865f13bbc&url=) — From $329.99
+- [MERACH W50 on Amazon](https://yeahpromos.com/index/index/openurl?track=tcccd02c4deda63db8&url=) — From $299.99
+- [MERACH W60 on Amazon](https://yeahpromos.com/index/index/openurl?track=tc974c9e7865f13bbc&url=) — From $349.99
+
+*Prices checked via the YeahPromos affiliate feed on October 22, 2026. Amazon pricing changes often — confirm the current price before buying.*
 
 ---
 
