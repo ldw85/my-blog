@@ -16,7 +16,7 @@ affiliateCategory: "fitness"
 
 - **MERACH W60 (UltraWalk W60 Plus)** is the **premium "built-to-last" pick**: a 15,000-hour rated motor, SGS-verified 330 lb sustained capacity, 33% wider deck, 5W Bluetooth speaker with RGB lighting, and child-lock — the most feature-complete walking pad under $500.
 
-- Both share the same 12-level auto incline (up to 12%), the same 16.5" × 41.3" belt size, and the same 0.6–4.0 mph speed range.
+- Both share the same 12-level auto incline (up to 12%) and the same 0.6–4.0 mph speed range, and both run a 16.5" wide belt — though the W50's is slightly longer at 42.5" versus the W60's 41.3".
 
 - **Buy the W50** if you want maximum weight capacity and all-day endurance at a lower price. **Buy the W60** if you want smarter entertainment features and longer motor life.
 
@@ -30,7 +30,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 
 ![MERACH W50 Walking Pad](/_astro/merach-novawalk-w50-walking-pad-in-a-hom.4pLaIt-q.jpg)
 
-- **Price**: From $299.99
+- **Price**: From $329.99
 - **Motor**: 3.5 HP peak / 1.25 HP continuous brushless motor
 - **Weight Capacity**: 400 lb (181 kg)
 - **Incline**: 12-level auto incline (up to 12%)
@@ -59,10 +59,10 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 | Motor Life | Rated for 10-hour continuous sessions | Rated up to 15,000 hours (~10 years) |
 | Auto Incline | 12 levels, up to 12% | 12 levels, up to 12% |
 | Weight Capacity | 400 lb (181 kg) | 330 lb sustained (SGS-verified) |
-| Belt Size | 16.5" × 41.3" | 16.5" × 41.3" (33% wider than standard) |
+| Belt Size | 16.5" × 42.5" | 16.5" × 41.3" (33% wider than standard) |
 | Speed Range | 0.6–4.0 mph (1–6.5 km/h) | 0.6–4.0 mph (1–6.5 km/h) |
 | Noise Level | <25 dB (ultra-quiet) | Avg 53.6–54 dB |
-| Deck & Frame | 15.3 mm reinforced deck | 70 lb all-steel frame |
+| Deck & Frame | Reinforced alloy-steel frame, six-layer composite deck | 67.7 lb reinforced all-steel frame |
 | Display | LED: speed, time, distance, calories, incline | LED: same + app-sync stats |
 | Control | Magnetic remote | Magnetic remote + Merach App + mute |
 | Smart Features | Merach App, Kinomap, Zwift, Apple Health, Google Fit | Merach App, Apple Health, Google Fit, Apple Watch HR, 5W speaker + RGB |
@@ -78,7 +78,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 | **Motor Endurance** | 10-hr sessions | 15,000 hr ⭐ |
 | **Smart/Entertainment** | Basic | Speaker + RGB + child lock ⭐ |
 | **Quiet Operation** | <25 dB ⭐ | 53.6–54 dB |
-| **Price** | From $299.99 ⭐ | From $349.99 |
+| **Price** | From $329.99 ⭐ | From $349.99 |
 
 ---
 
@@ -86,7 +86,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 
 ### MERACH W50 — The Heavy-Duty All-Day Workhorse
 
-**400 lb capacity** — among the highest in the walking pad category, with a reinforced 15.3 mm deck for a steady, full-treadmill feel.
+**400 lb capacity** — among the highest in the walking pad category, with a reinforced alloy-steel frame and six-layer composite deck for a steady, full-treadmill feel.
 
 **10-hour continuous runtime** — most walking pads shut down after 1.5 hours; the W50 is engineered for all-day desk walking without overheating.
 
@@ -109,7 +109,7 @@ MERACH has become one of the best-selling walking pad brands on Amazon, and the 
 
 **15,000-hour rated brushless motor** — a 105 mm motor with Hall-sensor control and dual-vent convection cooling, built to outlast typical walking pads (~10 years of use).
 
-**SGS-verified sustained capacity** — 330 lb certified for continuous use (400 lb peak), on a 70 lb all-steel frame with thickened steel.
+**SGS-verified sustained capacity** — 330 lb certified for continuous use (400 lb peak), on a 67.7 lb all-steel frame with thickened steel.
 
 **33% wider deck** — the same 16.5" × 41.3" footprint tuned for a freer stride, plus an 8.2 ft power cord so you can place it anywhere.
 
@@ -203,10 +203,10 @@ You need a compact, under-desk, 12-level incline walking pad with a treadmill-gr
 
 Both models are regularly discounted on Amazon. Check today's price and grab the deal before it's gone — start turning your workday into a workout.
 
-- [MERACH W50 on Amazon](https://yeahpromos.com/index/index/openurl?track=tcccd02c4deda63db8&url=) — From $299.99
+- [MERACH W50 on Amazon](https://yeahpromos.com/index/index/openurl?track=d44704fc8078c1ae&url=) — From $329.99
 - [MERACH W60 on Amazon](https://yeahpromos.com/index/index/openurl?track=tc974c9e7865f13bbc&url=) — From $349.99
 
-*Prices checked via the YeahPromos affiliate feed on October 22, 2026. Amazon pricing changes often — confirm the current price before buying.*
+*Prices checked via the YeahPromos affiliate feed and Amazon.com on October 23, 2026. Amazon pricing changes often — confirm the current price before buying.*
 
 ---
 
