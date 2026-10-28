@@ -30,14 +30,7 @@ export const headerData = {
         { text: 'Mac mini - AI Server', href: getPermalink('/product/mac-mini') },
         { text: 'Apple Watch Series 11', href: getPermalink('/product/apple-watch') },
         { text: 'Fitness Equipment', href: getPermalink('/product/fitness') },
-        {
-          text: 'Holiday Themes',
-          href: getPermalink('/holidays'),
-          links: [
-            { text: 'All Holiday Themes', href: getPermalink('/holidays') },
-            { text: 'Halloween Express', href: getPermalink('/holiday/halloween-express') },
-          ],
-        },
+        { text: 'All Holiday Themes', href: getPermalink('/holidays') },
         { text: 'All Products', href: getPermalink('/products') },
       ],
     },
