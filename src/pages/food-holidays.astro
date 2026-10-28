@@ -1,0 +1,97 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Food Holiday Themes - TechReviews',
+  description:
+    'Seasonal food and baking guides for every celebration — bakery favorites, holiday spreads, brunch tables and freezer-to-oven convenience.',
+};
+
+const themes = [
+  {
+    title: 'Wildgrain Bakery Moments',
+    href: '/food/wildgrain',
+    emoji: '🥖',
+    tag: 'Bakery & Baking',
+    date: 'Oct 2026',
+    desc: 'Enjoy artisan breads, pasta and pastries at home — most items bake in 25 minutes or less, straight from the freezer.',
+    cta: 'Explore Wildgrain →',
+    gradient: 'from-amber-600 via-orange-500 to-stone-800',
+    image:
+      'https://wildgrain.com/cdn/shop/files/Fall_Hero_Gemini.jpg?v=1788384190&width=1500',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🥐 Food Holiday Themes</h1>
+        <p class="text-xl text-gray-600">Seasonal food guides for every celebration around the table</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          themes.map((theme) => (
+            <a
+              href={theme.href}
+              class="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+            >
+              <div class={`h-48 bg-gradient-to-br ${theme.gradient} flex items-center justify-center overflow-hidden`}>
+                {theme.image ? (
+                  <img
+                    src={theme.image}
+                    alt="Artisan bakery breads and pastries arranged for a holiday table"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                ) : (
+                  <span class="text-6xl">{theme.emoji}</span>
+                )}
+              </div>
+              <div class="p-6">
+                <h2 class="text-xl font-bold mb-2 group-hover:text-orange-600 transition-colors">{theme.title}</h2>
+                <p class="text-gray-600 mb-4 line-clamp-2">{theme.desc}</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-500">
+                    {theme.tag} · {theme.date}
+                  </span>
+                  <span class="text-orange-600 font-semibold group-hover:translate-x-1 transition-transform">
+                    {theme.cta}
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+
+        <div class="group block bg-white rounded-xl shadow-md overflow-hidden opacity-75">
+          <div class="h-48 bg-gradient-to-br from-red-400 to-green-600 flex items-center justify-center">
+            <span class="text-6xl">🎄</span>
+          </div>
+          <div class="p-6">
+            <h2 class="text-xl font-bold mb-2">More Food Themes Coming Soon</h2>
+            <p class="text-gray-600 mb-4 line-clamp-2">
+              Thanksgiving spreads, Christmas baking and New Year party food guides are on the way
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-500">Stay Tuned</span>
+              <span class="text-gray-400 font-semibold">🚧</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center space-y-4">
+        <a
+          href="/holidays"
+          class="inline-block text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+        >
+          ← Browse All Holiday Themes
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

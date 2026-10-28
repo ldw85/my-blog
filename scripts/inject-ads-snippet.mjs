@@ -57,6 +57,11 @@ const PAGES = [
     reason: '裸 HTML 节日主题页, 完全零埋点',
     selectors: ['a.affiliate-link'],
   },
+  {
+    file: 'src/pages/food/wildgrain.html',
+    reason: '裸 HTML 食品主题页, 完全零埋点',
+    selectors: ['a.affiliate-link'],
+  },
 ];
 
 const cfg = await import(resolve(ROOT, 'src/config/tracking.ts'));

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4ec">
+  <meta name="description" content="Discover an easier way to enjoy Wildgrain bakery-style breads, pasta and pastries at home. Explore available boxes, products and subscription details.">
+  <title>Wildgrain Bakery Moments, Made Easy | Home Table Guide</title>
+  <link rel="preconnect" href="https://wildgrain.com" crossorigin>
+  <link rel="dns-prefetch" href="https://wildgrain.com">
+  <style>
+    :root {
+      --site-primary: #885334;
+      --site-secondary: #e9d7c1;
+      --site-background: #f8f4ec;
+      --site-on-primary: #ffffff;
+      --site-on-secondary: #39271b;
+      --site-on-background: #30271f;
+      --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --site-font-heading: Georgia, "Times New Roman", serif;
+      --site-heading-scale: 1;
+      --site-spacing-scale: 1;
+      --site-radius-scale: 1;
+      --site-decoration-opacity: 1;
+      color-scheme: light dark;
+      --paper: light-dark(#fffdf9, #211f1c);
+      --paper-soft: light-dark(#f3eadf, #302a24);
+      --ink: light-dark(#30271f, #f5eee5);
+      --muted: light-dark(#75675a, #c8b9a9);
+      --line: light-dark(#e7dccc, #4d4035);
+      --accent: var(--site-primary);
+      --accent-soft: light-dark(#efe0cf, #49372a);
+      --shadow: 0 18px 48px rgba(64, 44, 26, .10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: light-dark(var(--site-background), #211f1c); color: var(--ink); font-family: var(--site-font-body); line-height: 1.55; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    .app-root { min-height: 100vh; width: 100%; border-radius: 0; background-color: light-dark(var(--site-background), #211f1c); color: light-dark(var(--site-on-background), #f5eee5); overflow: hidden; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .wordmark { font-size: 12px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; text-decoration: none; }
+    .nav-note { color: var(--muted); font-size: 12px; }
+    .nav-side { display: flex; align-items: center; gap: 16px; min-width: 0; }
+    .nav-back { font-size: 12px; font-weight: 750; color: var(--accent); text-decoration: none; white-space: nowrap; }
+    .nav-back:hover { text-decoration: underline; }
+    .hero { padding: clamp(28px, 5vw, 62px) 0 40px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0,.94fr) minmax(0,1.06fr); gap: clamp(28px, 5vw, 66px); align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--accent); font-size: 11px; line-height: 1.3; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 22px; height: 1px; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: var(--site-font-heading); font-weight: 500; letter-spacing: -.035em; }
+    h1 { max-width: 520px; margin: 17px 0 17px; font-size: clamp(43px, 6vw, 69px); line-height: 1.02; }
+    h2 { margin-bottom: 12px; font-size: clamp(32px, 4.2vw, 48px); line-height: 1.08; }
+    h3 { margin-bottom: 8px; font-size: 25px; line-height: 1.12; }
+    .hero-copy { max-width: 475px; min-width: 0; color: var(--muted); font-size: 16px; }
+    .benefits { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 20px 0 25px; padding: 0; list-style: none; color: var(--ink); font-size: 12px; }
+    .benefits li::before { content: "✓"; display: inline-grid; place-items: center; width: 17px; height: 17px; margin-right: 6px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 11px; font-weight: 800; }
+    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 48px; padding: 13px 20px; border: 1px solid var(--accent); border-radius: calc(10px * var(--site-radius-scale)); background: var(--accent); color: var(--site-on-primary); font-size: 13px; font-weight: 750; text-align: center; text-decoration: none; transition: transform .18s ease, filter .18s ease; }
+    .button:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .button:focus-visible, a:focus-visible { outline: 3px solid #c18d59; outline-offset: 3px; }
+    .button .arrow { font-size: 17px; line-height: 1; }
+    .link-note { margin: 10px 0 0; color: var(--muted); font-size: 11px; }
+    .hero-media { position: relative; min-width: 0; }
+    .hero-media img { width: 100%; aspect-ratio: 1.07 / 1; object-fit: cover; border-radius: calc(20px * var(--site-radius-scale)); box-shadow: var(--shadow); background: var(--paper-soft); }
+    .image-tag { position: absolute; right: 14px; bottom: 14px; max-width: 210px; padding: 10px 14px; border: 1px solid rgba(255,255,255,.65); border-radius: 12px; background: rgba(255,253,249,.92); color: #382a20; backdrop-filter: blur(8px); font-size: 11px; font-weight: 700; }
+    .trustline { display: flex; align-items: center; gap: 8px; margin-top: 17px; color: var(--muted); font-size: 11px; }
+    .trustline .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
+    .section { padding: clamp(42px, 6vw, 72px) 0; }
+    .section-head { max-width: 660px; margin: 0 auto 28px; text-align: center; }
+    .section-head .eyebrow { justify-content: center; margin-bottom: 13px; }
+    .section-head p { margin-bottom: 0; color: var(--muted); }
+    .scene-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 16px; }
+    .scene-card { overflow: hidden; border: 1px solid var(--line); border-radius: calc(15px * var(--site-radius-scale)); background: var(--paper); }
+    .scene-card img { width: 100%; aspect-ratio: 1.35 / 1; object-fit: cover; background: var(--paper-soft); }
+    .scene-copy { padding: 19px 19px 21px; }
+    .scene-copy h3 { font-size: 24px; }
+    .scene-copy p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
+    .variety { background: var(--paper-soft); }
+    .variety-layout { display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: clamp(25px, 5vw, 60px); align-items: center; }
+    .variety-copy p { color: var(--muted); }
+    .variety-copy .button { margin-top: 8px; }
+    .product-stack { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); grid-template-rows: auto auto; gap: 12px; }
+    .product-photo { overflow: hidden; border-radius: calc(14px * var(--site-radius-scale)); background: var(--paper); }
+    .product-photo img { width: 100%; height: 100%; min-height: 160px; max-height: 230px; object-fit: cover; }
+    .product-photo:first-child { grid-row: span 2; }
+    .product-photo:first-child img { max-height: 470px; min-height: 340px; }
+    .product-caption { padding: 12px 14px 14px; font-family: var(--site-font-heading); font-size: 19px; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 23px; margin-top: 32px; }
+    .step { padding-top: 18px; border-top: 1px solid var(--line); }
+    .step-no { display: inline-grid; width: 29px; height: 29px; place-items: center; margin-bottom: 14px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 800; }
+    .step h3 { font-size: 24px; }
+    .step p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
+    .feature-strip { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; gap: 22px; margin-top: 38px; padding: 16px; border: 1px solid var(--line); border-radius: calc(16px * var(--site-radius-scale)); background: var(--paper); }
+    .feature-strip img { width: 100%; height: 160px; border-radius: 10px; object-fit: cover; background: var(--paper-soft); }
+    .feature-strip h3 { font-size: 24px; }
+    .feature-strip p { margin-bottom: 0; color: var(--muted); font-size: 13px; }
+    .final-cta { padding: clamp(45px, 7vw, 82px) 0; background: var(--site-primary); color: #fffaf4; text-align: center; }
+    .final-cta .eyebrow { color: #f0d5b9; }
+    .final-cta .eyebrow::before { background: currentColor; }
+    .final-cta h2 { max-width: 730px; margin: 14px auto; }
+    .final-cta p { max-width: 590px; margin: 0 auto 23px; color: #f2e4d8; }
+    .final-cta .button { border-color: #fff7ed; background: #fff7ed; color: #603a23; }
+    .final-cta .link-note { color: #f2e4d8; }
+    footer { padding: 22px 0 25px; }
+    .footer-row { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .footer-back { margin-top: 14px; }
+    .footer-brand { font-size: 11px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .disclosure { max-width: 680px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.6; }
+    .error-note { display: none; padding: 10px; color: #7c261f; background: #fff0ec; font: 12px/1.4 var(--site-font-body); }
+    @media (max-width: 760px) {
+      .container { width: min(100% - 30px, 560px); }
+      .topbar { padding: 15px 0; }
+      .nav-note { max-width: 140px; text-align: right; }
+      .nav-side { gap: 12px; }
+      .nav-back { font-size: 11px; }
+      .hero { padding-top: 28px; }
+      .hero-grid, .variety-layout { grid-template-columns: minmax(0,1fr); }
+      .hero-grid { gap: 26px; }
+      h1 { font-size: clamp(42px, 12vw, 60px); }
+      .hero-copy { font-size: 15px; }
+      .hero-media { order: -1; }
+      .hero-media img { aspect-ratio: 1.3 / 1; max-height: 390px; }
+      .image-tag { right: 10px; bottom: 10px; }
+      .scene-grid { grid-template-columns: minmax(0,1fr); gap: 13px; }
+      .scene-card { display: grid; grid-template-columns: 36% 1fr; }
+      .scene-card img { height: 100%; min-height: 145px; aspect-ratio: auto; }
+      .scene-copy { align-self: center; padding: 14px; }
+      .scene-copy h3 { font-size: 21px; }
+      .scene-copy p { font-size: 12px; }
+      .product-photo img { min-height: 130px; }
+      .product-photo:first-child img { min-height: 280px; }
+      .how-grid { grid-template-columns: minmax(0,1fr); gap: 20px; }
+      .step { display: grid; grid-template-columns: 34px 1fr; column-gap: 12px; }
+      .step-no { grid-row: span 2; }
+      .step h3 { font-size: 22px; }
+      .feature-strip { grid-template-columns: minmax(0,1fr); }
+      .feature-strip img { height: 170px; }
+      .footer-row { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .button { transition: none; } }
+  </style>
+<!-- ADS_TAG_HEAD:BEGIN (自动注入, 勿手改) -->
+<!-- 账号清单: src/config/tracking.ts -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18013696631"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+["AW-18013696631","AW-18417039939"].forEach(function(id){ gtag('config', id); });
+["AW-18417039939/oioLCM2MoPQcEMP09s1E"].forEach(function(sendTo){ gtag('event', 'conversion', {'send_to': sendTo}); });
+</script>
+<!-- ADS_TAG_HEAD:END -->
+</head>
+<body>
+  <div class="app-root" data-sites-preview-theme>
+    <header class="topbar">
+      <div class="container nav">
+        <a class="wordmark" href="#top" aria-label="Home Table Guide home">The Home Table Guide</a>
+        <div class="nav-side">
+          <span class="nav-note">Ideas for easier, more delicious days</span>
+          <a class="nav-back" href="/food-holidays">← Food Themes</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">Bakery favorites at home</span>
+            <h1>Your Favorite Bakery Moments, Made Easy.</h1>
+            <p class="hero-copy">Enjoy artisan breads, pasta and pastries at home, with freezer-to-oven convenience for the moments that matter.</p>
+            <ul class="benefits" aria-label="Highlights">
+              <li>Most items bake in 25 minutes or less</li>
+              <li>No thawing needed</li>
+              <li>A mix of bakery favorites</li>
+            </ul>
+            <div class="actions">
+              <a class="button affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=30557&c=918273&a=808019&k=D0F03E66718DD6A37606CE64210F0F19&l=35310&s1=Wildgrain-nonbrand01" target="_blank" rel="sponsored noopener">Explore the Wildgrain Website <span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <p class="link-note">Opens Wildgrain.com, where you can explore available boxes, products and subscription details.</p>
+            <div class="trustline"><span class="dot"></span><span>An independent guide · Affiliate link disclosed below</span></div>
+          </div>
+          <div class="hero-media">
+            <img src="https://wildgrain.com/cdn/shop/files/Fall_Hero_Gemini.jpg?v=1788384190&width=1500" alt="Golden bakery pastries arranged for a cozy breakfast at home" fetchpriority="high" decoding="async">
+            <div class="image-tag">A little bakery joy, whenever you need it.</div>
+            <p class="error-note" role="status">The image could not load. Check the source URL before publishing.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="scenarios">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Made for real life</span>
+            <h2>Make Everyday Meals Feel Special.</h2>
+            <p>Keep something delicious close by, whether the day is busy or you finally have time to slow down.</p>
+          </div>
+          <div class="scene-grid">
+            <article class="scene-card">
+              <img src="https://wildgrain.com/cdn/shop/files/25_minutes_or_less.png?v=1759937691&width=600" alt="Bakery items designed for convenient preparation" loading="lazy" decoding="async">
+              <div class="scene-copy"><h3>Busy Morning?</h3><p>Make a warm, bakery-style breakfast part of your routine without starting from scratch.</p></div>
+            </article>
+            <article class="scene-card">
+              <img src="https://wildgrain.com/cdn/shop/files/PXL_20230608_162313841.PORTRAIT_1_3258669d-7a7c-46f6-b58f-feea55c5f482.jpg?v=1762458351&width=3002" alt="Pasta served for a relaxed homemade meal" loading="lazy" decoding="async">
+              <div class="scene-copy"><h3>Easy Weeknight Dinner?</h3><p>Bring a comforting pasta night to the table with less meal-time planning.</p></div>
+            </article>
+            <article class="scene-card">
+              <img src="https://wildgrain.com/cdn/shop/files/Wildgrain_Fall_Pastry_Bundle.jpg?v=1756319403&width=2806" alt="Assorted pastries for a cozy weekend brunch" loading="lazy" decoding="async">
+              <div class="scene-copy"><h3>Slow Weekend Brunch?</h3><p>Make room for flaky pastries and a slower morning at home.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section variety" id="variety">
+        <div class="container variety-layout">
+          <div class="variety-copy">
+            <span class="eyebrow">Something for the table</span>
+            <h2>A Little Bakery Variety, Right in Your Freezer.</h2>
+            <p>Explore a customizable selection of breads, pasta and pastries delivered frozen, ready for when something delicious sounds good.</p>
+            <p>See the available assortments, delivery options and current subscription terms on Wildgrain's website.</p>
+            <a class="button affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=30557&c=918273&a=808019&k=D0F03E66718DD6A37606CE64210F0F19&l=35310&s1=Wildgrain-nonbrand01" target="_blank" rel="sponsored noopener">Visit Wildgrain.com <span class="arrow" aria-hidden="true">↗</span></a>
+            <p class="link-note">You'll arrive at the Wildgrain homepage, not a specific product page.</p>
+          </div>
+          <div class="product-stack" aria-label="Examples of bakery box variety">
+            <div class="product-photo">
+              <img src="https://wildgrain.com/cdn/shop/files/PXL_20250716_142307298.PORTRAIT_4_2.jpg?v=1785937612&width=1500" alt="A selection of items from a bakery subscription box" loading="lazy" decoding="async">
+              <div class="product-caption">A box with variety</div>
+            </div>
+            <div class="product-photo">
+              <img src="https://wildgrain.com/cdn/shop/files/Wildgrain_Loaves_1eca2740-c73e-45f2-9b99-b14e6baa0091.png?v=1761062982&width=1500" alt="Assorted artisan loaves of bread" loading="lazy" decoding="async">
+              <div class="product-caption">Artisan breads</div>
+            </div>
+            <div class="product-photo">
+              <img src="https://wildgrain.com/cdn/shop/files/Wildgrain_Fall_Pastry_Bundle.jpg?v=1756319403&width=2806" alt="Assorted pastries for serving at home" loading="lazy" decoding="async">
+              <div class="product-caption">Flaky pastries</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="how-it-works">
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">Simple by design</span>
+            <h2>From Freezer to Table, Made Simple.</h2>
+            <p>A convenient way to keep bakery-inspired favorites ready for the moments you want them.</p>
+          </div>
+          <div class="how-grid">
+            <article class="step"><span class="step-no">1</span><h3>Explore Your Options</h3><p>Visit the website to review current box selections and choose what suits your household.</p></article>
+            <article class="step"><span class="step-no">2</span><h3>Keep Favorites Ready</h3><p>Store your delivery in the freezer and plan around breakfasts, dinners or little treats.</p></article>
+            <article class="step"><span class="step-no">3</span><h3>Bake and Enjoy</h3><p>Most items bake from frozen in 25 minutes or less, with no need to thaw first.</p></article>
+          </div>
+          <div class="feature-strip">
+            <img src="https://wildgrain.com/cdn/shop/files/Fall_Hero_Gemini.jpg?v=1788384190&width=1500" alt="Golden pastries ready to share at home" loading="lazy" decoding="async">
+            <div><h3>Make a little more room for delicious.</h3><p>Browse the full Wildgrain website for current products, box choices, delivery information and subscription terms.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="container">
+          <span class="eyebrow">Your next bakery moment</span>
+          <h2>Bring More Bakery Joy to Your Home.</h2>
+          <p>Discover breads, pasta and pastries made for easy enjoyment at home. Continue to Wildgrain's homepage to explore the options available now.</p>
+          <a class="button affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=30557&c=918273&a=808019&k=D0F03E66718DD6A37606CE64210F0F19&l=35310&s1=Wildgrain-nonbrand01" target="_blank" rel="sponsored noopener">Continue to Wildgrain.com <span class="arrow" aria-hidden="true">↗</span></a>
+          <p class="link-note">Opens the Wildgrain homepage in a new tab.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-row">
+        <div class="footer-brand">The Home Table Guide</div>
+        <p class="disclosure">Affiliate Disclosure: This independent page contains affiliate links. If you subscribe through one of these links, we may earn a commission at no additional cost to you. This page is not the official Wildgrain website. Product availability, delivery options and subscription terms are shown on the merchant website.</p>
+        <p class="footer-back"><a class="nav-back" href="/food-holidays">← All Food Themes</a></p>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll('img').forEach(function (img) {
+      img.addEventListener('error', function () {
+        var note = img.parentElement.querySelector('.error-note');
+        if (!note) {
+          note = document.createElement('p');
+          note.className = 'error-note';
+          note.setAttribute('role', 'status');
+          note.textContent = 'This image could not load. Check the source URL before publishing.';
+          img.insertAdjacentElement('afterend', note);
+        }
+        note.style.display = 'block';
+        img.setAttribute('data-image-error', 'true');
+      }, { once: true });
+    });
+  </script>
+<!-- AFFILIATE_CLICK:BEGIN (自动注入, 勿手改) -->
+<script>
+(function(){
+  var SEL = "a.affiliate-link";
+  var SEND_TO = "AW-18013696631/-luUCMfpjZEcEPfkzI1D";
+  var VALUE = 0.5;
+  var CURRENCY = "CNY";
+  window.__acB = window.__acB || {};
+  function go(url){ window.open(url, '_blank'); }
+  function bind(){
+    if (window.__acB[SEL]) return;
+    document.querySelectorAll(SEL).forEach(function(el){
+      el.addEventListener('click', function(e){
+        var url = this.getAttribute('href');
+        if (!url || url.charAt(0) === '#') return;
+        e.preventDefault();
+        if (typeof gtag === 'undefined') { go(url); return; }
+        gtag('event', 'conversion', {
+          'send_to': SEND_TO, 'value': VALUE, 'currency': CURRENCY,
+          'event_callback': function(){ go(url); }
+        });
+        setTimeout(function(){ go(url); }, 4000);
+      });
+    });
+    window.__acB[SEL] = true;
+  }
+  bind();
+  document.addEventListener('astro:page-load', bind);
+})();
+</script>
+<!-- AFFILIATE_CLICK:END -->
+</body>
+</html>

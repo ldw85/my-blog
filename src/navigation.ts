@@ -31,6 +31,7 @@ export const headerData = {
         { text: 'Apple Watch Series 11', href: getPermalink('/product/apple-watch') },
         { text: 'Fitness Equipment', href: getPermalink('/product/fitness') },
         { text: 'All Holiday Themes', href: getPermalink('/holidays') },
+        { text: 'Food', href: getPermalink('/food-holidays') },
         { text: 'All Products', href: getPermalink('/products') },
       ],
     },
