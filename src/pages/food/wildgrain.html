@@ -64,6 +64,15 @@
     .button:focus-visible, a:focus-visible { outline: 3px solid #c18d59; outline-offset: 3px; }
     .button .arrow { font-size: 17px; line-height: 1; }
     .link-note { margin: 10px 0 0; color: var(--muted); font-size: 11px; }
+    /* 折扣码: 顶部通栏 + 按钮旁徽标 */
+    .promo-strip { background: var(--accent); color: #fffaf4; }
+    .promo-strip-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 7px 12px; padding: 9px 0; font-size: 12.5px; font-weight: 700; line-height: 1.35; text-align: center; }
+    .promo-strip-code { display: inline-flex; align-items: center; gap: 6px; padding: 3px 11px; border-radius: 999px; background: #fff7ed; color: #603a23; font-weight: 800; white-space: nowrap; }
+    .promo-strip-code strong { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; letter-spacing: .06em; font-size: 13px; }
+    .promo-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 8px; }
+    .promo-badge { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 7px; padding: 8px 13px; border: 1.5px dashed var(--accent); border-radius: 10px; background: var(--accent-soft); color: var(--accent); font-size: 12.5px; font-weight: 800; line-height: 1.25; }
+    .promo-badge .promo-code { display: inline-block; padding: 3px 9px; border-radius: 6px; background: var(--accent); color: var(--site-on-primary); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px; font-weight: 900; letter-spacing: .05em; white-space: nowrap; }
+    .promo-badge .promo-save { font-weight: 800; }
     .hero-media { position: relative; min-width: 0; }
     .hero-media img { width: 100%; aspect-ratio: 1.07 / 1; object-fit: cover; border-radius: calc(20px * var(--site-radius-scale)); box-shadow: var(--shadow); background: var(--paper-soft); }
     .image-tag { position: absolute; right: 14px; bottom: 14px; max-width: 210px; padding: 10px 14px; border: 1px solid rgba(255,255,255,.65); border-radius: 12px; background: rgba(255,253,249,.92); color: #382a20; backdrop-filter: blur(8px); font-size: 11px; font-weight: 700; }
@@ -105,6 +114,9 @@
     .final-cta p { max-width: 590px; margin: 0 auto 23px; color: #f2e4d8; }
     .final-cta .button { border-color: #fff7ed; background: #fff7ed; color: #603a23; }
     .final-cta .link-note { color: #f2e4d8; }
+    .final-cta .promo-row { justify-content: center; }
+    .final-cta .promo-badge { border-color: #fff7ed; background: rgba(255, 247, 237, .16); color: #fff7ed; }
+    .final-cta .promo-badge .promo-code { background: #fff7ed; color: #603a23; }
     footer { padding: 22px 0 25px; }
     .footer-row { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 16px; }
     .footer-back { margin-top: 14px; }
@@ -117,6 +129,12 @@
       .nav-note { max-width: 140px; text-align: right; }
       .nav-side { gap: 12px; }
       .nav-back { font-size: 11px; }
+      .promo-strip-inner { padding: 8px 0; font-size: 11.5px; gap: 6px 9px; }
+      .promo-strip-code { padding: 3px 9px; }
+      .promo-strip-code strong { font-size: 12px; }
+      .promo-row { gap: 10px; }
+      .promo-badge { padding: 7px 11px; font-size: 11.5px; }
+      .promo-badge .promo-code { font-size: 12.5px; padding: 2px 8px; }
       .hero { padding-top: 28px; }
       .hero-grid, .variety-layout { grid-template-columns: minmax(0,1fr); }
       .hero-grid { gap: 26px; }
@@ -167,6 +185,14 @@ gtag('js', new Date());
       </div>
     </header>
 
+    <div class="promo-strip" role="note" aria-label="Discount code">
+      <div class="container promo-strip-inner">
+        <span>Limited offer for new subscribers</span>
+        <span class="promo-strip-code">Code: <strong>BOUNTY30</strong></span>
+        <span>Save $30 off your first order</span>
+      </div>
+    </div>
+
     <main id="top">
       <section class="hero">
         <div class="container hero-grid">
@@ -181,6 +207,9 @@ gtag('js', new Date());
             </ul>
             <div class="actions">
               <a class="button affiliate-link" href="https://afflat3c2.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=30557&c=918273&a=808019&k=D0F03E66718DD6A37606CE64210F0F19&l=35310" target="_blank" rel="sponsored noopener">Explore the Wildgrain Website <span class="arrow" aria-hidden="true">↗</span></a>
+            </div>
+            <div class="promo-row">
+              <span class="promo-badge"><span>Use code</span><span class="promo-code">BOUNTY30</span><span class="promo-save">$30 off first order</span></span>
             </div>
             <p class="link-note">Opens Wildgrain.com, where you can explore available boxes, products and subscription details.</p>
             <div class="trustline"><span class="dot"></span><span>An independent guide · Affiliate link disclosed below</span></div>
@@ -225,6 +254,9 @@ gtag('js', new Date());
             <p>Explore a customizable selection of breads, pasta and pastries delivered frozen, ready for when something delicious sounds good.</p>
             <p>See the available assortments, delivery options and current subscription terms on Wildgrain's website.</p>
             <a class="button affiliate-link" href="https://afflat3c2.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=30557&c=918273&a=808019&k=D0F03E66718DD6A37606CE64210F0F19&l=35310" target="_blank" rel="sponsored noopener">Visit Wildgrain.com <span class="arrow" aria-hidden="true">↗</span></a>
+            <div class="promo-row">
+              <span class="promo-badge"><span>Use code</span><span class="promo-code">BOUNTY30</span><span class="promo-save">$30 off first order</span></span>
+            </div>
             <p class="link-note">You'll arrive at the Wildgrain homepage, not a specific product page.</p>
           </div>
           <div class="product-stack" aria-label="Examples of bakery box variety">
@@ -269,6 +301,9 @@ gtag('js', new Date());
           <h2>Bring More Bakery Joy to Your Home.</h2>
           <p>Discover breads, pasta and pastries made for easy enjoyment at home. Continue to Wildgrain's homepage to explore the options available now.</p>
           <a class="button affiliate-link" href="https://afflat3c2.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=30557&c=918273&a=808019&k=D0F03E66718DD6A37606CE64210F0F19&l=35310" target="_blank" rel="sponsored noopener">Continue to Wildgrain.com <span class="arrow" aria-hidden="true">↗</span></a>
+          <div class="promo-row">
+            <span class="promo-badge"><span>Use code</span><span class="promo-code">BOUNTY30</span><span class="promo-save">$30 off first order</span></span>
+          </div>
           <p class="link-note">Opens the Wildgrain homepage in a new tab.</p>
         </div>
       </section>
