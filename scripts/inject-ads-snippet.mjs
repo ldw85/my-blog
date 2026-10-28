@@ -52,6 +52,11 @@ const PAGES = [
     reason: '裸 HTML, 完全零埋点 (无联盟 CTA, 仅补头部)',
     selectors: [],
   },
+  {
+    file: 'src/pages/holiday/halloween-express.html',
+    reason: '裸 HTML 节日主题页, 完全零埋点',
+    selectors: ['a.affiliate-link'],
+  },
 ];
 
 const cfg = await import(resolve(ROOT, 'src/config/tracking.ts'));

@@ -1,0 +1,85 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Holiday Themes - TechReviews',
+  description:
+    'Seasonal shopping guides and holiday theme pages — costumes, decorations, gifts and party ideas for every celebration.',
+};
+
+const themes = [
+  {
+    title: 'Halloween Express',
+    href: '/holiday/halloween-express',
+    emoji: '🎃',
+    tag: 'Halloween',
+    date: 'Oct 31',
+    desc: 'Costume inspiration for the whole family plus spooky decorations for your home and Halloween party.',
+    cta: 'Explore Halloween →',
+    gradient: 'from-orange-500 via-orange-600 to-purple-900',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🎉 Holiday Themes</h1>
+        <p class="text-xl text-gray-600">Seasonal shopping guides for every celebration</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          themes.map((theme) => (
+            <a
+              href={theme.href}
+              class="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden"
+            >
+              <div class={`h-48 bg-gradient-to-br ${theme.gradient} flex items-center justify-center`}>
+                <span class="text-6xl">{theme.emoji}</span>
+              </div>
+              <div class="p-6">
+                <h2 class="text-xl font-bold mb-2 group-hover:text-orange-600 transition-colors">{theme.title}</h2>
+                <p class="text-gray-600 mb-4 line-clamp-2">{theme.desc}</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-sm text-gray-500">
+                    {theme.tag} · {theme.date}
+                  </span>
+                  <span class="text-orange-600 font-semibold group-hover:translate-x-1 transition-transform">
+                    {theme.cta}
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+
+        <div class="group block bg-white rounded-xl shadow-md overflow-hidden opacity-75">
+          <div class="h-48 bg-gradient-to-br from-red-400 to-green-600 flex items-center justify-center">
+            <span class="text-6xl">🎄</span>
+          </div>
+          <div class="p-6">
+            <h2 class="text-xl font-bold mb-2">More Holiday Themes Coming Soon</h2>
+            <p class="text-gray-600 mb-4 line-clamp-2">
+              Thanksgiving, Christmas and New Year guides are on the way
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-500">Stay Tuned</span>
+              <span class="text-gray-400 font-semibold">🚧</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <a
+          href="/products"
+          class="inline-block text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+        >
+          ← Browse All Products
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

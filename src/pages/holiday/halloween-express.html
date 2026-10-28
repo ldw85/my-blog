@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Find Halloween costume inspiration for the whole family and discover spooky decorations for your home and party.">
+<title>Make This Halloween Unforgettable</title>
+<style>
+:root {
+  --site-primary: #F47721;
+  --site-on-primary: #1B120C;
+  --site-secondary: #24152E;
+  --site-on-secondary: #FFF8EF;
+  --site-background: #FFF8EF;
+  --site-on-background: #201923;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-font-heading: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --site-heading-scale: 1;
+  --site-spacing-scale: 1;
+  --site-radius-scale: 1;
+  --site-decoration-opacity: 1;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--site-font-body); color: var(--site-on-background); background: var(--site-background); }
+#app {
+  min-height: 100vh;
+  width: 100%;
+  color: light-dark(#201923, #F8F0E7);
+  background-color: var(--site-background);
+  overflow: hidden;
+  border-radius: 0;
+}
+a { color: inherit; }
+.wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+.topbar { display:flex; align-items:center; justify-content:space-between; padding: calc(18px * var(--site-spacing-scale)) 0; gap:16px; }
+.brand { font-weight:900; letter-spacing:-.06em; font-size:1.12rem; display:flex; align-items:center; gap:9px; }
+.brand-mark { width:31px;height:31px;border-radius:50%;background:var(--site-primary);display:grid;place-items:center;color:#21120B;font-size:18px; }
+.top-note { font-size:.76rem; text-transform:uppercase; letter-spacing:.14em; font-weight:800; color:light-dark(#6A566B,#D8C7DD); }
+.hero { position:relative; isolation:isolate; background:var(--site-secondary); color:var(--site-on-secondary); border-radius:calc(28px * var(--site-radius-scale)); overflow:hidden; min-height:470px; display:grid; grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr); }
+.hero-copy { padding:clamp(30px,5vw,66px); display:flex; flex-direction:column; align-items:flex-start; justify-content:center; position:relative; z-index:2; min-width:0; }
+.eyebrow { display:inline-flex; align-items:center; gap:8px; color:#FFC18F; font-size:.74rem; font-weight:850; letter-spacing:.15em; text-transform:uppercase; margin-bottom:19px; }
+.eyebrow:before { content:""; width:24px;height:2px;background:var(--site-primary); }
+h1,h2,h3,p { margin-top:0; }
+h1 { font-family:var(--site-font-heading); font-size:clamp(2.8rem,5.7vw,5.15rem); letter-spacing:-.065em; line-height:.96; margin-bottom:22px; max-width:600px; }
+h1 em { color:#FF9A48; font-style:normal; }
+.hero p { max-width:440px; color:#E8DCEB; font-size:1.03rem; line-height:1.7; margin-bottom:27px; }
+.actions { display:flex; flex-wrap:wrap; align-items:center; gap:16px; }
+.btn { display:inline-flex; justify-content:center; align-items:center; gap:9px; min-height:49px; padding:14px 21px; border-radius:999px; text-decoration:none; font-weight:850; font-size:.91rem; transition:transform .18s ease, background .18s ease; }
+.btn:hover { transform:translateY(-2px); }
+.btn-primary { background:var(--site-primary); color:#21120B; }
+.btn-outline { border:1px solid #76627C; color:#FFF8EF; }
+.hero-visual { position:relative; min-height:350px; background:#37213C; min-width:0; }
+.hero-visual img { width:100%; height:100%; min-height:470px; object-fit:cover; display:block; }
+.hero-visual:after { content:"";position:absolute;inset:0;background:linear-gradient(90deg,#24152E 0%,rgba(36,21,46,.25) 38%,rgba(20,10,25,.05) 100%);pointer-events:none; }
+.floating-note { position:absolute; z-index:2; right:24px; bottom:24px; padding:13px 16px; border:1px solid #FFFFFF55; background:#21132BD9; backdrop-filter:blur(8px); border-radius:14px; color:white; font-size:.8rem; line-height:1.45; max-width:190px; }
+.floating-note strong { display:block;color:#FFB16D;font-size:.93rem;margin-bottom:3px; }
+.section { padding:76px 0; }
+.section-head { display:flex; justify-content:space-between; align-items:end; gap:20px; margin-bottom:27px; }
+.kicker { color:#B94D0B; font-size:.74rem; font-weight:900; text-transform:uppercase; letter-spacing:.15em; margin-bottom:11px; }
+h2 { font-size:clamp(2rem,3.8vw,3.1rem); letter-spacing:-.055em; line-height:1.03; margin-bottom:0; }
+.section-intro { max-width:360px; line-height:1.6; color:light-dark(#695E6B,#C8BBCB); margin-bottom:2px; font-size:.93rem; }
+.cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.card { border:1px solid light-dark(#E9DDE6,#49394F); background:light-dark(#FFFFFF,#2B2030); border-radius:calc(20px * var(--site-radius-scale)); overflow:hidden; display:flex; flex-direction:column; }
+.card-image { aspect-ratio:1.23; overflow:hidden; background:#E8D9E9; }
+.card-image img { width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease; }
+.card:hover .card-image img { transform:scale(1.04); }
+.card-content { display:flex; padding:23px; flex-direction:column; align-items:flex-start; flex:1; }
+.card-index { font-size:.72rem; font-weight:900; letter-spacing:.12em; color:#C85A16; margin-bottom:12px; }
+h3 { font-size:1.28rem; letter-spacing:-.035em; line-height:1.15; margin-bottom:10px; }
+.card p { font-size:.9rem; line-height:1.65; color:light-dark(#6E6370,#C9BDCC); margin-bottom:21px; }
+.text-link { margin-top:auto; display:inline-flex; gap:8px; align-items:center; color:light-dark(#7E310B,#FFB47B); font-weight:900; text-decoration:none; font-size:.9rem; }
+.text-link span { transition:transform .2s ease; }
+.text-link:hover span { transform:translateX(4px); }
+.product-section { display:block; background:var(--site-secondary); color:var(--site-on-secondary); }
+.product-section .kicker { color:#FFB47B; }
+.product-section .section-intro { color:#D6C8D9; }
+.product-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin-top:31px; }
+.product-tile { text-decoration:none; border:1px solid #59465F; border-radius:calc(17px * var(--site-radius-scale)); overflow:hidden; background:#302137; transition:transform .18s ease,border-color .18s ease; }
+.product-tile:hover { transform:translateY(-3px); border-color:#FF9A48; }
+.product-tile img { width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
+.tile-copy { padding:16px; }
+.tile-copy strong { display:block; font-size:.97rem; line-height:1.25; margin-bottom:7px; }
+.tile-copy span { color:#D2C3D5; font-size:.8rem; line-height:1.5; display:block; }
+.mini-arrow { display:inline-flex; margin-top:12px; color:#FFB47B; font-weight:850; font-size:.79rem; }
+.moment { padding:74px 0; }
+.moment-panel { display:grid; grid-template-columns:.9fr 1.1fr; align-items:center; gap:40px; background:#F1E5D7; color:#251A26; padding:clamp(25px,5vw,55px); border-radius:calc(24px * var(--site-radius-scale)); }
+.moment-art { min-height:260px; border-radius:17px; overflow:hidden; }
+.moment-art img { width:100%;height:100%;min-height:260px;object-fit:cover;display:block; }
+.moment h2 { margin-bottom:17px; }
+.moment p { color:#5D4C5B; line-height:1.75; max-width:440px; }
+.moment .btn { margin-top:7px; }
+.final-cta { position:relative; background:#311D38; color:#FFF8EF; text-align:center; padding:76px 22px 72px; overflow:hidden; }
+.final-cta:before,.final-cta:after { content:"✦"; position:absolute; color:#F47721; opacity:var(--site-decoration-opacity); font-size:7rem; }
+.final-cta:before { left:8%;top:16%;transform:rotate(-15deg); }
+.final-cta:after { right:8%;bottom:8%;transform:rotate(20deg); }
+.final-cta h2 { max-width:680px; margin:0 auto 16px; }
+.final-cta p { color:#DCCDDD; max-width:490px; margin:0 auto 25px; line-height:1.7; }
+.footer { padding:22px 0 28px; font-size:.75rem; color:light-dark(#716674,#BFB1C4); display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px; line-height:1.6; }
+.footer a { text-underline-offset:3px; }
+.disclaimer { max-width:700px; }
+@media (max-width:760px) {
+ .wrap { width:min(100% - 28px,560px); }
+ .topbar { padding:15px 0; }
+ .top-note { font-size:.64rem; letter-spacing:.08em; text-align:right; }
+ .hero { grid-template-columns:minmax(0,1fr); min-height:0; border-radius:19px; }
+ .hero-copy { padding:34px 25px 29px; }
+ h1 { font-size:clamp(2.8rem,12vw,4.25rem); }
+ .hero p { font-size:.95rem; }
+ .hero-visual { min-height:245px; }
+ .hero-visual img { min-height:245px; max-height:290px; }
+ .hero-visual:after { background:linear-gradient(0deg,rgba(36,21,46,.42),transparent 70%); }
+ .floating-note { right:13px; bottom:13px; }
+ .section { padding:55px 0; }
+ .section-head { display:block; }
+ .section-intro { margin-top:14px; }
+ .cards { grid-template-columns:1fr; gap:14px; }
+ .card { display:grid; grid-template-columns:38% 1fr; }
+ .card-image { aspect-ratio:auto; min-height:220px; }
+ .card-content { padding:18px 16px; }
+ .card-index { margin-bottom:8px; }
+ h3 { font-size:1.13rem; }
+ .card p { font-size:.83rem; margin-bottom:15px; }
+ .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:11px; }
+ .tile-copy { padding:13px; }
+ .tile-copy strong { font-size:.9rem; }
+ .tile-copy span { font-size:.76rem; }
+ .moment { padding:48px 0; }
+ .moment-panel { grid-template-columns:1fr; gap:23px; padding:22px; }
+ .moment-art,.moment-art img { min-height:210px; }
+ .final-cta { padding:63px 23px; }
+ .final-cta:before { left:-12px;top:12px;font-size:4rem; }
+ .final-cta:after { right:-10px;font-size:4rem; }
+ .footer { display:block; }
+ .footer > * { margin-bottom:9px; }
+}
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition:none!important; } }
+</style>
+<!-- ADS_TAG_HEAD:BEGIN (自动注入, 勿手改) -->
+<!-- 账号清单: src/config/tracking.ts -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18013696631"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+["AW-18013696631","AW-18417039939"].forEach(function(id){ gtag('config', id); });
+["AW-18417039939/oioLCM2MoPQcEMP09s1E"].forEach(function(sendTo){ gtag('event', 'conversion', {'send_to': sendTo}); });
+</script>
+<!-- ADS_TAG_HEAD:END -->
+</head>
+<body>
+<div id="app">
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span><span>HALLOWEEN EDIT</span></div>
+      <div class="top-note">Costumes · Decor · Party Ideas</div>
+    </header>
+  </div>
+  <main>
+    <div class="wrap">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow">Your Halloween starts here</div>
+          <h1 id="hero-title">Make This Halloween <em>Unforgettable</em></h1>
+          <p>Find costume inspiration for the whole family and discover spooky decorations for a Halloween setup worth showing off.</p>
+          <div class="actions">
+            <a class="btn btn-primary affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=32683&c=918273&a=808019&k=5B5CC71DABFD0BB14F736DF3A5FFF3CD&l=39396&s1=Halloween01">Explore Halloween Inspiration <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline" href="#scenarios">Costumes &amp; Decor</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="https://i.halloweenexpress.com/transform/VIEWER_1000/31ce586d-636f-43a1-8381-76c276b81e08/HEXCharacterShopLP-adultcharacter-2903-061626-1x1" alt="Halloween costume inspiration for adults" fetchpriority="high" decoding="async">
+          <div class="floating-note"><strong>Make it your own</strong>Costumes, spooky scenes, and party-ready inspiration.</div>
+        </div>
+      </section>
+      <section class="section" id="scenarios" aria-labelledby="scenario-title">
+        <div class="section-head">
+          <div><div class="kicker">Pick your Halloween mood</div><h2 id="scenario-title">What's Your Halloween Plan?</h2></div>
+          <p class="section-intro">Start with the moment you're planning. Find ideas that fit your family, your home, and your Halloween night.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="card-image"><img src="https://i.halloweenexpress.com/transform/VIEWER_1000/a385f27d-26f7-49c3-8a89-7ec05245b471/HEXCharacterShopLP-kidscharacter-2903-061626-1x1" alt="Halloween costume inspiration for kids" loading="lazy" decoding="async"></div>
+            <div class="card-content"><div class="card-index">01 / FAMILY</div><h3>Find Your Family's Halloween Look</h3><p>From playful kids' costumes to coordinated family themes, explore ideas for a memorable Halloween together.</p><a class="text-link affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=32683&c=918273&a=808019&k=5B5CC71DABFD0BB14F736DF3A5FFF3CD&l=39396&s1=Halloween01">Explore Costumes <span>→</span></a></div>
+          </article>
+          <article class="card">
+            <div class="card-image"><img src="https://i.halloweenexpress.com/transform/VIEWER_400/5b1190dd-dafb-491d-b09e-2823d45e6432/HEXCharacterShopLP-supermariobros-2903-061626-1x1" alt="Colorful Halloween costume inspiration" loading="lazy" decoding="async"></div>
+            <div class="card-content"><div class="card-index">02 / SPOOKY HOME</div><h3>Give Your Front Yard a Spooky Upgrade</h3><p>Discover animated decorations and Halloween props to help transform your porch or yard into an attraction.</p><a class="text-link affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=32683&c=918273&a=808019&k=5B5CC71DABFD0BB14F736DF3A5FFF3CD&l=39396&s1=Halloween01">Explore Decorations <span>→</span></a></div>
+          </article>
+          <article class="card">
+            <div class="card-image"><img src="https://i.halloweenexpress.com/transform/VIEWER_400/63415487-2078-4765-84c1-5781f0068a21/HEXCharacterShopLP-Mandalorian-2903-061626-1x1" alt="Character costume inspiration for Halloween" loading="lazy" decoding="async"></div>
+            <div class="card-content"><div class="card-index">03 / PARTY HOST</div><h3>Set the Scene for Halloween Night</h3><p>Explore costumes, accessories, and decorations for a Halloween party your guests will remember.</p><a class="text-link affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=32683&c=918273&a=808019&k=5B5CC71DABFD0BB14F736DF3A5FFF3CD&l=39396&s1=Halloween01">Get Party Inspiration <span>→</span></a></div>
+          </article>
+        </div>
+      </section>
+  </div>
+  <section class="section product-section" aria-labelledby="product-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">Ideas for every kind of Halloween</div><h2 id="product-title">Bring Your Halloween Ideas to Life</h2></div>
+        <p class="section-intro">Explore a few ways to bring your plan together, from costume moments to a full-on spooky scene.</p>
+      </div>
+      <div class="product-grid">
+        <a class="product-tile affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=32683&c=918273&a=808019&k=5B5CC71DABFD0BB14F736DF3A5FFF3CD&l=39396&s1=Halloween01">
+          <img src="https://images.unsplash.com/photo-1509557965875-b88c97052f0e?auto=format&fit=crop&w=500&q=80" alt="Halloween seasonal styling">
+          <div class="tile-copy"><strong>Family &amp; Kids' Costumes</strong><span>Find a look for every member of the crew.</span><span class="mini-arrow">Explore costumes ↗</span></div>
+        </a>
+        <a class="product-tile affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=32683&c=918273&a=808019&k=5B5CC71DABFD0BB14F736DF3A5FFF3CD&l=39396&s1=Halloween01">
+          <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?auto=format&fit=crop&w=500&q=80" alt="Spooky Halloween decorations">
+          <div class="tile-copy"><strong>Adult &amp; Couples' Costumes</strong><span>Explore ideas for a standout Halloween look.</span><span class="mini-arrow">Find your look ↗</span></div>
+        </a>
+        <a class="product-tile affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=32683&c=918273&a=808019&k=5B5CC71DABFD0BB14F736DF3A5FFF3CD&l=39396&s1=Halloween01">
+          <img src="https://images.unsplash.com/photo-1572375992501-4b0892d50c69?auto=format&fit=crop&w=500&q=80" alt="Halloween party scene">
+          <div class="tile-copy"><strong>Animated Decorations</strong><span>Add a little drama to your Halloween setup.</span><span class="mini-arrow">Explore decor ↗</span></div>
+        </a>
+        <a class="product-tile affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=32683&c=918273&a=808019&k=5B5CC71DABFD0BB14F736DF3A5FFF3CD&l=39396&s1=Halloween01">
+          <img src="https://images.unsplash.com/photo-1509557965875-b88c97052f0e?auto=format&fit=crop&w=500&q=80" alt="Pumpkins for outdoor Halloween decoration">
+          <div class="tile-copy"><strong>Outdoor Halloween Props</strong><span>Set the mood from the front porch to the yard.</span><span class="mini-arrow">See outdoor ideas ↗</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <section class="moment" aria-labelledby="moment-title">
+      <div class="moment-panel">
+        <div class="moment-art"><img src="https://i.halloweenexpress.com/transform/VIEWER_400/26767865-d1fc-4689-bf7a-ddee6552b365/HEXCharacterShopLP-pawpatrol-2903-061626-1x1" alt="Playful costume inspiration for Halloween" loading="lazy" decoding="async"></div>
+        <div><div class="kicker">Your plans, your style</div><h2 id="moment-title">Your Halloween Style Starts Here</h2><p>Whether you're planning a family costume moment, hosting a spooky gathering, or decorating your front yard, explore Halloween ideas that fit your plans.</p><a class="btn btn-primary affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=32683&c=918273&a=808019&k=5B5CC71DABFD0BB14F736DF3A5FFF3CD&l=39396&s1=Halloween01">Find Your Halloween Favorites <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+  </div>
+  <section class="final-cta" aria-labelledby="final-title">
+    <div class="wrap">
+      <div class="kicker">Make the moment memorable</div>
+      <h2 id="final-title">Ready to Get Halloween-Ready?</h2>
+      <p>Explore costumes, accessories, and decorations to bring your Halloween plans together.</p>
+      <a class="btn btn-primary affiliate-link" href="https://afflat3c1.com/trk/lnk/8AFCF9E4-287B-4920-B75E-049BF7C13375/?o=32683&c=918273&a=808019&k=5B5CC71DABFD0BB14F736DF3A5FFF3CD&l=39396&s1=Halloween01">Shop Halloween Express <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  </main>
+  <div class="wrap">
+    <div style="text-align:center;padding:28px 0 4px;">
+      <a href="/holidays" style="color:#B94D0B;font-weight:800;text-decoration:none;font-size:.95rem;">← All Holiday Themes</a>
+    </div>
+    <footer class="footer">
+      <div class="disclaimer">Affiliate disclosure: As an affiliate, I may earn a commission from qualifying purchases made through links on this page. This independent shopping guide is not the official Halloween Express website.</div>
+      <div><a href="https://www.halloweenexpress.com/" rel="nofollow">Visit retailer website</a> · Shopping links use affiliate tracking.</div>
+    </footer>
+  </div>
+</div>
+<script>
+</script>
+<script>
+document.querySelectorAll('.affiliate-link').forEach(function(link) {
+  link.addEventListener('click', function() {
+    // Optional analytics hook: connect only to an authorized analytics implementation.
+    document.dispatchEvent(new CustomEvent('affiliate-outbound-click', {detail: {label: link.textContent.trim()}}));
+  });
+});
+</script>
+<!-- AFFILIATE_CLICK:BEGIN (自动注入, 勿手改) -->
+<script>
+(function(){
+  var SEL = "a.affiliate-link";
+  var SEND_TO = "AW-18013696631/-luUCMfpjZEcEPfkzI1D";
+  var VALUE = 0.5;
+  var CURRENCY = "CNY";
+  window.__acB = window.__acB || {};
+  function go(url){ window.open(url, '_blank'); }
+  function bind(){
+    if (window.__acB[SEL]) return;
+    document.querySelectorAll(SEL).forEach(function(el){
+      el.addEventListener('click', function(e){
+        var url = this.getAttribute('href');
+        if (!url || url.charAt(0) === '#') return;
+        e.preventDefault();
+        if (typeof gtag === 'undefined') { go(url); return; }
+        gtag('event', 'conversion', {
+          'send_to': SEND_TO, 'value': VALUE, 'currency': CURRENCY,
+          'event_callback': function(){ go(url); }
+        });
+        setTimeout(function(){ go(url); }, 4000);
+      });
+    });
+    window.__acB[SEL] = true;
+  }
+  bind();
+  document.addEventListener('astro:page-load', bind);
+})();
+</script>
+<!-- AFFILIATE_CLICK:END -->
+</body>
+</html>
