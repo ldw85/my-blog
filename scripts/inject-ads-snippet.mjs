@@ -62,6 +62,33 @@ const PAGES = [
     reason: '裸 HTML 食品主题页, 完全零埋点',
     selectors: ['a.affiliate-link'],
   },
+  // ── public/ 下的广告落地页 (2026-11-04 补入): 广告实际落地点最需要埋点 ──
+  {
+    file: 'public/landing-capcut.html',
+    reason: '广告落地页, 原来手写只 config 主号, 漏掉全站 AD_TAGS',
+    // 页面已有自己的 CTA 转化脚本 (AW-17402862141), 只补头部, 不重复绑点击
+    selectors: [],
+  },
+  {
+    file: 'public/landing-nicejob.html',
+    reason: '广告落地页, 原来手写只 config 主号, 漏掉全站 AD_TAGS',
+    selectors: [],
+  },
+  {
+    file: 'public/landing-dji-avata-2.html',
+    reason: '广告落地页, 完全零埋点',
+    selectors: [],
+  },
+  {
+    file: 'public/landing-dji-mini-4k.html',
+    reason: '广告落地页, 完全零埋点',
+    selectors: [],
+  },
+  {
+    file: 'public/landing-dji-mini-5-pro.html',
+    reason: '广告落地页, 完全零埋点',
+    selectors: [],
+  },
 ];
 
 const cfg = await import(resolve(ROOT, 'src/config/tracking.ts'));
