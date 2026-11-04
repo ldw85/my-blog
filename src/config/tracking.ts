@@ -33,6 +33,8 @@ export const AW_MAIN = 'AW-18013696631';
 export const AW_SECONDARY = 'AW-17760696639';
 /** 新接入账号 (2026-10-07): 后台类别为「网页浏览 / Page view」 */
 export const AW_PAGEVIEW = 'AW-18417039939';
+/** 新接入账号 (2026-11-04 David 指定): 全站 config, 暂无对应转化标签 */
+export const AW_20261104 = 'AW-18500023513';
 
 /**
  * 全站需要跟踪的 Google Ads 账号。
@@ -45,6 +47,7 @@ export const AW_PAGEVIEW = 'AW-18417039939';
 export const AD_TAGS: AdTag[] = [
   { id: AW_MAIN, note: '主转化账号 —— CTA 点击转化' },
   { id: AW_PAGEVIEW, note: '网页浏览类别转化账号 (2026-10-07 接入)' },
+  { id: AW_20261104, note: '新接入账号 (2026-11-04 接入, 仅 config 无转化标签)' },
 ];
 
 /** gtag.js 脚本的 loader ID: 全站只加载一次, 取第一个 AW 号 */
