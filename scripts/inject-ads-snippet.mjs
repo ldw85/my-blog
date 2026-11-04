@@ -103,8 +103,16 @@ const j = (arr) => JSON.stringify(arr);
 /**
  * 埋点头部: gtag.js 只加载一次, 其余 AW 号追加 config, 再打 page view 转化。
  * 与 src/components/AdsTagHead.astro 逻辑保持一致。
+ *
+ * ⚠️ config 必须输出字面量 `gtag('config','AW-xxx')`, 不用 forEach 循环:
+ * Google Ads 后台「验证代码」直接搜 HTML 里的 config 字面量, 循环写法线上能上报
+ * 但后台会报「未检测到」。账号清单仍以 tracking.ts 为唯一数据源, 这里只负责展开。
  */
 function headSnippet() {
+  const configs = adTags.map((id) => `gtag('config', '${id}');`).join('\n');
+  const conversions = pageViews
+    .map((sendTo) => `gtag('event', 'conversion', {'send_to': '${sendTo}'});`)
+    .join('\n');
   return `${HEAD_BEGIN}
 <!-- 账号清单: src/config/tracking.ts -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=${loaderId}"></script>
@@ -112,8 +120,8 @@ function headSnippet() {
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-${j(adTags)}.forEach(function(id){ gtag('config', id); });
-${j(pageViews)}.forEach(function(sendTo){ gtag('event', 'conversion', {'send_to': sendTo}); });
+${configs}
+${conversions}
 </script>
 ${HEAD_END}`;
 }
