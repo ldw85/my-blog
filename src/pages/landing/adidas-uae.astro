@@ -3,13 +3,9 @@ import Layout from '~/layouts/LandingLayout.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 // adidas UAE 联盟跟踪链接 (YeahPromos)
-// 格式: track=<ID>&url=<目标页>, url 为官方大促页 (adidas.ae Singles Day)
+// 格式: track=<ID>&tag1=<标签>&url=<目标页>, 全站统一指向 adidas UAE 官方站
 const AFFILIATE_URL =
-  'https://yeahpromos.com/index/index/openurl?track=26c13b09cd60422d&url=https%3A%2F%2Fwww.adidas.ae%2Fen%2Fsingles_day';
-
-// 官方品牌站点 (同样走跟踪链接, 保持归因一致)
-const AFFILIATE_BRAND_URL =
-  'https://yeahpromos.com/index/index/openurl?track=26c13b09cd60422d&url=https%3A%2F%2Fwww.adidas.ae%2F';
+  'https://yeahpromos.com/index/index/openurl?track=26c13b09cd60422d&tag1=adidas-02&url=https://www.adidas.ae/';
 
 const metadata = {
   title: 'adidas UAE 11.11 Sale — 30–60% Off Selected Styles | TechReviews',
@@ -109,7 +105,7 @@ const metadata = {
         <div class="text-center pb-10 md:pb-14 max-w-5xl mx-auto">
           <!-- 官方品牌标识 -->
           <a
-            href={AFFILIATE_BRAND_URL}
+            href={AFFILIATE_URL}
             target="_blank"
             rel="noopener noreferrer sponsored"
             class="inline-block mb-6 group"
@@ -225,7 +221,7 @@ const metadata = {
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a
-            href={AFFILIATE_BRAND_URL}
+            href={AFFILIATE_URL}
             target="_blank"
             rel="noopener noreferrer sponsored"
             class="btn adi-btn"
