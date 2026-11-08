@@ -18,7 +18,7 @@
  *
  * ⚠️ 每个页面只能放一次。
  */
-import { AD_TAGS, GTAG_LOADER_ID, PAGE_VIEW_CONVERSIONS } from '~/config/tracking';
+import { AD_TAGS, GTAG_LOADER_ID, PAGE_VIEW_CONVERSIONS, GTM_ID } from '~/config/tracking';
 
 const configLines = AD_TAGS.map((t) => `gtag('config', '${t.id}');`).join('\n');
 const conversionLines = PAGE_VIEW_CONVERSIONS.map((c) => `gtag('event', 'conversion', {'send_to': '${c.sendTo}'});`)
@@ -37,3 +37,9 @@ const inlineScript = [
 <!-- Google tag (gtag.js) -->
 <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_LOADER_ID}`}></script>
 <script is:inline set:html={inlineScript}></script>
+
+<!-- Google Tag Manager (GTM) —— 与 gtag.js 并存, 共用 dataLayer, 各自只加载一次 -->
+<script is:inline async src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}></script>
+<script is:inline set:html={`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());`}></script>

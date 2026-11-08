@@ -20,6 +20,23 @@ export interface AdTag {
   note: string;
 }
 
+/* ── Google Tag Manager (GTM) ──────────────────────────────────────── */
+
+/**
+ * GTM 容器 ID (David 2026-11-08 指定接入)。
+ *
+ * 与 Google Ads 的 gtag.js **并存**, 不是替代:
+ *   - 两者共用同一个 `window.dataLayer` 与同一个 `gtag()` 函数, 互不冲突
+ *   - gtag.js 负责 AW 号 (Google Ads) 的 config 与转化上报
+ *   - gtm.js 负责 GTM 容器内的标签 (由 David 在 GTM 后台自行配置)
+ *   - 两者都只加载一次, 重复加载才是冲突根因
+ *
+ * 埋点注入位置:
+ *   - src/components/AdsTagHead.astro (所有走 Layout 的页面 + 3 个独立 Astro 页面)
+ *   - scripts/inject-ads-snippet.mjs (11 个裸 HTML / public 静态页面)
+ */
+export const GTM_ID = 'GTM-PHPGWLPJ';
+
 /* ── AW 号常量 ─────────────────────────────────────────────────────── */
 
 /** 主转化账号: CTA 点击转化走这个号 */

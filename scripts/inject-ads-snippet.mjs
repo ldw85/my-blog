@@ -97,11 +97,12 @@ const loaderId = cfg.GTAG_LOADER_ID;
 const adTags = cfg.AD_TAGS.map((t) => t.id);
 const pageViews = cfg.PAGE_VIEW_CONVERSIONS.map((c) => c.sendTo);
 const cta = cfg.CTA_CONVERSION;
+const gtmId = cfg.GTM_ID;
 
 const j = (arr) => JSON.stringify(arr);
 
 /**
- * 埋点头部: gtag.js 只加载一次, 其余 AW 号追加 config, 再打 page view 转化。
+ * 埋点头部: gtm.js + gtag.js, 两者共存共用 dataLayer, 各自只加载一次。
  * 与 src/components/AdsTagHead.astro 逻辑保持一致。
  *
  * ⚠️ config 必须输出字面量 `gtag('config','AW-xxx')`, 不用 forEach 循环:
@@ -115,6 +116,14 @@ function headSnippet() {
     .join('\n');
   return `${HEAD_BEGIN}
 <!-- 账号清单: src/config/tracking.ts -->
+<!-- Google Tag Manager (GTM) —— 与 gtag.js 并存, 共用 dataLayer -->
+<script async src="https://www.googletagmanager.com/gtm.js?id=${gtmId}"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+</script>
+<!-- Google Ads (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=${loaderId}"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
