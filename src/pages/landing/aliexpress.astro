@@ -2,12 +2,13 @@
 import Layout from '~/layouts/LandingLayout.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-// AliExpress 联盟跟踪链接 (PartnerBoost, brand_id 72898, Joined)
-// 短链由 PartnerBoost 生成, 跳转 aliexpress.com 并携带联盟归因
-const AFFILIATE_URL = 'https://pboost.me/F6tLC45i4';
+// AliExpress 联盟跟踪链接 (YeahPromos → BlueAff → aliexpress.com)
+// 格式: track=<ID>&url=<目标页>, url 留空时默认跳 AliExpress 首页
+const AFFILIATE_URL =
+  'https://yeahpromos.com/index/index/openurl?track=216f339884691499&url=';
 
 const metadata = {
-  title: 'AliExpress 11.11 Shopping Event - E-commerce Deals',
+  title: 'AliExpress 11.11 Shopping Event - TechReviews',
   description:
     'Shop the AliExpress 11.11 shopping event: tech, home, fashion and gift finds with free shipping on eligible Choice orders, buyer protection and seasonal offers.',
 };
@@ -387,4 +388,285 @@ const metadata = {
       </div>
     </div>
   </section>
+
+  <!-- Exit-intent 邮箱订阅弹窗: 离开页面时展示 11.11 折扣信息并收集邮箱 (FormSubmit) -->
+  <div
+    id="dealModal"
+    class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+  >
+    <div class="relative w-full max-w-md bg-white rounded-3xl p-7 shadow-2xl">
+      <button
+        id="modalClose"
+        type="button"
+        aria-label="Close"
+        class="absolute right-4 top-4 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 text-xl leading-none"
+      >
+        ×
+      </button>
+      <span class="inline-block bg-[#fff0c9] text-[#8a560b] rounded-full px-3 py-1.5 text-[11px] font-bold tracking-widest uppercase">
+        🔥 11.11 Exclusive Offer
+      </span>
+      <h3 id="modalTitle" class="text-2xl font-bold tracking-tight mt-4 pr-8">
+        Wait — don't miss your <span class="text-[#e62e04]">11.11 discount</span>!
+      </h3>
+      <div class="bg-gradient-to-r from-[#ff8a3d] to-[#e62e04] text-white rounded-2xl px-4 py-3 mt-4 text-sm font-bold">
+        🎁 Extra coupon codes + seasonal savings inside — selected items up to 70% off (Nov 1–18).
+      </div>
+      <p class="text-sm text-gray-500 mt-4 mb-4">
+        Leave your email and we'll send you AliExpress discount codes and deal alerts. No purchase
+        needed — unsubscribe anytime.
+      </p>
+      <form id="emailForm">
+        <div class="flex flex-col gap-2">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Your email address"
+            autocomplete="email"
+            required
+            aria-label="Your email address"
+            class="border border-gray-300 rounded-xl px-3.5 py-3 text-sm outline-none focus:border-[#ff6a00] focus:ring-2 focus:ring-[#ff6a00]/25"
+          />
+          <button
+            id="submitBtn"
+            type="submit"
+            class="bg-[#ff6a00] hover:bg-[#e62e04] text-white font-bold rounded-xl py-3 text-sm transition-colors"
+          >
+            Send me the deals
+          </button>
+        </div>
+        <label class="flex items-start gap-2 text-[11px] text-gray-500 mt-3">
+          <input type="checkbox" id="consent" required class="mt-0.5 accent-[#ff6a00]" />
+          <span>
+            I agree to receive occasional shopping and promotion emails. I can withdraw my consent
+            by replying "unsubscribe" or contacting the site operator.
+          </span>
+        </label>
+        <input
+          type="text"
+          name="_honey"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+          class="absolute -left-[9999px] w-px h-px"
+        />
+        <p class="text-[10px] text-gray-400 mt-2">
+          Your email is sent to the site operator through FormSubmit. See our
+          <a href="/privacy" target="_blank" rel="noopener" class="underline">privacy policy</a>.
+        </p>
+        <p id="formError" role="alert" class="hidden text-[11px] text-red-600 mt-2"></p>
+      </form>
+      <div id="formSuccess" class="hidden bg-green-50 border border-green-200 text-green-700 rounded-xl p-3 text-sm mt-4">
+        🎉 Thanks — you're on the list! Watch your inbox for 11.11 discount codes.
+      </div>
+      <a
+        id="continueLink"
+        href={AFFILIATE_URL}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        class="block text-center mt-4 py-3 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 text-xs font-bold transition-colors"
+      >
+        No thanks — continue to AliExpress →
+      </a>
+    </div>
+  </div>
+
+  <!-- 移动端底部订阅提示 -->
+  <div
+    id="mobileNudge"
+    class="hidden fixed z-40 bottom-3 left-3 right-3 bg-[#171a1f] text-white rounded-2xl px-4 py-3 shadow-2xl items-center justify-between gap-3 text-sm"
+    role="status"
+    aria-live="polite"
+  >
+    <span>🎁 Get 11.11 discount codes by email</span>
+    <button id="nudgeOpen" type="button" class="bg-[#ff6a00] text-white font-bold rounded-full px-3.5 py-2 text-xs whitespace-nowrap">
+      Get deals
+    </button>
+    <button id="nudgeClose" type="button" aria-label="Dismiss" class="text-white/70 px-1 text-lg leading-none">
+      ×
+    </button>
+  </div>
+
+  <script>
+    // 退出弹窗逻辑 (改写自原版 index.html): 桌面端鼠标离开视口顶部触发, 移动端用非阻断式底栏;
+    // 首次点击联盟链接也先弹窗(可跳过); localStorage 记录 snooze/已订阅状态
+    (function () {
+      'use strict';
+      const AFFILIATE_URL = 'https://yeahpromos.com/index/index/openurl?track=216f339884691499&url=';
+      const FORM_ENDPOINT = 'https://formsubmit.co/ajax/ldwldw85@outlook.com';
+      const SNOOZE_KEY = 'aliexpress_1111_modal_snooze_v1';
+      const SUBMITTED_KEY = 'aliexpress_email_submitted';
+
+      const modal = document.getElementById('dealModal');
+      const form = document.getElementById('emailForm');
+      const emailInput = document.getElementById('email');
+      const consent = document.getElementById('consent');
+      const errorBox = document.getElementById('formError');
+      const successBox = document.getElementById('formSuccess');
+      const submitBtn = document.getElementById('submitBtn');
+      const mobileNudge = document.getElementById('mobileNudge');
+
+      let shownThisPage = false;
+      let sourceTrigger = 'manual';
+
+      const storageGet = (k: string) => {
+        try {
+          return localStorage.getItem(k);
+        } catch {
+          return null;
+        }
+      };
+      const storageSet = (k: string, v: string) => {
+        try {
+          localStorage.setItem(k, v);
+        } catch {
+          /* ignore */
+        }
+      };
+
+      const canPrompt = () =>
+        !shownThisPage &&
+        Date.now() > Number(storageGet(SNOOZE_KEY) || 0) &&
+        !storageGet(SUBMITTED_KEY);
+
+      const snooze = () => storageSet(SNOOZE_KEY, String(Date.now() + 7 * 24 * 60 * 60 * 1000));
+
+      function openModal(trigger: string) {
+        if (!canPrompt()) return;
+        sourceTrigger = trigger || 'manual';
+        shownThisPage = true;
+        modal!.classList.remove('hidden');
+        modal!.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        mobileNudge!.classList.add('hidden');
+        setTimeout(() => emailInput!.focus({ preventScroll: true }), 120);
+      }
+
+      function closeModal() {
+        modal!.classList.add('hidden');
+        modal!.classList.remove('flex');
+        document.body.style.overflow = '';
+        snooze();
+      }
+
+      document.getElementById('modalClose')!.addEventListener('click', closeModal);
+      modal!.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal!.classList.contains('hidden')) closeModal();
+      });
+
+      // 首次点击任何联盟跳转链接 → 先展示订阅弹窗 (弹窗内/底栏内的链接放行)
+      document.addEventListener(
+        'click',
+        (e) => {
+          const target = e.target as HTMLElement | null;
+          const link = target?.closest?.('a');
+          if (!link) return;
+          const href = link.getAttribute('href') || '';
+          if (!href.startsWith('https://yeahpromos.com/index/index/openurl')) return;
+          if (canPrompt() && !link.closest('#dealModal') && !link.closest('#mobileNudge')) {
+            e.preventDefault();
+            openModal('cta');
+            return;
+          }
+          if (window.dataLayer) {
+            window.dataLayer.push({ event: 'affiliate_outbound_click', link_url: href, trigger: sourceTrigger });
+          }
+        },
+        true
+      );
+
+      // 桌面端退出意图: 8 秒后激活, 鼠标从视口顶部离开时触发
+      let exitReady = false;
+      setTimeout(() => {
+        exitReady = true;
+      }, 8000);
+      document.addEventListener('mouseout', (e) => {
+        if (exitReady && e.clientY <= 0 && !e.relatedTarget && canPrompt() && window.innerWidth > 700) {
+          openModal('exit');
+        }
+      });
+
+      // 移动端: 38 秒或滚动 68% 后显示底部提示, 不阻断浏览
+      let nudgeShown = false;
+      function showNudge() {
+        if (nudgeShown || !canPrompt() || window.innerWidth > 700) return;
+        nudgeShown = true;
+        mobileNudge!.classList.remove('hidden');
+        mobileNudge!.classList.add('flex');
+      }
+      setTimeout(showNudge, 38000);
+      window.addEventListener(
+        'scroll',
+        () => {
+          const total = document.documentElement.scrollHeight - window.innerHeight || 1;
+          if (window.scrollY / total > 0.68) showNudge();
+        },
+        { passive: true }
+      );
+      document.getElementById('nudgeOpen')!.addEventListener('click', () => openModal('nudge'));
+      document.getElementById('nudgeClose')!.addEventListener('click', () => {
+        mobileNudge!.classList.add('hidden');
+        snooze();
+      });
+
+      // 邮箱提交 (FormSubmit AJAX)
+      form!.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        errorBox!.style.display = 'none';
+        errorBox!.textContent = '';
+        if (!consent!.checked) {
+          errorBox!.textContent = 'Please tick the consent box to subscribe.';
+          errorBox!.style.display = 'block';
+          return;
+        }
+        const email = emailInput!.value.trim();
+        if (!email) {
+          emailInput!.focus();
+          return;
+        }
+        submitBtn!.disabled = true;
+        submitBtn!.textContent = 'Sending…';
+        const payload = {
+          email,
+          consent: 'Yes — occasional shopping and promotion emails; unsubscribe on request.',
+          source: 'AliExpress 11.11 landing page',
+          prompt_trigger: sourceTrigger,
+          submitted_page: window.location.href,
+          _subject: 'New AliExpress deal alert opt-in',
+          _template: 'table',
+          _honey: '',
+        };
+        try {
+          const response = await fetch(FORM_ENDPOINT, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          const result = await response.json().catch(() => ({}));
+          if (!response.ok || !(result.success === true || result.success === 'true')) {
+            throw new Error(result.message || 'The form service could not confirm the request.');
+          }
+          form!.style.display = 'none';
+          successBox!.style.display = 'block';
+          storageSet(SUBMITTED_KEY, '1');
+          if (window.dataLayer) {
+            window.dataLayer.push({ event: 'email_optin_submitted', form_name: 'aliexpress_deal_alerts' });
+          }
+        } catch {
+          errorBox!.textContent = 'Sorry, we could not submit your email right now. Please try again in a moment.';
+          errorBox!.style.display = 'block';
+        } finally {
+          submitBtn!.disabled = false;
+          submitBtn!.textContent = 'Send me the deals';
+        }
+      });
+    })();
+  </script>
 </Layout>

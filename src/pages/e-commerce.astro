@@ -1,0 +1,76 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'E-commerce Deals & Shopping Platforms - TechReviews',
+  description:
+    'Curated e-commerce platform deals: seasonal shopping events, marketplace offers and platform landing pages with exclusive discount opportunities.',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🛒 E-commerce Deals</h1>
+        <p class="text-xl text-gray-600">
+          Shopping platforms, seasonal events and curated marketplace offers
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- AliExpress 11.11 Shopping Event -->
+        <a
+          href="/landing/aliexpress"
+          class="group block bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+        >
+          <div
+            class="h-48 bg-gradient-to-br from-[#ff8a3d] via-[#ff6a00] to-[#e62e04] flex flex-col items-center justify-center text-white"
+          >
+            <span class="text-3xl font-extrabold tracking-tight bg-white text-[#ff6a00] px-4 py-1.5 rounded-xl">
+              AliExpress
+            </span>
+            <span class="mt-3 text-sm font-bold tracking-widest uppercase opacity-90">
+              11.11 Shopping Event
+            </span>
+          </div>
+          <div class="p-6">
+            <h2 class="text-xl font-bold mb-2 group-hover:text-[#e62e04] transition-colors">
+              AliExpress 11.11 Seasonal Deals
+            </h2>
+            <p class="text-gray-600 mb-4 line-clamp-2">
+              Good finds, better prices — tech, home, fashion and gift-worthy finds across a global
+              marketplace. Free shipping on eligible Choice orders, buyer protection and free
+              returns on eligible items. Through Nov 18, 2026.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-500">Nov 1–18, 2026</span>
+              <span class="text-[#e62e04] font-semibold group-hover:translate-x-1 transition-transform">
+                Shop Now →
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- 占位: 更多电商平台即将上线 -->
+        <div class="group block bg-white rounded-2xl shadow-md overflow-hidden opacity-75 border border-gray-100">
+          <div
+            class="h-48 bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center"
+          >
+            <span class="text-6xl">🏬</span>
+          </div>
+          <div class="p-6">
+            <h2 class="text-xl font-bold mb-2">More platforms coming soon</h2>
+            <p class="text-gray-600 mb-4 line-clamp-2">
+              More e-commerce platform deals and seasonal events are on the way.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-500">Stay tuned</span>
+              <span class="text-gray-400 font-semibold">🚧</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
