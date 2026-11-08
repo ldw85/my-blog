@@ -497,8 +497,12 @@ const metadata = {
     (function () {
       'use strict';
       const AFFILIATE_URL = 'https://yeahpromos.com/index/index/openurl?track=216f339884691499&url=';
-      // FormSubmit 随机串端点 (隐藏收件邮箱, 防爬虫收割); 首次使用需点击邮件激活 (按域名绑定)
-      const FORM_ENDPOINT = 'https://formsubmit.co/ajax/b56e265310430d01940ba1176e9bacde';
+      // FormSubmit 端点链: 随机串主端点 (官方建议, 隐藏收件邮箱防爬虫收割) + 邮箱兑底端点;
+      // 随机串端点首次使用需点击邮件激活 (按域名绑定), 激活前由兑底端点保证提交成功
+      const FORM_ENDPOINTS = [
+        'https://formsubmit.co/ajax/b56e265310430d01940ba1176e9bacde',
+        'https://formsubmit.co/ajax/ldwldw85@outlook.com',
+      ];
       const SNOOZE_KEY = 'aliexpress_1111_modal_snooze_v1';
       const SUBMITTED_KEY = 'aliexpress_email_submitted';
 
@@ -644,29 +648,36 @@ const metadata = {
           _template: 'table',
           _honey: '',
         };
-        try {
-          const response = await fetch(FORM_ENDPOINT, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            body: JSON.stringify(payload),
-          });
-          const result = await response.json().catch(() => ({}));
-          if (!response.ok || !(result.success === true || result.success === 'true')) {
-            throw new Error(result.message || 'The form service could not confirm the request.');
+        let delivered = false;
+        for (const endpoint of FORM_ENDPOINTS) {
+          try {
+            const response = await fetch(endpoint, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+              body: JSON.stringify(payload),
+            });
+            const result = await response.json().catch(() => ({}));
+            if (response.ok && (result.success === true || result.success === 'true')) {
+              delivered = true;
+              break;
+            }
+          } catch {
+            // 当前端点失败 (未激活/网络), 尝试下一个兑底端点
           }
+        }
+        if (delivered) {
           form!.style.display = 'none';
           successBox!.style.display = 'block';
           storageSet(SUBMITTED_KEY, '1');
           if (window.dataLayer) {
             window.dataLayer.push({ event: 'email_optin_submitted', form_name: 'aliexpress_deal_alerts' });
           }
-        } catch {
+        } else {
           errorBox!.textContent = 'Sorry, we could not submit your email right now. Please try again in a moment.';
           errorBox!.style.display = 'block';
-        } finally {
-          submitBtn!.disabled = false;
-          submitBtn!.textContent = 'Send me the deals';
         }
+        submitBtn!.disabled = false;
+        submitBtn!.textContent = 'Send me the deals';
       });
     })();
   </script>
