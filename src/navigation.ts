@@ -32,6 +32,7 @@ export const headerData = {
         { text: 'Fitness Equipment', href: getPermalink('/product/fitness') },
         { text: 'All Holiday Themes', href: getPermalink('/holidays') },
         { text: 'Food', href: getPermalink('/food-holidays') },
+        { text: 'E-commerce', href: getPermalink('/landing/e-commerce') },
         { text: 'All Products', href: getPermalink('/products') },
       ],
     },
@@ -57,6 +58,7 @@ export const footerData = {
         { text: 'Top Rankings', href: getBlogPermalink() },
         { text: 'Comparisons', href: getBlogPermalink() },
         { text: 'Holiday Deals', href: getPermalink('/landing-pages') },
+        { text: 'E-commerce', href: getPermalink('/landing/e-commerce') },
       ],
     },
     {
