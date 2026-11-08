@@ -33,7 +33,7 @@ export const headerData = {
         { text: 'All Holiday Themes', href: getPermalink('/holidays') },
         { text: 'Food', href: getPermalink('/food-holidays') },
         { text: 'E-commerce', href: getPermalink('/e-commerce') },
-        { text: 'AliExpress 11.11', href: getPermalink('/landing/aliexpress') },
+        { text: 'adidas UAE 11.11', href: getPermalink('/landing/adidas-uae') },
         { text: 'All Products', href: getPermalink('/products') },
       ],
     },
