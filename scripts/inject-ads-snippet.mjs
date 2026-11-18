@@ -89,6 +89,18 @@ const PAGES = [
     reason: '广告落地页, 完全零埋点',
     selectors: [],
   },
+  // ── Tools 列表页下的 VEVOR 评测页 (2026-11-18 新增) ──
+  {
+    file: 'src/pages/tools/vevor-lawn-sweeper.html',
+    reason: 'Tools 列表页评测页 (裸 HTML), 零埋点',
+    // .btn 同时用于页内锚点 (#comparison), 埋点脚本会自动跳过 href 以 # 开头的链接
+    selectors: ['a.btn'],
+  },
+  {
+    file: 'src/pages/tools/vevor-wire-stripper.html',
+    reason: 'Tools 列表页评测页 (裸 HTML), 零埋点',
+    selectors: ['a.button'],
+  },
 ];
 
 const cfg = await import(resolve(ROOT, 'src/config/tracking.ts'));
