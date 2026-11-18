@@ -29,13 +29,21 @@ export const headerData = {
       links: [
         { text: 'Mac mini - AI Server', href: getPermalink('/product/mac-mini') },
         { text: 'Apple Watch Series 11', href: getPermalink('/product/apple-watch') },
-        { text: 'Fitness Equipment', href: getPermalink('/product/fitness') },
+        { text: 'Tools', href: getPermalink('/tools') },
         { text: 'All Holiday Themes', href: getPermalink('/holidays') },
         { text: 'Food', href: getPermalink('/food-holidays') },
-        { text: 'E-commerce', href: getPermalink('/e-commerce') },
         { text: 'adidas UAE 11.11', href: getPermalink('/landing/adidas-uae') },
         { text: 'All Products', href: getPermalink('/products') },
       ],
+    },
+    // E-commerce 与 Fitness Equipment 已从 Products 下拉提升为一级菜单 (2026-11-18)
+    {
+      text: 'E-commerce',
+      href: getPermalink('/e-commerce'),
+    },
+    {
+      text: 'Fitness Equipment',
+      href: getPermalink('/product/fitness'),
     },
     {
       text: 'About',

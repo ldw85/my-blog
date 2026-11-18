@@ -1,0 +1,99 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Tools Reviews & Guides - TechReviews',
+  description:
+    'Expert reviews of the tools worth your money: real-world testing, honest verdicts and buying guides for must-have software and hardware tools.',
+};
+
+// Tools 列表页条目数据源。
+// David 后续提供 2 个评测页链接后，只需把下方数组中对应条目的 href 填上即可自动变成可点击卡片，
+// 无需改动页面布局。href 为空时卡片渲染为不可点击的「即将上线」占位块，避免产生 404 链接。
+const tools = [
+  {
+    title: 'Tool Review 1 — 待替换',
+    description: '评测页链接待 David 提供。替换此处 description 为该工具的一句话卖点描述。',
+    href: '',
+    category: 'Tools',
+    badge: 'Coming Soon',
+    gradient: 'from-blue-500 to-indigo-600',
+    icon: '🔧',
+  },
+  {
+    title: 'Tool Review 2 — 待替换',
+    description: '评测页链接待 David 提供。替换此处 description 为该工具的一句话卖点描述。',
+    href: '',
+    category: 'Tools',
+    badge: 'Coming Soon',
+    gradient: 'from-emerald-500 to-teal-600',
+    icon: '🧰',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <section class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🧰 Tools</h1>
+        <p class="text-xl text-gray-600">In-depth reviews of tools worth your time and money</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          tools.map((tool) => {
+            const isLive = !!tool.href;
+            const cardClass =
+              'group block bg-white rounded-2xl shadow-md transition-all duration-300 overflow-hidden border border-gray-100';
+            const interactiveClass = isLive ? 'hover:shadow-xl cursor-pointer' : 'opacity-75 cursor-default';
+            const titleClass = isLive ? 'group-hover:text-blue-600 transition-colors' : 'text-gray-700';
+            const cta = isLive ? (
+              <span class="text-blue-600 font-semibold group-hover:translate-x-1 transition-transform">
+                Read Review →
+              </span>
+            ) : (
+              <span class="text-gray-400 font-semibold">🚧</span>
+            );
+
+            return tool.href ? (
+              <a href={tool.href} class={`${cardClass} ${interactiveClass}`}>
+                <div class:list={['h-48 bg-gradient-to-br flex items-center justify-center relative', tool.gradient]}>
+                  <span class="text-6xl">{tool.icon}</span>
+                  <span class="absolute top-4 right-4 text-xs font-bold tracking-widest uppercase bg-white/90 text-gray-700 px-2.5 py-1 rounded-full">
+                    {tool.badge}
+                  </span>
+                </div>
+                <div class="p-6">
+                  <h2 class:list={['text-xl font-bold mb-2', titleClass]}>{tool.title}</h2>
+                  <p class="text-gray-600 mb-4 line-clamp-2">{tool.description}</p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-500">{tool.category}</span>
+                    {cta}
+                  </div>
+                </div>
+              </a>
+            ) : (
+              <div class={`${cardClass} ${interactiveClass}`}>
+                <div class:list={['h-48 bg-gradient-to-br flex items-center justify-center relative', tool.gradient]}>
+                  <span class="text-6xl">{tool.icon}</span>
+                  <span class="absolute top-4 right-4 text-xs font-bold tracking-widest uppercase bg-white/90 text-gray-700 px-2.5 py-1 rounded-full">
+                    {tool.badge}
+                  </span>
+                </div>
+                <div class="p-6">
+                  <h2 class="text-xl font-bold mb-2 text-gray-700">{tool.title}</h2>
+                  <p class="text-gray-600 mb-4 line-clamp-2">{tool.description}</p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-500">{tool.category}</span>
+                    {cta}
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+  </section>
+</Layout>
