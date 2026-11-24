@@ -101,6 +101,12 @@ const PAGES = [
     reason: 'Tools 列表页评测页 (裸 HTML), 零埋点',
     selectors: ['a.button'],
   },
+  {
+    file: 'src/pages/tools/xtool-review.html',
+    reason: 'Tools 列表页 xTool 评测落地页 (裸 HTML), 零埋点',
+    // .btn.secondary 是页内锚点 (#verdict), 埋点脚本会自动跳过 href 以 # 开头的链接
+    selectors: ['a.navcta', 'a.btn', 'a.text-link'],
+  },
 ];
 
 const cfg = await import(resolve(ROOT, 'src/config/tracking.ts'));
