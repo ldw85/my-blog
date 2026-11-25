@@ -106,7 +106,8 @@ const PAGES = [
     file: 'src/pages/product/dreame-review.html',
     reason: 'Products 列表页 Dreame 品牌评测落地页 (裸 HTML), 零埋点',
     // .btn.alt 是页内锚点 (#pros-cons), 埋点脚本会自动跳过 href 以 # 开头的链接
-    selectors: ['a.btn'],
+    // a.blink = 美发产品卡片 CTA (2026-11-25 补)
+    selectors: ['a.btn', 'a.blink'],
   },
   {
     file: 'src/pages/tools/xtool-review.html',
