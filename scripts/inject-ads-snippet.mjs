@@ -101,6 +101,13 @@ const PAGES = [
     reason: 'Tools 列表页评测页 (裸 HTML), 零埋点',
     selectors: ['a.button'],
   },
+  // ── Products 列表页: Dreame 品牌评测落地页 (2026-11-25 新增) ──
+  {
+    file: 'src/pages/product/dreame-review.html',
+    reason: 'Products 列表页 Dreame 品牌评测落地页 (裸 HTML), 零埋点',
+    // .btn.alt 是页内锚点 (#pros-cons), 埋点脚本会自动跳过 href 以 # 开头的链接
+    selectors: ['a.btn'],
+  },
   {
     file: 'src/pages/tools/xtool-review.html',
     reason: 'Tools 列表页 xTool 评测落地页 (裸 HTML), 零埋点',
